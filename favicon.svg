@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">CsaládiMenü</title>
+  <desc id="desc">Séfsapka keresztezett habverővel és fakanállal, zöld és narancssárga színekben</desc>
+  <rect width="256" height="256" rx="58" fill="#fff7ed"/>
+  <circle cx="128" cy="128" r="113" fill="none" stroke="#f3dfb3" stroke-width="5"/>
+  <path d="M0 220c48-22 93-19 132-6 42 14 81 11 124-14v56H0Z" fill="#059669"/>
+  <g fill="#6aa6a0" stroke="#064e3b" stroke-linejoin="round" stroke-width="9">
+    <path d="M71 103c-15-3-27-14-27-29 0-18 15-31 32-29 5-18 21-30 40-26 7-12 19-19 33-19 18 0 33 11 39 27 18-5 35 9 35 28 0 15-10 27-24 30-3 17-17 29-34 29H88c-8 0-14-5-17-11Z"/>
+    <path d="M86 105c11 11 25 16 42 16 20 0 35-6 44-18l-4 43-36 12-40-12Z" fill="#fff7ed"/>
+  </g>
+  <path d="M73 75c13 2 21 12 20 23-1 6-4 10-9 12M128 27c-6 10-6 20 0 29 3 5 3 10 0 15M182 72c-14 5-19 16-14 27" fill="none" stroke="#064e3b" stroke-linecap="round" stroke-width="7"/>
+  <g fill="none" stroke="#064e3b" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <path d="m65 184 108-45"/>
+    <path d="m91 174 59 24c9 4 16-8 9-14l-54-42" stroke="#f97316"/>
+    <path d="M67 183c-13-4-23-13-26-25-2-8 4-14 11-10l27 14M47 151l-12-7M58 146l-5-14M71 143l4-14"/>
+    <path d="m77 187 101-44"/>
+  </g>
+  <text x="128" y="151" text-anchor="middle" fill="#064e3b" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1">CSALÁDI</text>
+  <text x="128" y="171" text-anchor="middle" fill="#f97316" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1">MENÜ</text>
+</svg>

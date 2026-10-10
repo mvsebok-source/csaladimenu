@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "name": "Olasz Margherita Pizza",
+    "cuisine": "it",
+    "type": "veggie",
+    "time": 35,
+    "baseCost": 290,
+    "rating": 4.9,
+    "ratingsCount": 142,
+    "ingredients": [
+      { "name": "Liszt", "amount": 125, "unit": "g" },
+      { "name": "Élesztő", "amount": 3, "unit": "g" },
+      { "name": "Paradicsomszósz", "amount": 80, "unit": "ml" },
+      { "name": "Sajt", "amount": 80, "unit": "g" },
+      { "name": "Fűszerek", "amount": 1, "unit": "csipet" }
+    ],
+    "steps": [
+      "<strong>Előkészítés:</strong> Mérj ki minden hozzávalót. Melegíts fel kb. 100 ml vizet langyosra, de ne legyen forró, mert az megölheti az élesztőt.",
+      "<strong>A tészta összeállítása:</strong> Keverd el az élesztőt a langyos vízben, majd add a liszthez. Sózd, adj hozzá kevés olívaolajat, és gyúrd 8-10 percig, amíg sima, rugalmas és csak enyhén ragacsos lesz.",
+      "<strong>Kelesztés:</strong> Formázz gombócot, tedd kiolajozott tálba, fedd le, és pihentesd meleg, huzatmentes helyen 45-60 percig. Akkor jó, ha körülbelül a kétszeresére nő.",
+      "<strong>Formázás:</strong> Borítsd lisztezett felületre, a levegőt óvatosan nyomkodd ki belőle, majd kézzel vagy sodrófával formázz kb. fél centi vastag kerek lapot. Ne szurkáld meg a szélét, így szép pereme marad.",
+      "<strong>Feltétezés:</strong> Kend meg vékonyan paradicsomszósszal, szórd meg a fűszerekkel és a sajttal. Ne tegyél túl sok szószt rá, mert a tészta elázhat.",
+      "<strong>Sütés és ellenőrzés:</strong> 230-250 °C-ra előmelegített sütőben süsd 10-12 percig. Akkor kész, ha a széle aranybarna, az alja pedig átsült és enyhén ropogós. Szeletelés előtt pihentesd 2 percig."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bolognai Spagetti",
+    "cuisine": "it",
+    "type": "meat",
+    "time": 40,
+    "baseCost": 480,
+    "rating": 4.8,
+    "ratingsCount": 210,
+    "ingredients": [
+      { "name": "Tészta", "amount": 100, "unit": "g" },
+      { "name": "Darált hús", "amount": 120, "unit": "g" },
+      { "name": "Paradicsomszósz", "amount": 150, "unit": "ml" },
+      { "name": "Sajt", "amount": 30, "unit": "g" },
+      { "name": "Hagyma", "amount": 0.5, "unit": "db" }
+    ],
+    "steps": [
+      "<strong>Előkészítés:</strong> A hagymát hámozd meg és vágd apró kockákra. Készítsd a tűzhely mellé a húst, a paradicsomszószt és a fűszereket, mert főzés közben gyorsan kell dolgozni.",
+      "<strong>Hagymás alap:</strong> Melegíts 1-2 evőkanál olívaolajat közepes lángon. Add hozzá a hagymát, és 4-5 perc alatt párold üvegesre. Ne barnítsd meg, mert keserű lehet.",
+      "<strong>A hús pirítása:</strong> Tedd a darált húst a serpenyőbe, és fakanállal törd kisebb darabokra. Sózd, borsozd, majd 6-8 percig pirítsd, amíg mindenhol elveszíti a nyers, rózsaszín színét.",
+      "<strong>A szósz főzése:</strong> Öntsd rá a paradicsomszószt, add hozzá a zöldfűszereket, majd forrald fel. Ezután vedd takarékra, fedd le félig, és főzd 20-25 percig. Közben néha keverd meg; akkor jó, ha sűrű és illatos.",
+      "<strong>A tészta kifőzése:</strong> Forralj bő, sózott vizet, majd főzd ki a tésztát a csomagoláson jelzett idő szerint. Keverj fél deci főzővizet a szószhoz, ez selymesebbé teszi.",
+      "<strong>Tálalás:</strong> Forgasd össze a tésztát a szósszal, kóstold meg, és szükség esetén sózd utána. Reszelt sajttal, forrón tálald."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Paprikás Krumpli Kolbásszal",
+    "cuisine": "hu",
+    "type": "meat",
+    "time": 40,
+    "baseCost": 380,
+    "rating": 4.7,
+    "ratingsCount": 98,
+    "ingredients": [
+      { "name": "Krumpli", "amount": 250, "unit": "g" },
+      { "name": "Kolbász", "amount": 60, "unit": "g" },
+      { "name": "Hagyma", "amount": 0.5, "unit": "db" },
+      { "name": "Fűszerek", "amount": 1, "unit": "csipet" }
+    ],
+    "steps": [
+      "<strong>Előkészítés:</strong> A hagymát vágd apró kockákra, a krumplit hámozd meg, majd vágd egyforma, kb. 2-3 centis darabokra. A kolbászt karikázd fel.",
+      "<strong>Hagymás alap:</strong> Melegíts zsiradékot egy lábasban, add hozzá a hagymát, és közepes lángon párold 5-6 percig, amíg puha és üveges lesz.",
+      "<strong>Fűszerezés:</strong> Húzd le a lábast a tűzről, keverd bele a pirospaprikát, majd azonnal add hozzá a krumplit és a kolbászt. Így a paprika nem ég meg és nem lesz keserű.",
+      "<strong>Főzés:</strong> Öntsd fel annyi vízzel, amennyi éppen ellepi a krumplit. Sózd óvatosan, mert a kolbász is sós lehet, majd forrald fel.",
+      "<strong>Puhítás:</strong> Fedd le, és közepes lángon főzd 25-30 percig. Akkor kész, ha a krumpliba könnyen belecsúszik a kés, de a darabok még nem esnek szét.",
+      "<strong>Befejezés:</strong> Kóstold meg, állítsd be a sót és a fűszerezést, majd pihentesd 5 percig. Friss kenyérrel, forrón tálald."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Csirkepaprikás Nokedlivel",
+    "cuisine": "hu",
+    "type": "meat",
+    "time": 50,
+    "baseCost": 520,
+    "rating": 4.9,
+    "ratingsCount": 185,
+    "ingredients": [
+      { "name": "Csirkehús", "amount": 180, "unit": "g" },
+      { "name": "Tejföl", "amount": 40, "unit": "g" },
+      { "name": "Liszt", "amount": 80, "unit": "g" },
+      { "name": "Tojás", "amount": 0.5, "unit": "db" },
+      { "name": "Hagyma", "amount": 0.5, "unit": "db" }
+    ],
+    "steps": [
+      "<strong>Előkészítés:</strong> A csirkét töröld szárazra, vágd egyforma falatokra, majd enyhén sózd meg. A hagymát kockázd fel, a nokedli hozzávalóit készítsd a kezed ügyébe.",
+      "<strong>Pörköltalap:</strong> Kevés zsiradékon párold üvegesre a hagymát. Húzd le a tűzről, keverd bele a pirospaprikát, majd egy kevés vízzel azonnal engedd fel, hogy a paprika ne égjen meg.",
+      "<strong>A csirke párolása:</strong> Add hozzá a húst, keverd át, majd közepes lángon pirítsd 4-5 percig. Önts alá kevés vizet, fedd le, és főzd 25-30 percig, amíg a hús teljesen átfő.",
+      "<strong>Nokedlitészta:</strong> Keverd össze a lisztet, a tojást, egy csipet sót és annyi vizet, hogy sűrű, ragacsos tésztát kapj. Ne keverd túl, csak álljon össze.",
+      "<strong>Nokedli főzése:</strong> Forralj sós vizet, szaggasd bele a tésztát, és főzd addig, amíg a nokedlik felúsznak, majd még 1 percig. Szűrd le, és kevés olajjal forgasd át.",
+      "<strong>Tejfölös habarás:</strong> Keverd simára a tejfölt kevés liszttel és a pörköltszaftból kivett néhány kanál forró lével. Öntsd vissza a lábasba, és 2-3 perc alatt sűrítsd be. Ne forrald erősen, így nem csapódik ki a tejföl.",
+      "<strong>Tálalás:</strong> Kóstold meg a mártást, szükség esetén sózd, majd a nokedlivel együtt, frissen tálald."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Csirkés Mexikói Quesadilla",
+    "cuisine": "mx",
+    "type": "meat",
+    "time": 25,
+    "baseCost": 460,
+    "rating": 4.8,
+    "ratingsCount": 112,
+    "ingredients": [
+      { "name": "Tortilla", "amount": 2, "unit": "db" },
+      { "name": "Csirkehús", "amount": 100, "unit": "g" },
+      { "name": "Sajt", "amount": 50, "unit": "g" },
+      { "name": "Paprika", "amount": 0.5, "unit": "db" },
+      { "name": "Paradicsom", "amount": 0.5, "unit": "db" }
+    ],
+    "steps": [
+      "<strong>Előkészítés:</strong> A csirkét vágd vékony, egyforma csíkokra, a paprikát és a paradicsomot pedig apró darabokra. Reszeld le a sajtot, hogy gyorsan olvadjon.",
+      "<strong>A töltelék:</strong> Forrósíts fel egy serpenyőt kevés olajjal, majd pirítsd a csirkét 5-7 percig. Add hozzá a paprikát és a fűszereket, és süsd addig, amíg a hús teljesen átsül, de még szaftos marad.",
+      "<strong>Biztonsági ellenőrzés:</strong> A legvastagabb csirkedarabot vágd ketté. Belül ne legyen rózsaszín vagy üveges; ha bizonytalan vagy, süsd még 1-2 percig.",
+      "<strong>Összeállítás:</strong> Teríts ki egy tortillát, a felére szórj sajtot, tedd rá a csirkét és a zöldségeket, majd ismét szórj rá sajtot. Ne töltsd túl, különben nem lehet szépen félbehajtani.",
+      "<strong>Pirítás:</strong> Melegítsd fel a tiszta serpenyőt szárazon, tedd bele a félbehajtott quesadillát, és közepes lángon süsd 2-3 percig oldalanként. Akkor jó, ha a tortilla aranybarna, a sajt pedig megolvadt.",
+      "<strong>Tálalás:</strong> Pihentesd 1 percig, majd vágd háromszögekre. Friss paradicsommal, tejföllel vagy joghurtos mártogatóssal kínáld."
+    ]
+  }
+]

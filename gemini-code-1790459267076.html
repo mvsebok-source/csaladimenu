@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CsaládiMenü Pro 3.0 – Egyfájlos Tesztverzió</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="Generated_favicon_192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Generated_favicon_180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#064e3b">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#ecfdf5', 500: '#10b981', 600: '#059669', 900: '#064e3b' },
+                        cta: { 500: '#f97316', 600: '#ea580c' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+        .star-rating i { cursor: pointer; transition: color 0.15s; }
+        .star-rating i:hover, .star-rating i.active { color: #f59e0b; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen pb-12">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-600 text-white p-2 rounded-xl text-lg font-bold shadow-sm">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight">Családi<span class="text-brand-500">Menü</span> Pro</span>
+                    <span class="hidden sm:inline-block text-xs bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-md ml-2 font-bold">3.0 Demo Engine</span>
+                </div>
+            </div>
+            
+            <div class="flex bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs font-bold">
+                <button id="tab-btn-calc" onclick="switchTab('calc')" class="px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Recept Kereső</span>
+                </button>
+                <button id="tab-btn-planner" onclick="switchTab('planner')" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-days text-amber-400"></i>
+                    <span>Heti Menütervező Pro</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-6">
+
+        <!-- CONTROLS & PANTRY -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-slate-200/80 space-y-4">
+            <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 border-b border-slate-100 pb-4">
+                <div>
+                    <h1 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+                        <span>Családi Szűrő & Spájz</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 mt-0.5">Állítsd be a család létszámát és jelöld be a hűtőben lévő alapanyagokat!</p>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <input type="text" id="search-input" placeholder="Keresés receptre..." class="bg-slate-50 border border-slate-200 text-xs rounded-xl px-3.5 py-2.5 w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-brand-500 font-medium">
+                </div>
+            </div>
+
+            <!-- SLIDERS GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-users text-brand-600 mr-1.5"></i> Létszám:</label>
+                        <span id="servings-display" class="font-extrabold text-brand-600 text-base">7 fő</span>
+                    </div>
+                    <input type="range" id="servings-slider" min="1" max="15" value="7" class="w-full accent-brand-600 cursor-pointer">
+                </div>
+
+                <div id="cuisine-filter-control" class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-earth-americas text-brand-600 mr-1.5"></i> Konyha típus:</label>
+                    <select id="cuisine-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700">
+                        <option value="all">Minden konyha</option>
+                        <option value="hu">Magyaros 🇭🇺</option>
+                        <option value="it">Olasz 🇮🇹</option>
+                        <option value="mx">Mexikói 🇲🇽</option>
+                        <option value="asia">Ázsiai 🥢</option>
+                    </select>
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-filter text-brand-600 mr-1.5"></i> Étrend:</label>
+                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700">
+                        <option value="all">Összes étel</option>
+                        <option value="meat">Húsos ételek</option>
+                        <option value="veggie">Húsmentes / Vega</option>
+                    </select>
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-clock text-brand-600 mr-1.5"></i> Max. idő:</label>
+                        <span id="time-display" class="font-bold text-slate-700 text-xs">60 perc</span>
+                    </div>
+                    <input type="range" id="time-slider" min="15" max="120" step="15" value="60" class="w-full accent-brand-600 cursor-pointer">
+                </div>
+            </div>
+
+            <!-- INGREDIENTS PICKER -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Mi van otthon a hűtőben / spájzban?</span>
+                    <button id="clear-ingredients" class="text-xs text-rose-600 hover:underline font-semibold">Törlés</button>
+                </div>
+                <div id="ingredients-container" class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar p-1"></div>
+            </div>
+        </div>
+
+        <!-- VIEW 1: RECIPES GRID -->
+        <div id="view-calc" class="space-y-4">
+            <div class="flex justify-between items-center px-1">
+                <h2 class="font-extrabold text-slate-900 text-lg">Receptek (<span id="recipe-count">0</span>)</h2>
+            </div>
+            <div id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+
+        <!-- VIEW 2: WEEKLY PLANNER -->
+        <div id="view-planner" class="hidden space-y-6">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-3xl shadow-md border border-slate-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <span class="bg-brand-500/20 text-brand-400 text-xs font-bold px-3 py-1 rounded-md uppercase">Heti Menütervező Pro</span>
+                    <h2 class="text-2xl font-extrabold mt-1">Heti Menünaptár</h2>
+                </div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full md:w-auto">
+                    <div class="bg-slate-800/90 p-3.5 rounded-2xl border border-slate-700/80 w-full sm:w-auto">
+                        <span class="text-[10px] text-slate-400 uppercase font-bold block">Teljes Heti Összköltség:</span>
+                        <span id="weekly-total-cost" class="text-2xl font-extrabold text-brand-400">0 Ft</span>
+                    </div>
+                    <button onclick="autoGenerateWeeklyMenu()" class="bg-cta-500 hover:bg-cta-600 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-md transition text-xs flex items-center justify-center gap-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>🎲 1-Kattintásos Automata Menü</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3" id="weekly-days-grid"></div>
+
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 space-y-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4">
+                    <div>
+                        <h3 class="font-extrabold text-slate-900 text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-basket-shopping text-brand-600"></i>
+                            <span>Összevont Heti Bevásárlólista</span>
+                        </h3>
+                    </div>
+                    <button id="shopping-list-copy-button" onclick="copyConsolidatedShoppingList()" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-4 rounded-xl shadow transition text-xs flex items-center gap-2">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>📋 Hiányzó Heti Tételek Másolása</span>
+                    </button>
+                </div>
+                <div id="consolidated-shopping-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- DETAILED RECIPE MODAL -->
+    <div id="recipe-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 flex flex-col justify-between">
+            <div>
+                <div class="p-6 border-b border-slate-100 flex justify-between items-start sticky top-0 bg-white z-10 rounded-t-3xl">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span id="modal-cuisine" class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md uppercase"></span>
+                            <span id="modal-rating-badge" class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md flex items-center gap-1">
+                                <i class="fa-solid fa-star text-amber-500"></i> <span id="modal-rating-val">4.9</span>
+                            </span>
+                        </div>
+                        <h3 id="modal-title" class="text-2xl font-extrabold text-slate-900 mt-1"></h3>
+                        <div id="modal-meta" class="text-xs text-slate-500 mt-1 flex gap-4 font-semibold"></div>
+                    </div>
+                    <button id="close-modal" class="text-slate-400 hover:text-slate-600 text-2xl font-bold p-1">&times;</button>
+                </div>
+                
+                <div class="p-6 space-y-6">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-3">
+                            <i class="fa-solid fa-list-check text-brand-600 mr-1.5"></i> Hozzávalók (<span id="modal-servings"></span>):
+                        </h4>
+                        <ul id="modal-ingredients" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-700"></ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-3">
+                            <i class="fa-solid fa-utensils text-brand-600 mr-1.5"></i> Részletes Elkészítési Útmutató:
+                        </h4>
+                        <ol id="modal-steps" class="space-y-3 text-sm text-slate-700 list-decimal list-inside bg-slate-50 p-4 rounded-2xl border border-slate-100 leading-relaxed"></ol>
+                    </div>
+
+                    <div class="bg-amber-50/60 border border-amber-200/80 p-4 rounded-2xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-extrabold text-amber-900">Milyen lett az étel? Értékeld:</span>
+                            <span id="user-rating-feedback" class="text-[11px] font-bold text-emerald-600 hidden"><i class="fa-solid fa-check"></i> Köszönjük!</span>
+                        </div>
+                        <div class="flex items-center gap-2 star-rating text-slate-300 text-xl" id="star-rating-box">
+                            <i class="fa-solid fa-star" data-val="1"></i>
+                            <i class="fa-solid fa-star" data-val="2"></i>
+                            <i class="fa-solid fa-star" data-val="3"></i>
+                            <i class="fa-solid fa-star" data-val="4"></i>
+                            <i class="fa-solid fa-star" data-val="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-slate-100 bg-slate-50 rounded-b-3xl flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="text-[10px] text-slate-400 uppercase font-bold block">Várható összköltség:</span>
+                    <span id="modal-cost" class="text-xl font-extrabold text-brand-600"></span>
+                </div>
+                <button id="copy-missing" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-5 rounded-xl text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>Hiányzó cikkek másolása</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="recipe-catalog.js"></script>
+    <script>
+        const recipes = [
+            { 
+                id: 1, name: "Olasz Margherita Pizza", cuisine: "it", type: "veggie", time: 35, baseCost: 290, rating: 4.9, ratingsCount: 142,
+                ingredients: [{ name: "Liszt", amount: 125, unit: "g" }, { name: "Élesztő", amount: 3, unit: "g" }, { name: "Paradicsomszósz", amount: 80, unit: "ml" }, { name: "Sajt", amount: 80, unit: "g" }, { name: "Fűszerek", amount: 1, unit: "csipet" }],
+                steps: ["<strong>Előkészítés:</strong> Mérj ki minden hozzávalót, a vizet langyosítsd meg, de ne legyen forró.", "<strong>Tészta:</strong> Keverd el az élesztőt a vízben, add a liszthez, sózd, olajozd, majd gyúrd 8-10 percig sima, rugalmas tésztává.", "<strong>Kelesztés és formázás:</strong> Letakarva keleszd 45-60 percig, amíg megduplázódik, majd lisztezett felületen formázd kerekre.", "<strong>Feltétezés:</strong> Kend meg vékonyan paradicsomszósszal, szórd meg fűszerekkel és sajttal.", "<strong>Sütés:</strong> 230-250 °C-ra előmelegített sütőben süsd 10-12 percig, amíg a széle aranybarna és az alja ropogós lesz."]
+            },
+            { 
+                id: 2, name: "Bolognai Spagetti", cuisine: "it", type: "meat", time: 40, baseCost: 480, rating: 4.8, ratingsCount: 210,
+                ingredients: [{ name: "Tészta", amount: 100, unit: "g" }, { name: "Darált hús", amount: 120, unit: "g" }, { name: "Paradicsomszósz", amount: 150, unit: "ml" }, { name: "Sajt", amount: 30, unit: "g" }, { name: "Hagyma", amount: 0.5, unit: "db" }],
+                steps: ["<strong>Előkészítés:</strong> A hagymát vágd apró kockákra, a hozzávalókat készítsd a tűzhely mellé.", "<strong>Alap:</strong> Olívaolajon, közepes lángon párold üvegesre a hagymát, majd add hozzá a darált húst.", "<strong>Pirítás:</strong> Fakanállal törd szét a húst, sózd, borsozd, és süsd addig, amíg sehol sem rózsaszín.", "<strong>Szósz:</strong> Öntsd hozzá a paradicsomszószt, és fedő alatt, kis lángon főzd 20-25 percig, néha megkeverve.", "<strong>Tálalás:</strong> Főzd ki a tésztát, keverj fél deci főzővizet a szószhoz, majd sajttal tálald."]
+            },
+            { 
+                id: 3, name: "Paprikás Krumpli Kolbásszal", cuisine: "hu", type: "meat", time: 40, baseCost: 380, rating: 4.7, ratingsCount: 98,
+                ingredients: [{ name: "Krumpli", amount: 250, unit: "g" }, { name: "Kolbász", amount: 60, unit: "g" }, { name: "Hagyma", amount: 0.5, unit: "db" }, { name: "Fűszerek", amount: 1, unit: "csipet" }],
+                steps: ["<strong>Előkészítés:</strong> A hagymát kockázd fel, a krumplit hámozd meg és vágd egyforma darabokra, a kolbászt karikázd fel.", "<strong>Alap:</strong> A hagymát zsiradékon, közepes lángon párold üvegesre.", "<strong>Fűszerezés:</strong> Húzd le a tűzről, keverd bele a pirospaprikát, majd add hozzá a krumplit és a kolbászt.", "<strong>Főzés:</strong> Öntsd fel annyi vízzel, amennyi éppen ellepi, majd lefedve főzd 25-30 percig.", "<strong>Befejezés:</strong> Akkor kész, ha a krumpli puha, de nem esik szét. Kóstold meg, pihentesd 5 percig, és kenyérrel tálald."]
+            },
+            { 
+                id: 4, name: "Csirkepaprikás Nokedlivel", cuisine: "hu", type: "meat", time: 50, baseCost: 520, rating: 4.9, ratingsCount: 185,
+                ingredients: [{ name: "Csirkehús", amount: 180, unit: "g" }, { name: "Tejföl", amount: 40, unit: "g" }, { name: "Liszt", amount: 80, unit: "g" }, { name: "Tojás", amount: 0.5, unit: "db" }, { name: "Hagyma", amount: 0.5, unit: "db" }],
+                steps: ["<strong>Előkészítés:</strong> A csirkét vágd egyforma falatokra, a hagymát kockázd fel, a nokedli hozzávalóit készítsd ki.", "<strong>Pörköltalap:</strong> Párold meg a hagymát, húzd le a tűzről, keverd bele a pirospaprikát, majd kevés vízzel engedd fel.", "<strong>Csirke:</strong> Add hozzá a húst, pirítsd 4-5 percig, majd lefedve főzd 25-30 percig, amíg teljesen átfő.", "<strong>Nokedli:</strong> Keverj sűrű tésztát lisztből, tojásból, sóból és vízből, szaggasd forró sós vízbe, majd felúszás után még 1 percig főzd.", "<strong>Habarás:</strong> A tejfölt kevés liszttel és forró szafttal keverd simára, add az ételhez, és 2-3 perc alatt sűrítsd be."]
+            },
+            { 
+                id: 5, name: "Csirkés Mexikói Quesadilla", cuisine: "mx", type: "meat", time: 25, baseCost: 460, rating: 4.8, ratingsCount: 112,
+                ingredients: [{ name: "Tortilla", amount: 2, unit: "db" }, { name: "Csirkehús", amount: 100, unit: "g" }, { name: "Sajt", amount: 50, unit: "g" }, { name: "Paprika", amount: 0.5, unit: "db" }, { name: "Paradicsom", amount: 0.5, unit: "db" }],
+                steps: ["<strong>Előkészítés:</strong> A csirkét vékony csíkokra, a paprikát és paradicsomot apróra vágd, a sajtot reszeld le.", "<strong>Töltelék:</strong> Forró serpenyőben pirítsd a csirkét 5-7 percig, majd add hozzá a paprikát és a fűszereket.", "<strong>Ellenőrzés:</strong> Vágj ketté egy csirkedarabot; belül ne legyen rózsaszín vagy üveges.", "<strong>Összeállítás:</strong> A tortilla felére szórj sajtot, tedd rá a csirkét és a zöldségeket, majd hajtsd félbe.", "<strong>Sütés:</strong> Száraz serpenyőben süsd oldalanként 2-3 percig, amíg aranybarna és a sajt megolvadt, majd vágd háromszögekre."]
+            },
+            ...window.extraRecipes
+        ];
+
+        const daysList = [{ id: 'mon', label: 'Hétfő' }, { id: 'tue', label: 'Kedd' }, { id: 'wed', label: 'Szerda' }, { id: 'thu', label: 'Csütörtök' }, { id: 'fri', label: 'Péntek' }, { id: 'sat', label: 'Szombat' }, { id: 'sun', label: 'Vasárnap' }];
+
+        let selectedIngredients = new Set();
+        let weeklyMenu = { mon: 2, tue: 3, wed: 5, thu: 1, fri: 4, sat: 2, sun: 1 };
+        const plannerSearch = {};
+        const plannerCuisine = {};
+        let activeRecipeId = null;
+
+        const allIngredientsList = ["Tészta", "Rizs", "Darált hús", "Paradicsomszósz", "Sajt", "Krumpli", "Kolbász", "Fűszerek", "Mák", "Cukor", "Tejföl", "Csirkehús", "Liszt", "Tojás", "Tortilla", "Paprika", "Paradicsom", "Élesztő", "Hal", "Hagyma", "Pirospaprika", "Zöldség", "Olívaolaj", "Bab", "Kukorica", "Tofu", "Szójaszósz", "Gyömbér"];
+
+        // DOM Elements
+        const ingredientsContainer = document.getElementById('ingredients-container');
+        const recipesGrid = document.getElementById('recipes-grid');
+        const servingsSlider = document.getElementById('servings-slider');
+        const servingsDisplay = document.getElementById('servings-display');
+        const timeSlider = document.getElementById('time-slider');
+        const timeDisplay = document.getElementById('time-display');
+        const cuisineSelect = document.getElementById('cuisine-select');
+        const dietSelect = document.getElementById('diet-select');
+        const searchInput = document.getElementById('search-input');
+        const recipeCount = document.getElementById('recipe-count');
+        const modal = document.getElementById('recipe-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        function switchTab(tab) {
+            document.getElementById('view-calc').classList.toggle('hidden', tab !== 'calc');
+            document.getElementById('view-planner').classList.toggle('hidden', tab !== 'planner');
+            document.getElementById('cuisine-filter-control').classList.toggle('hidden', tab === 'planner');
+
+            const calcBtn = document.getElementById('tab-btn-calc');
+            const planBtn = document.getElementById('tab-btn-planner');
+
+            if (tab === 'calc') {
+                calcBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
+                planBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5";
+            } else {
+                planBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
+                calcBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5";
+                renderWeeklyPlanner();
+            }
+        }
+
+        function renderIngredients() {
+            ingredientsContainer.innerHTML = '';
+            allIngredientsList.sort().forEach(ing => {
+                const btn = document.createElement('button');
+                const isSelected = selectedIngredients.has(ing);
+                btn.className = `text-xs px-2.5 py-1 rounded-lg border font-medium transition ${isSelected ? 'bg-brand-600 text-white border-brand-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}`;
+                btn.innerText = ing;
+                btn.onclick = () => {
+                    if (selectedIngredients.has(ing)) selectedIngredients.delete(ing);
+                    else selectedIngredients.add(ing);
+                    renderIngredients();
+                    renderRecipes();
+                    renderWeeklyPlanner();
+                };
+                ingredientsContainer.appendChild(btn);
+            });
+        }
+
+        document.getElementById('clear-ingredients').onclick = () => {
+            selectedIngredients.clear();
+            renderIngredients();
+            renderRecipes();
+            renderWeeklyPlanner();
+        };
+
+        function getFilteredRecipes(ignoreGlobalCuisine = false) {
+            const maxTime = parseInt(timeSlider.value);
+            const diet = dietSelect.value;
+            const cuisine = cuisineSelect.value;
+            const query = searchInput.value.toLowerCase().trim();
+
+            return recipes.filter(r => {
+                if (r.time > maxTime) return false;
+                if (diet === 'meat' && r.type !== 'meat') return false;
+                if (diet === 'veggie' && r.type !== 'veggie') return false;
+                if (!ignoreGlobalCuisine && cuisine !== 'all' && r.cuisine !== cuisine) return false;
+                if (selectedIngredients.size > 0 && !r.ingredients.some(ingredientMatchesSelection)) return false;
+                if (query) {
+                    const matchName = r.name.toLowerCase().includes(query);
+                    const matchIng = r.ingredients.some(i => i.name.toLowerCase().includes(query));
+                    if (!matchName && !matchIng) return false;
+                }
+                return true;
+            });
+        }
+
+        function ingredientMatchesSelection(ingredient) {
+            if (selectedIngredients.has(ingredient.name)) return true;
+            if (selectedIngredients.has('Rizs') && ingredient.name.includes('Rizs')) return true;
+            if (selectedIngredients.has('Tofu') && ingredient.name.includes('Tofu')) return true;
+            return selectedIngredients.has('Tészta') && ingredient.name.includes('Tészta');
+        }
+
+        function getPlannerFilteredRecipes(dayId) {
+            const cuisine = plannerCuisine[dayId] || 'all';
+            const query = (plannerSearch[dayId] || '').toLowerCase().trim();
+            return getFilteredRecipes(true).filter(r => {
+                if (cuisine !== 'all' && r.cuisine !== cuisine) return false;
+                return !query || r.name.toLowerCase().includes(query) || r.ingredients.some(i => i.name.toLowerCase().includes(query));
+            });
+        }
+
+        function buildPlannerRecipeOptions(dayId) {
+            const recipeId = weeklyMenu[dayId];
+            const selectedRecipe = recipes.find(r => r.id === recipeId);
+            const matches = getPlannerFilteredRecipes(dayId);
+            let options = '<option value="">-- Nincs étel --</option>';
+
+            if (selectedRecipe && !matches.some(r => r.id === selectedRecipe.id)) {
+                options += `<option value="${selectedRecipe.id}" selected>${selectedRecipe.name} · jelenlegi választás, eltér a szűrőktől</option>`;
+            }
+            matches.forEach(r => {
+                options += `<option value="${r.id}" ${recipeId === r.id ? 'selected' : ''}>${r.name}</option>`;
+            });
+            if (!matches.length && !selectedRecipe) options += '<option disabled>Nincs találat a szűrőkre</option>';
+            return options;
+        }
+
+        function updatePlannerRecipeOptions(dayId) {
+            const select = document.querySelector(`[data-day-select="${dayId}"]`);
+            if (!select) return;
+            select.innerHTML = buildPlannerRecipeOptions(dayId);
+            select.value = weeklyMenu[dayId] ? String(weeklyMenu[dayId]) : '';
+        }
+
+        function renderRecipes() {
+            const servings = parseInt(servingsSlider.value);
+            const maxTime = parseInt(timeSlider.value);
+
+            servingsDisplay.innerText = `${servings} fő`;
+            timeDisplay.innerText = `${maxTime} perc`;
+
+            const filtered = getFilteredRecipes();
+
+            recipeCount.innerText = filtered.length;
+            recipesGrid.innerHTML = '';
+
+            filtered.forEach(r => {
+                const ingredientNames = r.ingredients.map(i => i.name);
+                const matched = r.ingredients.filter(ingredientMatchesSelection).length;
+                const matchPct = ingredientNames.length > 0 ? Math.round((matched / ingredientNames.length) * 100) : 0;
+                const totalCost = Math.round(r.baseCost * servings);
+
+                const cuisineLabels = { hu: "Magyar 🇭🇺", it: "Olasz 🇮🇹", mx: "Mexikói 🇲🇽", asia: "Ázsiai 🥢" };
+
+                const card = document.createElement('div');
+                card.className = 'bg-white border border-slate-200/80 rounded-3xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-2">
+                            <h3 class="font-extrabold text-slate-900 text-base">${r.name}</h3>
+                            <span class="text-[11px] px-2.5 py-1 rounded-full font-extrabold ${matchPct === 100 ? 'bg-cta-500 text-white' : 'bg-slate-100 text-slate-700'}">${matchPct}% megvan</span>
+                        </div>
+                        <div class="flex gap-3 text-xs font-semibold text-slate-500 mb-2">
+                            <span><i class="fa-regular fa-clock text-slate-400 mr-1"></i> ${r.time} perc</span>
+                            <span><i class="fa-solid fa-earth-americas text-slate-400 mr-1"></i> ${cuisineLabels[r.cuisine]}</span>
+                            <span class="text-amber-500 font-bold ml-auto"><i class="fa-solid fa-star"></i> ${r.rating} (${r.ratingsCount})</span>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] text-slate-400 uppercase font-bold block">Ár (${servings} fő):</span>
+                            <span class="text-lg font-extrabold text-brand-600">${totalCost.toLocaleString('hu-HU')} Ft</span>
+                        </div>
+                        <button onclick="openRecipeModal(${r.id})" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm">Részletes Recept</button>
+                    </div>
+                `;
+                recipesGrid.appendChild(card);
+            });
+        }
+
+        function renderWeeklyPlanner() {
+            const servings = parseInt(servingsSlider.value);
+            const daysGrid = document.getElementById('weekly-days-grid');
+            daysGrid.innerHTML = '';
+
+            let totalWeeklyCost = 0;
+            let consolidatedIngredients = {};
+
+            daysList.forEach(day => {
+                const recipeId = weeklyMenu[day.id];
+                const recipe = recipes.find(r => r.id === recipeId);
+
+                let dayCost = 0;
+                if (recipe) {
+                    dayCost = Math.round(recipe.baseCost * servings);
+                    totalWeeklyCost += dayCost;
+
+                    recipe.ingredients.forEach(ing => {
+                        const totalAmt = ing.amount * servings;
+                        if (!consolidatedIngredients[ing.name]) {
+                            consolidatedIngredients[ing.name] = { amount: 0, unit: ing.unit };
+                        }
+                        consolidatedIngredients[ing.name].amount += totalAmt;
+                    });
+                }
+
+                const dayCard = document.createElement('div');
+                dayCard.className = 'bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-3';
+                
+                const selectOptions = buildPlannerRecipeOptions(day.id);
+
+                dayCard.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">${day.label}</span>
+                            <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded">${dayCost.toLocaleString('hu-HU')} Ft</span>
+                        </div>
+                        <div class="grid grid-cols-[minmax(0,1fr)_130px] gap-2 mb-2">
+                            <input type="search" data-day-search="${day.id}" aria-label="${day.label} receptkereső" placeholder="Recept keresése..." class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <select data-day-cuisine="${day.id}" aria-label="${day.label} konyhája" class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs font-semibold text-slate-700">
+                                <option value="all">Minden konyha</option>
+                                <option value="hu">Magyar 🇭🇺</option>
+                                <option value="it">Olasz 🇮🇹</option>
+                                <option value="mx">Mexikói 🇲🇽</option>
+                                <option value="asia">Ázsiai 🥢</option>
+                            </select>
+                        </div>
+                        <select data-day-select="${day.id}" onchange="updateDayRecipe('${day.id}', this.value)" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            ${selectOptions}
+                        </select>
+                    </div>
+                `;
+                dayCard.querySelector(`[data-day-search="${day.id}"]`).value = plannerSearch[day.id] || '';
+                dayCard.querySelector(`[data-day-cuisine="${day.id}"]`).value = plannerCuisine[day.id] || 'all';
+                dayCard.querySelector(`[data-day-search="${day.id}"]`).addEventListener('input', event => {
+                    plannerSearch[day.id] = event.target.value;
+                    updatePlannerRecipeOptions(day.id);
+                });
+                dayCard.querySelector(`[data-day-cuisine="${day.id}"]`).addEventListener('change', event => {
+                    plannerCuisine[day.id] = event.target.value;
+                    updatePlannerRecipeOptions(day.id);
+                });
+                daysGrid.appendChild(dayCard);
+            });
+
+            document.getElementById('weekly-total-cost').innerText = `${totalWeeklyCost.toLocaleString('hu-HU')} Ft`;
+            renderConsolidatedShoppingList(consolidatedIngredients);
+        }
+
+        function renderConsolidatedShoppingList(consolidated) {
+            const container = document.getElementById('consolidated-shopping-container');
+            container.innerHTML = '';
+
+            const keys = Object.keys(consolidated);
+            keys.sort().forEach(ingName => {
+                const item = consolidated[ingName];
+                const roundedAmount = Math.round(item.amount * 10) / 10;
+                const hasItem = selectedIngredients.has(ingName);
+
+                const card = document.createElement('div');
+                card.className = `p-3 rounded-2xl border flex justify-between items-center text-xs ${hasItem ? 'bg-emerald-50/80 text-emerald-900 border-emerald-200/60' : 'bg-slate-50 text-slate-800 border-slate-200'}`;
+                card.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <i class="${hasItem ? 'fa-solid fa-circle-check text-emerald-600' : 'fa-solid fa-circle-xmark text-slate-400'}"></i>
+                        <span class="font-bold">${ingName}</span>
+                    </div>
+                    <span class="font-mono font-extrabold text-slate-900">${roundedAmount} ${item.unit}</span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function copyConsolidatedShoppingList() {
+            const servings = parseInt(servingsSlider.value);
+            const missing = {};
+
+            daysList.forEach(day => {
+                const recipe = recipes.find(item => item.id === weeklyMenu[day.id]);
+                if (!recipe) return;
+                recipe.ingredients.forEach(ingredient => {
+                    if (ingredientMatchesSelection(ingredient)) return;
+                    const key = `${ingredient.name}|${ingredient.unit}`;
+                    if (!missing[key]) missing[key] = { name: ingredient.name, unit: ingredient.unit, amount: 0 };
+                    missing[key].amount += ingredient.amount * servings;
+                });
+            });
+
+            const lines = Object.values(missing).map(item => {
+                const amount = Math.round(item.amount * 10) / 10;
+                return `- ${item.name}: ${amount} ${item.unit}`;
+            });
+            const text = lines.length ? `Hiányzó heti alapanyagok:\n${lines.join('\n')}` : 'Nincs hiányzó alapanyag a heti menüben.';
+            const button = document.getElementById('shopping-list-copy-button');
+            const originalLabel = '📋 Hiányzó Heti Tételek Másolása';
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    const copied = document.execCommand('copy');
+                    textarea.remove();
+                    if (!copied) throw new Error('Clipboard copy failed');
+                }
+                button.innerText = 'Vágólapra másolva';
+            } catch (error) {
+                button.innerText = 'Nem sikerült másolni';
+            }
+            window.setTimeout(() => { button.innerText = originalLabel; }, 2000);
+        }
+
+        function updateDayRecipe(dayId, recipeId) {
+            weeklyMenu[dayId] = recipeId ? parseInt(recipeId) : null;
+            renderWeeklyPlanner();
+        }
+
+        function autoGenerateWeeklyMenu() {
+            daysList.forEach(day => {
+                const candidates = getPlannerFilteredRecipes(day.id);
+                if (!candidates.length) return;
+                const randomRecipe = candidates[Math.floor(Math.random() * candidates.length)];
+                weeklyMenu[day.id] = randomRecipe.id;
+            });
+            renderWeeklyPlanner();
+        }
+
+        function openRecipeModal(id) {
+            const recipe = recipes.find(r => r.id === id);
+            if (!recipe) return;
+
+            activeRecipeId = id;
+            const servings = parseInt(servingsSlider.value);
+            const cuisineLabels = { hu: "Magyar 🇭🇺", it: "Olasz 🇮🇹", mx: "Mexikói 🇲🇽", asia: "Ázsiai 🥢" };
+
+            document.getElementById('modal-title').innerText = recipe.name;
+            document.getElementById('modal-cuisine').innerText = cuisineLabels[recipe.cuisine];
+            document.getElementById('modal-rating-val').innerText = `${recipe.rating} (${recipe.ratingsCount})`;
+            document.getElementById('modal-servings').innerText = `${servings} fő`;
+            document.getElementById('modal-cost').innerText = `${Math.round(recipe.baseCost * servings).toLocaleString('hu-HU')} Ft`;
+
+            const ingList = document.getElementById('modal-ingredients');
+            ingList.innerHTML = '';
+            recipe.ingredients.forEach(ing => {
+                const totalAmount = Math.round(ing.amount * servings * 10) / 10;
+                const hasIngredient = selectedIngredients.has(ing.name);
+                const li = document.createElement('li');
+                li.className = `p-2.5 rounded-xl flex justify-between items-center text-xs ${hasIngredient ? 'bg-emerald-50 text-emerald-900' : 'bg-rose-50 text-rose-900'}`;
+                li.innerHTML = `<span class="font-bold">${ing.name}</span><span class="font-mono font-extrabold">${totalAmount} ${ing.unit}</span>`;
+                ingList.appendChild(li);
+            });
+
+            const stepsList = document.getElementById('modal-steps');
+            stepsList.innerHTML = '';
+            recipe.steps.forEach(step => {
+                const li = document.createElement('li');
+                li.innerHTML = step;
+                stepsList.appendChild(li);
+            });
+
+            modal.classList.remove('hidden');
+        }
+
+        closeModalBtn.onclick = () => modal.classList.add('hidden');
+        servingsSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
+        timeSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
+        dietSelect.onchange = () => { renderRecipes(); renderWeeklyPlanner(); };
+        cuisineSelect.onchange = () => { renderRecipes(); renderWeeklyPlanner(); };
+        searchInput.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
+
+        // Init
+        renderIngredients();
+        renderRecipes();
+    </script>
+</body>
+</html>

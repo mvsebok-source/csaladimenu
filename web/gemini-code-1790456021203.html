@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CsaládiMenü.hu – Okos Recept- és Heti Menütervező Nagycsaládoknak</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        cta: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+        .glow-effect { box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="bg-brand-600 text-white p-2 rounded-xl text-lg font-bold shadow-sm">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">Családi<span class="text-brand-600">Menü</span>.hu</span>
+            </div>
+            
+            <!-- NAV TABS -->
+            <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+                <button id="tab-btn-calc" onclick="switchTab('calc')" class="px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Recept Kereső</span>
+                </button>
+                <button id="tab-btn-planner" onclick="switchTab('planner')" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5 relative">
+                    <i class="fa-solid fa-calendar-days text-cta-500"></i>
+                    <span>Heti Menütervező</span>
+                    <span class="bg-cta-500 text-white text-[9px] px-1.5 py-0.2 rounded-full uppercase font-black ml-1">Pro</span>
+                </button>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#arak" class="bg-cta-500 hover:bg-cta-600 text-white font-bold py-2 px-4 rounded-xl shadow transition text-xs flex items-center gap-1.5">
+                    <span>Pro Előfizetés</span>
+                    <i class="fa-solid fa-crown text-amber-300"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-brand-900 via-brand-700 to-brand-600 text-white py-12 px-4">
+        <div class="max-w-5xl mx-auto text-center space-y-5">
+            <span class="bg-white/10 text-brand-100 text-xs font-bold px-4 py-1.5 rounded-full inline-block border border-white/20 backdrop-blur-sm">
+                <i class="fa-solid fa-sparkles text-amber-300 mr-1.5"></i> Vége a napi "Mi legyen az ebéd?" fejtörésnek!
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Spórolj heti 3 órát és több tízezer forintot <br class="hidden sm:block">
+                <span class="text-brand-100">az intelligens nagycsaládos menütervezővel!</span>
+            </h1>
+            <p class="text-brand-100/90 text-sm sm:text-base max-w-2xl mx-auto">
+                Állítsd be a család létszámát, válaszd ki a spájzban lévő elemeket, és generálj egyetlen kattintással komplett heti menüt és bolti bevásárlólistát!
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 pb-16 space-y-6">
+
+        <!-- SHARED CONTROLS (Servings & Pantry) -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-xl border border-slate-200 space-y-4">
+            
+            <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 border-b border-slate-100 pb-4">
+                <div>
+                    <h2 class="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-brand-600"></i>
+                        <span>Családi Szűrő & Spájz Beállítások</span>
+                    </h2>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <input type="text" id="search-input" placeholder="Keresés receptre vagy alapanyagra..." class="bg-slate-50 border border-slate-200 text-xs rounded-xl px-3.5 py-2.5 w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-brand-500 font-medium">
+                </div>
+            </div>
+
+            <!-- SLIDERS GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-users text-brand-600 mr-1.5"></i> Létszám:</label>
+                        <span id="servings-display" class="font-extrabold text-brand-600 text-base">7 fő</span>
+                    </div>
+                    <input type="range" id="servings-slider" min="1" max="15" value="7" class="w-full accent-brand-600 cursor-pointer">
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-earth-americas text-brand-600 mr-1.5"></i> Konyha típus:</label>
+                    <select id="cuisine-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="all">Minden konyha</option>
+                        <option value="hu">Magyaros 🇭🇺</option>
+                        <option value="it">Olasz 🇮🇹</option>
+                        <option value="mx">Mexikói 🇲🇽</option>
+                        <option value="asia">Ázsiai 🥢</option>
+                    </select>
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-filter text-brand-600 mr-1.5"></i> Étrend:</label>
+                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="all">Összes étel</option>
+                        <option value="meat">Húsos ételek</option>
+                        <option value="veggie">Húsmentes / Vega</option>
+                    </select>
+                </div>
+
+                <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-clock text-brand-600 mr-1.5"></i> Max. idő:</label>
+                        <span id="time-display" class="font-bold text-slate-700 text-xs">60 perc</span>
+                    </div>
+                    <input type="range" id="time-slider" min="15" max="120" step="15" value="60" class="w-full accent-brand-600 cursor-pointer">
+                </div>
+            </div>
+
+            <!-- INGREDIENTS PICKER -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Mi van otthon a hűtőben / spájzban?</span>
+                    <button id="clear-ingredients" class="text-xs text-rose-600 hover:underline font-semibold">Törlés</button>
+                </div>
+                <div id="ingredients-container" class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar p-1"></div>
+            </div>
+
+        </div>
+
+        <!-- VIEW 1: FREE RECIPE SEARCH -->
+        <div id="view-calc" class="space-y-4">
+            <div class="flex justify-between items-center px-1">
+                <h3 class="font-extrabold text-slate-900 text-lg">Receptek (<span id="recipe-count">0</span>)</h3>
+                <span class="text-xs text-slate-500">Kattints a kártyákra a részletekért</span>
+            </div>
+            <div id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+
+        <!-- VIEW 2: PRO WEEKLY PLANNER PREVIEW -->
+        <div id="view-planner" class="hidden space-y-6">
+            
+            <!-- BANNER FOR PRO FEATURE -->
+            <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-brand-900 text-white p-6 rounded-3xl shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 relative overflow-hidden">
+                <div class="space-y-2 z-10">
+                    <span class="bg-cta-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                        <i class="fa-solid fa-crown text-amber-300 mr-1"></i> Pro Funkció
+                    </span>
+                    <h3 class="text-2xl font-extrabold">Heti Menütervező & Automata Bevásárlólista</h3>
+                    <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
+                        Ne pazarolj több időt a heti menü kitalálására! A Pro verzió automatikusan generál egy kiegyensúlyozott heti étrendet a családodra szabva, és összeadja a bolti hiányzó cikkeket.
+                    </p>
+                </div>
+
+                <div class="z-10 flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
+                    <button onclick="triggerPaywall('Heti Menü Automata Generálás')" class="bg-cta-500 hover:bg-cta-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-md transition text-xs flex items-center justify-center gap-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>🎲 Automatikus Heti Menü Generálása</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEKLY DAYS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-3">
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
+                    <span class="font-extrabold text-slate-900 text-sm">Hétfő</span>
+                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Bolognai Spagetti</div>
+                    <span class="text-[10px] text-slate-500 block">3 360 Ft / 7 fő</span>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
+                    <span class="font-extrabold text-slate-900 text-sm">Kedd</span>
+                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Paprikás Krumpli</div>
+                    <span class="text-[10px] text-slate-500 block">2 660 Ft / 7 fő</span>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
+                    <span class="font-extrabold text-slate-900 text-sm">Szerda</span>
+                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Csirkés Quesadilla</div>
+                    <span class="text-[10px] text-slate-500 block">3 220 Ft / 7 fő</span>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
+                    <span class="font-extrabold text-slate-900 text-sm">Csütörtök</span>
+                    <button onclick="triggerPaywall('Csütörtöki Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
+                    <span class="font-extrabold text-slate-900 text-sm">Péntek</span>
+                    <button onclick="triggerPaywall('Pénteki Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
+                    <span class="font-extrabold text-slate-900 text-sm">Szombat</span>
+                    <button onclick="triggerPaywall('Szombati Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
+                    <span class="font-extrabold text-slate-900 text-sm">Vasárnap</span>
+                    <button onclick="triggerPaywall('Vasárnapi Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
+                </div>
+            </div>
+
+            <!-- CONSOLIDATED LIST PREVIEW BOX -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+                    <div>
+                        <h4 class="font-extrabold text-slate-900 text-base">Összevont Heti Bevásárlólista (Pro)</h4>
+                        <p class="text-xs text-slate-500">A kiválasztott receptek hiányzó tételei automatikusan összegezve</p>
+                    </div>
+                    <button onclick="triggerPaywall('Heti Bevásárlólista Másolása')" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2 px-4 rounded-xl shadow transition text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Lista Másolása</span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+                        <span class="font-bold text-slate-800">Tészta (Spagetti)</span>
+                        <span class="font-mono font-extrabold">1.4 kg</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+                        <span class="font-bold text-slate-800">Darált hús</span>
+                        <span class="font-mono font-extrabold">1.8 kg</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
+                        <span class="font-bold text-slate-800">Sajt (Trappista)</span>
+                        <span class="font-mono font-extrabold">850 g</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PRICING SECTION -->
+        <section id="arak" class="pt-8 border-t border-slate-200">
+            <div class="max-w-4xl mx-auto text-center space-y-4">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-wider">Azonnali Megtérülés</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Válassz csomagot a gondtalan főzéshez</h2>
+                <p class="text-slate-600 max-w-xl mx-auto text-sm">Már az első heti bevásárlásnál visszahozza az árát az ételpazarlás megszüntetésével.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-left">
+                    <div class="bg-white border border-slate-200 rounded-3xl p-6 space-y-5 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-800">Havi Előfizetés</h3>
+                        <div class="text-3xl font-extrabold text-slate-900">1 990 Ft <span class="text-xs font-normal text-slate-500">/ hó</span></div>
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Korlátlan hozzáférés 200+ recepthez</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Heti Menütervező Naptár</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Összevont Bevásárlólista Export</li>
+                        </ul>
+                        <button onclick="triggerPaywall('Havi Előfizetés')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-xs">Előfizetés Havi Csomagra</button>
+                    </div>
+
+                    <div class="bg-brand-50/60 border-2 border-brand-500 rounded-3xl p-6 space-y-5 shadow-xl relative">
+                        <span class="absolute -top-3 right-6 bg-cta-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Legnépszerűbb (37% Spórolás)</span>
+                        <h3 class="text-lg font-bold text-slate-800">Éves Előfizetés</h3>
+                        <div class="text-3xl font-extrabold text-slate-900">14 900 Ft <span class="text-xs font-normal text-slate-500">/ év</span></div>
+                        <p class="text-[11px] text-brand-700 font-bold">(Mindössze 1 240 Ft / hó)</p>
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Minden Pro funkció korlátlanul</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Nemzetközi ételek (Olasz, Mexikói, Ázsiai)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Saját receptek elmentése</li>
+                        </ul>
+                        <button onclick="triggerPaywall('Éves Előfizetés')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-bold py-3 rounded-xl shadow transition text-xs">Éves Csomag Indítása</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PAYWALL / PRO UPGRADE MODAL -->
+    <div id="paywall-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-5 shadow-2xl border border-slate-200 relative">
+            <button id="close-paywall" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+            
+            <div class="w-14 h-14 bg-amber-100 text-cta-500 rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-inner">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+
+            <div class="space-y-2">
+                <h3 class="text-xl font-extrabold text-slate-900">Oldd fel a Heti Menütervezőt!</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    A(z) <strong id="paywall-feature-name" class="text-slate-800">Heti Menütervező</strong> a CsaládiMenü Pro része. Takaríts meg heti 3 óra szervezést és csökkentsd a bolti számládat!
+                </p>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-left space-y-2 text-xs">
+                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Automatikus heti menü 1 kattintásra</div>
+                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Összevont bolti bevásárlólista</div>
+                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Spájz alapanyagok automatikus levonása</div>
+            </div>
+
+            <div class="space-y-2 pt-2">
+                <button onclick="alert('Átirányítás a Stripe biztonságos fizetési oldalára...')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition text-xs flex items-center justify-center gap-2">
+                    <span>Próbáld ki Pro-t – 1 990 Ft/hó</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <p class="text-[10px] text-slate-400">Bármikor lemondható egyetlen kattintással.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        const recipes = [
+            { id: 1, name: "Bolognai Spagetti", cuisine: "it", type: "meat", time: 35, baseCost: 480, ingredients: ["Tészta", "Darált hús", "Paradicsomszósz", "Sajt", "Hagyma"] },
+            { id: 2, name: "Paprikás Krumpli Kolbásszal", cuisine: "hu", type: "meat", time: 40, baseCost: 380, ingredients: ["Krumpli", "Kolbász", "Hagyma", "Fűszerek"] },
+            { id: 3, name: "Tejfölös Mákos Tészta", cuisine: "hu", type: "veggie", time: 20, baseCost: 220, ingredients: ["Tészta", "Mák", "Cukor", "Tejföl"] },
+            { id: 4, name: "Csirkepaprikás Nokedlivel", cuisine: "hu", type: "meat", time: 50, baseCost: 520, ingredients: ["Csirkehús", "Tejföl", "Liszt", "Tojás", "Hagyma"] },
+            { id: 5, name: "Csirkés Quesadilla", cuisine: "mx", type: "meat", time: 25, baseCost: 460, ingredients: ["Tortilla", "Csirkehús", "Sajt", "Paprika", "Paradicsom"] },
+            { id: 6, name: "Margherita Pizza", cuisine: "it", type: "veggie", time: 30, baseCost: 290, ingredients: ["Liszt", "Paradicsomszósz", "Sajt", "Fűszerek"] }
+        ];
+
+        const allIngredientsList = ["Tészta", "Darált hús", "Paradicsomszósz", "Sajt", "Krumpli", "Kolbász", "Fűszerek", "Mák", "Cukor", "Tejföl", "Csirkehús", "Liszt", "Tojás", "Tortilla", "Paprika", "Paradicsom", "Hagyma"];
+
+        let selectedIngredients = new Set(["Tészta", "Sajt"]);
+
+        // DOM
+        const ingredientsContainer = document.getElementById('ingredients-container');
+        const recipesGrid = document.getElementById('recipes-grid');
+        const servingsSlider = document.getElementById('servings-slider');
+        const servingsDisplay = document.getElementById('servings-display');
+        const paywallModal = document.getElementById('paywall-modal');
+        const closePaywallBtn = document.getElementById('close-paywall');
+
+        function switchTab(tab) {
+            document.getElementById('view-calc').classList.toggle('hidden', tab !== 'calc');
+            document.getElementById('view-planner').classList.toggle('hidden', tab !== 'planner');
+
+            const calcBtn = document.getElementById('tab-btn-calc');
+            const planBtn = document.getElementById('tab-btn-planner');
+
+            if (tab === 'calc') {
+                calcBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
+                planBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+            } else {
+                planBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
+                calcBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+            }
+        }
+
+        function triggerPaywall(featureName) {
+            document.getElementById('paywall-feature-name').innerText = featureName;
+            paywallModal.classList.remove('hidden');
+        }
+
+        closePaywallBtn.onclick = () => paywallModal.classList.add('hidden');
+
+        function renderIngredients() {
+            ingredientsContainer.innerHTML = '';
+            allIngredientsList.sort().forEach(ing => {
+                const btn = document.createElement('button');
+                const isSelected = selectedIngredients.has(ing);
+                btn.className = `text-xs px-2.5 py-1 rounded-lg border font-medium transition ${isSelected ? 'bg-brand-600 text-white border-brand-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}`;
+                btn.innerText = ing;
+                btn.onclick = () => {
+                    if (selectedIngredients.has(ing)) selectedIngredients.delete(ing);
+                    else selectedIngredients.add(ing);
+                    renderIngredients();
+                    renderRecipes();
+                };
+                ingredientsContainer.appendChild(btn);
+            });
+        }
+
+        function renderRecipes() {
+            const servings = parseInt(servingsSlider.value);
+            servingsDisplay.innerText = `${servings} fő`;
+
+            document.getElementById('recipe-count').innerText = recipes.length;
+            recipesGrid.innerHTML = '';
+
+            recipes.forEach(r => {
+                const matched = r.ingredients.filter(i => selectedIngredients.has(i)).length;
+                const matchPct = Math.round((matched / r.ingredients.length) * 100);
+                const totalCost = Math.round(r.baseCost * servings);
+
+                const card = document.createElement('div');
+                card.className = 'bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-3';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-2">
+                            <h4 class="font-bold text-slate-900 text-base">${r.name}</h4>
+                            <span class="text-xs px-2 py-0.5 rounded font-bold ${matchPct === 100 ? 'bg-cta-500 text-white' : 'bg-slate-100 text-slate-700'}">${matchPct}% megvan</span>
+                        </div>
+                        <div class="text-xs text-slate-600">
+                            <strong>Hozzávalók:</strong> ${r.ingredients.join(', ')}
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] text-slate-400 font-bold block">Ár (${servings} fő):</span>
+                            <span class="text-lg font-extrabold text-brand-600">${totalCost.toLocaleString('hu-HU')} Ft</span>
+                        </div>
+                        <button onclick="triggerPaywall('${r.name} Recept')" class="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold">Recept</button>
+                    </div>
+                `;
+                recipesGrid.appendChild(card);
+            });
+        }
+
+        servingsSlider.oninput = renderRecipes;
+
+        // Init
+        renderIngredients();
+        renderRecipes();
+    </script>
+</body>
+</html>
