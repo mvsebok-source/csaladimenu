@@ -78,12 +78,17 @@ window.extraRecipes = (() => {
     };
     const cuisineCost = { hu: 340, it: 510, mx: 470, asia: 490 };
     const cuisineTime = { hu: 45, it: 35, mx: 30, asia: 35 };
+    const freeRecipeLimits = { hu: 4, it: 4, mx: 4, asia: 5 };
+    const freeRecipeCounts = {};
 
-    return dishes.map(([cuisine, name, type], index) => ({
+    return dishes.map(([cuisine, name, type], index) => {
+        freeRecipeCounts[cuisine] = (freeRecipeCounts[cuisine] || 0) + 1;
+        return {
         id: index + 6,
         name,
         cuisine,
         type,
+        access: freeRecipeCounts[cuisine] <= freeRecipeLimits[cuisine] ? "free" : "pro",
         time: cuisineTime[cuisine] + (index % 4) * 5,
         baseCost: cuisineCost[cuisine] + (index % 7) * 35,
         rating: Number((4.3 + (index % 7) * 0.1).toFixed(1)),
@@ -94,5 +99,6 @@ window.extraRecipes = (() => {
             unit
         })),
         steps: cuisineSteps[cuisine]
-    }));
+    };
+    });
 })();
