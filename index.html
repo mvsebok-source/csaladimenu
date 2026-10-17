@@ -501,7 +501,7 @@
                 if (recipe.course !== 'dessert' && diet !== 'all' && recipe.type !== diet) return false;
                 if (selectedIngredients.size && !recipe.ingredients.some(ingredientMatchesSelection)) return false;
                 return !query || recipe.name.toLowerCase().includes(query) || recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query));
-            });
+            }).sort((a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }));
 
             document.getElementById('recipe-count').innerText = filteredRecipes.length;
             const pageCount = Math.max(1, Math.ceil(filteredRecipes.length / recipesPerPage));

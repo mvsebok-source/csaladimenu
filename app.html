@@ -27,8 +27,10 @@
     <style>
         .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
-        .star-rating i { cursor: pointer; transition: color 0.15s; }
-        .star-rating i:hover, .star-rating i.active { color: #f59e0b; }
+        .star-rating button { color: #cbd5e1; font-size: 1.5rem; line-height: 1; padding: 0.25rem; border-radius: 0.375rem; transition: color 0.15s, transform 0.15s; }
+        .star-rating button:hover, .star-rating button.active { color: #f59e0b; }
+        .star-rating button:hover { transform: scale(1.12); }
+        .star-rating button:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
         body { font-size: 17px; line-height: 1.6; }
         body .text-xs,
         body .text-\[9px\],
@@ -232,15 +234,16 @@
                     <div class="bg-amber-50/60 border border-amber-200/80 p-4 rounded-2xl space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="text-xs font-extrabold text-amber-900">Milyen lett az étel? Értékeld:</span>
-                            <span id="user-rating-feedback" class="text-[11px] font-bold text-emerald-600 hidden"><i class="fa-solid fa-check"></i> Köszönjük!</span>
+                            <span id="user-rating-feedback" class="text-[11px] font-bold text-emerald-700" role="status" aria-live="polite"></span>
                         </div>
-                        <div class="flex items-center gap-2 star-rating text-slate-300 text-xl" id="star-rating-box">
-                            <i class="fa-solid fa-star" data-val="1"></i>
-                            <i class="fa-solid fa-star" data-val="2"></i>
-                            <i class="fa-solid fa-star" data-val="3"></i>
-                            <i class="fa-solid fa-star" data-val="4"></i>
-                            <i class="fa-solid fa-star" data-val="5"></i>
+                        <div class="flex items-center gap-1 star-rating text-2xl" id="star-rating-box" role="group" aria-label="Értékeld a receptet">
+                            <button type="button" data-val="1" aria-label="1 csillag" aria-pressed="false"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
+                            <button type="button" data-val="2" aria-label="2 csillag" aria-pressed="false"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
+                            <button type="button" data-val="3" aria-label="3 csillag" aria-pressed="false"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
+                            <button type="button" data-val="4" aria-label="4 csillag" aria-pressed="false"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
+                            <button type="button" data-val="5" aria-label="5 csillag" aria-pressed="false"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
                         </div>
+                        <p id="rating-demo-note" class="text-xs text-amber-900">A minta pontszám csak példa. Saját értékelésed ezen az eszközön mentődik; a közös értékeléshez Supabase szükséges.</p>
                     </div>
                 </div>
             </div>
@@ -285,6 +288,13 @@
         const recipeCount = document.getElementById('recipe-count');
         const modal = document.getElementById('recipe-modal');
         const closeModalBtn = document.getElementById('close-modal');
+        const ratingBox = document.getElementById('star-rating-box');
+        const ratingFeedback = document.getElementById('user-rating-feedback');
+        const ratingDemoNote = document.getElementById('rating-demo-note');
+        const ratingStorageKey = 'csaladimenu-recipe-ratings-v1';
+        let ratingData = null;
+        let ratingStorageError = '';
+        let ratingHover = 0;
         const pantryPicker = window.PantryPicker.create({
             recipes,
             selectedIngredients,
@@ -334,7 +344,7 @@
                     if (!matchName && !matchIng) return false;
                 }
                 return true;
-            });
+            }).sort((a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }));
         }
 
         function ingredientMatchesSelection(ingredient) {
@@ -349,6 +359,88 @@
                 if (cuisine !== 'all' && r.cuisine !== cuisine) return false;
                 return !query || r.name.toLowerCase().includes(query) || r.ingredients.some(i => i.name.toLowerCase().includes(query));
             });
+        }
+
+        function initializeRatingData() {
+            try {
+                const saved = localStorage.getItem(ratingStorageKey);
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (!parsed || parsed.version !== 1 || typeof parsed.recipes !== 'object') {
+                        throw new Error('Az elmentett értékelések formátuma nem megfelelő.');
+                    }
+                    ratingData = parsed;
+                    return;
+                }
+
+                ratingData = { version: 1, recipes: {} };
+                recipes.forEach(recipe => {
+                    ratingData.recipes[recipe.id] = {
+                        sample: Math.round((4 + Math.random()) * 10) / 10,
+                        user: null
+                    };
+                });
+                localStorage.setItem(ratingStorageKey, JSON.stringify(ratingData));
+            } catch (error) {
+                ratingStorageError = error instanceof Error ? error.message : 'Az értékelések tárhelye nem érhető el.';
+                ratingData = { version: 1, recipes: {} };
+                recipes.forEach(recipe => {
+                    ratingData.recipes[recipe.id] = {
+                        sample: Math.round((4 + Math.random()) * 10) / 10,
+                        user: null
+                    };
+                });
+            }
+        }
+
+        function getRatingInfo(recipeId) {
+            return ratingData.recipes[recipeId];
+        }
+
+        function renderRatingStars(rating) {
+            const filledStars = Math.round(rating);
+            return Array.from({ length: 5 }, (_, index) =>
+                `<i class="fa-${index < filledStars ? 'solid' : 'regular'} fa-star ${index < filledStars ? 'text-amber-500' : 'text-slate-300'}" aria-hidden="true"></i>`
+            ).join('');
+        }
+
+        function updateModalRating(rating = 0) {
+            ratingBox.querySelectorAll('button[data-val]').forEach(button => {
+                const value = Number(button.dataset.val);
+                const highlighted = value <= (ratingHover || rating);
+                button.classList.toggle('active', highlighted);
+                button.setAttribute('aria-pressed', String(value === rating));
+            });
+        }
+
+        function submitRecipeRating(value) {
+            if (!activeRecipeId || !Number.isInteger(value) || value < 1 || value > 5) return;
+            if (ratingStorageError) {
+                ratingFeedback.textContent = 'Nem menthető az értékelés: ' + ratingStorageError;
+                ratingFeedback.classList.add('text-rose-700');
+                ratingFeedback.classList.remove('text-emerald-700');
+                return;
+            }
+
+            const info = getRatingInfo(activeRecipeId);
+            const previousRating = info.user;
+            info.user = value;
+            try {
+                localStorage.setItem(ratingStorageKey, JSON.stringify(ratingData));
+            } catch (error) {
+                info.user = previousRating;
+                ratingFeedback.textContent = 'Nem sikerült elmenteni az értékelést. Próbáld újra.';
+                ratingFeedback.classList.add('text-rose-700');
+                ratingFeedback.classList.remove('text-emerald-700');
+                return;
+            }
+
+            ratingHover = 0;
+            updateModalRating(value);
+            ratingFeedback.textContent = `Köszönjük! Saját értékelésed: ${value}/5. Ezen az eszközön mentve.`;
+            ratingFeedback.classList.remove('text-rose-700');
+            ratingFeedback.classList.add('text-emerald-700');
+            renderRecipes();
         }
 
         function buildPlannerRecipeOptions(dayId) {
@@ -402,6 +494,12 @@
                         <div class="flex justify-between items-start gap-2 mb-2">
                             <h3 class="font-extrabold text-slate-900 text-base">${r.name}</h3>
                             <span class="text-[11px] px-2.5 py-1 rounded-full font-extrabold ${matchPct === 100 ? 'bg-cta-500 text-white' : 'bg-slate-100 text-slate-700'}">${matchPct}% megvan</span>
+                        </div>
+                        <div data-rating-summary="${r.id}" class="flex flex-wrap items-center gap-1.5 text-xs mb-2" aria-label="Mintaértékelés ${getRatingInfo(r.id).sample} az 5-ből">
+                            <span class="flex gap-0.5">${renderRatingStars(getRatingInfo(r.id).sample)}</span>
+                            <span class="font-bold text-slate-700">${getRatingInfo(r.id).sample.toFixed(1)}/5</span>
+                            <span class="text-slate-500">minta</span>
+                            ${getRatingInfo(r.id).user ? `<span class="text-brand-700 font-semibold">· Te: ${getRatingInfo(r.id).user}/5</span>` : ''}
                         </div>
                         <div class="flex gap-3 text-xs font-semibold text-slate-500 mb-2">
                             <span><i class="fa-regular fa-clock text-slate-400 mr-1"></i> ${r.time} perc</span>
@@ -615,9 +713,44 @@
                 stepsList.appendChild(tip);
             }
 
+            const ratingInfo = getRatingInfo(recipe.id);
+            ratingHover = 0;
+            ratingDemoNote.textContent = `Mintaértékelés: ${ratingInfo.sample.toFixed(1)}/5 – csak példa. A saját értékelésed ezen az eszközön mentődik; a közös értékeléshez Supabase szükséges.`;
+            ratingFeedback.textContent = ratingStorageError
+                ? `Az értékelés tárhelye nem érhető el: ${ratingStorageError}`
+                : ratingInfo.user
+                    ? `A saját értékelésed: ${ratingInfo.user}/5. Módosíthatod a csillagokra kattintva.`
+                    : '';
+            ratingFeedback.classList.toggle('text-rose-700', Boolean(ratingStorageError));
+            ratingFeedback.classList.toggle('text-emerald-700', !ratingStorageError);
+            updateModalRating(ratingInfo.user || 0);
             modal.classList.remove('hidden');
         }
 
+        ratingBox.addEventListener('click', event => {
+            const button = event.target.closest('button[data-val]');
+            if (button) submitRecipeRating(Number(button.dataset.val));
+        });
+        ratingBox.addEventListener('mouseover', event => {
+            const button = event.target.closest('button[data-val]');
+            if (!button) return;
+            ratingHover = Number(button.dataset.val);
+            updateModalRating(getRatingInfo(activeRecipeId)?.user || 0);
+        });
+        ratingBox.addEventListener('mouseleave', () => {
+            ratingHover = 0;
+            updateModalRating(getRatingInfo(activeRecipeId)?.user || 0);
+        });
+        ratingBox.addEventListener('focusin', event => {
+            const button = event.target.closest('button[data-val]');
+            if (!button) return;
+            ratingHover = Number(button.dataset.val);
+            updateModalRating(getRatingInfo(activeRecipeId)?.user || 0);
+        });
+        ratingBox.addEventListener('focusout', () => {
+            ratingHover = 0;
+            updateModalRating(getRatingInfo(activeRecipeId)?.user || 0);
+        });
         closeModalBtn.onclick = () => modal.classList.add('hidden');
         servingsSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
         timeSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
@@ -627,6 +760,7 @@
         searchInput.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
 
         // Init
+        initializeRatingData();
         renderRecipes();
     </script>
 </body>
