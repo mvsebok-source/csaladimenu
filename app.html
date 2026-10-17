@@ -29,6 +29,18 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
         .star-rating i { cursor: pointer; transition: color 0.15s; }
         .star-rating i:hover, .star-rating i.active { color: #f59e0b; }
+        body { font-size: 17px; line-height: 1.6; }
+        body .text-xs,
+        body .text-\[9px\],
+        body .text-\[10px\],
+        body .text-\[11px\] { font-size: 14px; line-height: 1.45; }
+        body label.text-xs { font-size: 15px; line-height: 1.4; }
+        body button { font-size: 16px; line-height: 1.5; }
+        body button.text-xs { font-size: 16px; line-height: 1.5; }
+        body input.text-xs,
+        body select.text-xs { font-size: 16px; line-height: 1.5; }
+        body .text-sm { font-size: 16px; line-height: 1.5; }
+        body .text-base { font-size: 17px; line-height: 1.5; }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen pb-12">
@@ -447,7 +459,7 @@
                             <span class="font-extrabold text-slate-900 text-sm">${day.label}</span>
                             <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded">${dayCost.toLocaleString('hu-HU')} Ft</span>
                         </div>
-                        <div class="grid grid-cols-[minmax(0,1fr)_130px] gap-2 mb-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_160px] gap-2 mb-2">
                             <input type="search" data-day-search="${day.id}" aria-label="${day.label} receptkereső" placeholder="Recept keresése..." class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
                             <select data-day-cuisine="${day.id}" aria-label="${day.label} konyhája" class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs font-semibold text-slate-700">
                                 <option value="all">Minden konyha</option>
