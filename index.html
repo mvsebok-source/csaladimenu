@@ -72,7 +72,7 @@
 
     <!-- HEADER & NAVIGATION -->
     <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 h-auto sm:h-16 py-2 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-2">
             <div class="flex items-center gap-2.5">
                 <div class="bg-brand-600 text-white p-2 rounded-xl text-lg font-bold shadow-sm">
                     <i class="fa-solid fa-utensils"></i>
@@ -154,7 +154,11 @@
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-earth-americas text-brand-600 mr-1.5"></i> Konyha típus:</label>
                     <select id="cuisine-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                        <option value="all">Magyar konyha 🇭🇺</option>
+                        <option value="all">Minden konyha</option>
+                        <option value="hu">Magyar 🇭🇺</option>
+                        <option value="it">Olasz 🇮🇹</option>
+                        <option value="mx">Mexikói 🇲🇽</option>
+                        <option value="asia">Ázsiai 🥢</option>
                     </select>
                 </div>
 
@@ -180,19 +184,19 @@
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <div class="flex justify-between items-center mb-1">
                         <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-clock text-brand-600 mr-1.5"></i> Max. idő:</label>
-                        <span id="time-display" class="font-bold text-slate-700 text-xs">180 perc</span>
+                        <span id="time-display" class="font-bold text-slate-700 text-xs">240 perc</span>
                     </div>
-                    <input type="range" id="time-slider" min="15" max="180" step="15" value="180" class="w-full accent-brand-600 cursor-pointer">
+                    <input type="range" id="time-slider" min="15" max="240" step="15" value="240" class="w-full accent-brand-600 cursor-pointer">
                 </div>
             </div>
 
             <!-- INGREDIENTS PICKER -->
             <div>
                 <div class="flex justify-between items-center mb-2">
-                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Mi van otthon a hűtőben / spájzban?</span>
-                    <button id="clear-ingredients" class="text-xs text-rose-600 hover:underline font-semibold">Törlés</button>
+                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Otthoni alapanyagok <span id="pantry-count" class="normal-case text-brand-600"></span></span>
+                    <button id="clear-ingredients" type="button" class="hidden text-xs text-rose-600 hover:underline font-semibold">Mindet törlöm</button>
                 </div>
-                <div id="ingredients-container" class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar p-1"></div>
+                <div id="ingredients-container"></div>
             </div>
 
         </div>
@@ -309,7 +313,7 @@
                         <h3 class="text-lg font-bold text-slate-800">Havi Előfizetés</h3>
                         <div class="text-3xl font-extrabold text-slate-900">1 990 Ft <span class="text-xs font-normal text-slate-500">/ hó</span></div>
                         <ul class="space-y-2.5 text-xs text-slate-700">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Hozzáférés 70 magyar recepthez</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Hozzáférés 280 magyar és nemzetközi recepthez</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Heti Menütervező Naptár</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Összevont Bevásárlólista Export</li>
                         </ul>
@@ -323,7 +327,7 @@
                         <p class="text-[11px] text-brand-700 font-bold">(Mindössze 1 240 Ft / hó)</p>
                         <ul class="space-y-2.5 text-xs text-slate-700">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Minden Pro funkció korlátlanul</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> 20 hagyományos magyar desszert</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> 80 magyar és nemzetközi desszert</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Saját receptek elmentése</li>
                         </ul>
                         <button onclick="triggerPaywall('Éves Előfizetés')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-bold py-3 rounded-xl shadow transition text-xs">Éves Csomag Indítása</button>
@@ -391,6 +395,7 @@
 
     <!-- SCRIPT -->
     <script src="recipe-catalog.js"></script>
+    <script src="pantry.js"></script>
     <script>
         const recipes = window.recipeCatalog.map(recipe => ({
             ...recipe,
@@ -398,11 +403,9 @@
             ingredients: recipe.ingredients.map(ingredient => ingredient.name)
         }));
 
-        const allIngredientsList = [...new Set(recipes.flatMap(recipe => recipe.ingredients).filter(ingredient => ingredient !== "Hús"))].sort();
         let selectedIngredients = new Set();
 
         // DOM
-        const ingredientsContainer = document.getElementById('ingredients-container');
         const recipesGrid = document.getElementById('recipes-grid');
         const servingsSlider = document.getElementById('servings-slider');
         const servingsDisplay = document.getElementById('servings-display');
@@ -416,6 +419,15 @@
         const closePaywallBtn = document.getElementById('close-paywall');
         let recipePage = 1;
         let recipesPerPage = 12;
+        const pantryPicker = window.PantryPicker.create({
+            recipes,
+            selectedIngredients,
+            getIngredientName: ingredient => ingredient,
+            onChange: () => {
+                recipePage = 1;
+                renderRecipes();
+            }
+        });
 
         function switchTab(tab) {
             document.getElementById('view-calc').classList.toggle('hidden', tab !== 'calc');
@@ -440,29 +452,8 @@
 
         closePaywallBtn.onclick = () => paywallModal.classList.add('hidden');
 
-        function renderIngredients() {
-            ingredientsContainer.innerHTML = '';
-            allIngredientsList.sort().forEach(ing => {
-                const btn = document.createElement('button');
-                const isSelected = selectedIngredients.has(ing);
-                btn.className = `text-xs px-2.5 py-1 rounded-lg border font-medium transition ${isSelected ? 'bg-brand-600 text-white border-brand-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}`;
-                btn.innerText = ing;
-                btn.onclick = () => {
-                    if (selectedIngredients.has(ing)) selectedIngredients.delete(ing);
-                    else selectedIngredients.add(ing);
-                    recipePage = 1;
-                    renderIngredients();
-                    renderRecipes();
-                };
-                ingredientsContainer.appendChild(btn);
-            });
-        }
-
         function ingredientMatchesSelection(ingredientName) {
-            if (selectedIngredients.has(ingredientName)) return true;
-            if (selectedIngredients.has('Rizs') && ingredientName.includes('Rizs')) return true;
-            if (selectedIngredients.has('Tofu') && ingredientName.includes('Tofu')) return true;
-            return selectedIngredients.has('Tészta') && ingredientName.includes('Tészta');
+            return pantryPicker.matches(ingredientName);
         }
 
         function renderRecipePagination(resultCount) {
@@ -507,7 +498,7 @@
                 if (recipe.time > maxTime) return false;
                 if (cuisine !== 'all' && recipe.cuisine !== cuisine) return false;
                 if (course !== 'all' && recipe.course !== course) return false;
-                if (diet !== 'all' && recipe.type !== diet) return false;
+                if (recipe.course !== 'dessert' && diet !== 'all' && recipe.type !== diet) return false;
                 if (selectedIngredients.size && !recipe.ingredients.some(ingredientMatchesSelection)) return false;
                 return !query || recipe.name.toLowerCase().includes(query) || recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query));
             });
@@ -527,7 +518,7 @@
                 const courseLabels = { main: 'Főétel', soup: 'Leves', dessert: 'Desszert' };
                 const actionButton = recipe.access === 'free'
                     ? `<button onclick="openRecipeDetails(${recipe.id})" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold">Részletes recept</button>`
-                    : `<button onclick="triggerPaywall('${recipe.name} Recept')" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fa-solid fa-lock mr-1"></i>Pro recept</button>`;
+                    : `<button onclick="triggerRecipePaywall(${recipe.id})" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fa-solid fa-lock mr-1"></i>Pro recept</button>`;
                 const card = document.createElement('div');
                 card.className = 'bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-3';
                 card.innerHTML = `
@@ -571,7 +562,7 @@
             const recipe = recipes.find(item => item.id === recipeId);
             if (!recipe || recipe.access !== 'free') return;
             const servings = parseInt(servingsSlider.value);
-            const cuisineNames = { hu: 'Magyar' };
+            const cuisineNames = { hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
             const courseNames = { main: 'Főétel', soup: 'Leves', dessert: 'Desszert' };
             document.getElementById('recipe-details-title').innerText = recipe.name;
             document.getElementById('recipe-details-meta').innerText = `${cuisineNames[recipe.cuisine]} · ${courseNames[recipe.course]} · ${recipe.time} perc · FREE`;
@@ -604,18 +595,17 @@
             document.getElementById('recipe-details-modal').classList.remove('hidden');
         }
 
+        function triggerRecipePaywall(recipeId) {
+            const recipe = recipes.find(item => item.id === recipeId);
+            if (recipe) triggerPaywall(`${recipe.name} Recept`);
+        }
+
         const recipeDetailsModal = document.getElementById('recipe-details-modal');
         document.getElementById('close-recipe-details').onclick = () => recipeDetailsModal.classList.add('hidden');
         recipeDetailsModal.onclick = event => {
             if (event.target === recipeDetailsModal) recipeDetailsModal.classList.add('hidden');
         };
 
-        document.getElementById('clear-ingredients').onclick = () => {
-            selectedIngredients.clear();
-            recipePage = 1;
-            renderIngredients();
-            renderRecipes();
-        };
         servingsSlider.oninput = renderRecipes;
         timeSlider.oninput = () => { recipePage = 1; renderRecipes(); };
         cuisineSelect.onchange = () => { recipePage = 1; renderRecipes(); };
@@ -624,7 +614,6 @@
         searchInput.oninput = () => { recipePage = 1; renderRecipes(); };
 
         // Init
-        renderIngredients();
         renderRecipes();
     </script>
 </body>

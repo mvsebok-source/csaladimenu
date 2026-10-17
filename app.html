@@ -35,7 +35,7 @@
 
     <!-- HEADER & NAVIGATION -->
     <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-40 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 h-auto sm:h-16 py-2 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-2">
             <div class="flex items-center gap-3">
                 <div class="bg-brand-600 text-white p-2 rounded-xl text-lg font-bold shadow-sm">
                     <i class="fa-solid fa-utensils"></i>
@@ -69,7 +69,7 @@
                     <h1 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
                         <span>Családi Szűrő & Spájz</span>
                     </h1>
-                    <p class="text-xs text-slate-500 mt-0.5">Állítsd be a család létszámát és jelöld be a hűtőben lévő alapanyagokat!</p>
+                    <p class="text-xs text-slate-500 mt-0.5">Jelöld be, ami már megvan otthon — az előkészített változat is ugyanannak számít.</p>
                 </div>
                 
                 <div class="flex items-center gap-2">
@@ -90,7 +90,11 @@
                 <div id="cuisine-filter-control" class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-earth-americas text-brand-600 mr-1.5"></i> Konyha típus:</label>
                     <select id="cuisine-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700">
-                        <option value="all">Magyar konyha 🇭🇺</option>
+                        <option value="all">Minden konyha</option>
+                        <option value="hu">Magyar 🇭🇺</option>
+                        <option value="it">Olasz 🇮🇹</option>
+                        <option value="mx">Mexikói 🇲🇽</option>
+                        <option value="asia">Ázsiai 🥢</option>
                     </select>
                 </div>
 
@@ -116,19 +120,19 @@
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <div class="flex justify-between items-center mb-1">
                         <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-clock text-brand-600 mr-1.5"></i> Max. idő:</label>
-                        <span id="time-display" class="font-bold text-slate-700 text-xs">180 perc</span>
+                        <span id="time-display" class="font-bold text-slate-700 text-xs">240 perc</span>
                     </div>
-                    <input type="range" id="time-slider" min="15" max="180" step="15" value="180" class="w-full accent-brand-600 cursor-pointer">
+                    <input type="range" id="time-slider" min="15" max="240" step="15" value="240" class="w-full accent-brand-600 cursor-pointer">
                 </div>
             </div>
 
             <!-- INGREDIENTS PICKER -->
             <div>
                 <div class="flex justify-between items-center mb-2">
-                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Mi van otthon a hűtőben / spájzban?</span>
-                    <button id="clear-ingredients" class="text-xs text-rose-600 hover:underline font-semibold">Törlés</button>
+                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-basket-shopping text-brand-600 mr-1.5"></i> Otthoni alapanyagok <span id="pantry-count" class="normal-case text-brand-600"></span></span>
+                    <button id="clear-ingredients" type="button" class="hidden text-xs text-rose-600 hover:underline font-semibold">Mindet törlöm</button>
                 </div>
-                <div id="ingredients-container" class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar p-1"></div>
+                <div id="ingredients-container"></div>
             </div>
         </div>
 
@@ -244,6 +248,7 @@
 
     <!-- SCRIPT -->
     <script src="recipe-catalog.js"></script>
+    <script src="pantry.js"></script>
     <script>
         const recipes = window.recipeCatalog;
 
@@ -255,10 +260,7 @@
         const plannerCuisine = {};
         let activeRecipeId = null;
 
-        const allIngredientsList = [...new Set(recipes.flatMap(recipe => recipe.ingredients.map(ingredient => ingredient.name)))];
-
         // DOM Elements
-        const ingredientsContainer = document.getElementById('ingredients-container');
         const recipesGrid = document.getElementById('recipes-grid');
         const servingsSlider = document.getElementById('servings-slider');
         const servingsDisplay = document.getElementById('servings-display');
@@ -271,6 +273,15 @@
         const recipeCount = document.getElementById('recipe-count');
         const modal = document.getElementById('recipe-modal');
         const closeModalBtn = document.getElementById('close-modal');
+        const pantryPicker = window.PantryPicker.create({
+            recipes,
+            selectedIngredients,
+            getIngredientName: ingredient => ingredient.name,
+            onChange: () => {
+                renderRecipes();
+                renderWeeklyPlanner();
+            }
+        });
 
         function switchTab(tab) {
             document.getElementById('view-calc').classList.toggle('hidden', tab !== 'calc');
@@ -291,31 +302,6 @@
             }
         }
 
-        function renderIngredients() {
-            ingredientsContainer.innerHTML = '';
-            allIngredientsList.sort().forEach(ing => {
-                const btn = document.createElement('button');
-                const isSelected = selectedIngredients.has(ing);
-                btn.className = `text-xs px-2.5 py-1 rounded-lg border font-medium transition ${isSelected ? 'bg-brand-600 text-white border-brand-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}`;
-                btn.innerText = ing;
-                btn.onclick = () => {
-                    if (selectedIngredients.has(ing)) selectedIngredients.delete(ing);
-                    else selectedIngredients.add(ing);
-                    renderIngredients();
-                    renderRecipes();
-                    renderWeeklyPlanner();
-                };
-                ingredientsContainer.appendChild(btn);
-            });
-        }
-
-        document.getElementById('clear-ingredients').onclick = () => {
-            selectedIngredients.clear();
-            renderIngredients();
-            renderRecipes();
-            renderWeeklyPlanner();
-        };
-
         function getFilteredRecipes(ignoreGlobalCuisine = false, ignoreGlobalCourse = false) {
             const maxTime = parseInt(timeSlider.value);
             const diet = dietSelect.value;
@@ -325,8 +311,8 @@
 
             return recipes.filter(r => {
                 if (r.time > maxTime) return false;
-                if (diet === 'meat' && r.type !== 'meat') return false;
-                if (diet === 'veggie' && r.type !== 'veggie') return false;
+                if (r.course !== 'dessert' && diet === 'meat' && r.type !== 'meat') return false;
+                if (r.course !== 'dessert' && diet === 'veggie' && r.type !== 'veggie') return false;
                 if (!ignoreGlobalCuisine && cuisine !== 'all' && r.cuisine !== cuisine) return false;
                 if (!ignoreGlobalCourse && course !== 'all' && r.course !== course) return false;
                 if (selectedIngredients.size > 0 && !r.ingredients.some(ingredientMatchesSelection)) return false;
@@ -340,10 +326,7 @@
         }
 
         function ingredientMatchesSelection(ingredient) {
-            if (selectedIngredients.has(ingredient.name)) return true;
-            if (selectedIngredients.has('Rizs') && ingredient.name.includes('Rizs')) return true;
-            if (selectedIngredients.has('Tofu') && ingredient.name.includes('Tofu')) return true;
-            return selectedIngredients.has('Tészta') && ingredient.name.includes('Tészta');
+            return pantryPicker.matches(ingredient.name);
         }
 
         function getPlannerFilteredRecipes(dayId) {
@@ -397,7 +380,7 @@
                 const matchPct = ingredientNames.length > 0 ? Math.round((matched / ingredientNames.length) * 100) : 0;
                 const totalCost = Math.round(r.baseCost * servings);
 
-                const cuisineLabels = { hu: "Magyar 🇭🇺" };
+                const cuisineLabels = { hu: "Magyar 🇭🇺", it: "Olasz 🇮🇹", mx: "Mexikói 🇲🇽", asia: "Ázsiai 🥢" };
                 const courseLabels = { main: "Főétel", soup: "Leves", dessert: "Desszert" };
 
                 const card = document.createElement('div');
@@ -469,6 +452,9 @@
                             <select data-day-cuisine="${day.id}" aria-label="${day.label} konyhája" class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs font-semibold text-slate-700">
                                 <option value="all">Minden konyha</option>
                                 <option value="hu">Magyar 🇭🇺</option>
+                                <option value="it">Olasz 🇮🇹</option>
+                                <option value="mx">Mexikói 🇲🇽</option>
+                                <option value="asia">Ázsiai 🥢</option>
                             </select>
                         </div>
                         <select data-day-select="${day.id}" onchange="updateDayRecipe('${day.id}', this.value)" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
@@ -582,7 +568,7 @@
 
             activeRecipeId = id;
             const servings = parseInt(servingsSlider.value);
-            const cuisineLabels = { hu: "Magyar 🇭🇺" };
+            const cuisineLabels = { hu: "Magyar 🇭🇺", it: "Olasz 🇮🇹", mx: "Mexikói 🇲🇽", asia: "Ázsiai 🥢" };
             const courseLabels = { main: "Főétel", soup: "Leves", dessert: "Desszert" };
 
             document.getElementById('modal-title').innerText = recipe.name;
@@ -629,7 +615,6 @@
         searchInput.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
 
         // Init
-        renderIngredients();
         renderRecipes();
     </script>
 </body>
