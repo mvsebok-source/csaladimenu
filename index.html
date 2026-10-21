@@ -34,6 +34,35 @@
         .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
         .glow-effect { box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3); }
+        .header-tabs .header-tab-button {
+          min-width: 0;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.375rem;
+          padding: 0 0.875rem;
+          border-radius: 0.5rem;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          font-weight: 700;
+          white-space: nowrap;
+          transition: color 0.15s, background-color 0.15s;
+        }
+        .header-tabs .header-tab-button.is-active { background: #059669; color: #ffffff; }
+        .header-tabs .header-tab-button.is-inactive { color: #475569; }
+        .header-tabs .header-tab-button.is-inactive:hover { color: #0f172a; }
+        .header-tabs .header-tab-badge {
+          margin-left: 0.25rem;
+          padding: 0 0.375rem;
+          border-radius: 9999px;
+          background: #f97316;
+          color: #ffffff;
+          font-size: 0.5625rem;
+          line-height: 0.75rem;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
         .btn-primary-large {
           display: inline-block;
           background: linear-gradient(180deg, #065f46 0%, #064e3b 100%);
@@ -81,23 +110,23 @@
             </div>
             
             <!-- NAV TABS -->
-            <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
-                <button id="tab-btn-calc" onclick="switchTab('calc')" class="px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5">
+            <div class="header-tabs grid grid-cols-2 w-full sm:w-auto bg-slate-100 p-1 rounded-xl border border-slate-200">
+                <button id="tab-btn-calc" onclick="switchTab('calc')" class="header-tab-button is-active">
                     <i class="fa-solid fa-calculator"></i>
                     <span>Recept Kereső</span>
                 </button>
-                <button id="tab-btn-planner" onclick="switchTab('planner')" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5 relative">
+                <button id="tab-btn-planner" onclick="switchTab('planner')" class="header-tab-button is-inactive">
                     <i class="fa-solid fa-calendar-days text-cta-500"></i>
                     <span>Heti Menütervező</span>
-                    <span class="bg-cta-500 text-white text-[9px] px-1.5 py-0.2 rounded-full uppercase font-black ml-1">Pro</span>
+                    <span class="header-tab-badge">Pro</span>
                 </button>
             </div>
 
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="#arak" class="bg-cta-500 hover:bg-cta-600 text-white font-bold py-2 px-4 rounded-xl shadow transition text-xs flex items-center gap-1.5">
+            <div class="flex items-center gap-3">
+                <button type="button" onclick="triggerPaywall('CsaládiMenü Pro')" class="bg-cta-500 hover:bg-cta-600 text-white font-bold py-2 px-4 rounded-xl shadow transition text-xs flex items-center gap-1.5">
                     <span>Pro Előfizetés</span>
                     <i class="fa-solid fa-crown text-amber-300"></i>
-                </a>
+                </button>
             </div>
         </div>
     </header>
@@ -108,6 +137,9 @@
             <span class="bg-white/10 text-brand-100 text-xs font-bold px-4 py-1.5 rounded-full inline-block border border-white/20 backdrop-blur-sm">
                 <i class="fa-solid fa-sparkles text-amber-300 mr-1.5"></i> Vége a napi "Mi legyen az ebéd?" fejtörésnek!
             </span>
+            <p class="mx-auto w-fit rounded-full border border-emerald-200/40 bg-white/10 px-4 py-2 text-sm font-extrabold text-white">
+                TESZTÜZEM • MOST INGYENES REGISZTRÁCIÓ • NINCS LEJÁRATI IDŐ
+            </p>
             <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                 Spórolj heti 3 órát és több tízezer forintot <br class="hidden sm:block">
                 <span class="text-brand-100">az intelligens nagycsaládos menütervezővel!</span>
@@ -116,7 +148,7 @@
                 Állítsd be a család létszámát, válaszd ki a spájzban lévő elemeket, és generálj egyetlen kattintással komplett heti menüt és bolti bevásárlólistát!
             </p>
             <div class="flex flex-col items-center gap-2">
-                <a href="app.html" class="btn-primary-large">Belépés a Személyes Tervezőbe</a>
+                <button type="button" onclick="triggerPaywall('Személyes Tervező', null, 'login')" class="btn-primary-large">Belépés a Személyes Tervezőbe</button>
                 <p class="text-brand-100/90 text-sm">Próbáld ki a CsaládiMenü-tervező összes funkcióját!</p>
             </div>
         </div>
@@ -304,33 +336,38 @@
         <!-- PRICING SECTION -->
         <section id="arak" class="pt-8 border-t border-slate-200">
             <div class="max-w-4xl mx-auto text-center space-y-4">
-                <span class="text-brand-600 font-bold text-xs uppercase tracking-wider">Azonnali Megtérülés</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Válassz csomagot a gondtalan főzéshez</h2>
-                <p class="text-slate-600 max-w-xl mx-auto text-sm">Már az első heti bevásárlásnál visszahozza az árát az ételpazarlás megszüntetésével.</p>
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-wider">Tesztüzem alatt ingyenes</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Válaszd ki a számodra megfelelő csomagot</h2>
+                <p class="text-slate-600 max-w-xl mx-auto text-sm">Most minden regisztráció ingyenes. A csomagválasztás egyelőre csak preferencia; fizetés vagy előfizetés nem indul.</p>
+                <div class="max-w-2xl mx-auto rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-left text-sm text-emerald-950" role="status">
+                    <strong class="block text-base">TESZTÜZEM: most minden regisztráció INGYENES.</strong>
+                    <span class="mt-1 block">A tesztelés alatt nincs fizetés, előfizetés vagy visszaszámlálás: a hozzáférésed nem jár le automatikusan. Az alábbi összegek a tesztüzem utáni tervezett árak, most nem kerülnek felszámításra.</span>
+                </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-left">
                     <div class="bg-white border border-slate-200 rounded-3xl p-6 space-y-5 shadow-sm">
                         <h3 class="text-lg font-bold text-slate-800">Havi Előfizetés</h3>
-                        <div class="text-3xl font-extrabold text-slate-900">1 990 Ft <span class="text-xs font-normal text-slate-500">/ hó</span></div>
+                        <div class="text-3xl font-extrabold text-emerald-700">INGYENES <span class="text-xs font-normal text-slate-500">a tesztüzem alatt</span></div>
+                        <p class="text-sm text-slate-500">Tervezett későbbi ár: 1 990 Ft / hó</p>
                         <ul class="space-y-2.5 text-xs text-slate-700">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Hozzáférés 280 magyar és nemzetközi recepthez</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Heti Menütervező Naptár</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Összevont Bevásárlólista Export</li>
                         </ul>
-                        <button onclick="triggerPaywall('Havi Előfizetés')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-xs">Előfizetés Havi Csomagra</button>
+                        <button onclick="triggerPaywall('Havi csomag', 'monthly')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-xs">Ingyenes tesztfiók létrehozása</button>
                     </div>
 
                     <div class="bg-brand-50/60 border-2 border-brand-500 rounded-3xl p-6 space-y-5 shadow-xl relative">
                         <span class="absolute -top-3 right-6 bg-cta-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Legnépszerűbb (37% Spórolás)</span>
                         <h3 class="text-lg font-bold text-slate-800">Éves Előfizetés</h3>
-                        <div class="text-3xl font-extrabold text-slate-900">14 900 Ft <span class="text-xs font-normal text-slate-500">/ év</span></div>
-                        <p class="text-[11px] text-brand-700 font-bold">(Mindössze 1 240 Ft / hó)</p>
+                        <div class="text-3xl font-extrabold text-emerald-700">INGYENES <span class="text-xs font-normal text-slate-500">a tesztüzem alatt</span></div>
+                        <p class="text-sm text-slate-500">Tervezett későbbi ár: 14 900 Ft / év (1 240 Ft / hó)</p>
                         <ul class="space-y-2.5 text-xs text-slate-700">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Minden Pro funkció korlátlanul</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> 80 magyar és nemzetközi desszert</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Saját receptek elmentése</li>
                         </ul>
-                        <button onclick="triggerPaywall('Éves Előfizetés')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-bold py-3 rounded-xl shadow transition text-xs">Éves Csomag Indítása</button>
+                        <button onclick="triggerPaywall('Éves csomag', 'yearly')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-bold py-3 rounded-xl shadow transition text-xs">Ingyenes tesztfiók létrehozása</button>
                     </div>
                 </div>
             </div>
@@ -359,44 +396,62 @@
                 </section>
             </div>
         </div>
-    </div>
+    </div
 
-    <!-- PAYWALL / PRO UPGRADE MODAL -->
-    <div id="paywall-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-5 shadow-2xl border border-slate-200 relative">
-            <button id="close-paywall" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
-            
-            <div class="w-14 h-14 bg-amber-100 text-cta-500 rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-inner">
-                <i class="fa-solid fa-crown"></i>
+    <!-- SIGN IN / SIGN UP MODAL -->
+    <div id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl border border-slate-200 relative">
+            <button id="close-auth-modal" type="button" aria-label="Ablak bezárása" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+            <div class="w-12 h-12 bg-amber-100 text-cta-500 rounded-2xl flex items-center justify-center mx-auto text-xl shadow-inner">
+                <i class="fa-solid fa-crown" aria-hidden="true"></i>
+            </div>
+            <p class="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm font-bold text-emerald-900 text-center">
+                Tesztüzem: a regisztráció most INGYENES. Nincs fizetés, előfizetés vagy lejárati visszaszámlálás.
+            </p>
+            <h2 id="auth-modal-title" class="mt-4 text-xl font-extrabold text-slate-900 text-center">Csatlakozz a CsaládiMenü Pro-hoz</h2>
+            <p id="auth-modal-description" class="mt-2 text-sm text-slate-600 text-center">Válaszd ki a csomagot, majd lépj be vagy hozz létre fiókot.</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-5 p-1 bg-slate-100 rounded-xl" role="tablist" aria-label="Fiók művelet">
+                <button id="auth-mode-signup" type="button" role="tab" aria-selected="true" class="py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm">Regisztráció</button>
+                <button id="auth-mode-login" type="button" role="tab" aria-selected="false" class="py-2 rounded-lg text-sm font-bold text-slate-600">Belépés</button>
             </div>
 
-            <div class="space-y-2">
-                <h3 class="text-xl font-extrabold text-slate-900">Oldd fel a Heti Menütervezőt!</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">
-                    A(z) <strong id="paywall-feature-name" class="text-slate-800">Heti Menütervező</strong> a CsaládiMenü Pro része. Takaríts meg heti 3 óra szervezést és csökkentsd a bolti számládat!
-                </p>
-            </div>
-
-            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-left space-y-2 text-xs">
-                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Automatikus heti menü 1 kattintásra</div>
-                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Összevont bolti bevásárlólista</div>
-                <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-circle-check text-brand-600"></i> Spájz alapanyagok automatikus levonása</div>
-            </div>
-
-            <div class="space-y-2 pt-2">
-                <button onclick="alert('Átirányítás a Stripe biztonságos fizetési oldalára...')" class="w-full bg-cta-500 hover:bg-cta-600 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition text-xs flex items-center justify-center gap-2">
-                    <span>Próbáld ki Pro-t – 1 990 Ft/hó</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+            <form id="auth-form" class="mt-5 space-y-4">
+                <label class="block text-sm font-semibold text-slate-700">
+                    Csomagpreferencia
+                    <select id="auth-plan" class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="monthly">Havi csomag – INGYENES a tesztüzem alatt</option>
+                        <option value="yearly">Éves csomag – INGYENES a tesztüzem alatt</option>
+                    </select>
+                </label>
+                <label class="block text-sm font-semibold text-slate-700">
+                    E-mail-cím
+                    <input id="auth-email" name="email" type="email" autocomplete="email" required class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </label>
+                <label class="block text-sm font-semibold text-slate-700">
+                    Jelszó
+                    <input id="auth-password" name="password" type="password" autocomplete="new-password" minlength="6" required class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    <span id="auth-password-hint" class="mt-1 block text-xs font-normal text-slate-500">Legalább 6 karakter.</span>
+                </label>
+                <p id="auth-message" role="status" aria-live="polite" class="hidden text-sm rounded-xl p-3"></p>
+                <button id="auth-submit" type="submit" class="w-full bg-cta-500 hover:bg-cta-600 disabled:opacity-60 text-white font-extrabold py-3 rounded-xl shadow transition text-sm">
+                    Ingyenes tesztfiók létrehozása
                 </button>
-                <p class="text-[10px] text-slate-400">Bármikor lemondható egyetlen kattintással.</p>
-            </div>
+                <p class="text-xs text-slate-500 text-center">A fiók létrehozásakor nem indul el előfizetési vagy próbaidő-számláló. A tesztüzem alatt nincs fizetés.</p>
+            </form>
         </div>
     </div>
 
     <!-- SCRIPT -->
     <script src="recipe-catalog.js"></script>
     <script src="pantry.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        const supabaseClient = window.supabase.createClient(
+            'https://zunwfzkpmknshiiudzcp.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1bndmemtwbWtuc2hpaXVkemNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4NTc3MDMsImV4cCI6MjEwNzQzMzcwM30.ixVdSZp08QU8bxsGCgHbYaLYwnKKNB12o62BlHuOH3U'
+        );
+        const TEST_MODE = true;
         const recipes = window.recipeCatalog.map(recipe => ({
             ...recipe,
             detailedIngredients: recipe.ingredients,
@@ -415,8 +470,22 @@
         const courseSelect = document.getElementById('course-select');
         const dietSelect = document.getElementById('diet-select');
         const searchInput = document.getElementById('search-input');
-        const paywallModal = document.getElementById('paywall-modal');
-        const closePaywallBtn = document.getElementById('close-paywall');
+        const authModal = document.getElementById('auth-modal');
+        const authForm = document.getElementById('auth-form');
+        const authEmailInput = document.getElementById('auth-email');
+        const authPasswordInput = document.getElementById('auth-password');
+        const authPasswordHint = document.getElementById('auth-password-hint');
+        const authMessage = document.getElementById('auth-message');
+        const authSubmitButton = document.getElementById('auth-submit');
+        const authPlanSelect = document.getElementById('auth-plan');
+        const authModeSignupButton = document.getElementById('auth-mode-signup');
+        const authModeLoginButton = document.getElementById('auth-mode-login');
+        const closeAuthModalButton = document.getElementById('close-auth-modal');
+        const authModalTitle = document.getElementById('auth-modal-title');
+        const authModalDescription = document.getElementById('auth-modal-description');
+        let authMode = 'signup';
+        let authFeatureName = 'CsaládiMenü Pro';
+        let previousFocus = null;
         let recipePage = 1;
         let recipesPerPage = 12;
         const pantryPicker = window.PantryPicker.create({
@@ -437,20 +506,129 @@
             const planBtn = document.getElementById('tab-btn-planner');
 
             if (tab === 'calc') {
-                calcBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
-                planBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+                calcBtn.className = "header-tab-button is-active";
+                planBtn.className = "header-tab-button is-inactive";
             } else {
-                planBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
-                calcBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+                planBtn.className = "header-tab-button is-active";
+                calcBtn.className = "header-tab-button is-inactive";
             }
         }
 
-        function triggerPaywall(featureName) {
-            document.getElementById('paywall-feature-name').innerText = featureName;
-            paywallModal.classList.remove('hidden');
+        function setAuthMessage(message, isError = false) {
+            authMessage.textContent = message;
+            authMessage.classList.toggle('hidden', !message);
+            authMessage.classList.toggle('bg-rose-50', isError);
+            authMessage.classList.toggle('text-rose-800', isError);
+            authMessage.classList.toggle('bg-emerald-50', !isError);
+            authMessage.classList.toggle('text-emerald-800', !isError);
         }
 
-        closePaywallBtn.onclick = () => paywallModal.classList.add('hidden');
+        function updateAuthMode(mode) {
+            authMode = mode;
+            const isSignup = mode === 'signup';
+            authModeSignupButton.setAttribute('aria-selected', String(isSignup));
+            authModeLoginButton.setAttribute('aria-selected', String(!isSignup));
+            authModeSignupButton.className = isSignup
+                ? 'py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm'
+                : 'py-2 rounded-lg text-sm font-bold text-slate-600';
+            authModeLoginButton.className = isSignup
+                ? 'py-2 rounded-lg text-sm font-bold text-slate-600'
+                : 'py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm';
+            authModalTitle.textContent = isSignup ? 'Hozz létre ingyenes tesztfiókot' : 'Lépj be a fiókodba';
+            authModalDescription.textContent = isSignup
+                ? `${authFeatureName} használatához válassz csomagot és hozz létre fiókot.`
+                : `${authFeatureName} használatához add meg a meglévő belépési adataidat.`;
+            authPasswordInput.autocomplete = isSignup ? 'new-password' : 'current-password';
+            authPasswordHint.classList.toggle('hidden', !isSignup);
+            authSubmitButton.textContent = isSignup ? 'Ingyenes tesztfiók létrehozása' : 'Belépés';
+            setAuthMessage('');
+        }
+
+        function triggerPaywall(featureName, plan = null, mode = 'signup') {
+            previousFocus = document.activeElement;
+            authFeatureName = featureName || 'CsaládiMenü Pro';
+            authPlanSelect.value = plan || 'monthly';
+            updateAuthMode(mode);
+            setAuthMessage('');
+            authModal.classList.remove('hidden');
+            authEmailInput.focus({ preventScroll: true });
+        }
+
+        function closeAuthModal() {
+            authModal.classList.add('hidden');
+            if (previousFocus instanceof HTMLElement) previousFocus.focus();
+        }
+
+        authModeSignupButton.addEventListener('click', () => updateAuthMode('signup'));
+        authModeLoginButton.addEventListener('click', () => updateAuthMode('login'));
+        closeAuthModalButton.addEventListener('click', closeAuthModal);
+        authModal.addEventListener('click', event => {
+            if (event.target === authModal) closeAuthModal();
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !authModal.classList.contains('hidden')) closeAuthModal();
+        });
+        supabaseClient.auth.onAuthStateChange(event => {
+            if (event === 'SIGNED_IN') window.location.assign('./app.html');
+        });
+
+        authForm.addEventListener('submit', async event => {
+            event.preventDefault();
+            const submittedMode = authMode;
+            setAuthMessage('');
+            authSubmitButton.disabled = true;
+            authModeSignupButton.disabled = true;
+            authModeLoginButton.disabled = true;
+            authPlanSelect.disabled = true;
+            authSubmitButton.textContent = submittedMode === 'signup' ? 'Fiók létrehozása…' : 'Belépés…';
+
+            try {
+                const email = authEmailInput.value.trim();
+                const password = authPasswordInput.value;
+                const result = submittedMode === 'signup'
+                    ? await supabaseClient.auth.signUp({
+                        email,
+                        password,
+                        options: {
+                            data: {
+                                access_mode: TEST_MODE ? 'test' : 'paid',
+                                test_access: TEST_MODE,
+                                test_plan: authPlanSelect.value,
+                                billing_status: TEST_MODE ? 'test_free' : 'pending',
+                                subscription_started_at: null,
+                                subscription_expires_at: null
+                            },
+                            ...(window.location.protocol === 'http:' || window.location.protocol === 'https:'
+                                ? { emailRedirectTo: new URL('./index.html', window.location.href).href }
+                                : {})
+                        }
+                    })
+                    : await supabaseClient.auth.signInWithPassword({ email, password });
+
+                if (result.error) {
+                    const message = result.error.message.toLowerCase().includes('invalid login credentials')
+                        ? 'A megadott e-mail-cím vagy jelszó nem megfelelő.'
+                        : result.error.message;
+                    setAuthMessage(message, true);
+                    return;
+                }
+
+                if (submittedMode === 'signup' && !result.data.session) {
+                    setAuthMessage('Ha már van fiókod, válts a Belépés fülre. Egyébként a folytatáshoz erősítsd meg az e-mail-címedet a postafiókodba érkezett levélben.');
+                    return;
+                }
+
+                if (result.data.session) window.location.assign('./app.html');
+            } catch (error) {
+                setAuthMessage(error instanceof Error ? error.message : 'Nem sikerült kapcsolódni. Próbáld újra.', true);
+            } finally {
+                authSubmitButton.disabled = false;
+                authModeSignupButton.disabled = false;
+                authModeLoginButton.disabled = false;
+                authPlanSelect.disabled = false;
+                authSubmitButton.textContent = authMode === 'signup' ? 'Ingyenes tesztfiók létrehozása' : 'Belépés';
+            }
+        });
 
         function ingredientMatchesSelection(ingredientName) {
             return pantryPicker.matches(ingredientName);

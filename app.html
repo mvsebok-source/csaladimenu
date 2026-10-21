@@ -27,6 +27,35 @@
     <style>
         .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+        .header-tabs .header-tab-button {
+          min-width: 0;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.375rem;
+          padding: 0 0.875rem;
+          border-radius: 0.5rem;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          font-weight: 700;
+          white-space: nowrap;
+          transition: color 0.15s, background-color 0.15s;
+        }
+        .header-tabs .header-tab-button.is-active { background: #059669; color: #ffffff; }
+        .header-tabs .header-tab-button.is-inactive { color: #cbd5e1; }
+        .header-tabs .header-tab-button.is-inactive:hover { color: #ffffff; }
+        .header-tabs .header-tab-badge {
+          margin-left: 0.25rem;
+          padding: 0 0.375rem;
+          border-radius: 9999px;
+          background: #f97316;
+          color: #ffffff;
+          font-size: 0.5625rem;
+          line-height: 0.75rem;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
         .star-rating button { color: #cbd5e1; font-size: 1.5rem; line-height: 1; padding: 0.25rem; border-radius: 0.375rem; transition: color 0.15s, transform 0.15s; }
         .star-rating button:hover, .star-rating button.active { color: #f59e0b; }
         .star-rating button:hover { transform: scale(1.12); }
@@ -60,21 +89,30 @@
                 </div>
             </div>
             
-            <div class="flex bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs font-bold">
-                <button id="tab-btn-calc" onclick="switchTab('calc')" class="px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5">
+            <div class="header-tabs grid grid-cols-2 w-full sm:w-auto bg-slate-800 p-1 rounded-xl border border-slate-700">
+                <button id="tab-btn-calc" onclick="switchTab('calc')" class="header-tab-button is-active">
                     <i class="fa-solid fa-calculator"></i>
                     <span>Recept Kereső</span>
                 </button>
-                <button id="tab-btn-planner" onclick="switchTab('planner')" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5">
+                <button id="tab-btn-planner" onclick="switchTab('planner')" class="header-tab-button is-inactive">
                     <i class="fa-solid fa-calendar-days text-amber-400"></i>
-                    <span>Heti Menütervező Pro</span>
+                    <span>Heti Menütervező</span>
+                    <span class="header-tab-badge">Pro</span>
                 </button>
+            </div>
+            <div class="flex items-center gap-2 text-xs">
+                <span id="app-user-email" class="max-w-40 truncate text-slate-300" aria-live="polite">Fiók ellenőrzése…</span>
+                <button id="sign-out-button" type="button" class="rounded-lg border border-slate-600 px-3 py-1.5 font-bold hover:bg-slate-800">Kilépés</button>
             </div>
         </div>
     </header>
 
     <!-- MAIN APP CONTAINER -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-6">
+        <div role="status" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-950">
+            <strong class="block">TESZTÜZEM — INGYENES HOZZÁFÉRÉS</strong>
+            <span>A tesztelés alatt nem indul előfizetés vagy visszaszámlálás, és a hozzáférés nem jár le automatikusan.</span>
+        </div>
 
         <!-- CONTROLS & PANTRY -->
         <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-slate-200/80 space-y-4">
@@ -315,11 +353,11 @@
             const planBtn = document.getElementById('tab-btn-planner');
 
             if (tab === 'calc') {
-                calcBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
-                planBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5";
+                calcBtn.className = "header-tab-button is-active";
+                planBtn.className = "header-tab-button is-inactive";
             } else {
-                planBtn.className = "px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition flex items-center gap-1.5";
-                calcBtn.className = "px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition flex items-center gap-1.5";
+                planBtn.className = "header-tab-button is-active";
+                calcBtn.className = "header-tab-button is-inactive";
                 renderWeeklyPlanner();
             }
         }
@@ -762,6 +800,50 @@
         // Init
         initializeRatingData();
         renderRecipes();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const appSupabaseClient = window.supabase.createClient(
+            'https://zunwfzkpmknshiiudzcp.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1bndmemtwbWtuc2hpaXVkemNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4NTc3MDMsImV4cCI6MjEwNzQzMzcwM30.ixVdSZp08QU8bxsGCgHbYaLYwnKKNB12o62BlHuOH3U'
+        );
+        const appUserEmail = document.getElementById('app-user-email');
+        const signOutButton = document.getElementById('sign-out-button');
+
+        async function verifyAppSession() {
+            try {
+                const { data, error } = await appSupabaseClient.auth.getSession();
+                if (error) throw error;
+                if (!data.session) {
+                    window.location.replace('./index.html');
+                    return;
+                }
+
+                appUserEmail.textContent = data.session.user.email || 'Bejelentkezve';
+            } catch (error) {
+                appUserEmail.textContent = error instanceof Error
+                    ? `Fiókellenőrzési hiba: ${error.message}`
+                    : 'Nem sikerült ellenőrizni a fiókot.';
+                signOutButton.textContent = 'Vissza a főoldalra';
+                signOutButton.onclick = () => window.location.replace('./index.html');
+            }
+        }
+
+        signOutButton.addEventListener('click', async () => {
+            signOutButton.disabled = true;
+            try {
+                const { error } = await appSupabaseClient.auth.signOut();
+                if (error) throw error;
+                window.location.replace('./index.html');
+            } catch (error) {
+                appUserEmail.textContent = error instanceof Error
+                    ? `Nem sikerült kijelentkezni: ${error.message}`
+                    : 'Nem sikerült kijelentkezni.';
+                signOutButton.disabled = false;
+            }
+        });
+
+        verifyAppSession();
     </script>
 </body>
 </html>
