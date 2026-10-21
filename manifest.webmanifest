@@ -1,6 +1,7 @@
 {
-  "name": "CsaládiMenü Pro",
+  "name": "CsaládiMenü – familymenu.hu",
   "short_name": "CsaládiMenü",
+  "description": "Családi receptkereső és heti menütervező a familymenu.hu oldalon.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
