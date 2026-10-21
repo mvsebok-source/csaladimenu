@@ -418,28 +418,34 @@
             <h2 id="auth-modal-title" class="mt-4 text-xl font-extrabold text-slate-900 text-center">Csatlakozz a CsaládiMenü Pro-hoz</h2>
             <p id="auth-modal-description" class="mt-2 text-sm text-slate-600 text-center">Válaszd ki a csomagot, majd lépj be vagy hozz létre fiókot.</p>
 
-            <div class="grid grid-cols-2 gap-2 mt-5 p-1 bg-slate-100 rounded-xl" role="tablist" aria-label="Fiók művelet">
+            <div id="auth-mode-tabs" class="grid grid-cols-2 gap-2 mt-5 p-1 bg-slate-100 rounded-xl" role="tablist" aria-label="Fiók művelet">
                 <button id="auth-mode-signup" type="button" role="tab" aria-selected="true" class="py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm">Regisztráció</button>
                 <button id="auth-mode-login" type="button" role="tab" aria-selected="false" class="py-2 rounded-lg text-sm font-bold text-slate-600">Belépés</button>
             </div>
 
             <form id="auth-form" class="mt-5 space-y-4">
-                <label class="block text-sm font-semibold text-slate-700">
+                <label id="auth-plan-field" class="block text-sm font-semibold text-slate-700">
                     Csomagpreferencia
                     <select id="auth-plan" class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <option value="monthly">Havi csomag – INGYENES a tesztüzem alatt</option>
                         <option value="yearly">Éves csomag – INGYENES a tesztüzem alatt</option>
                     </select>
                 </label>
-                <label class="block text-sm font-semibold text-slate-700">
+                <label id="auth-email-field" class="block text-sm font-semibold text-slate-700">
                     E-mail-cím
                     <input id="auth-email" name="email" type="email" autocomplete="email" required class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-brand-500">
                 </label>
-                <label class="block text-sm font-semibold text-slate-700">
+                <label id="auth-password-field" class="block text-sm font-semibold text-slate-700">
                     Jelszó
-                    <input id="auth-password" name="password" type="password" autocomplete="new-password" minlength="6" required class="mt-1.5 w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    <span class="relative mt-1.5 block">
+                        <input id="auth-password" name="password" type="password" autocomplete="new-password" minlength="6" required class="w-full bg-white border border-slate-300 rounded-xl pl-3 pr-12 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <button id="toggle-password-visibility" type="button" aria-label="Jelszó megjelenítése" aria-pressed="false" class="absolute inset-y-0 right-0 flex items-center px-4 text-slate-500 hover:text-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-r-xl">
+                            <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                        </button>
+                    </span>
                     <span id="auth-password-hint" class="mt-1 block text-xs font-normal text-slate-500">Legalább 6 karakter.</span>
                 </label>
+                <button id="auth-forgot-password" type="button" class="hidden text-sm font-semibold text-brand-700 underline underline-offset-2">Elfelejtetted a jelszavad?</button>
                 <p id="auth-message" role="status" aria-live="polite" class="hidden text-sm rounded-xl p-3"></p>
                 <button id="auth-submit" type="submit" class="w-full bg-cta-500 hover:bg-cta-600 disabled:opacity-60 text-white font-extrabold py-3 rounded-xl shadow transition text-sm">
                     Ingyenes tesztfiók létrehozása
@@ -481,16 +487,24 @@
         const authForm = document.getElementById('auth-form');
         const authEmailInput = document.getElementById('auth-email');
         const authPasswordInput = document.getElementById('auth-password');
+        const togglePasswordVisibilityButton = document.getElementById('toggle-password-visibility');
         const authPasswordHint = document.getElementById('auth-password-hint');
+        const authPasswordField = document.getElementById('auth-password-field');
+        const authEmailField = document.getElementById('auth-email-field');
+        const authPlanField = document.getElementById('auth-plan-field');
         const authMessage = document.getElementById('auth-message');
         const authSubmitButton = document.getElementById('auth-submit');
         const authPlanSelect = document.getElementById('auth-plan');
         const authModeSignupButton = document.getElementById('auth-mode-signup');
         const authModeLoginButton = document.getElementById('auth-mode-login');
+        const authModeTabs = document.getElementById('auth-mode-tabs');
+        const authForgotPasswordButton = document.getElementById('auth-forgot-password');
         const closeAuthModalButton = document.getElementById('close-auth-modal');
         const authModalTitle = document.getElementById('auth-modal-title');
         const authModalDescription = document.getElementById('auth-modal-description');
         let authMode = 'signup';
+        let authFlow = 'auth';
+        let passwordRecoveryActive = false;
         let authFeatureName = 'CsaládiMenü Pro';
         let previousFocus = null;
         let recipePage = 1;
@@ -532,7 +546,15 @@
 
         function updateAuthMode(mode) {
             authMode = mode;
+            authFlow = 'auth';
+            setPasswordVisibility(false);
             const isSignup = mode === 'signup';
+            authModeTabs.classList.remove('hidden');
+            authEmailField.classList.remove('hidden');
+            authPasswordField.classList.remove('hidden');
+            authPlanField.classList.remove('hidden');
+            authEmailInput.required = true;
+            authPasswordInput.required = true;
             authModeSignupButton.setAttribute('aria-selected', String(isSignup));
             authModeLoginButton.setAttribute('aria-selected', String(!isSignup));
             authModeSignupButton.className = isSignup
@@ -547,8 +569,44 @@
                 : `${authFeatureName} használatához add meg a meglévő belépési adataidat.`;
             authPasswordInput.autocomplete = isSignup ? 'new-password' : 'current-password';
             authPasswordHint.classList.toggle('hidden', !isSignup);
+            authForgotPasswordButton.classList.toggle('hidden', isSignup);
             authSubmitButton.textContent = isSignup ? 'Ingyenes tesztfiók létrehozása' : 'Belépés';
             setAuthMessage('');
+        }
+
+        function setAuthFlow(flow) {
+            authFlow = flow;
+            const isAuth = flow === 'auth';
+            const isResetRequest = flow === 'reset-request';
+            setPasswordVisibility(false);
+            if (flow !== 'auth') authPasswordInput.value = '';
+            authModeTabs.classList.toggle('hidden', !isAuth);
+            authPlanField.classList.toggle('hidden', !isAuth);
+            authEmailField.classList.toggle('hidden', flow === 'update-password');
+            authPasswordField.classList.toggle('hidden', isResetRequest);
+            authForgotPasswordButton.classList.add('hidden');
+            authEmailInput.required = flow !== 'update-password';
+            authPasswordInput.required = flow !== 'reset-request';
+            authPasswordInput.autocomplete = 'new-password';
+            authPasswordHint.classList.toggle('hidden', flow !== 'update-password');
+
+            if (isResetRequest) {
+                authModalTitle.textContent = 'Jelszó visszaállítása';
+                authModalDescription.textContent = 'Add meg a fiókodhoz tartozó e-mail-címet. Küldünk egy linket, amellyel új jelszót állíthatsz be.';
+                authSubmitButton.textContent = 'Visszaállító e-mail küldése';
+            } else if (flow === 'update-password') {
+                authModalTitle.textContent = 'Állíts be új jelszót';
+                authModalDescription.textContent = 'A jelszó-visszaállító link érvényes. Adj meg egy új, legalább 6 karakteres jelszót.';
+                authSubmitButton.textContent = 'Új jelszó mentése';
+            }
+            setAuthMessage('');
+        }
+
+        function setPasswordVisibility(isVisible) {
+            authPasswordInput.type = isVisible ? 'text' : 'password';
+            togglePasswordVisibilityButton.setAttribute('aria-pressed', String(isVisible));
+            togglePasswordVisibilityButton.setAttribute('aria-label', isVisible ? 'Jelszó elrejtése' : 'Jelszó megjelenítése');
+            togglePasswordVisibilityButton.innerHTML = `<i class="fa-regular ${isVisible ? 'fa-eye-slash' : 'fa-eye'}" aria-hidden="true"></i>`;
         }
 
         function triggerPaywall(featureName, plan = null, mode = 'signup') {
@@ -568,6 +626,11 @@
 
         authModeSignupButton.addEventListener('click', () => updateAuthMode('signup'));
         authModeLoginButton.addEventListener('click', () => updateAuthMode('login'));
+        authForgotPasswordButton.addEventListener('click', () => setAuthFlow('reset-request'));
+        togglePasswordVisibilityButton.addEventListener('click', () => {
+            setPasswordVisibility(authPasswordInput.type === 'password');
+            authPasswordInput.focus();
+        });
         closeAuthModalButton.addEventListener('click', closeAuthModal);
         authModal.addEventListener('click', event => {
             if (event.target === authModal) closeAuthModal();
@@ -575,8 +638,16 @@
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape' && !authModal.classList.contains('hidden')) closeAuthModal();
         });
-        supabaseClient.auth.onAuthStateChange(event => {
-            if (event === 'SIGNED_IN') window.location.assign('./app.html');
+        supabaseClient.auth.onAuthStateChange((event, session) => {
+            if (event === 'PASSWORD_RECOVERY') {
+                passwordRecoveryActive = true;
+                authEmailInput.value = session?.user.email || '';
+                setAuthFlow('update-password');
+                authModal.classList.remove('hidden');
+                authPasswordInput.focus({ preventScroll: true });
+            } else if (event === 'SIGNED_IN' && !passwordRecoveryActive) {
+                window.location.assign('./app.html');
+            }
         });
 
         authForm.addEventListener('submit', async event => {
@@ -587,11 +658,32 @@
             authModeSignupButton.disabled = true;
             authModeLoginButton.disabled = true;
             authPlanSelect.disabled = true;
-            authSubmitButton.textContent = submittedMode === 'signup' ? 'Fiók létrehozása…' : 'Belépés…';
+            if (authFlow === 'reset-request') authSubmitButton.textContent = 'E-mail küldése…';
+            else if (authFlow === 'update-password') authSubmitButton.textContent = 'Jelszó mentése…';
+            else authSubmitButton.textContent = submittedMode === 'signup' ? 'Fiók létrehozása…' : 'Belépés…';
 
             try {
                 const email = authEmailInput.value.trim();
                 const password = authPasswordInput.value;
+                if (authFlow === 'reset-request') {
+                    const options = window.location.protocol === 'http:' || window.location.protocol === 'https:'
+                        ? { redirectTo: new URL('./index.html', window.location.href).href }
+                        : undefined;
+                    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, options);
+                    if (error) throw error;
+                    setAuthMessage('Ha ehhez az e-mail-címhez tartozik fiók, elküldtük a jelszó-visszaállító linket. Nézd meg a postafiókodat és a spam mappát is.');
+                    return;
+                }
+
+                if (authFlow === 'update-password') {
+                    const { error } = await supabaseClient.auth.updateUser({ password });
+                    if (error) throw error;
+                    passwordRecoveryActive = false;
+                    setAuthMessage('Az új jelszót elmentettük. Átirányítunk a fiókodba.');
+                    window.setTimeout(() => window.location.assign('./app.html'), 1000);
+                    return;
+                }
+
                 const result = submittedMode === 'signup'
                     ? await supabaseClient.auth.signUp({
                         email,
@@ -633,7 +725,13 @@
                 authModeSignupButton.disabled = false;
                 authModeLoginButton.disabled = false;
                 authPlanSelect.disabled = false;
-                authSubmitButton.textContent = authMode === 'signup' ? 'Ingyenes tesztfiók létrehozása' : 'Belépés';
+                if (authFlow === 'auth') {
+                    authSubmitButton.textContent = authMode === 'signup' ? 'Ingyenes tesztfiók létrehozása' : 'Belépés';
+                } else if (authFlow === 'reset-request') {
+                    authSubmitButton.textContent = 'Visszaállító e-mail küldése';
+                } else {
+                    authSubmitButton.textContent = 'Új jelszó mentése';
+                }
             }
         });
 
