@@ -261,7 +261,7 @@
         </div>
     </footer>
 
-    <aside id="cookie-notice" role="region" aria-labelledby="cookie-notice-heading" class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-300 bg-white/95 p-4 shadow-[0_-8px_30px_rgba(15,23,42,0.14)] backdrop-blur">
+    <aside id="cookie-notice" role="region" aria-labelledby="cookie-notice-heading" class="fixed inset-x-0 bottom-0 z-40 max-h-[80vh] overflow-y-auto overscroll-contain border-t border-slate-300 bg-white/95 p-4 shadow-[0_-8px_30px_rgba(15,23,42,0.14)] backdrop-blur">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-start gap-4">
             <div class="min-w-0 flex-1">
                 <h2 id="cookie-notice-heading" class="font-extrabold text-slate-900"><i class="fa-solid fa-cookie-bite mr-1.5 text-amber-600" aria-hidden="true"></i>Cookie- és böngészőtárhely-tájékoztató</h2>
@@ -270,11 +270,11 @@
                     <summary class="cursor-pointer font-semibold text-brand-700">Részletek</summary>
                     <p class="mt-1">A bejelentkezéshez a Supabase hitelesítési szolgáltatását használjuk. A receptértékelés és a tájékoztató bezárásának jelzése a böngésződ helyi tárhelyére kerül. Ezeket az adatokat a böngésző beállításaiban törölheted. Részletek: <a class="font-semibold text-brand-700 underline" href="./aszf.html#cookie-tajekoztato">tájékoztató</a>.</p>
                 </details>
-                <p id="cookie-notice-error" class="mt-1 hidden text-xs font-semibold text-rose-700" role="status"></p>
             </div>
-            <button id="cookie-notice-dismiss" type="button" class="shrink-0 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">Rendben, értem</button>
+            <button id="cookie-notice-dismiss" type="button" class="order-first w-full shrink-0 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 sm:order-last sm:w-auto">Rendben, értem</button>
         </div>
     </aside>
+    <p id="cookie-notice-error" class="fixed inset-x-4 bottom-4 z-40 mx-auto hidden max-w-xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm font-semibold text-amber-900 shadow-lg" role="status" aria-live="polite"></p>
 
     <!-- DETAILED RECIPE MODAL -->
     <div id="recipe-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
@@ -360,12 +360,12 @@
         cookieNoticeDismissButton.addEventListener('click', () => {
             try {
                 localStorage.setItem(cookieNoticeStorageKey, 'true');
-                cookieNotice.classList.add('hidden');
             } catch (error) {
-                cookieNoticeError.textContent = 'Nem sikerült megjegyezni a bezárást. Ellenőrizd a böngésződ tárhelybeállításait.';
-                cookieNoticeError.classList.remove('hidden');
                 console.error('Cookie notice dismissal could not be saved to local storage.', error);
+                cookieNoticeError.textContent = 'A tájékoztató bezárult, de a böngésző nem tudta megjegyezni ezt; később újra megjelenhet.';
+                cookieNoticeError.classList.remove('hidden');
             }
+            cookieNotice.classList.add('hidden');
         });
 
         const daysList = [{ id: 'mon', label: 'Hétfő' }, { id: 'tue', label: 'Kedd' }, { id: 'wed', label: 'Szerda' }, { id: 'thu', label: 'Csütörtök' }, { id: 'fri', label: 'Péntek' }, { id: 'sat', label: 'Szombat' }, { id: 'sun', label: 'Vasárnap' }];
