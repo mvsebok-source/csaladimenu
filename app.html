@@ -208,7 +208,9 @@
                     <p class="mt-0.5 text-sm text-slate-600">A receptfeltöltés hamarosan a Pro felhasználók számára is elérhető lesz.</p>
                 </div>
             </div>
+            <div data-recipe-pagination></div>
             <div id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+            <div data-recipe-pagination></div>
         </div>
 
         <!-- VIEW 2: WEEKLY PLANNER -->
@@ -371,6 +373,8 @@
         const daysList = [{ id: 'mon', label: 'Hétfő' }, { id: 'tue', label: 'Kedd' }, { id: 'wed', label: 'Szerda' }, { id: 'thu', label: 'Csütörtök' }, { id: 'fri', label: 'Péntek' }, { id: 'sat', label: 'Szombat' }, { id: 'sun', label: 'Vasárnap' }];
 
         let selectedIngredients = new Set();
+        let recipePage = 1;
+        let recipesPerPage = 12;
         let weeklyMenu = { mon: 2, tue: 3, wed: 5, thu: 1, fri: 4, sat: 2, sun: 1 };
         const plannerSearch = {};
         const plannerCuisine = {};
@@ -401,6 +405,7 @@
             selectedIngredients,
             getIngredientName: ingredient => ingredient.name,
             onChange: () => {
+                recipePage = 1;
                 renderRecipes();
                 renderWeeklyPlanner();
             }
@@ -456,6 +461,34 @@
             return pantryPicker.matches(ingredientName);
         }
 
+        function renderRecipePagination(resultCount) {
+            const pageCount = Math.max(1, Math.ceil(resultCount / recipesPerPage));
+            const firstResult = resultCount === 0 ? 0 : (recipePage - 1) * recipesPerPage + 1;
+            const lastResult = Math.min(recipePage * recipesPerPage, resultCount);
+
+            document.querySelectorAll('[data-recipe-pagination]').forEach(container => {
+                container.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-1 py-2">
+                        <div class="flex items-center gap-3 text-xs text-slate-600">
+                            <label class="flex items-center gap-2">
+                                <span>Oldalanként</span>
+                                <select aria-label="Receptek oldalanként" data-recipes-per-page class="bg-white border border-slate-200 rounded-lg px-2 py-1.5 font-semibold text-slate-700">
+                                    <option value="12" ${recipesPerPage === 12 ? 'selected' : ''}>12</option>
+                                    <option value="24" ${recipesPerPage === 24 ? 'selected' : ''}>24</option>
+                                </select>
+                            </label>
+                            <span aria-live="polite">${firstResult}–${lastResult} / ${resultCount} recept</span>
+                        </div>
+                        <nav aria-label="Receptoldalak" class="flex items-center gap-2">
+                            <button type="button" data-page-action="previous" aria-label="Előző oldal" ${recipePage <= 1 ? 'disabled' : ''} class="px-3 py-2 rounded-lg border border-slate-200 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed">‹ Előző</button>
+                            <span class="min-w-20 text-center text-xs font-bold text-slate-600">${recipePage} / ${pageCount}</span>
+                            <button type="button" data-page-action="next" aria-label="Következő oldal" ${recipePage >= pageCount ? 'disabled' : ''} class="px-3 py-2 rounded-lg border border-slate-200 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed">Következő ›</button>
+                        </nav>
+                    </div>
+                `;
+            });
+        }
+
         function getPlannerFilteredRecipes(dayId) {
             const cuisine = plannerCuisine[dayId] || 'all';
             const query = (plannerSearch[dayId] || '').toLowerCase().trim();
@@ -475,17 +508,29 @@
                         throw new Error('Az elmentett értékelések formátuma nem megfelelő.');
                     }
                     ratingData = parsed;
-                    return;
+                } else {
+                    ratingData = { version: 1, recipes: {} };
                 }
 
-                ratingData = { version: 1, recipes: {} };
+                let needsSave = !saved;
                 recipes.forEach(recipe => {
-                    ratingData.recipes[recipe.id] = {
-                        sample: Math.round((4 + Math.random()) * 10) / 10,
-                        user: null
-                    };
+                    const recipeRating = ratingData.recipes[recipe.id];
+                    if (!recipeRating || !Number.isFinite(recipeRating.sample)) {
+                        ratingData.recipes[recipe.id] = {
+                            sample: Math.round((4 + Math.random()) * 10) / 10,
+                            user: null
+                        };
+                        needsSave = true;
+                    }
                 });
-                localStorage.setItem(ratingStorageKey, JSON.stringify(ratingData));
+                if (needsSave) {
+                    try {
+                        localStorage.setItem(ratingStorageKey, JSON.stringify(ratingData));
+                    } catch (error) {
+                        ratingStorageError = error instanceof Error ? error.message : 'Az értékelések tárhelye nem érhető el.';
+                        console.warn('Recipe ratings could not be saved after initializing new recipes.', error);
+                    }
+                }
             } catch (error) {
                 ratingStorageError = error instanceof Error ? error.message : 'Az értékelések tárhelye nem érhető el.';
                 ratingData = { version: 1, recipes: {} };
@@ -581,9 +626,13 @@
             const filtered = getFilteredRecipes();
 
             recipeCount.innerText = filtered.length;
+            const pageCount = Math.max(1, Math.ceil(filtered.length / recipesPerPage));
+            recipePage = Math.min(recipePage, pageCount);
+            renderRecipePagination(filtered.length);
             recipesGrid.innerHTML = '';
 
-            filtered.forEach(r => {
+            const firstRecipeIndex = (recipePage - 1) * recipesPerPage;
+            filtered.slice(firstRecipeIndex, firstRecipeIndex + recipesPerPage).forEach(r => {
                 const ingredientNames = r.ingredients.map(i => i.name);
                 const matched = r.ingredients.filter(ingredientMatchesSelection).length;
                 const matchPct = ingredientNames.length > 0 ? Math.round((matched / ingredientNames.length) * 100) : 0;
@@ -623,6 +672,21 @@
                 recipesGrid.appendChild(card);
             });
         }
+
+        document.addEventListener('click', event => {
+            const pageButton = event.target.closest('[data-page-action]');
+            if (!pageButton || pageButton.disabled) return;
+            recipePage += pageButton.dataset.pageAction === 'next' ? 1 : -1;
+            renderRecipes();
+            recipesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        document.addEventListener('change', event => {
+            if (!event.target.matches('[data-recipes-per-page]')) return;
+            recipesPerPage = parseInt(event.target.value, 10);
+            recipePage = 1;
+            renderRecipes();
+        });
 
         function renderWeeklyPlanner() {
             const servings = parseInt(servingsSlider.value);
@@ -858,11 +922,11 @@
         });
         closeModalBtn.onclick = () => modal.classList.add('hidden');
         servingsSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
-        timeSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
-        dietSelect.onchange = () => { renderRecipes(); renderWeeklyPlanner(); };
-        cuisineSelect.onchange = () => { renderRecipes(); renderWeeklyPlanner(); };
-        courseSelect.onchange = () => { renderRecipes(); renderWeeklyPlanner(); };
-        searchInput.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
+        timeSlider.oninput = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        dietSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        cuisineSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        courseSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        searchInput.oninput = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
 
         // Init
         initializeRatingData();
