@@ -435,7 +435,7 @@
             const diet = dietSelect.value;
             const cuisine = cuisineSelect.value;
             const course = courseSelect.value;
-            const query = searchInput.value.toLowerCase().trim();
+            const query = window.PantryPicker.normalizeSearchText(searchInput.value);
 
             return recipes.filter(r => {
                 if (r.time > maxTime) return false;
@@ -445,8 +445,8 @@
                 if (!ignoreGlobalCourse && course !== 'all' && r.course !== course) return false;
                 if (selectedIngredients.size > 0 && !r.ingredients.some(ingredientMatchesSelection)) return false;
                 if (query) {
-                    const matchName = r.name.toLowerCase().includes(query);
-                    const matchIng = r.ingredients.some(i => i.name.toLowerCase().includes(query));
+                    const matchName = window.PantryPicker.normalizeSearchText(r.name).includes(query);
+                    const matchIng = r.ingredients.some(i => window.PantryPicker.normalizeSearchText(i.name).includes(query));
                     if (!matchName && !matchIng) return false;
                 }
                 return true;
@@ -491,11 +491,13 @@
 
         function getPlannerFilteredRecipes(dayId) {
             const cuisine = plannerCuisine[dayId] || 'all';
-            const query = (plannerSearch[dayId] || '').toLowerCase().trim();
+            const query = window.PantryPicker.normalizeSearchText(plannerSearch[dayId] || '');
             return getFilteredRecipes(true, true).filter(r => {
                 if (r.course === 'dessert') return false;
                 if (cuisine !== 'all' && r.cuisine !== cuisine) return false;
-                return !query || r.name.toLowerCase().includes(query) || r.ingredients.some(i => i.name.toLowerCase().includes(query));
+                return !query
+                    || window.PantryPicker.normalizeSearchText(r.name).includes(query)
+                    || r.ingredients.some(i => window.PantryPicker.normalizeSearchText(i.name).includes(query));
             });
         }
 

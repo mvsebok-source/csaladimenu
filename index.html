@@ -883,7 +883,7 @@
             const cuisine = cuisineSelect.value;
             const course = courseSelect.value;
             const diet = dietSelect.value;
-            const query = searchInput.value.toLowerCase().trim();
+            const query = window.PantryPicker.normalizeSearchText(searchInput.value);
             servingsDisplay.innerText = `${servings} fő`;
             timeDisplay.innerText = `${maxTime} perc`;
 
@@ -893,7 +893,9 @@
                 if (course !== 'all' && recipe.course !== course) return false;
                 if (recipe.course !== 'dessert' && diet !== 'all' && recipe.type !== diet) return false;
                 if (selectedIngredients.size && !recipe.ingredients.some(ingredientMatchesSelection)) return false;
-                return !query || recipe.name.toLowerCase().includes(query) || recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query));
+                return !query
+                    || window.PantryPicker.normalizeSearchText(recipe.name).includes(query)
+                    || recipe.ingredients.some(ingredient => window.PantryPicker.normalizeSearchText(ingredient).includes(query));
             }).sort((a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }));
 
             document.getElementById('recipe-count').innerText = filteredRecipes.length;

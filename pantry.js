@@ -215,5 +215,5 @@
         };
     }
 
-    window.PantryPicker = { create };
+    window.PantryPicker = { create, normalizeSearchText };
 })();
