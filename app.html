@@ -365,8 +365,6 @@
                 localStorage.setItem(cookieNoticeStorageKey, 'true');
             } catch (error) {
                 console.error('Cookie notice dismissal could not be saved to local storage.', error);
-                cookieNoticeError.textContent = 'A tájékoztató bezárult, de a böngésző nem tudta megjegyezni ezt; később újra megjelenhet.';
-                cookieNoticeError.classList.remove('hidden');
             }
             cookieNotice.classList.add('hidden');
         });
