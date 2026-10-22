@@ -838,15 +838,30 @@
                     : await supabaseClient.auth.signInWithPassword({ email, password });
 
                 if (result.error) {
-                    const message = result.error.message.toLowerCase().includes('invalid login credentials')
-                        ? 'A megadott e-mail-cím vagy jelszó nem megfelelő.'
-                        : result.error.message;
+                    const errorMessage = result.error.message.toLowerCase();
+                    let message = result.error.message;
+                    if (errorMessage.includes('invalid login credentials')) {
+                        message = 'A megadott e-mail-cím vagy jelszó nem megfelelő.';
+                    } else if (submittedMode === 'signup' && (
+                        errorMessage.includes('error sending confirmation email')
+                        || errorMessage.includes('confirmation email could not be sent')
+                    )) {
+                        message = 'A regisztrációs megerősítő e-mailt most nem sikerült elküldeni. Próbáld újra később; ha a hiba továbbra is fennáll, jelezd nekünk.';
+                    } else if (errorMessage.includes('email rate limit exceeded')) {
+                        message = 'Rövid időn belül túl sok e-mailkérés történt. Várj egy kicsit, majd próbáld újra.';
+                    }
                     setAuthMessage(message, true);
                     return;
                 }
 
                 if (submittedMode === 'signup' && !result.data.session) {
-                    setAuthMessage('Ha már van fiókod, válts a Belépés fülre. Egyébként a folytatáshoz erősítsd meg az e-mail-címedet a postafiókodba érkezett levélben.');
+                    if (!result.data.user) {
+                        setAuthMessage('A regisztráció nem fejeződött be. Próbáld újra később.', true);
+                    } else if (result.data.user.identities?.length === 0) {
+                        setAuthMessage('Ezzel az e-mail-címmel már létezik fiók. Lépj be, vagy kérj jelszó-visszaállító e-mailt.', true);
+                    } else {
+                        setAuthMessage(`Sikeres regisztráció! Megerősítő e-mailt küldtünk a(z) ${email} címre. A fiókod használatához kattints a levélben található megerősítő linkre. Ha nem találod, nézd meg a spam vagy promóciók mappát is.`);
+                    }
                     return;
                 }
 
