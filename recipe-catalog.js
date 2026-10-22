@@ -5379,6 +5379,3581 @@ window.recipeCatalog = [
         "totalCost": 1369
     },
     {
+        "id": 1071,
+        "sourceId": "hu-51",
+        "name": "Sütőtökkrémleves pirított kenyérkockával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 60,
+        "baseCost": 280,
+        "access": "pro",
+        "servings": 4,
+        "description": "Az őszi magyar konyha sztárja: sütőben előre megsütött, ezért mélyen édes és karamelles sütőtök selymes krémlevesként, gyömbérrel, tejszínnel és ropogós kenyérkockával.",
+        "ingredients": [
+            {
+                "name": "sütőtök (Nagydobosi vagy Hokkaido)",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "friss gyömbér",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "habtejszín (vagy tejföl)",
+                "amount": 25,
+                "unit": "ml"
+            },
+            {
+                "name": "fehér kenyér (a kenyérkockához)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A sütőt 200 °C-ra előmelegíted. A sütőtököt félbevágod, kikanalazod a magjait, és nagyobb cikkekre vágod (a héját nem kell lehámozni, sütés után könnyen leválik).",
+            "A cikkeket 1 evőkanál olajjal és egy csipet sóval összeforgatod, és sütőpapíros tepsin 30–35 percig sütöd, amíg puha és a széle karamellizálódik. Kicsit hűlni hagyod, majd kanállal kiszeded a húsát.",
+            "Egy lábasban a vajon a felkockázott hagymát 6–8 percig üvegesre párolod, hozzáadod a zúzott fokhagymát és a reszelt gyömbért, majd a kockára vágott burgonyát és a sütőtök húsát.",
+            "Felöntöd 1 liter vízzel, sózod, és 15 percig főzöd, amíg a burgonya teljesen puha.",
+            "Botmixerrel selymesre turmixolod, belekevered a tejszínt, és sóval, borssal ízesíted. Ha túl sűrű, forró vízzel hígítod.",
+            "A kenyeret kis kockákra vágod, és a maradék olajon serpenyőben aranybarnára pirítod. Tálaláskor a leves tetejére szórod."
+        ],
+        "tip": "A sütés a titok: főzve a tök vizes és fakóbb ízű marad. Egy csepp tökmagolaj vagy pirított tökmag a tetején igazi stájer-magyar csavar.",
+        "totalCost": 1121
+    },
+    {
+        "id": 1072,
+        "sourceId": "hu-52",
+        "name": "Hideg meggyleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 25,
+        "baseCost": 760,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar nyár egyik legszeretettebb levese: fahéjas, citromos, tejszínes-tejfölös édes-savanykás gyümölcsleves, jól behűtve.",
+        "ingredients": [
+            {
+                "name": "meggy",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "fahéj",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromhéj",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "szegfűszeg",
+                "amount": 0.75,
+                "unit": "szem"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "habtejszín",
+                "amount": 25,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "Egy lábasban 1 liter vizet a cukorral, a fahéjjal, a szegfűszeggel, a citromhéjjal és egy csipet sóval felforralsz.",
+            "Beleteszed a meggyet (a fagyasztottat nem kell kiolvasztani), és 5 percig főzöd.",
+            "A tejfölt a tejszínnel és a liszttel csomómentesre kevered, majd 4–5 evőkanál forró levet adsz hozzá, hogy ne csapódjon ki.",
+            "A habarást a leveshez öntöd, és kevergetve 2–3 percig forralod, amíg enyhén besűrűsödik.",
+            "A fahéjrudat, a szegfűszeget és a citromhéjat kiveszed, és kóstolva cukorral igazítod az édességét (a meggy savassága évről évre változik).",
+            "Kihűtöd, majd legalább 3 órára hűtőbe teszed. Jéghidegen tálalod."
+        ],
+        "tip": "Friss meggyből a legfinomabb (június–július); a magokat meggymagozóval vedd ki. Vegyes gyümölcslevesnek fél adag meggy mellé almát, körtét és szilvát is főzhetsz.",
+        "totalCost": 3054
+    },
+    {
+        "id": 1073,
+        "sourceId": "hu-53",
+        "name": "Palócleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 100,
+        "baseCost": 490,
+        "access": "pro",
+        "servings": 4,
+        "description": "A hagyomány szerint Gundel János alkotta Mikszáth Kálmán tiszteletére: paprikás húsleves zöldbabbal, burgonyával, tejföllel és sok kaporral.",
+        "ingredients": [
+            {
+                "name": "sertéslapocka (eredetileg ürü- vagy bárányhús)",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "egész köménymag",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "burgonya",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "zöldbab (fagyasztott vagy friss)",
+                "amount": 112.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "kapor",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy ecet)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 1,5 cm-es kockákra vágod, a hagymát finomra aprítod.",
+            "Egy lábasban az olajon a hagymát üvegesre párolod, a tűzről levéve elkevered benne a fűszerpaprikát, majd hozzáadod a húst, és 5 percig pirítod.",
+            "Sózod, hozzáadod a zúzott fokhagymát, a köményt és a babérlevelet, felöntöd 1,5 liter vízzel, és fedő alatt, kis lángon 45–50 percig főzöd, amíg a hús majdnem puha.",
+            "Hozzáadod a kockára vágott burgonyát és a 3 cm-es darabokra vágott zöldbabot, és további 15–20 percig főzöd, amíg mindkettő puha.",
+            "Habarás: a tejfölt csomómentesre kevered a liszttel, hozzáadsz 3–4 evőkanál forró levet (így nem csapódik ki), majd visszaöntöd a lábasba, és kevergetve 3–4 percig forralod.",
+            "Belekevered a kaprot, néhány csepp citromlével enyhén savanykásra ízesíted, kiveszed a babérlevelet, és forrón tálalod."
+        ],
+        "tip": "Friss kaporral és nyári zöldbabbal a legjobb. Az eredeti ürühússal készül; bárányhússal is kiváló.",
+        "totalCost": 1940
+    },
+    {
+        "id": 1074,
+        "sourceId": "hu-54",
+        "name": "Jókai bableves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 170,
+        "baseCost": 710,
+        "access": "pro",
+        "servings": 4,
+        "description": "Jókai Mór nevét viselő, laktató bableves csülökkel, füstölt kolbásszal, gyökérzöldségekkel, csipetkével és tejfölös habarással.",
+        "ingredients": [
+            {
+                "name": "sertéscsülök (lehetőleg füstölt)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "száraz tarkabab (beáztatva)",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "füstölt kolbász",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "finomliszt (a habaráshoz)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a csipetkéhez)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a csipetkéhez)",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "citromlé (vagy ecet)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A babot előző este bő hideg vízbe áztatod. A csülköt (ha füstölt és nagyon sós, szintén beáztatod) 2,5 liter hideg vízben a babérlevéllel feltéve 1,5 órát főzöd.",
+            "Hozzáadod a leöntött babot, és további 45–60 percig főzöd, amíg a bab és a csülök is puha. A csülköt kiveszed, a húsát lefejted a csontról és felkockázod.",
+            "Egy serpenyőben az olajon a felkarikázott kolbászt 3 percig pirítod, hozzáadod a finomra vágott hagymát, üvegesre párolod, majd a tűzről levéve belekevered a fűszerpaprikát és a zúzott fokhagymát.",
+            "A paprikás kolbászt, a karikára vágott répát és petrezselyemgyökeret és a csülökhúst a leveshez adod, és 15–20 percig főzöd. Csipetke: a lisztet a tojással és egy csipet sóval kemény tésztává gyúrod, vékonyra lapítod, és ujjaiddal borsónyi darabokat csipkedsz belőle; a forrásban lévő levesben 5–6 percig főzöd.",
+            "Habarás: a tejfölt csomómentesre kevered a liszttel, hozzáadsz 3–4 evőkanál forró levet (így nem csapódik ki), majd visszaöntöd a lábasba, és kevergetve 3–4 percig forralod.",
+            "Néhány csepp citromlével vagy ecettel enyhén savanykásra ízesíted, kóstolod a sót (a füstölt hús sós), és forrón tálalod."
+        ],
+        "tip": "Az igazi Jókai bableves füstölt csülökkel készül; a leveskocka-ízű pótlás helyett inkább a csülök főzőlevét használd fel.",
+        "totalCost": 2853
+    },
+    {
+        "id": 1075,
+        "sourceId": "hu-55",
+        "name": "Tárkonyos csirkeraguleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 55,
+        "baseCost": 470,
+        "access": "pro",
+        "servings": 4,
+        "description": "Krémes, tejfölös-vajas csirkeraguleves zöldségekkel és zöldborsóval, a jellegzetes ánizsos tárkonnyal és egy leheletnyi savanykássággal – a menzák és vendéglők kedvence.",
+        "ingredients": [
+            {
+                "name": "csirkemellfilé (vagy csontozott comb)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "zellergumó",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "fagyasztott zöldborsó",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "tárkony",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A csirkét 1 cm-es kockákra, a répát, a petrezselyemgyökeret és a zellert apró kockákra vágod.",
+            "Egy lábasban a vajat felolvasztod, és a zöldségeket 5 percig párolod rajta.",
+            "Hozzáadod a csirkét, és 3–4 percig együtt párolod, amíg kifehéredik. Megszórod a liszttel, és kevergetve 1 percig pirítod.",
+            "Felöntöd 1,3 liter hideg vízzel, csomómentesre kevered, sózod, borsozod, hozzáadod a tárkonyt, és 20 percig főzöd. Az utolsó 5 percben a borsót is.",
+            "A tejfölt egy merőkanálnyi forró levessel temperálod, majd a leveshez öntöd, és 2 percig forralod.",
+            "Citromlével enyhén savanykásra ízesíted, kóstolod a sót, és tálalod. A tárkony íze állás közben erősödik."
+        ],
+        "tip": "Galuskával (a nokedli tésztájából kiskanállal szaggatva) még laktatóbb.",
+        "totalCost": 1889
+    },
+    {
+        "id": 1076,
+        "sourceId": "hu-56",
+        "name": "Tejfölös karfiolleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 410,
+        "access": "pro",
+        "servings": 4,
+        "description": "Egyszerű, krémes, tejfölös magyar karfiolleves gyökérzöldségekkel és pirított zsemlekockával.",
+        "ingredients": [
+            {
+                "name": "karfiol",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "zsemle (a pirított kockához)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 3.75,
+                "unit": "ml"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fehér vagy fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "szerecsendió",
+                "amount": 0.25,
+                "unit": "csipet"
+            }
+        ],
+        "steps": [
+            "A karfiolt kis rózsáira szeded, a répát és a gyökeret vékony karikákra vágod.",
+            "Egy lábasban a zöldségeket 1,3 liter sós vízzel feltéve 12–15 percig főzöd, amíg a karfiol puha, de nem esik szét.",
+            "Rántás: a vajon a lisztet kevergetve 1–2 percig világosra pirítod, 1,5 dl hideg vízzel csomómentesre kevered, és a leveshez adod. 5 percig forralod.",
+            "A tejfölt egy merőkanálnyi forró levessel temperálod, és a leveshez öntöd.",
+            "Sóval, borssal és egy csipet szerecsendióval ízesíted.",
+            "A zsemlét felkockázod, az olajon ropogósra pirítod, és tálaláskor a levesre szórod."
+        ],
+        "tip": "Ha krémlevesnek szereted, a felét turmixold bele, a többit hagyd darabosan.",
+        "totalCost": 1638
+    },
+    {
+        "id": 1077,
+        "sourceId": "hu-57",
+        "name": "Fokhagymakrémleves sajtos pirítóskockával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 40,
+        "baseCost": 360,
+        "access": "pro",
+        "servings": 4,
+        "description": "Bársonyos, tejszínes, de nem csípős fokhagymakrémleves: a lassan párolt fokhagyma édessé és kerekké válik. Sajtos kenyérkockával tálalva igazi téli melegítő.",
+        "ingredients": [
+            {
+                "name": "fokhagyma",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tej",
+                "amount": 75,
+                "unit": "ml"
+            },
+            {
+                "name": "habtejszín",
+                "amount": 50,
+                "unit": "ml"
+            },
+            {
+                "name": "fehér kenyér",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "trappista sajt, reszelve",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fehér vagy fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A fokhagymagerezdeket megpucolod, a hagymát és a burgonyát felkockázod.",
+            "Egy lábasban a vajon kis lángon a hagymát és az egész fokhagymagerezdeket 8–10 percig párolod, amíg puhák és enyhén aranyszínűek, de nem barnulnak meg (a megégett fokhagyma keserű).",
+            "Hozzáadod a burgonyát, felöntöd 6 dl vízzel, sózod, és 15 percig főzöd, amíg a burgonya puha.",
+            "Hozzáöntöd a tejet és a tejszínt, felforralod, majd botmixerrel selymesre turmixolod. Sóval, borssal ízesíted.",
+            "A kenyeret kockákra vágod, és 200 °C-os sütőben 6–8 percig pirítod. A végén megszórod a reszelt sajttal, és még 2 percig sütöd, amíg megolvad.",
+            "A levest tányérba szeded, és a sajtos kockákat a tetejére halmozod."
+        ],
+        "tip": "Bögrébe töltve, egy kevés pirított hagymával is látványos.",
+        "totalCost": 1428
+    },
+    {
+        "id": 1078,
+        "sourceId": "hu-58",
+        "name": "Zöldborsóleves galuskával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 40,
+        "baseCost": 240,
+        "access": "pro",
+        "servings": 4,
+        "description": "Tavaszi, édeskés, vajas zöldborsóleves sárgarépával, apró galuskával – a nagymamák vasárnapi előétele.",
+        "ingredients": [
+            {
+                "name": "zöldborsó (fagyasztott vagy friss)",
+                "amount": 112.5,
+                "unit": "g"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a rántáshoz)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a galuskához)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a galuskához)",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            }
+        ],
+        "steps": [
+            "A répát és a petrezselyemgyökeret apró kockákra vágod.",
+            "Egy lábasban a vaj felén a zöldségeket 5 percig párolod, hozzáadod a borsót, és még 2 percig együtt párolod.",
+            "Megszórod a liszttel, 1 percig kevergeted, majd felöntöd 1,3 liter hideg vízzel, csomómentesre kevered, sózod, megszórod a cukorral, és 10 percig főzöd.",
+            "Galuska: a lisztet a tojással, egy csipet sóval és kb. 3–4 evőkanál vízzel sűrű, kanálról nehezen leváló tésztává kevered.",
+            "A forrásban lévő levesbe vizes kiskanállal apró galuskákat szaggatsz, és 3–4 percig főzöd, amíg feljönnek.",
+            "A maradék vajat és az apróra vágott petrezselyemzöldet belekevered, és tálalod."
+        ],
+        "tip": "Májusban, friss zöldborsóval a legfinomabb; a hüvelyeket is kifőzheted alaplének.",
+        "totalCost": 953
+    },
+    {
+        "id": 1079,
+        "sourceId": "hu-59",
+        "name": "Korhelyleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 40,
+        "baseCost": 710,
+        "access": "pro",
+        "servings": 4,
+        "description": "Szilveszter hajnalának és a hideg téli estéknek a levese: savanyú káposzta, füstölt kolbász, paprikás rántás és tejföl – a „másnaposok gyógyszere”.",
+        "ingredients": [
+            {
+                "name": "savanyú káposzta",
+                "amount": 170,
+                "unit": "g"
+            },
+            {
+                "name": "füstölt kolbász",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 6.25,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 1.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A savanyú káposztát kissé felaprítod; ha nagyon savanyú, hideg vízben átöblíted (a levét tedd félre, és a végén ízlés szerint add hozzá).",
+            "Egy lábasban a káposztát 1,5 liter vízzel és a babérlevéllel feltéve 15 percig főzöd.",
+            "Közben a kolbászt felkarikázod. Egy serpenyőben az olajon 3–4 percig pirítod, hozzáadod a finomra vágott hagymát, és üvegesre párolod.",
+            "Megszórod a liszttel, 1 percig pirítod, majd a tűzről levéve belekevered a fűszerpaprikát, és 2 dl hideg vízzel csomómentesre kevered.",
+            "A paprikás-kolbászos rántást a levesbe öntöd, és 10 percig főzöd. Kóstolod: ha kell, egy kevés káposztalével savanyítod, sózod, borsozod.",
+            "Tálaláskor mindegyik tányérba egy kanál tejföl kerül."
+        ],
+        "tip": "Sokan egy kevés főtt füstölt hússal vagy virslikarikákkal teszik még laktatóbbá.",
+        "totalCost": 2847
+    },
+    {
+        "id": 1080,
+        "sourceId": "hu-60",
+        "name": "Tejfölös-kapros zöldbabfőzelék",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 35,
+        "baseCost": 450,
+        "access": "pro",
+        "servings": 4,
+        "description": "Enyhén savanykás, fokhagymás, kapros-tejfölös zöldbabfőzelék – fasírttal vagy tükörtojással a magyar menü örök darabja.",
+        "ingredients": [
+            {
+                "name": "zöldbab (sárga vagy zöld, fagyasztott vagy friss)",
+                "amount": 225,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 0.75,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "kapor",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy 1 ek ecet)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (tükörtojásnak)",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "napraforgóolaj (a tojáshoz)",
+                "amount": 5,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A zöldbabot (ha friss, megtisztítod és 3 cm-es darabokra vágod) 5 dl sós vízben 10–12 percig puhára főzöd.",
+            "Rántás: az olajon a lisztet 1 percig világosra pirítod, a tűzről levéve elkevered a fűszerpaprikával, és 2 dl hideg vízzel csomómentesre kevered.",
+            "A rántást a babhoz öntöd a zúzott fokhagymával, és kevergetve 5 percig forralod, amíg besűrűsödik.",
+            "A tejfölt egy kevés forró főzelékkel temperálod, a főzelékhez kevered, és 1–2 percig melegíted.",
+            "Kaporral, citromlével és cukorral édes-savanykásra ízesíted, kóstolod a sót.",
+            "Tükörtojás: serpenyőben 1 evőkanál olajat közepes lángon felhevítesz, a tojásokat egyenként beleütöd, megsózod, és 3–4 percig sütöd, amíg a fehérje megköt, a sárgája folyós marad. A főzeléket mély tányérba szeded, a tetejére teszed a tojást."
+        ],
+        "tip": "Hagyományos feltét a fasírt (hu-22) vagy a sült virsli.",
+        "totalCost": 1781
+    },
+    {
+        "id": 1081,
+        "sourceId": "hu-61",
+        "name": "Spenótfőzelék tükörtojással és főtt burgonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 35,
+        "baseCost": 430,
+        "access": "pro",
+        "servings": 4,
+        "description": "Fokhagymás, tejes, selymes spenótfőzelék – a gyerekkori menzák rettegett, otthon viszont imádott klasszikusa, tükörtojással és sós főtt burgonyával.",
+        "ingredients": [
+            {
+                "name": "fagyasztott aprított spenót",
+                "amount": 225,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tej",
+                "amount": 75,
+                "unit": "ml"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "szerecsendió",
+                "amount": 0.25,
+                "unit": "csipet"
+            },
+            {
+                "name": "burgonya (köretnek)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (tükörtojásnak)",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "napraforgóolaj (a tojáshoz)",
+                "amount": 5,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A burgonyát meghámozod, felnegyedeled, és sós vízben 18–20 perc alatt puhára főzöd.",
+            "A spenótot egy lábasban egy kevés vízzel fedő alatt felolvasztod és átforrósítod (kb. 8 perc).",
+            "Fehér rántás: a vajat felolvasztod, hozzáadod a lisztet, és kevergetve 1 percig pirítod úgy, hogy ne változzon a színe. Lehúzod a tűzről, és a hideg tejjel (vagy vízzel) habverővel csomómentesre kevered.",
+            "A tejes rántást és a zúzott fokhagymát a spenóthoz adod, és folyamatosan kevergetve 5 percig főzöd, amíg krémes. Sóval, borssal és egy csipet szerecsendióval ízesíted.",
+            "Tükörtojás: serpenyőben 1 evőkanál olajat közepes lángon felhevítesz, a tojásokat egyenként beleütöd, megsózod, és 3–4 percig sütöd, amíg a fehérje megköt, a sárgája folyós marad.",
+            "A főzeléket a főtt burgonyával és a tükörtojással tálalod."
+        ],
+        "tip": "Friss spenótból (1,2 kg) is készülhet: forrásban lévő vízben 1 percig blansírozod, majd apróra vágod.",
+        "totalCost": 1722
+    },
+    {
+        "id": 1082,
+        "sourceId": "hu-62",
+        "name": "Sárgaborsó-főzelék pirított hagymával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 60,
+        "baseCost": 150,
+        "access": "pro",
+        "servings": 4,
+        "description": "Krémes, sűrű, olcsó és laktató téli főzelék feles sárgaborsóból, ropogós pirított hagymával a tetején.",
+        "ingredients": [
+            {
+                "name": "feles sárgaborsó",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "szárított majoránna",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "só",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "kenyér (tálaláshoz)",
+                "amount": 75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A sárgaborsót átmosod (ha van időd, 1–2 órára beáztatod), és 1,2 liter vízzel, a babérlevéllel feltéve 35–40 percig főzöd, amíg teljesen szétfő. Az utolsó 10 percben sózod.",
+            "Kiveszed a babérlevelet, és habverővel (vagy botmixerrel) krémesre kevered.",
+            "Rántás: az egyik hagymát finomra vágod, 1 evőkanál olajon üvegesre párolod, hozzáadod a lisztet és a zúzott fokhagymát, 1 percig pirítod, majd a tűzről levéve belekevered a fűszerpaprikát és 1 dl hideg vizet.",
+            "A rántást a főzelékhez kevered, hozzáadod a majoránnát, és 5 percig főzöd. Ha túl sűrű, forró vízzel hígítod.",
+            "A másik hagymát vékony karikákra vágod, és a maradék olajon közepes lángon 10–12 percig sötét aranybarnára, ropogósra pirítod.",
+            "A főzeléket tányérba szeded, a tetejére halmozod a pirított hagymát, és kenyérrel tálalod."
+        ],
+        "tip": "Hagyományosan sült kolbásszal vagy füstölt hússal eszik; állás közben erősen besűrűsödik.",
+        "totalCost": 602
+    },
+    {
+        "id": 1083,
+        "sourceId": "hu-63",
+        "name": "Kelkáposzta-főzelék",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 320,
+        "access": "pro",
+        "servings": 4,
+        "description": "Fokhagymás, köményes, paprikás kelkáposzta-főzelék burgonyával – ősszel és télen a legjobb, amikor a kel édesebb.",
+        "ingredients": [
+            {
+                "name": "kelkáposzta",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "egész köménymag",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "kenyér (tálaláshoz)",
+                "amount": 75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A kelkáposzta külső leveleit eltávolítod, a fejet negyedeled, a torzsát kivágod, és a leveleket vastag csíkokra vágod. A burgonyát kis kockákra vágod.",
+            "Egy lábasban a burgonyát és a kelkáposztát 7 dl sós vízzel és a köménnyel feltéve 15–18 percig főzöd, amíg puha.",
+            "Rántás: az olajon a lisztet világosra pirítod, a tűzről levéve elkevered a fűszerpaprikával és a zúzott fokhagymával, majd 2 dl hideg vízzel csomómentesre kevered.",
+            "A rántást a főzelékhez öntöd, és kevergetve 5 percig főzöd, amíg besűrűsödik.",
+            "A tejfölt temperálva belekevered, és sóval, borssal ízesíted.",
+            "Kenyérrel tálalod; hagyományos feltét a sült kolbász, a fasírt vagy a tükörtojás."
+        ],
+        "tip": "A kelkáposzta a fagyok után a legédesebb – ezért igazi őszi-téli étel.",
+        "totalCost": 1270
+    },
+    {
+        "id": 1084,
+        "sourceId": "hu-64",
+        "name": "Vajas sárgarépafőzelék tükörtojással",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 40,
+        "baseCost": 280,
+        "access": "pro",
+        "servings": 4,
+        "description": "Édes, vajas, tejes sárgarépafőzelék petrezselyemmel – egyszerű, olcsó, gyerekbarát magyar főzelék.",
+        "ingredients": [
+            {
+                "name": "sárgarépa",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tej",
+                "amount": 75,
+                "unit": "ml"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            },
+            {
+                "name": "tojás (tükörtojásnak)",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "napraforgóolaj (a tojáshoz)",
+                "amount": 5,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A répát megtisztítod, és vékony karikákra vagy kis kockákra vágod.",
+            "Egy lábasban 5 dl vízzel, a cukorral és sóval feltéve fedő alatt 15 percig főzöd, amíg puha.",
+            "Fehér rántás: a vajat felolvasztod, hozzáadod a lisztet, és kevergetve 1 percig pirítod úgy, hogy ne változzon a színe. Lehúzod a tűzről, és a hideg tejjel (vagy vízzel) habverővel csomómentesre kevered.",
+            "A tejes rántást a répához öntöd, és folyamatosan kevergetve 4–5 percig főzöd, amíg krémes.",
+            "Belekevered az apróra vágott petrezselyemzöldet, és sóval, cukorral ízesíted.",
+            "Tükörtojás: serpenyőben 1 evőkanál olajat közepes lángon felhevítesz, a tojásokat egyenként beleütöd, megsózod, és 3–4 percig sütöd, amíg a fehérje megköt, a sárgája folyós marad. A főzeléket a tükörtojással tálalod."
+        ],
+        "tip": "Egy marék zöldborsó vagy egy kevés kapor változatossá teszi.",
+        "totalCost": 1121
+    },
+    {
+        "id": 1085,
+        "sourceId": "hu-65",
+        "name": "Paradicsomos káposzta főtt burgonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 50,
+        "baseCost": 320,
+        "access": "pro",
+        "servings": 4,
+        "description": "Édes-savanykás, paradicsomos káposztafőzelék – a magyar konyha egyik legjellegzetesebb főzeléke, sós főtt burgonyával vagy fasírttal.",
+        "ingredients": [
+            {
+                "name": "fejes káposzta",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "darabolt paradicsomkonzerv (vagy 1 kg érett paradicsom)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "zellerzöld vagy petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            },
+            {
+                "name": "burgonya (köretnek)",
+                "amount": 200,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A káposztát negyedeled, a torzsát kivágod, és vékony csíkokra vágod.",
+            "Egy lábasban 5 dl sós vízzel feltéve fedő alatt 12–15 percig főzöd, amíg puha.",
+            "Közben a paradicsomot botmixerrel pürésíted. A burgonyát meghámozod, felnegyedeled, és sós vízben 18–20 perc alatt puhára főzöd.",
+            "Rántás: az olajon a finomra vágott hagymát üvegesre párolod, hozzáadod a lisztet, és 1–2 percig világos aranyszínűre pirítod.",
+            "Felöntöd a paradicsompürével, csomómentesre kevered, majd a káposztához öntöd. 10 percig főzöd, amíg sűrű.",
+            "Cukorral és sóval édes-savanykásra ízesíted, és a főtt burgonyával tálalod."
+        ],
+        "tip": "Klasszikus párja a fasírt (hu-22) vagy a sült kolbász. Nyár végén friss, érett paradicsomból a legfinomabb.",
+        "totalCost": 1281
+    },
+    {
+        "id": 1086,
+        "sourceId": "hu-66",
+        "name": "Kapros tökfőzelék",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 40,
+        "baseCost": 360,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar nyár főzeléke: gyalult főzőtök édes-savanykás, kapros-tejfölös mártásban, enyhén paprikás rántással.",
+        "ingredients": [
+            {
+                "name": "főzőtök",
+                "amount": 300,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 0.75,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "kapor",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy 1 ek ecet)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "kenyér (tálaláshoz)",
+                "amount": 75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A tököt meghámozod, félbevágod, kikanalazod a magos belsejét, és a tökgyalun vagy a reszelő nagy lyukú oldalán csíkokra gyalulod. Megsózod, 15 percig állni hagyod, majd a levét enyhén kinyomod.",
+            "Egy lábasban az olajon a finomra vágott hagymát üvegesre párolod, hozzáadod a tököt, aláöntesz 1 dl vizet, és fedő alatt 8–10 percig párolod.",
+            "A tejfölt csomómentesre kevered a liszttel, a fűszerpaprikával és 1 dl hideg vízzel.",
+            "A habarást a tökhöz öntöd, és kevergetve 4–5 percig főzöd, amíg besűrűsödik.",
+            "Belekevered a kaprot, és citromlével, cukorral és sóval édes-savanykásra ízesíted.",
+            "Kenyérrel, fasírttal vagy tükörtojással tálalod."
+        ],
+        "tip": "A friss kapor a lényeg; szárított kaporral is jó, de kevésbé illatos.",
+        "totalCost": 1449
+    },
+    {
+        "id": 1087,
+        "sourceId": "hu-67",
+        "name": "Babfőzelék pirított hagymával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 90,
+        "baseCost": 300,
+        "access": "pro",
+        "servings": 4,
+        "description": "Fokhagymás, babérleveles, enyhén savanykás, tejfölös tarkabab-főzelék – olcsó, tápláló téli alapétel.",
+        "ingredients": [
+            {
+                "name": "száraz tarka- vagy fehérbab (beáztatva)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy ecet)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "kenyér (tálaláshoz)",
+                "amount": 75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A babot előző este beáztatod. Másnap leöntöd a vizét, és 1,2 liter friss vízben a babérlevéllel sózás nélkül 60–70 percig puhára főzöd. A végén sózod.",
+            "A bab negyedét a főzőlevével villával vagy botmixerrel pépesíted, és visszakevered – ettől lesz krémes.",
+            "Rántás: az egyik hagymát finomra vágod, 1 evőkanál olajon üvegesre párolod, hozzáadod a lisztet, 1 percig pirítod, majd a tűzről levéve belekevered a fűszerpaprikát, a zúzott fokhagymát és 1,5 dl hideg vizet.",
+            "A rántást a babhoz öntöd, 5 percig főzöd, majd belekevered a tejfölt, és citromlével enyhén savanykásra ízesíted.",
+            "A másik hagymát vékony karikákra vágod, és a maradék olajon ropogósra pirítod.",
+            "A főzeléket a pirított hagymával és kenyérrel tálalod."
+        ],
+        "tip": "Sült kolbásszal vagy füstölt hússal húsos változat is készülhet.",
+        "totalCost": 1206
+    },
+    {
+        "id": 1088,
+        "sourceId": "hu-68",
+        "name": "Milánói makaróni",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 45,
+        "baseCost": 610,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar menzák és családi asztalok „olasz” klasszikusa: makaróni édeskés paradicsomszósszal, sonkával, gombával és bőven reszelt trappista sajttal.",
+        "ingredients": [
+            {
+                "name": "makaróni vagy penne (durumtészta)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "főtt sonka",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "csiperkegomba",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "darabolt paradicsomkonzerv",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "vaj",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "szárított oregánó",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "trappista sajt, reszelve",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A tésztát bő, sós vízben a csomagoláson jelzett ideig kifőzöd, és leszűröd.",
+            "A hagymát finomra, a sonkát csíkokra, a gombát vékony szeletekre vágod.",
+            "Egy lábasban az olajon a hagymát üvegesre párolod, hozzáadod a gombát, és addig pirítod, amíg a leve elfő (kb. 6 perc).",
+            "Hozzáadod a sonkát, 1 percig pirítod, majd a paradicsomot, az oregánót, a cukrot és a sót, és 15 percig főzöd. A végén belekevered a vajat.",
+            "Kóstolod: a milánói szósz enyhén édeskés.",
+            "A tésztát a szósszal összeforgatod, és bőven reszelt sajttal tálalod."
+        ],
+        "tip": "Sütőben is befejezheted: tűzálló tálban, sajttal megszórva 200 °C-on 10 percig.",
+        "totalCost": 2454
+    },
+    {
+        "id": 1089,
+        "sourceId": "hu-69",
+        "name": "Bakonyi sertésszelet galuskával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 65,
+        "baseCost": 610,
+        "access": "pro",
+        "servings": 4,
+        "description": "Bakonyi erdők gombás-paprikás étele: puha sertésszelet tejfölös gombapaprikás mártásban, nokedlivel.",
+        "ingredients": [
+            {
+                "name": "sertéscomb",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a hús forgatásához)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "csiperkegomba (vagy vegyes erdei gomba)",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a habaráshoz)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a nokedlihez)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a nokedlihez)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A hússzeleteket enyhén kiveregeted, sózod, borsozod, és egyik oldalukat belisztezed.",
+            "Egy széles serpenyőben az olajon mindkét oldalukat 2 percig elősütöd, majd kiszeded.",
+            "A visszamaradt zsiradékon a finomra vágott hagymát üvegesre párolod, a tűzről levéve elkevered benne a fűszerpaprikát, majd hozzáadod a felkockázott zöldpaprikát, paradicsomot és a felszeletelt gombát.",
+            "Visszateszed a húst, aláöntesz 2 dl vizet, és fedő alatt, kis lángon 30–35 percig párolod, amíg a hús puha.",
+            "A tejfölt a liszttel csomómentesre kevered, kevés forró szafttal temperálod, és a mártáshoz öntöd; 2–3 percig forralod.",
+            "A nokedlit a hu-02 receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva). A húst a nokedlivel és a gombás mártással tálalod."
+        ],
+        "tip": "Erdei gombával (vargánya, rókagomba) az igazi bakonyi.",
+        "totalCost": 2433
+    },
+    {
+        "id": 1090,
+        "sourceId": "hu-70",
+        "name": "Székelykáposzta",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 105,
+        "baseCost": 830,
+        "access": "pro",
+        "servings": 4,
+        "description": "A legenda szerint Székely József megyei levéltárnokról kapta a nevét: sertéspörkölt savanyú káposztával összefőzve, bőven tejföllel.",
+        "ingredients": [
+            {
+                "name": "sertéslapocka (vagy comb)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "savanyú káposzta",
+                "amount": 170,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj vagy sertészsír",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "egész köménymag",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "kenyér (tálaláshoz)",
+                "amount": 75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 2–3 cm-es kockákra vágod, a hagymát finomra aprítod. A káposztát, ha nagyon savanyú, átöblíted.",
+            "Egy lábasban az olajon a hagymát üvegesre párolod, a tűzről levéve elkevered benne a fűszerpaprikát, majd hozzáadod a húst, és 5 percig pirítod.",
+            "Sózod, borsozod, hozzáadod a zúzott fokhagymát és a köményt, aláöntesz 1 dl vizet, és fedő alatt 40 percig párolod.",
+            "Hozzáadod a káposztát és annyi vizet, hogy épp ellepje, és további 30–35 percig főzöd, amíg a hús és a káposzta is puha.",
+            "A tejfölt a liszttel csomómentesre kevered, kevés forró lével temperálod, és a káposztához öntöd; 3–4 percig forralod.",
+            "Tálaláskor mindegyik tányérra még egy kanál tejfölt teszel, és friss kenyérrel kínálod."
+        ],
+        "tip": "Másnap, újramelegítve még ízesebb – mint minden káposztás étel.",
+        "totalCost": 3316
+    },
+    {
+        "id": 1091,
+        "sourceId": "hu-71",
+        "name": "Marhapörkölt nokedlivel",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 175,
+        "baseCost": 1400,
+        "access": "pro",
+        "servings": 4,
+        "description": "A pörköltek királya: marhalábszár sok hagymán, lassan, saját levében puhára párolva, sűrű, piros szafttal és nokedlivel.",
+        "ingredients": [
+            {
+                "name": "marhalábszár (csont nélkül)",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj vagy sertészsír",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "egész köménymag",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "finomliszt (a nokedlihez)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a nokedlihez)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "só",
+                "amount": 4.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 2,5 cm-es kockákra vágod, a hagymát nagyon finomra aprítod (a pörkölt szaftját a szétfőtt hagyma sűríti).",
+            "Vastag aljú lábasban az olajon a hagymát közepes lángon 12–15 percig puhára, üvegesre párolod, majd a tűzről levéve elkevered benne a fűszerpaprikát.",
+            "Hozzáadod a húst, visszateszed a tűzre, és nagy lángon kevergetve 5–6 percig pirítod, amíg minden oldala kifehéredik.",
+            "Sózod, borsozod, hozzáadod a köményt, a zúzott fokhagymát, a felkockázott paradicsomot és paprikát, aláöntesz 1,5 dl vizet, és fedő alatt, a leggyengébb lángon 2–2,5 órát párolod. Mindig csak annyi vizet pótolsz, hogy ne kapjon le.",
+            "Amikor a hús omlós, fedő nélkül 10 percig zsírjára sütöd, hogy a szaft sűrű és fényes legyen.",
+            "A nokedlit a hu-02 receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva)."
+        ],
+        "tip": "A lábszár inas, kollagénben gazdag része adja a pörkölt selymes szaftját – ne cseréld sovány húsra.",
+        "totalCost": 5588
+    },
+    {
+        "id": 1092,
+        "sourceId": "hu-72",
+        "name": "Vadas marha zsemlegombóccal",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 190,
+        "baseCost": 1620,
+        "access": "pro",
+        "servings": 4,
+        "description": "Ünnepi magyar fogás: szalonnával tűzdelt marhahús édes-savanykás, mustáros, tejszínes gyökérzöldséges mártásban, puha zsemlegombóccal.",
+        "ingredients": [
+            {
+                "name": "marhacomb (felsál vagy fehérpecsenye)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "füstölt szalonna (a tűzdeléshez)",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "zellergumó",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "mustár",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy 2 ek ecet)",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "habtejszín",
+                "amount": 50,
+                "unit": "ml"
+            },
+            {
+                "name": "zsemle (a gombóchoz)",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "tej (a gombóchoz)",
+                "amount": 37.5,
+                "unit": "ml"
+            },
+            {
+                "name": "tojás (a gombóchoz)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "finomliszt (a gombóchoz)",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (a gombóchoz)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A szalonnát vékony rudakra vágod, és egy éles, keskeny késsel a húsba szúrt lyukakba tűzdeled. A húst sózod, borsozod.",
+            "Egy vastag aljú lábasban az olajon a húst minden oldalán barnára sütöd, majd kiveszed. A visszamaradt zsiradékon a karikára vágott répát, gyökeret, zellert és hagymát 8–10 percig pirítod.",
+            "Megszórod a cukorral, és kevergetve addig pirítod, amíg a zöldségek karamellizálódnak. Visszateszed a húst, hozzáadod a babérlevelet, aláöntesz 4 dl vizet, és fedő alatt, kis lángon 2–2,5 órát párolod (vagy 160 °C-os sütőben). Időnként megforgatod, a vizet pótolod.",
+            "Zsemlegombóc: a zsemléket kis kockákra vágod, a vajon megpirítod, majd összekevered a tojással felvert tejjel, a liszttel és egy csipet sóval. 20 percig állni hagyod, vizes kézzel 8 gombócot formázol, és enyhén sós, gyöngyöző vízben 15 percig főzöd.",
+            "A puha húst kiveszed, a babérlevelet eltávolítod. A zöldségeket a főzőlével simára turmixolod, belekevered a mustárt, a citromlevet és a liszttel elkevert tejszínt, és 5 percig forralod. Sóval, cukorral, citrommal édes-savanykás-mustárosra ízesíted.",
+            "A húst szeletekre vágod, és a mártással, zsemlegombóccal tálalod. Hagyományosan egy kanál vörösáfonya-lekvár is kerül mellé."
+        ],
+        "tip": "Az ízek másnapra összeérnek; a vadas előző nap elkészítve még jobb.",
+        "totalCost": 6472
+    },
+    {
+        "id": 1093,
+        "sourceId": "hu-73",
+        "name": "Bácskai rizses hús",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 65,
+        "baseCost": 560,
+        "access": "pro",
+        "servings": 4,
+        "description": "Vajdasági eredetű egytálétel: paprikás sertéspörkölt lecsós zöldségekkel és a szaftjában puhára párolt rizzsel.",
+        "ingredients": [
+            {
+                "name": "sertéscomb (vagy lapocka)",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "rizs",
+                "amount": 62.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "csemegeuborka (tálaláshoz)",
+                "amount": 50,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 2 cm-es kockákra vágod, a hagymát finomra, a paprikát karikákra, a paradicsomot kockákra.",
+            "Egy széles lábasban az olajon a hagymát üvegesre párolod, a tűzről levéve elkevered a fűszerpaprikát, majd hozzáadod a húst, és 5 percig pirítod.",
+            "Sózod, borsozod, hozzáadod a zúzott fokhagymát, aláöntesz 1 dl vizet, és fedő alatt 25 percig párolod.",
+            "Hozzáadod a paprikát és a paradicsomot, és 5 percig együtt párolod.",
+            "Beleszórod az átmosott rizst, felöntöd 6 dl forró vízzel, sózod, és fedő alatt, a leggyengébb lángon 18–20 percig főzöd, keverés nélkül. Utána 5 percig pihenteted.",
+            "Villával óvatosan átforgatod, és csemegeuborkával tálalod."
+        ],
+        "tip": "Ne kevergesd a rizst főzés közben, különben ragacsos lesz.",
+        "totalCost": 2252
+    },
+    {
+        "id": 1094,
+        "sourceId": "hu-74",
+        "name": "Stefánia vagdalt burgonyapürével",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 85,
+        "baseCost": 780,
+        "access": "pro",
+        "servings": 4,
+        "description": "A vasárnapi ebédek látványos fogása: főtt tojásokkal töltött, sütőben sült, szaftos darált húsos „kenyér”, szalonnával borítva, krumplipürével.",
+        "ingredients": [
+            {
+                "name": "darált sertéshús",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "zsemle (áztatáshoz)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "tej (a zsemle áztatásához)",
+                "amount": 25,
+                "unit": "ml"
+            },
+            {
+                "name": "tojás",
+                "amount": 1.25,
+                "unit": "db"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "szárított majoránna",
+                "amount": 0.125,
+                "unit": "tk"
+            },
+            {
+                "name": "füstölt szalonna",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya (a püréhez)",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "tej (a püréhez)",
+                "amount": 37.5,
+                "unit": "ml"
+            },
+            {
+                "name": "vaj (a püréhez)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "4 tojást 10 perc alatt keményre főzöl, hideg vízben lehűtöd, és meghámozod. A zsemlét a tejben 10 percig áztatod, majd kinyomkodod.",
+            "A sütőt 180 °C-ra előmelegíted. A darált húst összegyúrod a zsemlével, 1 nyers tojással, a nagyon finomra vágott hagymával, a zúzott fokhagymával, a fűszerpaprikával, a majoránnával, 2 teáskanál sóval és a borssal.",
+            "Egy sütőpapírra a massza felét kb. 25×10 cm-es téglalappá simítod, a közepére egy sorban lefekteted a főtt tojásokat, ráteszed a maradék masszát, és szorosan, hézagmentesen hasábbá formázod.",
+            "Egy kiolajozott tepsibe (vagy őzgerincformába) teszed, a tetejét befeded a szalonnaszeletekkel, és aláöntesz 1 dl vizet.",
+            "50–60 percig sütöd, félidőben a kisült lével meglocsolva, amíg a teteje aranybarna és a közepébe szúrt kés mentén tiszta lé folyik ki. 10 percig pihenteted, majd vastag szeletekre vágod.",
+            "Püré: a burgonyát felkockázva sós vízben puhára főzöd, áttöröd, és a forró tejjel és a vajjal habosra kevered. A vagdaltat a pürével és a tepsi szaftjával tálalod."
+        ],
+        "tip": "Hidegen, vékonyra szeletelve szendvicsbe is kiváló. Savanyúsággal tálald.",
+        "totalCost": 3130
+    },
+    {
+        "id": 1095,
+        "sourceId": "hu-75",
+        "name": "Lucskos káposzta",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 90,
+        "baseCost": 510,
+        "access": "pro",
+        "servings": 4,
+        "description": "Felföldi, szaftos („lucskos”) egytálétel: friss fejes káposzta sertéshússal és rizzsel, paprikásan összefőzve, tejföllel és kaporral.",
+        "ingredients": [
+            {
+                "name": "sertéslapocka",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "fejes káposzta",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "rizs",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "kapor",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 2 cm-es kockákra vágod, a káposztát nagyobb kockákra (kb. 3×3 cm), a hagymát finomra.",
+            "Egy lábasban az olajon a hagymát üvegesre párolod, a tűzről levéve elkevered a fűszerpaprikát, majd hozzáadod a húst, és 5 percig pirítod.",
+            "Sózod, borsozod, hozzáadod a fokhagymát, a felkockázott paradicsomot és paprikát, aláöntesz 1 dl vizet, és fedő alatt 30 percig párolod.",
+            "Hozzáadod a káposztát és az átmosott rizst, felöntöd annyi vízzel, hogy épp ellepje, és fedő alatt további 25–30 percig főzöd, amíg a káposzta és a rizs is puha.",
+            "A tejfölt a liszttel csomómentesre kevered, kevés forró lével temperálod, és a káposztához öntöd; 3–4 percig forralod.",
+            "Kaporral ízesíted, és mély tányérban, szaftosan tálalod."
+        ],
+        "tip": "Ha a káposzta túl sok levet szív fel, egy kevés vízzel hígítsd: a lucskos legyen szaftos.",
+        "totalCost": 2033
+    },
+    {
+        "id": 1096,
+        "sourceId": "hu-76",
+        "name": "Rakott kel",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 85,
+        "baseCost": 580,
+        "access": "pro",
+        "servings": 4,
+        "description": "Az őszi-téli rakott ételek csendes kedvence: blansírozott kelkáposztalevelek, paprikás darált hús és rizs rétegezve, tejföllel összesütve.",
+        "ingredients": [
+            {
+                "name": "kelkáposzta",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "darált sertéshús",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "rizs",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "vaj (a tál kikenéséhez)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A kelkáposzta leveleit leveszed, a vastag ereket ellaposítod, és bő, sós, forrásban lévő vízben 3–4 percig blansírozod. Leszűröd.",
+            "A rizst 2 dl sós vízben 10 percig félpuhára főzöd.",
+            "Az olajon a finomra vágott hagymát üvegesre párolod, a tűzről levéve elkevered a fűszerpaprikát, majd hozzáadod a darált húst és a fokhagymát, sózod, borsozod, és morzsolgatva 10 percig pirítod. Belekevered a rizst.",
+            "A sütőt 180 °C-ra előmelegíted. A tejfölt a tojással és egy csipet sóval elkevered.",
+            "Egy kivajazott tűzálló tálba rétegezed: kellevelek, hús, néhány kanál tejföl – háromszor ismételve; a tetejére kellevél és a maradék tejföl kerül.",
+            "Fóliával letakarva 30 percig, majd fólia nélkül 15 percig sütöd, amíg a teteje aranyszínű. 10 percig pihenteted, és szeletelve tálalod."
+        ],
+        "tip": "Húsmentesen gombás-rizses töltelékkel is elkészítheted.",
+        "totalCost": 2333
+    },
+    {
+        "id": 1097,
+        "sourceId": "hu-77",
+        "name": "Tarhonyás hús",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 75,
+        "baseCost": 490,
+        "access": "pro",
+        "servings": 4,
+        "description": "Az alföldi pásztorok és a menzák kedvence: paprikás sertéspörkölt, amelyben olajon pirított tarhonya fő meg, csemegeuborkával.",
+        "ingredients": [
+            {
+                "name": "sertéslapocka (vagy comb)",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "tarhonya",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "csemegeuborka (tálaláshoz)",
+                "amount": 50,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst 2 cm-es kockákra vágod, a hagymát finomra aprítod.",
+            "Egy lábasban 2 evőkanál olajon a hagymát üvegesre párolod, a tűzről levéve elkevered a fűszerpaprikát, hozzáadod a húst, és 5 percig pirítod.",
+            "Sózod, borsozod, hozzáadod a fokhagymát, a felkockázott paprikát és paradicsomot, aláöntesz 1,5 dl vizet, és fedő alatt 35–40 percig párolod, amíg a hús majdnem puha.",
+            "Közben egy serpenyőben a maradék olajon a tarhonyát kevergetve 4–5 percig aranybarnára pirítod (ez adja a jellegzetes diós ízt).",
+            "A tarhonyát a pörkölthöz adod, felöntöd 6 dl forró vízzel, és fedő alatt, kis lángon 15–18 percig főzöd, amíg a tarhonya megpuhul és a folyadékot felszívja. Ha kell, vizet pótolsz.",
+            "Csemegeuborkával tálalod."
+        ],
+        "tip": "A tarhonyát mindig pirítsd meg főzés előtt; így nem ragad össze.",
+        "totalCost": 1979
+    },
+    {
+        "id": 1098,
+        "sourceId": "hu-78",
+        "name": "Balatoni rántott hekk",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 35,
+        "baseCost": 1130,
+        "access": "pro",
+        "servings": 4,
+        "description": "A balatoni strandbüfék ikonja otthon: paprikás lisztbe forgatott, ropogósra sütött hekk citrommal, friss kenyérrel és hideg uborkasalátával.",
+        "ingredients": [
+            {
+                "name": "hekkfilé (kiolvasztva) vagy tisztított egész hekk",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 30,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj a sütéshez",
+                "amount": 50,
+                "unit": "ml"
+            },
+            {
+                "name": "citrom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fehér kenyér",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "uborka (a salátához)",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor (a salátához)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma (a salátához)",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "Uborkasaláta: az uborkát vékonyra gyalulod, megsózod, 15 perc után kinyomkodod, majd leöntöd 2,5 dl hideg vízzel, fél citrom levével, a cukorral és a zúzott fokhagymával kevert lével. Hűtőbe teszed.",
+            "A halat papírtörlővel alaposan szárazra itatod, megsózod, és meglocsolod a maradék citrom levének felével. 10 percig pihenteted.",
+            "A lisztet összekevered a fűszerpaprikával, és a halat alaposan beleforgatod, a felesleget leütögeted.",
+            "Egy serpenyőben 1,5 cm magasan olajat hevítesz 175 °C-ra, és a halat adagonként, oldalanként 3–4 perc alatt aranybarnára, ropogósra sütöd.",
+            "Papírtörlőre szeded, és enyhén megsózod.",
+            "Forrón, citromgerezddel, friss kenyérrel és a hideg uborkasalátával tálalod."
+        ],
+        "tip": "A strandokon egész, kibelezett hekket sütnek; filével szálkamentes és gyerekbarát.",
+        "totalCost": 4529
+    },
+    {
+        "id": 1099,
+        "sourceId": "hu-79",
+        "name": "Töltött paprika paradicsommártással",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 90,
+        "baseCost": 760,
+        "access": "pro",
+        "servings": 4,
+        "description": "Nyár végi klasszikus: rizses darált hússal töltött zöldpaprika édes-savanykás paradicsommártásban, főtt burgonyával.",
+        "ingredients": [
+            {
+                "name": "zöldpaprika (töltenivaló)",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "darált sertéshús",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "rizs",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 0.75,
+                "unit": "g"
+            },
+            {
+                "name": "darabolt paradicsomkonzerv",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya (köretnek)",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A paprikák tetejét levágod (kalapnak félreteheted), a magházat kiveszed. A rizst átmosod, és nyersen hagyod.",
+            "Töltelék: a darált húst összegyúrod a nyers rizzsel, a nagyon finomra vágott hagyma felével, a tojással, a zúzott fokhagymával, a fűszerpaprikával, 2 teáskanál sóval és a borssal.",
+            "A tölteléket lazán a paprikákba töltöd (ne tömd tele, mert a rizs megdagad). A maradékból gombócokat formázhatsz.",
+            "Mártás: az olajon a maradék hagymát üvegesre párolod, hozzáadod a lisztet, világos rántássá pirítod, majd felöntöd a pürésített paradicsommal és 5 dl vízzel. Csomómentesre kevered, sózod, cukrozod.",
+            "Beleállítod a paprikákat (a kalapjukat is visszateheted), és fedő alatt, kis lángon 45–50 percig főzöd. Közben a burgonyát sós vízben megfőzöd.",
+            "Kóstolod a mártást: legyen édes-savanykás. A paprikát a mártással és a főtt burgonyával tálalod."
+        ],
+        "tip": "Augusztus–szeptemberben, friss paradicsommal és vékony falú TV-paprikával a legjobb.",
+        "totalCost": 3053
+    },
+    {
+        "id": 1100,
+        "sourceId": "hu-80",
+        "name": "Flekken káposztasalátával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 40,
+        "baseCost": 560,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar kerti grillezés klasszikusa: fokhagymás-paprikás pácban érlelt, rostlapon sült sertéstarja, ecetes-cukros káposztasalátával és sült burgonyával.",
+        "ingredients": [
+            {
+                "name": "sertéstarja, csont nélkül",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 15,
+                "unit": "ml"
+            },
+            {
+                "name": "mustár",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "fejes káposzta (a salátához)",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy 2 ek ecet)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "Pác: 2 evőkanál olajat összekeversz a zúzott fokhagymával, a fűszerpaprikával, a mustárral és a borssal. A tarjaszeleteket enyhén kiveregeted, bedörzsölöd a páccal, és legalább 2 órára (legjobb egy éjszakára) hűtőbe teszed.",
+            "Káposztasaláta: a káposztát nagyon vékonyra gyalulod, megsózod, és 15 percig állni hagyod. Kinyomkodod, majd 1,5 dl hideg vízzel, a citromlével és a cukorral elkevert lével leöntöd. Hűtőbe teszed.",
+            "A sütőt 200 °C-ra előmelegíted. A burgonyát cikkekre vágod, a maradék olaj felével és sóval összeforgatod, és tepsiben 35 percig ropogósra sütöd.",
+            "A húst sütés előtt megsózod (előtte nem, mert kiszívja a levét).",
+            "Forró rostlapon, grillen vagy grillserpenyőben a maradék olajjal oldalanként 4–5 percig sütöd, amíg szép csíkos és átsült (maghőmérséklet 68–70 °C).",
+            "3 percig pihenteted, majd a burgonyával és a káposztasalátával tálalod."
+        ],
+        "tip": "A tarja zsírosabb, mint a karaj, ezért grillen szaftos marad.",
+        "totalCost": 2253
+    },
+    {
+        "id": 1101,
+        "sourceId": "hu-81",
+        "name": "Sült kacsacomb párolt lilakáposztával és hagymás tört burgonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 140,
+        "baseCost": 1440,
+        "access": "pro",
+        "servings": 4,
+        "description": "Márton-napi (november 11.) ünnepi fogás: omlósra, ropogós bőrűre sült kacsacomb, almás-fahéjas párolt lilakáposzta és kacsazsíros hagymás tört krumpli.",
+        "ingredients": [
+            {
+                "name": "kacsacomb",
+                "amount": 300,
+                "unit": "g"
+            },
+            {
+                "name": "szárított majoránna",
+                "amount": 0.25,
+                "unit": "tk"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "lilakáposzta",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "savanykás alma",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma (1 a káposztához, 1 a burgonyához)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "citromlé (vagy 2 ek ecet)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fahéj",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 4.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A kacsacombok bőrét éles késsel rácsmintában bevagdosod (a húsig ne vágd át), majd bedörzsölöd sóval, borssal, majoránnával és a zúzott fokhagymával.",
+            "Bőrös oldalukkal felfelé egy tepsibe teszed, aláöntesz 1 dl vizet, alufóliával letakarod, és 160 °C-on 75 percig párolva sütöd. Ezután leveszed a fóliát, a sütőt 200 °C-ra kapcsolod, és további 25–30 percig sütöd, amíg a bőr ropogós és aranybarna. A kisült zsírt félreteszed.",
+            "Lilakáposzta: a káposztát vékony csíkokra vágod. Egy lábasban 1 evőkanál kacsazsíron a felszeletelt hagymát 5 percig párolod, megszórod a cukorral, és enyhén karamellizálod.",
+            "Hozzáadod a káposztát, a reszelt almát, a citromlevet, a fahéjat, sózod, aláöntesz 1 dl vizet, és fedő alatt 40–45 percig párolod, amíg puha. Kóstolva édes-savanykásra ízesíted.",
+            "Burgonya: a burgonyát héjában puhára főzöd, meghámozod, és villával durván összetöröd. A másik hagymát vékonyra szeleteled, 2 evőkanál kacsazsíron aranybarnára pirítod, és a burgonyával összeforgatod. Sózod.",
+            "A kacsacombot a párolt káposztával és a hagymás tört burgonyával tálalod."
+        ],
+        "tip": "A megmaradt kacsazsír üvegben hetekig eláll – zsíros kenyérre vagy krumplisütéshez kiváló.",
+        "totalCost": 5771
+    },
+    {
+        "id": 1102,
+        "sourceId": "hu-82",
+        "name": "Paradicsomos húsgombóc főtt burgonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 60,
+        "baseCost": 550,
+        "access": "pro",
+        "servings": 4,
+        "description": "Az iskolai menzák és nagymamák klasszikusa: puha, fokhagymás húsgombócok édes-savanykás paradicsommártásban, petrezselymes főtt burgonyával.",
+        "ingredients": [
+            {
+                "name": "darált sertéshús",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "zsemle (áztatáshoz)",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "tej",
+                "amount": 20,
+                "unit": "ml"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "darabolt paradicsomkonzerv",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (a burgonyához)",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A zsemlét a tejben 10 percig áztatod, kinyomkodod, és összegyúrod a darált hússal, a tojással, a hagyma felével (nagyon finomra vágva), a zúzott fokhagymával, sóval és borssal. Vizes kézzel 16–20 diónyi gombócot formázol.",
+            "Mártás: az olajon a maradék, finomra vágott hagymát üvegesre párolod, hozzáadod a lisztet, és világos rántássá pirítod.",
+            "Felöntöd a pürésített paradicsommal és 4 dl vízzel, csomómentesre kevered, sózod, és felforralod.",
+            "A gombócokat óvatosan a gyöngyöző mártásba teszed, és fedő alatt, kis lángon 20–25 percig főzöd (az első 10 percben ne kevergesd, hogy ne essenek szét).",
+            "Közben a burgonyát felnegyedelve sós vízben puhára főzöd, leszűröd, és vajjal (és ha van, petrezselyemzölddel) átforgatod.",
+            "Cukorral édes-savanykásra ízesíted a mártást, és a gombócokat a burgonyával tálalod."
+        ],
+        "tip": "Rizzsel vagy nokedlivel is tálalható; a gombócok fagyasztva is elállnak.",
+        "totalCost": 2184
+    },
+    {
+        "id": 1103,
+        "sourceId": "hu-83",
+        "name": "Rántott karfiol párolt rizzsel és fokhagymás tejföllel",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 50,
+        "baseCost": 550,
+        "access": "pro",
+        "servings": 4,
+        "description": "A vegetáriánus menü örökzöldje: előfőzött, ropogós bundában sült karfiolrózsák párolt rizzsel és fokhagymás tejföllel.",
+        "ingredients": [
+            {
+                "name": "karfiol",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "száraz zsemle (zsemlemorzsához)",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "napraforgóolaj a sütéshez",
+                "amount": 50,
+                "unit": "ml"
+            },
+            {
+                "name": "rizs",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj (a rizshez)",
+                "amount": 2.5,
+                "unit": "ml"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A karfiolt nagyobb rózsáira szeded, és bő, sós, forrásban lévő vízben 5–6 percig roppanósra előfőzöd. Leszűröd, és papírtörlőn hagyod teljesen kihűlni és megszáradni.",
+            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
+            "A rózsákat lisztbe, felvert sós tojásba, majd zsemlemorzsába forgatod.",
+            "A rizst a hu-08 receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés).",
+            "Egy serpenyőben 1,5 cm magasan olajat hevítesz 170 °C-ra, és a karfiolt adagonként, forgatva 4–5 perc alatt aranybarnára sütöd. Papírtörlőre szeded.",
+            "A tejfölt elkevered a zúzott fokhagymával és egy csipet sóval, és a karfiolt a rizzsel és a fokhagymás tejföllel tálalod."
+        ],
+        "tip": "A karfiol legyen teljesen száraz, különben a panír leválik. Tartármártással is klasszikus.",
+        "totalCost": 2184
+    },
+    {
+        "id": 1104,
+        "sourceId": "hu-84",
+        "name": "Tócsni fokhagymás tejföllel",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 250,
+        "access": "pro",
+        "servings": 4,
+        "description": "Ahány tájegység, annyi neve (lapcsánka, prósza, cicedli): nyers reszelt burgonyából sütött, ropogós szélű fokhagymás-majorannás lepény, tejföllel.",
+        "ingredients": [
+            {
+                "name": "burgonya (lisztes)",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "szárított majoránna",
+                "amount": 0.25,
+                "unit": "tk"
+            },
+            {
+                "name": "napraforgóolaj a sütéshez",
+                "amount": 37.5,
+                "unit": "ml"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A burgonyát meghámozod, és a reszelő finomabb (vagy közepes) oldalán lereszeled, a hagymát is. Egy tiszta konyharuhába téve a levét erőteljesen kinyomod – minél szárazabb, annál ropogósabb lesz.",
+            "Összekevered a tojással, a liszttel, 3 gerezd zúzott fokhagymával, a majoránnával, sóval és borssal.",
+            "Egy serpenyőben fél centi magasan olajat hevítesz.",
+            "Evőkanálnyi adagokat teszel bele, és vékony, tenyérnyi lepényekké lapítod.",
+            "Közepes lángon oldalanként 3–4 percig aranybarnára, ropogósra sütöd. Papírtörlőre szeded.",
+            "A tejfölt elkevered a maradék zúzott fokhagymával és egy csipet sóval, és a forró tócsnival tálalod."
+        ],
+        "tip": "Reszelt sajttal megszórva vagy savanyú káposztával is népszerű.",
+        "totalCost": 1009
+    },
+    {
+        "id": 1105,
+        "sourceId": "hu-85",
+        "name": "Szilvás gombóc fahéjas morzsában",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 70,
+        "baseCost": 390,
+        "access": "pro",
+        "servings": 4,
+        "description": "Kora őszi kedvenc édes főétel: krumplis tésztába rejtett, fahéjas cukorral töltött szilva, vajas, pirított morzsába hempergetve.",
+        "ingredients": [
+            {
+                "name": "lisztes burgonya",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "vaj (a tésztába)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "szilva (lehetőleg besztercei)",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor (a töltelékhez)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fahéj",
+                "amount": 0.75,
+                "unit": "g"
+            },
+            {
+                "name": "száraz zsemle (zsemlemorzsához)",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "vaj (a morzsához)",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "porcukor (tálaláshoz)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 1.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A burgonyát héjában puhára főzöd, még melegen meghámozod és áttöröd. Hagyod teljesen kihűlni.",
+            "A kihűlt burgonyát a tojással, a puha vajjal, egy csipet sóval és annyi liszttel gyúrod össze, hogy rugalmas, nem ragadó tésztát kapj.",
+            "A szilvákat oldalt bevágod, kiveszed a magjukat, és a helyükre egy csipet fahéjas cukrot teszel.",
+            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon kevergetve aranybarnára pirítod, és elkevered egy kevés fahéjjal.",
+            "A tésztát lisztezett deszkán 0,5 cm vastagra nyújtod, 7×7 cm-es négyzetekre vágod, mindegyik közepére egy szilvát teszel, és a tésztát köré zárva sima gombóccá formázod.",
+            "Bő, enyhén sós, forrásban lévő vízben adagonként főzöd; amikor feljönnek, még 8–10 percig gyöngyözve főzöd. Szűrőkanállal kiszeded, a pirított morzsába forgatod, és porcukorral meghintve tálalod."
+        ],
+        "tip": "Fagyasztott, felezett szilvával télen is elkészíthető; a nyers gombócok tálcán lefagyaszthatók.",
+        "totalCost": 1548
+    },
+    {
+        "id": 1106,
+        "sourceId": "hu-86",
+        "name": "Lekváros derelye",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 55,
+        "baseCost": 420,
+        "access": "pro",
+        "servings": 4,
+        "description": "Barátfüleként is ismert, gyúrt tésztás édes főétel: sűrű szilvalekvárral töltött tésztapárnák vajas, pirított morzsában.",
+        "ingredients": [
+            {
+                "name": "finomliszt",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "sűrű szilvalekvár",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "száraz zsemle (zsemlemorzsához)",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "vaj (a morzsához)",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "porcukor",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 1.25,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A lisztet 2 tojással, egy csipet sóval és kb. 1 dl langyos vízzel sima, rugalmas tésztává gyúrod, és 20 percig letakarva pihenteted.",
+            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon aranybarnára pirítod.",
+            "A tésztát lisztezett deszkán 2 mm vékonyra nyújtod. A felére 5 cm-enként egy-egy kávéskanál lekvárt teszel, a lekvárcsomók közötti részt felvert tojással megkened.",
+            "Ráhajtod a tészta másik felét, ujjal a lekvár körül lenyomkodod, majd derelyevágóval vagy késsel négyzetekre vágod. A széleket villával összenyomod, hogy főzés közben ne nyíljanak szét.",
+            "Bő, enyhén sós, forrásban lévő vízben 4–5 percig főzöd, amíg feljönnek.",
+            "Leszűröd, a pirított morzsába forgatod, és porcukorral meghintve tálalod."
+        ],
+        "tip": "Túróval vagy diós töltelékkel is készülhet.",
+        "totalCost": 1699
+    },
+    {
+        "id": 1107,
+        "sourceId": "hu-87",
+        "name": "Juhtúrós sztrapacska",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 750,
+        "access": "pro",
+        "servings": 4,
+        "description": "Felvidéki-palóc klasszikus: nyers reszelt burgonyás galuska krémes juhtúróval és tejföllel – hagyományosan pirított szalonnával, itt húsmentesen, pirított hagymával.",
+        "ingredients": [
+            {
+                "name": "burgonya",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "juhtúró",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma (a pirított hagymához)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A burgonyát meghámozod, és a reszelő legfinomabb oldalán lereszeled (vagy aprítóban pépesíted).",
+            "Összekevered a tojással, 1 teáskanál sóval és annyi liszttel, hogy sűrű, nokedlitésztánál kicsit keményebb masszát kapj.",
+            "Bő, sós, forrásban lévő vízbe nokedliszaggatóval vagy deszkáról késsel beleszaggatod, és amikor feljönnek, még 2–3 percig főzöd. Leszűröd.",
+            "A juhtúrót elkevered a tejföl felével, hogy krémes legyen.",
+            "A hagymát vékony karikákra vágod, és az olajon ropogósra, aranybarnára pirítod.",
+            "A forró galuskát a juhtúrós krémmel összeforgatod, tányérra szeded, a tetejére a maradék tejfölt és a pirított hagymát teszed."
+        ],
+        "tip": "A hagyományos változatban pirított szalonnakockák és a kisült zsír kerül rá.",
+        "totalCost": 2994
+    },
+    {
+        "id": 1108,
+        "sourceId": "hu-88",
+        "name": "Gombás-paprikás tarhonya",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 520,
+        "access": "pro",
+        "servings": 4,
+        "description": "A tarhonyás hús húsmentes testvére: aranybarnára pirított tarhonya paprikás gombapörkölttel összefőzve, tejföllel.",
+        "ingredients": [
+            {
+                "name": "tarhonya",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "csiperkegomba",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "zöldpaprika",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fekete bors",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "csemegeuborka (tálaláshoz)",
+                "amount": 50,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A gombát negyedeled, a hagymát finomra, a paprikát és a paradicsomot kockákra vágod.",
+            "Egy serpenyőben 1 evőkanál olajon a tarhonyát kevergetve 4–5 percig aranybarnára pirítod. Kiszeded.",
+            "Egy lábasban a maradék olajon a hagymát üvegesre párolod, a tűzről levéve elkevered a fűszerpaprikát, hozzáadod a gombát, a paprikát, a paradicsomot és a fokhagymát, és 8 percig párolod.",
+            "Hozzáadod a tarhonyát, felöntöd 6 dl forró vízzel, sózod, borsozod, és fedő alatt, kis lángon 15–18 percig főzöd, amíg a tarhonya megpuhul.",
+            "Belekevered a tejfölt, és 1 percig melegíted.",
+            "Csemegeuborkával tálalod."
+        ],
+        "tip": "Vegyes erdei gombával még ízletesebb.",
+        "totalCost": 2091
+    },
+    {
+        "id": 1109,
+        "sourceId": "hu-d21",
+        "name": "Gundel palacsinta",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 70,
+        "baseCost": 640,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar cukrászat egyik csúcsa: rumos-mazsolás diós töltelékkel töltött, negyedbe hajtott palacsinta forró, rumos csokoládémártással.",
+        "ingredients": [
+            {
+                "name": "finomliszt",
+                "amount": 62.5,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "tej",
+                "amount": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "szódavíz vagy víz",
+                "amount": 0.5,
+                "unit": "dl"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj (a sütéshez)",
+                "amount": 10,
+                "unit": "ml"
+            },
+            {
+                "name": "darált dió (a töltelékhez)",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "tej (a töltelékhez)",
+                "amount": 25,
+                "unit": "ml"
+            },
+            {
+                "name": "kristálycukor (a töltelékhez)",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "mazsola",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "reszelt citromhéj",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "rum (vagy rumaroma)",
+                "amount": 0.75,
+                "unit": "ek"
+            },
+            {
+                "name": "étcsokoládé (a mártáshoz)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "kakaópor",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "habtejszín (a mártáshoz)",
+                "amount": 37.5,
+                "unit": "ml"
+            },
+            {
+                "name": "kristálycukor (a mártáshoz)",
+                "amount": 5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "Palacsinta: a lisztet a tojásokkal, a cukorral, a sóval és a tej felével csomómentesre kevered, majd a maradék tejjel és a szódavízzel tejszínsűrűségűre hígítod, és 15 percig pihenteted. Egy palacsintasütőt kevés olajjal kikensz, felforrósítasz, és vékony rétegben tésztát merítesz bele. Amikor a széle elválik (kb. 1 perc), megfordítod, és a másik oldalát 30 másodpercig sütöd. Ebből a mennyiségből kb. 14–16 palacsinta lesz. Ebből a recepthez 8–12 palacsinta kell; a maradékot lekvárral kínálhatod.",
+            "Töltelék: a mazsolát a rumban (vagy egy kevés langyos vízben) 15 percig áztatod.",
+            "A tejet a cukorral felforralod, lehúzod a tűzről, és belekevered a darált diót, a citromhéjat és a lecsepegtetett mazsolát (a rumot is). Sűrű, kenhető krémet kapsz.",
+            "Minden palacsintára 1–1,5 evőkanál tölteléket kensz, félbe, majd negyedbe hajtod, és egy kivajazott tűzálló tálban egymásra fektetve sorakoztatod. 180 °C-os sütőben 8–10 percig melegíted.",
+            "Csokoládémártás: a tejszínt a cukorral és a kakaóval felforralod, lehúzod a tűzről, beletöröd a csokoládét, és simára kevered. Ha kell, néhány csepp rummal ízesíted.",
+            "Tányéronként 2–3 palacsintát teszel, és bőven meglocsolod a forró csokoládémártással."
+        ],
+        "tip": "A legenda szerint a receptet Gundel Károly vendéglőjében tették híressé; a mártás legyen forró, a palacsinta meleg.",
+        "totalCost": 2579
+    },
+    {
+        "id": 1110,
+        "sourceId": "hu-d22",
+        "name": "Sült sütőtök fahéjjal",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 70,
+        "baseCost": 200,
+        "access": "pro",
+        "servings": 6,
+        "description": "Az ősz illata: sütőben karamellesre sült sütőtökcikkek – a régi piacok és vásárok kedvence, egy kis fahéjjal, mézzel vagy egyszerűen magában.",
+        "ingredients": [
+            {
+                "name": "sütőtök (Nagydobosi vagy Kanadai)",
+                "amount": 333.333,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fahéj",
+                "amount": 0.5,
+                "unit": "g"
+            },
+            {
+                "name": "méz",
+                "amount": 8.333,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 3.333,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A sütőt 200 °C-ra előmelegíted.",
+            "A sütőtököt alaposan megmosod, félbevágod, és kikanalazod a magjait (a magokat megtisztítva külön megpiríthatod).",
+            "Héjastul 4–5 cm széles cikkekre vágod.",
+            "A cikkeket sütőpapíros tepsibe állítod, aláöntesz 1 dl vizet, és 50–60 percig sütöd, amíg a húsa teljesen puha és a széle karamellizálódik.",
+            "A forró tökre kis vajdarabokat teszel, és megszórod fahéjjal.",
+            "Melegen vagy langyosan, ízlés szerint mézzel meglocsolva tálalod."
+        ],
+        "tip": "A Nagydobosi sütőtök a legédesebb; október–novemberben, néhány hét érlelés után a legjobb.",
+        "totalCost": 1200
+    },
+    {
+        "id": 1111,
+        "sourceId": "hu-d23",
+        "name": "Gesztenyepüré tejszínhabbal",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 15,
+        "baseCost": 810,
+        "access": "pro",
+        "servings": 4,
+        "description": "A magyar cukrászdák őszi-téli klasszikusa: rumos, édesített gesztenyepüré „spagettivé” nyomva, tejszínhab-koronával.",
+        "ingredients": [
+            {
+                "name": "édesített gesztenyepüré (fagyasztott vagy hűtött)",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "rum (vagy rumaroma)",
+                "amount": 0.5,
+                "unit": "ek"
+            },
+            {
+                "name": "habtejszín",
+                "amount": 62.5,
+                "unit": "ml"
+            },
+            {
+                "name": "porcukor",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "vaníliás cukor",
+                "amount": 2,
+                "unit": "g"
+            },
+            {
+                "name": "étcsokoládé (díszítéshez, elhagyható)",
+                "amount": 5,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A gesztenyepürét (ha fagyasztott, előző este a hűtőben kiolvasztod) egy tálban a rummal simára kevered.",
+            "A habtejszínt jól behűtve a porcukorral és a vaníliás cukorral kemény habbá vered.",
+            "A pürét burgonyanyomón vagy krumplinyomón keresztül közvetlenül a tálaló poharakba vagy tányérokra nyomod, hogy laza, „spagettis” halom legyen.",
+            "Nem nyomkodod össze, hogy levegős maradjon.",
+            "Mindegyik adag tetejére bőven tejszínhabot teszel.",
+            "Tálalás előtt reszelt étcsokoládéval vagy egy szem koktélcseresznyével díszíted, és hidegen kínálod."
+        ],
+        "tip": "Ha cukrozatlan gesztenyepürét kapsz, 25 dkg-hoz kb. 5–6 dkg porcukrot keverj.",
+        "totalCost": 3237
+    },
+    {
+        "id": 1112,
+        "sourceId": "hu-d24",
+        "name": "Almás-meggyes rétes",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 65,
+        "baseCost": 370,
+        "access": "pro",
+        "servings": 8,
+        "description": "Kész réteslapból készülő, ropogós vajas rétes kétféle töltelékkel: fahéjas-diós alma és édes-savanykás meggy.",
+        "ingredients": [
+            {
+                "name": "réteslap",
+                "amount": 21.25,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (olvasztva, a kenéshez)",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "savanykás alma",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 15,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fahéj",
+                "amount": 0.375,
+                "unit": "g"
+            },
+            {
+                "name": "darált dió",
+                "amount": 6.25,
+                "unit": "g"
+            },
+            {
+                "name": "fagyasztott magozott meggy",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "száraz zsemle (zsemlemorzsához)",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "porcukor (a tetejére)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "vaníliás cukor",
+                "amount": 1,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A meggyet szűrőben kiolvasztod és alaposan lecsepegteted. A sütőt 190 °C-ra előmelegíted.",
+            "Az almát meghámozod, lereszeled, kissé kinyomod a levét, és összekevered a cukor felével, a fahéjjal és a vaníliás cukorral.",
+            "A zsemlét ledarálod, és a vaj 2 evőkanálnyi részén aranybarnára pirítod. A diót összekevered a morzsa felével.",
+            "Egy konyharuhára 3 réteslapot teszel egymásra, mindegyiket olvasztott vajjal megkenve. Az alsó harmadára az almás töltelékhez a diós morzsát szórod, rá az almát, és a konyharuha segítségével feltekered. Ugyanígy 3 lapból elkészíted a meggyest: a lapokra a maradék morzsát, a meggyet és a maradék cukrot teszed. (A 3 maradék lapot a rudak külső csomagolásához használhatod.)",
+            "A rudakat sütőpapíros tepsibe teszed, a tetejüket vajjal megkened, és 30–35 percig aranybarnára sütöd. Félidőben még egyszer megkened vajjal.",
+            "Langyosra hűtöd, ferdén felszeleteled, és bőven porcukorral meghinted."
+        ],
+        "tip": "Az alma levét mindig nyomd ki, különben a rétes alja elázik. Túrós vagy mákos töltelékkel is ugyanígy készül.",
+        "totalCost": 2932
+    },
+    {
+        "id": 1113,
+        "sourceId": "hu-d25",
+        "name": "Lekváros piskótatekercs",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 32,
+        "baseCost": 120,
+        "access": "pro",
+        "servings": 10,
+        "description": "Könnyű, puha, tojáshabos piskóta sárgabarack- vagy házi lekvárral megkenve és feltekerve – a nagymamák legegyszerűbb vendégváró süteménye.",
+        "ingredients": [
+            {
+                "name": "tojás",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "vaníliás cukor",
+                "amount": 0.8,
+                "unit": "g"
+            },
+            {
+                "name": "baracklekvár (vagy bármilyen lekvár)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "porcukor (a tetejére)",
+                "amount": 2,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 0.1,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A sütőt 180 °C-ra előmelegíted, és egy 30×40 cm-es tepsit sütőpapírral bélelsz.",
+            "A tojásokat szétválasztod. A fehérjéket egy csipet sóval kemény habbá vered, majd fokozatosan hozzáadod a kristálycukor felét, és fényes, kemény habot versz.",
+            "A sárgákat a maradék cukorral és a vaníliás cukorral világos, habos krémmé kevered.",
+            "A sárgás krémet óvatosan a habhoz forgatod, majd a lisztet szitán keresztül, kis adagokban, alulról felfelé forgató mozdulatokkal beleforgatod, hogy a hab ne törjön össze.",
+            "A tésztát egyenletesen a tepsibe simítod, és 10–12 percig sütöd, amíg a teteje világos aranyszínű és tapintásra visszarugózik. Azonnal egy porcukorral meghintett konyharuhára borítod, lehúzod a sütőpapírt, és a konyharuhával együtt melegen feltekered, majd hagyod kihűlni.",
+            "A kihűlt tekercset óvatosan kitekered, megkened a lekvárral, újra feltekered, porcukorral meghinted, és ferdén szeleteled."
+        ],
+        "tip": "A melegen való feltekerés a titka: így nem reped meg a tekercs.",
+        "totalCost": 1244
+    },
+    {
+        "id": 1114,
+        "sourceId": "hu-d26",
+        "name": "Szilvás lepény",
+        "cuisine": "hu",
+        "course": "dessert",
+        "type": "veggie",
+        "time": 60,
+        "baseCost": 140,
+        "access": "pro",
+        "servings": 12,
+        "description": "Szeptember íze: puha, vajas kevert tészta sűrűn rakott félbevágott szilvával, fahéjas cukorral megszórva sütve.",
+        "ingredients": [
+            {
+                "name": "finomliszt",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (puha)",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "tej",
+                "amount": 12.5,
+                "unit": "ml"
+            },
+            {
+                "name": "sütőpor",
+                "amount": 1,
+                "unit": "g"
+            },
+            {
+                "name": "vaníliás cukor",
+                "amount": 0.667,
+                "unit": "g"
+            },
+            {
+                "name": "szilva (lehetőleg besztercei)",
+                "amount": 83.333,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor (a tetejére)",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt fahéj",
+                "amount": 0.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 0.083,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A sütőt 180 °C-ra előmelegíted, és egy 25×35 cm-es tepsit kivajazol és kilisztezel (vagy sütőpapírral bélelsz).",
+            "A szilvákat megmosod, félbevágod, és kiveszed a magjukat.",
+            "A puha vajat a cukorral és a vaníliás cukorral habosra kevered, majd egyenként beledolgozod a tojásokat.",
+            "A lisztet összekevered a sütőporral és a sóval, és a tejjel felváltva, kis adagokban a vajas krémhez kevered. Sűrű, kenhető tésztát kapsz.",
+            "A tésztát a tepsibe simítod, a szilvafeleket vágott felükkel felfelé, szorosan egymás mellé nyomkodod, és megszórod a fahéjjal elkevert cukorral.",
+            "40–45 percig sütöd, amíg a tészta aranybarna és a közepébe szúrt tűpróba száraz. Langyosra hűtve kockákra vágod."
+        ],
+        "tip": "A fahéjas cukorba egy kevés darált diót is keverhetsz. Fagyasztott szilvával télen is elkészíthető.",
+        "totalCost": 1727
+    },
+    {
         "id": 2001,
         "sourceId": "as-01",
         "name": "Kung pao csirke",
