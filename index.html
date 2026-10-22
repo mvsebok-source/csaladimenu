@@ -532,6 +532,13 @@
                     </span>
                     <span id="auth-password-hint" class="mt-1 block text-xs font-normal text-slate-500">Legalább 6 karakter.</span>
                 </label>
+                <label id="auth-remember-login-field" class="hidden flex items-start gap-2 text-sm text-slate-700">
+                    <input id="auth-remember-login" type="checkbox" class="mt-0.5 h-4 w-4 shrink-0 accent-brand-600">
+                    <span>
+                        <span class="block font-semibold">Maradjak belépve ezen az eszközön</span>
+                        <span class="block text-xs text-slate-500">Jelölés nélkül csak ideiglenes böngésző-munkamenetben maradsz belépve. Megosztott eszközön ne jelöld be.</span>
+                    </span>
+                </label>
                 <button id="auth-forgot-password" type="button" class="hidden text-sm font-semibold text-brand-700 underline underline-offset-2">Elfelejtetted a jelszavad?</button>
                 <p id="auth-message" role="status" aria-live="polite" class="hidden text-sm rounded-xl p-3"></p>
                 <button id="auth-submit" type="submit" class="w-full bg-cta-500 hover:bg-cta-600 disabled:opacity-60 text-white font-extrabold py-3 rounded-xl shadow transition text-sm">
@@ -545,8 +552,13 @@
     <!-- SCRIPT -->
     <script src="recipe-catalog.js"></script>
     <script src="pantry.js"></script>
+    <script src="auth-storage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        const authRememberLoginField = document.getElementById('auth-remember-login-field');
+        const authRememberLoginCheckbox = document.getElementById('auth-remember-login');
+        const authStorage = window.CsaladiMenuAuthStorage;
+        authStorage.install(window.supabase);
         const supabaseClient = window.supabase.createClient(
             'https://zunwfzkpmknshiiudzcp.supabase.co',
             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1bndmemtwbWtuc2hpaXVkemNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4NTc3MDMsImV4cCI6MjEwNzQzMzcwM30.ixVdSZp08QU8bxsGCgHbYaLYwnKKNB12o62BlHuOH3U'
@@ -663,6 +675,8 @@
             authEmailField.classList.remove('hidden');
             authPasswordField.classList.remove('hidden');
             authPlanField.classList.remove('hidden');
+            authRememberLoginField.classList.toggle('hidden', isSignup);
+            authRememberLoginCheckbox.checked = authStorage.rememberLogin;
             authEmailInput.required = true;
             authPasswordInput.required = true;
             authModeSignupButton.setAttribute('aria-selected', String(isSignup));
@@ -692,6 +706,7 @@
             if (flow !== 'auth') authPasswordInput.value = '';
             authModeTabs.classList.toggle('hidden', !isAuth);
             authPlanField.classList.toggle('hidden', !isAuth);
+            authRememberLoginField.classList.toggle('hidden', !isAuth || authMode !== 'login');
             authEmailField.classList.toggle('hidden', flow === 'update-password');
             authPasswordField.classList.toggle('hidden', isResetRequest);
             authForgotPasswordButton.classList.add('hidden');
@@ -736,6 +751,14 @@
 
         authModeSignupButton.addEventListener('click', () => updateAuthMode('signup'));
         authModeLoginButton.addEventListener('click', () => updateAuthMode('login'));
+        authRememberLoginCheckbox.addEventListener('change', () => {
+            try {
+                authStorage.setRememberLogin(authRememberLoginCheckbox.checked);
+            } catch (error) {
+                console.error('Remember-login preference could not be saved.', error);
+                setAuthMessage('A beállítást nem sikerült megjegyezni. A mostani belépésre ettől még érvényes.', true);
+            }
+        });
         authForgotPasswordButton.addEventListener('click', () => setAuthFlow('reset-request'));
         togglePasswordVisibilityButton.addEventListener('click', () => {
             setPasswordVisibility(authPasswordInput.type === 'password');

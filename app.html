@@ -344,6 +344,7 @@
     <!-- SCRIPT -->
     <script src="recipe-catalog.js"></script>
     <script src="pantry.js"></script>
+    <script src="auth-storage.js"></script>
     <script>
         const recipes = window.recipeCatalog;
         const cookieNotice = document.getElementById('cookie-notice');
@@ -936,6 +937,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        window.CsaladiMenuAuthStorage.install(window.supabase);
         const appSupabaseClient = window.supabase.createClient(
             'https://zunwfzkpmknshiiudzcp.supabase.co',
             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1bndmemtwbWtuc2hpaXVkemNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4NTc3MDMsImV4cCI6MjEwNzQzMzcwM30.ixVdSZp08QU8bxsGCgHbYaLYwnKKNB12o62BlHuOH3U'
