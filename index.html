@@ -540,6 +540,14 @@
                     </span>
                 </label>
                 <button id="auth-forgot-password" type="button" class="hidden text-sm font-semibold text-brand-700 underline underline-offset-2">Elfelejtetted a jelszavad?</button>
+                <button id="auth-resend-confirmation" type="button" class="hidden text-sm font-semibold text-brand-700 underline underline-offset-2">Megerősítő e-mail újraküldése</button>
+                <div id="auth-recovery-actions" class="hidden space-y-2 text-center">
+                    <button id="auth-recovery-login" type="button" class="text-sm font-semibold text-brand-700 underline underline-offset-2">Vissza a belépéshez</button>
+                    <p class="text-xs text-slate-600">
+                        Még nincs fiókod?
+                        <button id="auth-recovery-signup" type="button" class="font-bold text-brand-700 underline underline-offset-2">Regisztrálj itt</button>
+                    </p>
+                </div>
                 <p id="auth-message" role="status" aria-live="polite" class="hidden text-sm rounded-xl p-3"></p>
                 <button id="auth-submit" type="submit" class="w-full bg-cta-500 hover:bg-cta-600 disabled:opacity-60 text-white font-extrabold py-3 rounded-xl shadow transition text-sm">
                     Ingyenes tesztfiók létrehozása
@@ -619,11 +627,16 @@
         const authModeLoginButton = document.getElementById('auth-mode-login');
         const authModeTabs = document.getElementById('auth-mode-tabs');
         const authForgotPasswordButton = document.getElementById('auth-forgot-password');
+        const authResendConfirmationButton = document.getElementById('auth-resend-confirmation');
+        const authRecoveryActions = document.getElementById('auth-recovery-actions');
+        const authRecoveryLoginButton = document.getElementById('auth-recovery-login');
+        const authRecoverySignupButton = document.getElementById('auth-recovery-signup');
         const closeAuthModalButton = document.getElementById('close-auth-modal');
         const authModalTitle = document.getElementById('auth-modal-title');
         const authModalDescription = document.getElementById('auth-modal-description');
         let authMode = 'signup';
         let authFlow = 'auth';
+        let authLoginOnly = false;
         let passwordRecoveryActive = false;
         let authFeatureName = 'CsaládiMenü Pro';
         let previousFocus = null;
@@ -664,15 +677,33 @@
             authMessage.classList.toggle('text-emerald-800', !isError);
         }
 
+        function getAuthRedirectUrl() {
+            const currentUrl = new URL(window.location.href);
+            if (currentUrl.hostname === 'csaladimenu.vercel.app' || currentUrl.hostname.endsWith('.vercel.app')) {
+                return 'https://familymenu.hu/';
+            }
+            return new URL('./', currentUrl).href;
+        }
+
+        function waitForAuthRequest(promise, timeoutMs = 15000) {
+            let timeoutId;
+            const timeout = new Promise((resolve, reject) => {
+                timeoutId = window.setTimeout(() => reject(new Error('AUTH_REQUEST_TIMEOUT')), timeoutMs);
+            });
+            return Promise.race([promise, timeout]).finally(() => window.clearTimeout(timeoutId));
+        }
+
         function updateAuthMode(mode) {
             authMode = mode;
             authFlow = 'auth';
             setPasswordVisibility(false);
+            authRecoveryActions.classList.add('hidden');
+            authResendConfirmationButton.classList.add('hidden');
             const isSignup = mode === 'signup';
-            authModeTabs.classList.remove('hidden');
+            authModeTabs.classList.toggle('hidden', authLoginOnly);
             authEmailField.classList.remove('hidden');
             authPasswordField.classList.remove('hidden');
-            authPlanField.classList.remove('hidden');
+            authPlanField.classList.toggle('hidden', authLoginOnly || !isSignup);
             authRememberLoginField.classList.toggle('hidden', isSignup);
             authRememberLoginCheckbox.checked = authStorage.rememberLogin;
             authEmailInput.required = true;
@@ -702,12 +733,14 @@
             const isResetRequest = flow === 'reset-request';
             setPasswordVisibility(false);
             if (flow !== 'auth') authPasswordInput.value = '';
-            authModeTabs.classList.toggle('hidden', !isAuth);
-            authPlanField.classList.toggle('hidden', !isAuth);
+            authModeTabs.classList.toggle('hidden', !isAuth || authLoginOnly);
+            authPlanField.classList.toggle('hidden', !isAuth || authLoginOnly || authMode !== 'signup');
             authRememberLoginField.classList.toggle('hidden', !isAuth || authMode !== 'login');
             authEmailField.classList.toggle('hidden', flow === 'update-password');
             authPasswordField.classList.toggle('hidden', isResetRequest);
             authForgotPasswordButton.classList.add('hidden');
+            authRecoveryActions.classList.toggle('hidden', !isResetRequest);
+            authResendConfirmationButton.classList.add('hidden');
             authEmailInput.required = flow !== 'update-password';
             authPasswordInput.required = flow !== 'reset-request';
             authPasswordInput.autocomplete = 'new-password';
@@ -715,7 +748,7 @@
 
             if (isResetRequest) {
                 authModalTitle.textContent = 'Jelszó visszaállítása';
-                authModalDescription.textContent = 'Add meg a fiókodhoz tartozó e-mail-címet. Küldünk egy linket, amellyel új jelszót állíthatsz be.';
+                authModalDescription.textContent = 'Add meg a fiókodhoz tartozó e-mail-címet. Ha még nincs fiókod, válaszd a regisztrációt.';
                 authSubmitButton.textContent = 'Visszaállító e-mail küldése';
             } else if (flow === 'update-password') {
                 authModalTitle.textContent = 'Állíts be új jelszót';
@@ -735,6 +768,7 @@
         function triggerPaywall(featureName, plan = null, mode = 'signup') {
             previousFocus = document.activeElement;
             authFeatureName = featureName || 'CsaládiMenü Pro';
+            authLoginOnly = mode === 'login';
             authPlanSelect.value = plan || 'monthly';
             updateAuthMode(mode);
             setAuthMessage('');
@@ -749,6 +783,61 @@
 
         authModeSignupButton.addEventListener('click', () => updateAuthMode('signup'));
         authModeLoginButton.addEventListener('click', () => updateAuthMode('login'));
+        authResendConfirmationButton.addEventListener('click', async () => {
+            const email = authEmailInput.value.trim();
+            if (!email) {
+                setAuthMessage('Add meg a regisztrációkor használt e-mail-címedet.', true);
+                authEmailInput.focus();
+                return;
+            }
+
+            authResendConfirmationButton.disabled = true;
+            authResendConfirmationButton.textContent = 'E-mail küldése…';
+            try {
+                if (window.location.protocol === 'file:') throw new Error('LOCAL_FILE_AUTH');
+                const { error } = await waitForAuthRequest(supabaseClient.auth.resend({
+                    type: 'signup',
+                    email,
+                    options: { emailRedirectTo: getAuthRedirectUrl() }
+                }));
+                if (error) throw error;
+                setAuthMessage('Ha ez a fiók még nincs megerősítve, új megerősítő e-mailt küldtünk. Nézd meg a beérkező leveleket és a spam mappát is.');
+            } catch (error) {
+                const errorMessage = error instanceof Error ? error.message : '';
+                const normalizedError = errorMessage.toLowerCase();
+                let message = errorMessage || 'Nem sikerült elküldeni a megerősítő e-mailt.';
+                if (normalizedError.includes('local_file_auth')) {
+                    message = 'A fiókfunkciók helyi fájlból nem érhetők el. Nyisd meg az oldalt biztonságos HTTPS-kapcsolaton: https://familymenu.hu';
+                } else if (normalizedError.includes('auth_request_timeout')) {
+                    message = 'A kérés túl sokáig válaszolt. Nem kaptunk visszaigazolást az e-mail-küldésről; próbáld meg később újra.';
+                } else if (
+                    normalizedError.includes('failed to fetch')
+                    || normalizedError.includes('networkerror')
+                    || normalizedError.includes('load failed')
+                ) {
+                    message = 'Nem sikerült kapcsolódni a megerősítő e-mail szolgáltatáshoz. Ellenőrizd az internetkapcsolatot, majd próbáld újra.';
+                } else if (normalizedError.includes('rate limit')) {
+                    message = 'Rövid időn belül túl sok e-mailkérés történt. Várj néhány percet, majd próbáld újra.';
+                } else if (
+                    normalizedError.includes('error sending confirmation email')
+                    || normalizedError.includes('confirmation email could not be sent')
+                ) {
+                    message = 'A levelezőrendszer nem tudta elküldeni a megerősítő e-mailt. Próbáld meg később újra.';
+                }
+                setAuthMessage(message, true);
+            } finally {
+                authResendConfirmationButton.disabled = false;
+                authResendConfirmationButton.textContent = 'Megerősítő e-mail újraküldése';
+            }
+        });
+        authRecoveryLoginButton.addEventListener('click', () => {
+            authLoginOnly = false;
+            updateAuthMode('login');
+        });
+        authRecoverySignupButton.addEventListener('click', () => {
+            authLoginOnly = false;
+            updateAuthMode('signup');
+        });
         authRememberLoginCheckbox.addEventListener('change', () => {
             try {
                 authStorage.setRememberLogin(authRememberLoginCheckbox.checked);
@@ -794,15 +883,22 @@
             else authSubmitButton.textContent = submittedMode === 'signup' ? 'Fiók létrehozása…' : 'Belépés…';
 
             try {
+                if (window.location.protocol === 'file:') {
+                    setAuthMessage('A fiókfunkciók helyi fájlból nem érhetők el. Nyisd meg az oldalt biztonságos HTTPS-kapcsolaton: https://familymenu.hu', true);
+                    return;
+                }
+
                 const email = authEmailInput.value.trim();
                 const password = authPasswordInput.value;
                 if (authFlow === 'reset-request') {
                     const options = window.location.protocol === 'http:' || window.location.protocol === 'https:'
-                        ? { redirectTo: new URL('./index.html', window.location.href).href }
+                        ? { redirectTo: getAuthRedirectUrl() }
                         : undefined;
-                    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, options);
+                    const { error } = await waitForAuthRequest(
+                        supabaseClient.auth.resetPasswordForEmail(email, options)
+                    );
                     if (error) throw error;
-                    setAuthMessage('Ha ehhez az e-mail-címhez tartozik fiók, elküldtük a jelszó-visszaállító linket. Nézd meg a postafiókodat és a spam mappát is.');
+                    setAuthMessage('A kérés feldolgozása befejeződött. Ha ehhez az e-mail-címhez tartozik fiók, ellenőrizd a beérkező leveleket és a spam mappát is. Ha nem érkezik levél, próbáld meg később újra, vagy válaszd a „Regisztrálj itt” lehetőséget.');
                     return;
                 }
 
@@ -829,7 +925,7 @@
                                 subscription_expires_at: null
                             },
                             ...(window.location.protocol === 'http:' || window.location.protocol === 'https:'
-                                ? { emailRedirectTo: new URL('./index.html', window.location.href).href }
+                                ? { emailRedirectTo: getAuthRedirectUrl() }
                                 : {})
                         }
                     })
@@ -838,7 +934,13 @@
                 if (result.error) {
                     const errorMessage = result.error.message.toLowerCase();
                     let message = result.error.message;
-                    if (errorMessage.includes('invalid login credentials')) {
+                    if (
+                        submittedMode === 'login'
+                        && (errorMessage.includes('email not confirmed') || errorMessage.includes('email_not_confirmed'))
+                    ) {
+                        message = 'Az e-mail-címed még nincs megerősítve. Kérj új megerősítő levelet az alábbi gombbal.';
+                        authResendConfirmationButton.classList.remove('hidden');
+                    } else if (errorMessage.includes('invalid login credentials')) {
                         message = 'A megadott e-mail-cím vagy jelszó nem megfelelő.';
                     } else if (submittedMode === 'signup' && (
                         errorMessage.includes('error sending confirmation email')
@@ -856,7 +958,8 @@
                     if (!result.data.user) {
                         setAuthMessage('A regisztráció nem fejeződött be. Próbáld újra később.', true);
                     } else if (result.data.user.identities?.length === 0) {
-                        setAuthMessage('Ezzel az e-mail-címmel már létezik fiók. Lépj be, vagy kérj jelszó-visszaállító e-mailt.', true);
+                        setAuthMessage('Ezzel az e-mail-címmel már létezik fiók. Lépj be; ha még nem erősítetted meg a címedet, kérj új megerősítő e-mailt.', true);
+                        authResendConfirmationButton.classList.remove('hidden');
                     } else {
                         setAuthMessage(`Sikeres regisztráció! Megerősítő e-mailt küldtünk a(z) ${email} címre. A fiókod használatához kattints a levélben található megerősítő linkre. Ha nem találod, nézd meg a spam vagy promóciók mappát is.`);
                     }
@@ -865,7 +968,37 @@
 
                 if (result.data.session) window.location.assign('./app.html');
             } catch (error) {
-                setAuthMessage(error instanceof Error ? error.message : 'Nem sikerült kapcsolódni. Próbáld újra.', true);
+                const errorMessage = error instanceof Error ? error.message : '';
+                const normalizedError = errorMessage.toLowerCase();
+                let message = errorMessage || 'Nem sikerült kapcsolódni. Próbáld újra.';
+
+                if (authFlow === 'reset-request') {
+                    if (normalizedError.includes('auth_request_timeout')) {
+                        message = 'A jelszó-visszaállítás túl sokáig válaszolt. Nem kaptunk visszaigazolást az e-mail-küldésről. Ellenőrizd az internetkapcsolatot, majd próbáld meg később újra.';
+                    } else if (
+                        normalizedError.includes('failed to fetch')
+                        || normalizedError.includes('networkerror')
+                        || normalizedError.includes('load failed')
+                    ) {
+                        message = 'Nem sikerült kapcsolódni a jelszó-visszaállító szolgáltatáshoz, ezért a kérés nem jutott el hozzá. Ellenőrizd az internetkapcsolatot, majd próbáld újra.';
+                    } else if (normalizedError.includes('rate limit')) {
+                        message = 'Rövid időn belül túl sok visszaállító e-mailt kértél. Várj néhány percet, majd próbáld újra.';
+                    } else if (
+                        normalizedError.includes('error sending recovery email')
+                        || normalizedError.includes('error sending password recovery email')
+                    ) {
+                        message = 'A levelezőrendszer nem tudta elküldeni a visszaállító e-mailt. Próbáld meg később újra; ha a hiba megismétlődik, vedd fel velünk a kapcsolatot.';
+                    } else if (
+                        normalizedError.includes('redirect')
+                        && (normalizedError.includes('allow') || normalizedError.includes('url'))
+                    ) {
+                        message = 'A jelszó-visszaállítás visszatérési címe nincs engedélyezve. Ezt a szolgáltatás beállításaiban javítani kell; próbáld meg később újra.';
+                    } else if (normalizedError.includes('invalid email')) {
+                        message = 'Ellenőrizd, hogy helyesen írtad-e be az e-mail-címedet.';
+                    }
+                }
+
+                setAuthMessage(message, true);
             } finally {
                 authSubmitButton.disabled = false;
                 authModeSignupButton.disabled = false;

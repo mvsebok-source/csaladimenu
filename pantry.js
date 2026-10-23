@@ -2,7 +2,7 @@
     const preparationPrefixes = [
         /^(?:frissen\s+)?(?:durvára\s+(?:tört|vágott)|finomra\s+reszelt|apróra\s+vágott)\s+/i,
         /^(?:szeletelt|vágott)(?:\s+(?:vagy|és)\s+(?:szeletelt|vágott))?\s+/i,
-        /^(?:friss|frissen|reszelt|őrölt|darált|főtt|sült|nyers|hámozott|kockázott|darabolt|aprított|szárított|fagyasztott|érett|egész|hideg|langyos|meleg|forró|olvasztott|puha|felvert|szobahőmérsékletű|enyhe)\s+/i
+        /^(?:friss|frissen|reszelt|őrölt|főtt|sült|nyers|hámozott|kockázott|darabolt|aprított|szárított|fagyasztott|érett|egész|hideg|langyos|meleg|forró|olvasztott|puha|felvert|szobahőmérsékletű|enyhe)\s+/i
     ];
     const preparationSuffixes = [
         /(?:,\s*|\s+)(?:lereszelve|reszelve|felaprítva|aprítva|összezúzva|zúzva|szeletelve|felkockázva|kockázva|meghámozva|hámozva|összetörve)\s*$/i,
@@ -211,7 +211,17 @@
         render();
 
         return {
-            matches: ingredientName => selectedIngredients.has(canonicalize(ingredientName).key)
+            matches: ingredientName => selectedIngredients.has(canonicalize(ingredientName).key),
+            toggle: ingredientName => {
+                const key = canonicalize(ingredientName).key;
+                if (!key || key === 'hus') return false;
+
+                if (selectedIngredients.has(key)) selectedIngredients.delete(key);
+                else selectedIngredients.add(key);
+                render();
+                onChange();
+                return true;
+            }
         };
     }
 

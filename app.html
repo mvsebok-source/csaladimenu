@@ -244,7 +244,7 @@
                     </div>
                     <button id="shopping-list-copy-button" onclick="copyConsolidatedShoppingList()" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-4 rounded-xl shadow transition text-xs flex items-center gap-2">
                         <i class="fa-solid fa-copy"></i>
-                        <span>📋 Hiányzó Heti Tételek Másolása</span>
+                        <span id="shopping-list-copy-label" aria-live="polite">📋 Hiányzó Heti Tételek Másolása</span>
                     </button>
                 </div>
                 <div id="consolidated-shopping-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5"></div>
@@ -301,6 +301,9 @@
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-3">
                             <i class="fa-solid fa-list-check text-brand-600 mr-1.5"></i> Hozzávalók (<span id="modal-servings"></span>):
                         </h4>
+                        <p class="mb-3 text-xs leading-relaxed text-slate-600">
+                            A piros hozzávalók hiányoznak. Ha valamelyik mégis van otthon, koppints rá: zöldre vált, és kimarad a bevásárlólistából. A zöld hozzávalóra koppintva újra hiányzóként jelölheted.
+                        </p>
                         <ul id="modal-ingredients" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-700"></ul>
                     </div>
 
@@ -335,7 +338,7 @@
                 </div>
                 <button id="copy-missing" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-5 rounded-xl text-xs flex items-center gap-2">
                     <i class="fa-solid fa-copy"></i>
-                    <span>Hiányzó cikkek másolása</span>
+                    <span id="copy-missing-label" aria-live="polite">Hiányzó cikkek másolása</span>
                 </button>
             </div>
         </div>
@@ -458,6 +461,73 @@
 
         function ingredientIsSelected(ingredientName) {
             return pantryPicker.matches(ingredientName);
+        }
+
+        function renderRecipeModalIngredients(recipe) {
+            const servings = parseInt(servingsSlider.value, 10);
+            const ingredientList = document.getElementById('modal-ingredients');
+            ingredientList.replaceChildren();
+
+            recipe.ingredients.forEach((ingredient, index) => {
+                const hasIngredient = ingredientIsSelected(ingredient.name);
+                const amount = ingredient.amount == null
+                    ? ingredient.unit
+                    : `${Math.round(ingredient.amount * servings * 10) / 10} ${ingredient.unit}`;
+                const item = document.createElement('li');
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.dataset.ingredientIndex = String(index);
+                button.setAttribute('aria-pressed', String(hasIngredient));
+                button.setAttribute(
+                    'aria-label',
+                    `${ingredient.name}, ${amount}; ${hasIngredient ? 'van otthon, koppints a hiányzóként jelöléshez' : 'hiányzik, koppints ha van otthon'}`
+                );
+                button.className = `w-full h-full p-2.5 rounded-xl flex justify-between items-center gap-2 text-left text-xs transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 ${hasIngredient ? 'bg-emerald-50 text-emerald-900 hover:bg-emerald-100' : 'bg-rose-50 text-rose-900 hover:bg-rose-100'}`;
+
+                const name = document.createElement('span');
+                name.className = 'font-bold';
+                name.textContent = ingredient.name;
+                const quantity = document.createElement('span');
+                quantity.className = 'shrink-0 font-mono font-extrabold';
+                quantity.textContent = amount;
+                button.append(name, quantity);
+                item.appendChild(button);
+                ingredientList.appendChild(item);
+            });
+        }
+
+        async function copyTextToClipboard(text) {
+            let clipboardError;
+            if (navigator.clipboard && window.isSecureContext) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    return;
+                } catch (error) {
+                    clipboardError = error;
+                }
+            }
+
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.readOnly = true;
+            textarea.setAttribute('aria-hidden', 'true');
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            textarea.style.left = '0';
+            textarea.style.top = '0';
+            textarea.style.width = '1px';
+            textarea.style.height = '1px';
+            document.body.appendChild(textarea);
+            let copied;
+            try {
+                textarea.focus({ preventScroll: true });
+                textarea.select();
+                textarea.setSelectionRange(0, textarea.value.length);
+                copied = document.execCommand('copy');
+            } finally {
+                textarea.remove();
+            }
+            if (!copied) throw clipboardError || new Error('Clipboard copy failed.');
         }
 
         function renderRecipePagination(resultCount) {
@@ -804,27 +874,17 @@
             });
             const text = lines.length ? `Hiányzó heti alapanyagok:\n${lines.join('\n')}` : 'Nincs hiányzó alapanyag a heti menüben.';
             const button = document.getElementById('shopping-list-copy-button');
+            const label = document.getElementById('shopping-list-copy-label');
             const originalLabel = '📋 Hiányzó Heti Tételek Másolása';
 
             try {
-                if (navigator.clipboard && window.isSecureContext) {
-                    await navigator.clipboard.writeText(text);
-                } else {
-                    const textarea = document.createElement('textarea');
-                    textarea.value = text;
-                    textarea.style.position = 'fixed';
-                    textarea.style.opacity = '0';
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    const copied = document.execCommand('copy');
-                    textarea.remove();
-                    if (!copied) throw new Error('Clipboard copy failed');
-                }
-                button.innerText = 'Vágólapra másolva';
+                await copyTextToClipboard(text);
+                label.innerText = 'Vágólapra másolva';
             } catch (error) {
-                button.innerText = 'Nem sikerült másolni';
+                console.error('Weekly shopping list could not be copied.', error);
+                label.innerText = 'Nem sikerült másolni';
             }
-            window.setTimeout(() => { button.innerText = originalLabel; }, 2000);
+            window.setTimeout(() => { label.innerText = originalLabel; }, 2000);
         }
 
         function updateDayRecipe(dayId, recipeId) {
@@ -847,7 +907,7 @@
             if (!recipe) return;
 
             activeRecipeId = id;
-            const servings = parseInt(servingsSlider.value);
+            const servings = parseInt(servingsSlider.value, 10);
             const cuisineLabels = { hu: "Magyar 🇭🇺", it: "Olasz 🇮🇹", mx: "Mexikói 🇲🇽", asia: "Ázsiai 🥢" };
             const courseLabels = { main: "Főétel", soup: "Leves", dessert: "Desszert" };
 
@@ -856,19 +916,7 @@
             document.getElementById('modal-course-badge').innerText = courseLabels[recipe.course];
             document.getElementById('modal-servings').innerText = `${servings} fő`;
             document.getElementById('modal-cost').innerText = `${Math.round(recipe.baseCost * servings).toLocaleString('hu-HU')} Ft`;
-
-            const ingList = document.getElementById('modal-ingredients');
-            ingList.innerHTML = '';
-            recipe.ingredients.forEach(ing => {
-                const amountLabel = ing.amount == null
-                    ? ing.unit
-                    : `${Math.round(ing.amount * servings * 10) / 10} ${ing.unit}`;
-                const hasIngredient = ingredientIsSelected(ing.name);
-                const li = document.createElement('li');
-                li.className = `p-2.5 rounded-xl flex justify-between items-center text-xs ${hasIngredient ? 'bg-emerald-50 text-emerald-900' : 'bg-rose-50 text-rose-900'}`;
-                li.innerHTML = `<span class="font-bold">${ing.name}</span><span class="font-mono font-extrabold">${amountLabel}</span>`;
-                ingList.appendChild(li);
-            });
+            renderRecipeModalIngredients(recipe);
 
             const stepsList = document.getElementById('modal-steps');
             stepsList.innerHTML = '';
@@ -896,6 +944,53 @@
             updateModalRating(ratingInfo.user || 0);
             modal.classList.remove('hidden');
         }
+
+        document.getElementById('modal-ingredients').addEventListener('click', event => {
+            const button = event.target.closest('button[data-ingredient-index]');
+            if (!button) return;
+
+            const recipe = recipes.find(item => item.id === activeRecipeId);
+            const ingredient = recipe?.ingredients[Number(button.dataset.ingredientIndex)];
+            if (!recipe || !ingredient || !pantryPicker.toggle(ingredient.name)) return;
+            renderRecipeModalIngredients(recipe);
+        });
+
+        async function copyMissingRecipeIngredients() {
+            const recipe = recipes.find(item => item.id === activeRecipeId);
+            if (!recipe) return;
+
+            const servings = parseInt(servingsSlider.value, 10);
+            const missing = recipe.ingredients.filter(ingredient => !ingredientIsSelected(ingredient.name));
+            const lines = missing.map(ingredient => {
+                const amount = ingredient.amount == null
+                    ? ingredient.unit
+                    : `${Math.round(ingredient.amount * servings * 10) / 10} ${ingredient.unit}`;
+                return `- ${ingredient.name}: ${amount}`;
+            });
+            const text = lines.length
+                ? `Hiányzó alapanyagok – ${recipe.name} (${servings} fő):\n${lines.join('\n')}`
+                : 'Nincs hiányzó alapanyag ehhez a recepthez.';
+            const button = document.getElementById('copy-missing');
+            const label = document.getElementById('copy-missing-label');
+            const originalLabel = 'Hiányzó cikkek másolása';
+
+            button.disabled = true;
+            label.innerText = 'Másolás…';
+            try {
+                await copyTextToClipboard(text);
+                label.innerText = 'Vágólapra másolva';
+            } catch (error) {
+                console.error('Missing recipe ingredients could not be copied.', error);
+                label.innerText = 'Nem sikerült másolni';
+            } finally {
+                window.setTimeout(() => {
+                    label.innerText = originalLabel;
+                    button.disabled = false;
+                }, 2000);
+            }
+        }
+
+        document.getElementById('copy-missing').addEventListener('click', copyMissingRecipeIngredients);
 
         ratingBox.addEventListener('click', event => {
             const button = event.target.closest('button[data-val]');
