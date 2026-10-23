@@ -75,6 +75,22 @@
           font-weight: 900;
           text-transform: uppercase;
         }
+        @media (max-width: 639px) {
+          .header-tabs .header-tab-button {
+            height: auto;
+            min-height: 2.5rem;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            padding: 0.375rem 0.25rem;
+            font-size: 0.6875rem;
+            white-space: normal;
+          }
+          .header-tabs .header-tab-badge {
+            flex-basis: 100%;
+            margin-left: 0;
+            text-align: center;
+          }
+        }
         .btn-primary-large {
           display: inline-block;
           background: linear-gradient(180deg, #065f46 0%, #064e3b 100%);
@@ -133,7 +149,7 @@
                 <button id="tab-btn-planner" onclick="switchTab('planner')" class="header-tab-button is-inactive">
                     <i class="fa-solid fa-calendar-days text-cta-500"></i>
                     <span>Heti Menütervező</span>
-                    <span class="header-tab-badge">Pro</span>
+                    <span class="header-tab-badge">3 nap ingyen</span>
                 </button>
             </div>
 
@@ -249,33 +265,6 @@
 
         </div>
 
-        <section aria-labelledby="how-it-works-heading" class="rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 shadow-sm">
-            <div class="max-w-3xl mx-auto text-center mb-5">
-                <span class="text-brand-700 text-xs font-extrabold uppercase tracking-wide">Egyszerűen indulhatsz</span>
-                <h2 id="how-it-works-heading" class="mt-1 text-2xl font-extrabold text-slate-900">Így működik a receptkereső</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">1</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Állítsd be a létszámot</h3>
-                    <p class="mt-1 text-sm text-slate-600">A receptkártyák és hozzávalók a kiválasztott családlétszámhoz igazodnak.</p>
-                </article>
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">2</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Jelöld be, mi van otthon</h3>
-                    <p class="mt-1 text-sm text-slate-600">Szűrj a spájzban lévő alapanyagokra, ételtípusra, konyhára és elkészítési időre.</p>
-                </article>
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">3</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Válassz egy receptet</h3>
-                    <p class="mt-1 text-sm text-slate-600">Nyisd meg a receptet a hozzávalókért és az elkészítési lépésekért.</p>
-                </article>
-            </div>
-            <div class="mt-5 text-center">
-                <button type="button" onclick="triggerPaywall('Személyes Tervező', 'monthly', 'signup')" class="rounded-xl bg-brand-700 px-5 py-3 font-bold text-white hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">Ingyenes tesztfiókot kérek</button>
-            </div>
-        </section>
-
         <!-- VIEW 1: FREE RECIPE SEARCH -->
         <div id="view-calc" class="space-y-4">
             <div class="flex justify-between items-center px-1">
@@ -287,93 +276,92 @@
             <div data-recipe-pagination></div>
         </div>
 
-        <!-- VIEW 2: PRO WEEKLY PLANNER PREVIEW -->
+        <!-- VIEW 2: THREE-DAY FREE PLANNER -->
         <div id="view-planner" class="hidden space-y-6">
-            
-            <!-- BANNER FOR PRO FEATURE -->
-            <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-brand-900 text-white p-6 rounded-3xl shadow-lg border border-slate-700 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 relative overflow-hidden">
-                <div class="space-y-2 z-10">
-                    <span class="bg-cta-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                        <i class="fa-solid fa-crown text-amber-300 mr-1"></i> Pro Funkció
-                    </span>
-                    <h3 class="text-2xl font-extrabold">Heti Menütervező & Automata Bevásárlólista</h3>
-                    <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
-                        Válassz recepteket a hét napjaira, vagy kérj automatikus menüjavaslatot. A bevásárlólista összesíti a kiválasztott receptek hozzávalóit a beállított családlétszámhoz.
-                    </p>
-                </div>
-
-                <div class="z-10 flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
-                    <button onclick="triggerPaywall('Heti Menü Automata Generálás')" class="bg-cta-500 hover:bg-cta-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-md transition text-xs flex items-center justify-center gap-2 w-full sm:w-auto">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <span>🎲 Automatikus Heti Menü Generálása</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- WEEKLY DAYS GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-3">
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
-                    <span class="font-extrabold text-slate-900 text-sm">Hétfő</span>
-                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Gulyásleves csipetkével</div>
-                    <span class="text-[10px] text-slate-500 block">8 120 Ft / 7 fő</span>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
-                    <span class="font-extrabold text-slate-900 text-sm">Kedd</span>
-                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Csirkepaprikás nokedlivel</div>
-                    <span class="text-[10px] text-slate-500 block">3 850 Ft / 7 fő</span>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2">
-                    <span class="font-extrabold text-slate-900 text-sm">Szerda</span>
-                    <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-xs font-bold text-emerald-900">Rántott sertésszelet vajas burgonyával</div>
-                    <span class="text-[10px] text-slate-500 block">3 710 Ft / 7 fő</span>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
-                    <span class="font-extrabold text-slate-900 text-sm">Csütörtök</span>
-                    <button onclick="triggerPaywall('Csütörtöki Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
-                    <span class="font-extrabold text-slate-900 text-sm">Péntek</span>
-                    <button onclick="triggerPaywall('Pénteki Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
-                    <span class="font-extrabold text-slate-900 text-sm">Szombat</span>
-                    <button onclick="triggerPaywall('Szombati Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
-                </div>
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2 opacity-60">
-                    <span class="font-extrabold text-slate-900 text-sm">Vasárnap</span>
-                    <button onclick="triggerPaywall('Vasárnapi Menü')" class="w-full bg-slate-100 border border-dashed border-slate-300 p-2 rounded-xl text-xs font-bold text-slate-500 hover:bg-slate-200">+ Válassz repectet</button>
-                </div>
-            </div>
-
-            <!-- CONSOLIDATED LIST PREVIEW BOX -->
-            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 space-y-4">
-                <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 shadow-sm space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <div>
-                        <h4 class="font-extrabold text-slate-900 text-base">Összevont Heti Bevásárlólista (Pro)</h4>
-                        <p class="text-xs text-slate-500">A kiválasztott receptek hiányzó tételei automatikusan összegezve</p>
+                        <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-extrabold text-emerald-800">3 nap ingyen · 4 nap Pro</span>
+                        <h2 class="mt-2 text-2xl font-extrabold text-slate-900">Heti menütervező</h2>
+                        <p class="mt-1 max-w-2xl text-sm text-slate-600">Tervezd meg hétfő–szerda ebédjét ingyen. A csütörtöki–vasárnapi napok csak Pro esetén érhetők el.</p>
                     </div>
-                    <button onclick="triggerPaywall('Heti Bevásárlólista Másolása')" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2 px-4 rounded-xl shadow transition text-xs flex items-center gap-1.5">
-                        <i class="fa-solid fa-lock"></i>
-                        <span>Lista Másolása</span>
+                    <button type="button" onclick="generateFreeThreeDayMenu()" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                        3 napos menü generálása
                     </button>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
-                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
-                        <span class="font-bold text-slate-800">Tészta (Spagetti)</span>
-                        <span class="font-mono font-extrabold">1.4 kg</span>
-                    </div>
-                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
-                        <span class="font-bold text-slate-800">Darált hús</span>
-                        <span class="font-mono font-extrabold">1.8 kg</span>
-                    </div>
-                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between">
-                        <span class="font-bold text-slate-800">Sajt (Trappista)</span>
-                        <span class="font-mono font-extrabold">850 g</span>
-                    </div>
-                </div>
-            </div>
+                <ol aria-label="Így működik a menütervező" class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <li class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-sm font-extrabold text-white">1</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Állítsd be a napokat</h3>
+                        <p class="mt-1 text-sm text-slate-600">Naponta válassz konyhát, fogást – például levest vagy főételt – és adagszámot.</p>
+                    </li>
+                    <li class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-sm font-extrabold text-white">2</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Generálj vagy válassz</h3>
+                        <p class="mt-1 text-sm text-slate-600">Kérj háromnapos javaslatot, vagy kattints egy napra, és keress saját receptet.</p>
+                    </li>
+                    <li class="rounded-2xl border border-amber-200 bg-amber-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-amber-600 text-sm font-extrabold text-white">3</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Bővítsd Pro-val</h3>
+                        <p class="mt-1 text-sm text-slate-600">A további négy nap és az összevont bevásárlólista Pro funkció.</p>
+                    </li>
+                </ol>
 
+                <section aria-label="A hét napjai és elérhetőségük">
+                    <h3 class="mb-2 text-sm font-extrabold text-slate-800">A hét napjai</h3>
+                    <ol class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-7 gap-2">
+                        <li class="rounded-xl border border-emerald-200 bg-emerald-50 p-3">
+                            <span class="block font-bold text-slate-900">Hétfő</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-emerald-800">Ingyenes</span>
+                        </li>
+                        <li class="rounded-xl border border-emerald-200 bg-emerald-50 p-3">
+                            <span class="block font-bold text-slate-900">Kedd</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-emerald-800">Ingyenes</span>
+                        </li>
+                        <li class="rounded-xl border border-emerald-200 bg-emerald-50 p-3">
+                            <span class="block font-bold text-slate-900">Szerda</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-emerald-800">Ingyenes</span>
+                        </li>
+                        <li class="rounded-xl border border-amber-200 bg-amber-50 p-3">
+                            <span class="block font-bold text-slate-900">Csütörtök</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-amber-800">Csak Pro esetén érhető el</span>
+                        </li>
+                        <li class="rounded-xl border border-amber-200 bg-amber-50 p-3">
+                            <span class="block font-bold text-slate-900">Péntek</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-amber-800">Csak Pro esetén érhető el</span>
+                        </li>
+                        <li class="rounded-xl border border-amber-200 bg-amber-50 p-3">
+                            <span class="block font-bold text-slate-900">Szombat</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-amber-800">Csak Pro esetén érhető el</span>
+                        </li>
+                        <li class="rounded-xl border border-amber-200 bg-amber-50 p-3">
+                            <span class="block font-bold text-slate-900">Vasárnap</span>
+                            <span class="mt-1 block text-[10px] font-extrabold uppercase text-amber-800">Csak Pro esetén érhető el</span>
+                        </li>
+                    </ol>
+                </section>
+
+                <p id="free-planner-status" class="hidden rounded-xl border p-3 text-sm" role="status" aria-live="polite"></p>
+                <div id="free-planner-days" class="grid grid-cols-1 lg:grid-cols-3 gap-4"></div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3">
+                    <span class="font-bold text-emerald-950">A 3 nap becsült összköltsége</span>
+                    <span id="free-planner-total" class="text-lg font-extrabold text-emerald-800">0 Ft</span>
+                </div>
+            </section>
+
+            <section class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-3xl border border-amber-200 bg-amber-50 p-5 sm:p-6">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-wide text-amber-800">Pro lehetőség</span>
+                    <h3 class="mt-1 text-lg font-extrabold text-slate-900">Tervezd meg az egész hetet</h3>
+                    <p class="mt-1 text-sm text-slate-700">A Pro tervezővel négy további napot adhatsz a menühöz, és összevont bevásárlólistát készíthetsz.</p>
+                </div>
+                <button type="button" onclick="triggerPaywall('Heti Menü és Bevásárlólista')" class="shrink-0 rounded-xl bg-slate-900 px-5 py-3 text-sm font-bold text-white hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2">
+                    <i class="fa-solid fa-crown mr-1 text-amber-300" aria-hidden="true"></i> Pro részletei
+                </button>
+            </section>
         </div>
 
         <!-- PRICING SECTION -->
@@ -468,6 +456,32 @@
         </div>
     </aside>
     <p id="cookie-notice-error" class="fixed inset-x-4 bottom-4 z-40 mx-auto hidden max-w-xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm font-semibold text-amber-900 shadow-lg" role="status" aria-live="polite"></p>
+
+    <!-- WEEKLY PLANNER RECIPE PICKER -->
+    <div id="planner-recipe-modal" role="dialog" aria-modal="true" aria-labelledby="planner-recipe-modal-title" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200">
+            <div class="p-5 border-b border-slate-100 flex justify-between items-start gap-4">
+                <div>
+                    <p id="planner-recipe-modal-day" class="text-xs font-extrabold uppercase tracking-wide text-brand-700"></p>
+                    <h2 id="planner-recipe-modal-title" class="mt-1 text-xl font-extrabold text-slate-900">Válassz receptet</h2>
+                    <p id="planner-recipe-modal-filters" class="mt-1 text-sm text-slate-600"></p>
+                </div>
+                <button id="close-planner-recipe-modal" type="button" aria-label="Receptválasztó bezárása" class="shrink-0 rounded-lg px-2 text-2xl font-bold text-slate-400 hover:text-slate-700">&times;</button>
+            </div>
+            <div class="p-5 border-b border-slate-100 space-y-3">
+                <label for="planner-recipe-search" class="sr-only">Recept keresése</label>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true"></i>
+                    <input id="planner-recipe-search" type="search" autocomplete="off" placeholder="Keress recept vagy alapanyag alapján..." class="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <p id="planner-recipe-result-count" class="text-xs font-semibold text-slate-500" aria-live="polite"></p>
+                    <button id="clear-planner-recipe" type="button" class="self-start rounded-lg px-3 py-2 text-xs font-bold text-rose-700 hover:bg-rose-50">Recept törlése erről a napról</button>
+                </div>
+            </div>
+            <div id="planner-recipe-results" class="min-h-0 flex-1 space-y-2 overflow-y-auto p-5" aria-label="Választható receptek"></div>
+        </div>
+    </div>
 
     <!-- RECIPE DETAILS MODAL -->
     <div id="recipe-details-modal" role="dialog" aria-modal="true" aria-labelledby="recipe-details-title" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
@@ -642,6 +656,13 @@
         let previousFocus = null;
         let recipePage = 1;
         let recipesPerPage = 12;
+        const freePlannerDays = [
+            { id: 'monday', label: 'Hétfő', cuisine: 'all', course: 'main', servings: 4, recipeId: null },
+            { id: 'tuesday', label: 'Kedd', cuisine: 'all', course: 'main', servings: 4, recipeId: null },
+            { id: 'wednesday', label: 'Szerda', cuisine: 'all', course: 'main', servings: 4, recipeId: null }
+        ];
+        let activePlannerDayId = null;
+        let plannerRecipePickerReturnFocus = null;
         const pantryPicker = window.PantryPicker.create({
             recipes,
             selectedIngredients,
@@ -649,6 +670,7 @@
             onChange: () => {
                 recipePage = 1;
                 renderRecipes();
+                renderFreePlanner();
             }
         });
 
@@ -1018,6 +1040,266 @@
             return pantryPicker.matches(ingredientName);
         }
 
+        function getFreePlannerCandidates(day, query = '') {
+            const normalizedQuery = window.PantryPicker.normalizeSearchText(query);
+            return recipes.filter(recipe => {
+                if (recipe.access !== 'free') return false;
+                if (day.cuisine !== 'all' && recipe.cuisine !== day.cuisine) return false;
+                if (day.course !== 'all' && recipe.course !== day.course) return false;
+                return !normalizedQuery
+                    || window.PantryPicker.normalizeSearchText(recipe.name).includes(normalizedQuery)
+                    || recipe.ingredients.some(ingredient => window.PantryPicker.normalizeSearchText(ingredient).includes(normalizedQuery));
+            }).sort((a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }));
+        }
+
+        function getFreePlannerRecipe(day) {
+            return recipes.find(recipe => recipe.id === day.recipeId && recipe.access === 'free') || null;
+        }
+
+        function updateFreePlannerSummary() {
+            let totalCost = 0;
+            let selectedCount = 0;
+
+            freePlannerDays.forEach(day => {
+                const recipe = getFreePlannerRecipe(day);
+                const costElement = document.querySelector(`[data-free-planner-cost="${day.id}"]`);
+                if (!recipe) {
+                    if (costElement) costElement.textContent = 'Még nincs recept kiválasztva.';
+                    return;
+                }
+
+                const recipeCost = Math.round(recipe.baseCost * day.servings);
+                totalCost += recipeCost;
+                selectedCount += 1;
+                if (costElement) costElement.textContent = `${recipeCost.toLocaleString('hu-HU')} Ft · ${day.servings} fő · ${recipe.time} perc`;
+            });
+
+            document.getElementById('free-planner-total').textContent = `${totalCost.toLocaleString('hu-HU')} Ft`;
+            document.getElementById('free-planner-total').setAttribute('aria-label', `${selectedCount} kiválasztott nap becsült költsége: ${totalCost.toLocaleString('hu-HU')} forint`);
+        }
+
+        function createPlannerSelect(day, label, setting, options) {
+            const field = document.createElement('label');
+            field.className = 'block min-w-0 text-xs font-bold text-slate-600';
+            field.textContent = label;
+
+            const select = document.createElement('select');
+            select.dataset.plannerDaySetting = day.id;
+            select.dataset.settingName = setting;
+            select.setAttribute('aria-label', `${day.label}: ${label}`);
+            select.className = 'mt-1 w-full rounded-lg border border-slate-300 bg-white px-2.5 py-2 text-sm font-semibold text-slate-700 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200';
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.value = optionData.value;
+                option.textContent = optionData.label;
+                select.appendChild(option);
+            });
+            select.value = String(day[setting]);
+            select.addEventListener('change', () => {
+                day[setting] = setting === 'servings' ? Number(select.value) : select.value;
+                const selectedRecipe = getFreePlannerRecipe(day);
+                if (selectedRecipe && (
+                    (day.cuisine !== 'all' && selectedRecipe.cuisine !== day.cuisine)
+                    || (day.course !== 'all' && selectedRecipe.course !== day.course)
+                )) {
+                    day.recipeId = null;
+                }
+                const selectedControl = { dayId: day.id, setting };
+                renderFreePlanner();
+                document.querySelector(`[data-planner-day-setting="${selectedControl.dayId}"][data-setting-name="${selectedControl.setting}"]`)?.focus();
+            });
+            field.appendChild(select);
+            return field;
+        }
+
+        function renderFreePlanner() {
+            const container = document.getElementById('free-planner-days');
+            if (!container) return;
+
+            const cuisines = [
+                { value: 'all', label: 'Bármilyen konyha' },
+                { value: 'hu', label: 'Magyar' },
+                { value: 'it', label: 'Olasz' },
+                { value: 'mx', label: 'Mexikói' },
+                { value: 'asia', label: 'Ázsiai' }
+            ];
+            const courses = [
+                { value: 'all', label: 'Bármilyen fogás' },
+                { value: 'main', label: 'Főétel' },
+                { value: 'soup', label: 'Leves' },
+                { value: 'dessert', label: 'Desszert' }
+            ];
+            const servings = Array.from({ length: 15 }, (_, index) => ({
+                value: String(index + 1),
+                label: `${index + 1} fő`
+            }));
+            container.innerHTML = '';
+            freePlannerDays.forEach(day => {
+                const recipe = getFreePlannerRecipe(day);
+                const card = document.createElement('article');
+                card.className = 'flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm';
+
+                const heading = document.createElement('h3');
+                heading.className = 'text-lg font-extrabold text-slate-900';
+                heading.textContent = day.label;
+
+                const settings = document.createElement('div');
+                settings.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3';
+                settings.append(
+                    createPlannerSelect(day, 'Konyha', 'cuisine', cuisines),
+                    createPlannerSelect(day, 'Fogás', 'course', courses),
+                    createPlannerSelect(day, 'Adag', 'servings', servings)
+                );
+
+                const recipeButton = document.createElement('button');
+                recipeButton.type = 'button';
+                recipeButton.dataset.plannerRecipeDay = day.id;
+                recipeButton.className = 'flex min-h-14 w-full items-center justify-between gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-3 text-left text-sm font-bold text-brand-900 hover:border-brand-400 hover:bg-brand-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500';
+                const recipeName = document.createElement('span');
+                recipeName.className = 'min-w-0 flex-1';
+                recipeName.textContent = recipe ? recipe.name : 'Recept keresése és választása';
+                const recipeIcon = document.createElement('i');
+                recipeIcon.className = `fa-solid ${recipe ? 'fa-rotate' : 'fa-magnifying-glass'} shrink-0`;
+                recipeIcon.setAttribute('aria-hidden', 'true');
+                recipeButton.append(recipeName, recipeIcon);
+                recipeButton.addEventListener('click', () => openPlannerRecipePicker(day.id, recipeButton));
+
+                const cost = document.createElement('p');
+                cost.className = 'text-xs text-slate-500';
+                cost.dataset.freePlannerCost = day.id;
+                cost.textContent = recipe
+                    ? `${Math.round(recipe.baseCost * day.servings).toLocaleString('hu-HU')} Ft · ${day.servings} fő · ${recipe.time} perc`
+                    : 'Még nincs recept kiválasztva.';
+
+                card.append(heading, settings, recipeButton, cost);
+                container.appendChild(card);
+            });
+            updateFreePlannerSummary();
+        }
+
+        function setFreePlannerStatus(message, isError = false) {
+            const status = document.getElementById('free-planner-status');
+            status.textContent = message;
+            status.className = `rounded-xl border p-3 text-sm ${isError
+                ? 'border-amber-200 bg-amber-50 text-amber-900'
+                : 'border-emerald-200 bg-emerald-50 text-emerald-900'}`;
+        }
+
+        function renderPlannerRecipePickerResults() {
+            const day = freePlannerDays.find(item => item.id === activePlannerDayId);
+            if (!day) return;
+
+            const results = getFreePlannerCandidates(day, document.getElementById('planner-recipe-search').value);
+            const resultContainer = document.getElementById('planner-recipe-results');
+            const cuisineLabels = { hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
+            const courseLabels = { main: 'Főétel', soup: 'Leves', dessert: 'Desszert' };
+            document.getElementById('planner-recipe-result-count').textContent = `${results.length} választható ingyenes recept`;
+            resultContainer.innerHTML = '';
+
+            if (!results.length) {
+                const emptyState = document.createElement('p');
+                emptyState.className = 'rounded-xl bg-slate-50 p-5 text-center text-sm text-slate-600';
+                emptyState.textContent = 'Nincs találat. Próbálj más keresőszót vagy módosítsd a nap konyháját és fogását.';
+                resultContainer.appendChild(emptyState);
+                return;
+            }
+
+            results.forEach(recipe => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'w-full rounded-xl border border-slate-200 p-3 text-left hover:border-brand-300 hover:bg-brand-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500';
+
+                const name = document.createElement('span');
+                name.className = 'block font-bold text-slate-900';
+                name.textContent = recipe.name;
+                const details = document.createElement('span');
+                details.className = 'mt-1 block text-xs text-slate-600';
+                details.textContent = `${cuisineLabels[recipe.cuisine] || 'Egyéb'} · ${courseLabels[recipe.course] || 'Fogás'} · ${recipe.time} perc · ${Math.round(recipe.baseCost * day.servings).toLocaleString('hu-HU')} Ft / ${day.servings} fő`;
+                button.append(name, details);
+                button.addEventListener('click', () => {
+                    day.recipeId = recipe.id;
+                    closePlannerRecipePicker();
+                    renderFreePlanner();
+                    setFreePlannerStatus(`${day.label}: ${recipe.name} kiválasztva.`);
+                });
+                resultContainer.appendChild(button);
+            });
+        }
+
+        function openPlannerRecipePicker(dayId, returnFocus) {
+            const day = freePlannerDays.find(item => item.id === dayId);
+            if (!day) return;
+
+            activePlannerDayId = day.id;
+            plannerRecipePickerReturnFocus = returnFocus;
+            const cuisineLabels = { all: 'Bármilyen konyha', hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
+            const courseLabels = { all: 'bármilyen fogás', main: 'főétel', soup: 'leves', dessert: 'desszert' };
+            document.getElementById('planner-recipe-modal-day').textContent = day.label;
+            document.getElementById('planner-recipe-modal-filters').textContent =
+                `${cuisineLabels[day.cuisine]} · ${courseLabels[day.course]} · ${day.servings} fő`;
+            document.getElementById('planner-recipe-search').value = '';
+            document.getElementById('planner-recipe-modal').classList.remove('hidden');
+            renderPlannerRecipePickerResults();
+            document.getElementById('planner-recipe-search').focus();
+        }
+
+        function closePlannerRecipePicker() {
+            document.getElementById('planner-recipe-modal').classList.add('hidden');
+            const dayId = activePlannerDayId;
+            activePlannerDayId = null;
+            const currentTrigger = dayId
+                ? document.querySelector(`[data-planner-recipe-day="${dayId}"]`)
+                : null;
+            (currentTrigger || plannerRecipePickerReturnFocus)?.focus();
+            plannerRecipePickerReturnFocus = null;
+        }
+
+        function generateFreeThreeDayMenu() {
+            const usedRecipeIds = new Set();
+            const daysWithoutMatches = [];
+
+            freePlannerDays.forEach(day => {
+                const candidates = getFreePlannerCandidates(day);
+                const unusedCandidates = candidates.filter(recipe => !usedRecipeIds.has(recipe.id));
+                const pool = unusedCandidates.length ? unusedCandidates : candidates;
+                if (!pool.length) {
+                    day.recipeId = null;
+                    daysWithoutMatches.push(day.label);
+                    return;
+                }
+
+                const recipe = pool[Math.floor(Math.random() * pool.length)];
+                day.recipeId = recipe.id;
+                usedRecipeIds.add(recipe.id);
+            });
+            renderFreePlanner();
+
+            if (daysWithoutMatches.length) {
+                setFreePlannerStatus(`${daysWithoutMatches.join(', ')} napra a beállított konyhával és fogással nincs ingyenes recept. Módosítsd a nap szűrőit, majd válassz receptet.`, true);
+                return;
+            }
+
+            setFreePlannerStatus('Elkészült a háromnapos menüjavaslat. A napok beállításait és receptjeit külön-külön is módosíthatod.');
+        }
+
+        const plannerRecipeModal = document.getElementById('planner-recipe-modal');
+        document.getElementById('close-planner-recipe-modal').addEventListener('click', closePlannerRecipePicker);
+        document.getElementById('planner-recipe-search').addEventListener('input', renderPlannerRecipePickerResults);
+        document.getElementById('clear-planner-recipe').addEventListener('click', () => {
+            const day = freePlannerDays.find(item => item.id === activePlannerDayId);
+            if (!day) return;
+            day.recipeId = null;
+            closePlannerRecipePicker();
+            renderFreePlanner();
+            setFreePlannerStatus(`${day.label} receptválasztása törölve.`);
+        });
+        plannerRecipeModal.addEventListener('click', event => {
+            if (event.target === plannerRecipeModal) closePlannerRecipePicker();
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !plannerRecipeModal.classList.contains('hidden')) closePlannerRecipePicker();
+        });
+
         function renderRecipePagination(resultCount) {
             const pageCount = Math.max(1, Math.ceil(resultCount / recipesPerPage));
             const firstResult = resultCount === 0 ? 0 : (recipePage - 1) * recipesPerPage + 1;
@@ -1179,6 +1461,7 @@
 
         // Init
         renderRecipes();
+        renderFreePlanner();
     </script>
 </body>
 </html>
