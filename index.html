@@ -284,6 +284,7 @@
                         <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-extrabold text-emerald-800">3 nap ingyen · 4 nap Pro</span>
                         <h2 class="mt-2 text-2xl font-extrabold text-slate-900">Heti menütervező</h2>
                         <p class="mt-1 max-w-2xl text-sm text-slate-600">Tervezd meg hétfő–szerda ebédjét ingyen. A csütörtöki–vasárnapi napok csak Pro esetén érhetők el.</p>
+                        <p class="mt-1 text-xs font-semibold text-brand-800">A felül kijelölt spájz-alapanyagok szűrik a menüjavaslatokat és a receptlistát.</p>
                     </div>
                     <button type="button" onclick="generateFreeThreeDayMenu()" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
                         <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
@@ -295,12 +296,12 @@
                     <li class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-sm font-extrabold text-white">1</span>
                         <h3 class="mt-3 font-bold text-slate-900">Állítsd be a napokat</h3>
-                        <p class="mt-1 text-sm text-slate-600">Naponta válassz konyhát, fogást – például levest vagy főételt – és adagszámot.</p>
+                        <p class="mt-1 text-sm text-slate-600">Naponta válassz főételt, majd igény szerint levest és desszertet is adhatsz hozzá. A konyha és az adagszám minden fogásra érvényes.</p>
                     </li>
                     <li class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-sm font-extrabold text-white">2</span>
                         <h3 class="mt-3 font-bold text-slate-900">Generálj vagy válassz</h3>
-                        <p class="mt-1 text-sm text-slate-600">Kérj háromnapos javaslatot, vagy kattints egy napra, és keress saját receptet.</p>
+                        <p class="mt-1 text-sm text-slate-600">Kérj háromnapos főétel-javaslatot, vagy válassz külön főételt, levest és desszertet.</p>
                     </li>
                     <li class="rounded-2xl border border-amber-200 bg-amber-50 p-4">
                         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-amber-600 text-sm font-extrabold text-white">3</span>
@@ -657,11 +658,12 @@
         let recipePage = 1;
         let recipesPerPage = 12;
         const freePlannerDays = [
-            { id: 'monday', label: 'Hétfő', cuisine: 'all', course: 'main', servings: 4, recipeId: null },
-            { id: 'tuesday', label: 'Kedd', cuisine: 'all', course: 'main', servings: 4, recipeId: null },
-            { id: 'wednesday', label: 'Szerda', cuisine: 'all', course: 'main', servings: 4, recipeId: null }
+            { id: 'monday', label: 'Hétfő', cuisine: 'all', servings: 4, meals: { main: null, soup: null, dessert: null } },
+            { id: 'tuesday', label: 'Kedd', cuisine: 'all', servings: 4, meals: { main: null, soup: null, dessert: null } },
+            { id: 'wednesday', label: 'Szerda', cuisine: 'all', servings: 4, meals: { main: null, soup: null, dessert: null } }
         ];
         let activePlannerDayId = null;
+        let activePlannerCourse = 'main';
         let plannerRecipePickerReturnFocus = null;
         const pantryPicker = window.PantryPicker.create({
             recipes,
@@ -1040,20 +1042,21 @@
             return pantryPicker.matches(ingredientName);
         }
 
-        function getFreePlannerCandidates(day, query = '') {
+        function getFreePlannerCandidates(day, course, query = '') {
             const normalizedQuery = window.PantryPicker.normalizeSearchText(query);
             return recipes.filter(recipe => {
                 if (recipe.access !== 'free') return false;
+                if (selectedIngredients.size && !recipe.ingredients.some(ingredientMatchesSelection)) return false;
                 if (day.cuisine !== 'all' && recipe.cuisine !== day.cuisine) return false;
-                if (day.course !== 'all' && recipe.course !== day.course) return false;
+                if (recipe.course !== course) return false;
                 return !normalizedQuery
                     || window.PantryPicker.normalizeSearchText(recipe.name).includes(normalizedQuery)
                     || recipe.ingredients.some(ingredient => window.PantryPicker.normalizeSearchText(ingredient).includes(normalizedQuery));
             }).sort((a, b) => a.name.localeCompare(b.name, 'hu', { sensitivity: 'base' }));
         }
 
-        function getFreePlannerRecipe(day) {
-            return recipes.find(recipe => recipe.id === day.recipeId && recipe.access === 'free') || null;
+        function getFreePlannerRecipe(day, course) {
+            return recipes.find(recipe => recipe.id === day.meals[course] && recipe.access === 'free') || null;
         }
 
         function updateFreePlannerSummary() {
@@ -1061,17 +1064,12 @@
             let selectedCount = 0;
 
             freePlannerDays.forEach(day => {
-                const recipe = getFreePlannerRecipe(day);
-                const costElement = document.querySelector(`[data-free-planner-cost="${day.id}"]`);
-                if (!recipe) {
-                    if (costElement) costElement.textContent = 'Még nincs recept kiválasztva.';
-                    return;
-                }
-
-                const recipeCost = Math.round(recipe.baseCost * day.servings);
-                totalCost += recipeCost;
-                selectedCount += 1;
-                if (costElement) costElement.textContent = `${recipeCost.toLocaleString('hu-HU')} Ft · ${day.servings} fő · ${recipe.time} perc`;
+                ['main', 'soup', 'dessert'].forEach(course => {
+                    const recipe = getFreePlannerRecipe(day, course);
+                    if (!recipe) return;
+                    totalCost += Math.round(recipe.baseCost * day.servings);
+                    selectedCount += 1;
+                });
             });
 
             document.getElementById('free-planner-total').textContent = `${totalCost.toLocaleString('hu-HU')} Ft`;
@@ -1097,13 +1095,12 @@
             select.value = String(day[setting]);
             select.addEventListener('change', () => {
                 day[setting] = setting === 'servings' ? Number(select.value) : select.value;
-                const selectedRecipe = getFreePlannerRecipe(day);
-                if (selectedRecipe && (
-                    (day.cuisine !== 'all' && selectedRecipe.cuisine !== day.cuisine)
-                    || (day.course !== 'all' && selectedRecipe.course !== day.course)
-                )) {
-                    day.recipeId = null;
-                }
+                ['main', 'soup', 'dessert'].forEach(course => {
+                    const selectedRecipe = getFreePlannerRecipe(day, course);
+                    if (selectedRecipe && day.cuisine !== 'all' && selectedRecipe.cuisine !== day.cuisine) {
+                        day.meals[course] = null;
+                    }
+                });
                 const selectedControl = { dayId: day.id, setting };
                 renderFreePlanner();
                 document.querySelector(`[data-planner-day-setting="${selectedControl.dayId}"][data-setting-name="${selectedControl.setting}"]`)?.focus();
@@ -1123,19 +1120,12 @@
                 { value: 'mx', label: 'Mexikói' },
                 { value: 'asia', label: 'Ázsiai' }
             ];
-            const courses = [
-                { value: 'all', label: 'Bármilyen fogás' },
-                { value: 'main', label: 'Főétel' },
-                { value: 'soup', label: 'Leves' },
-                { value: 'dessert', label: 'Desszert' }
-            ];
             const servings = Array.from({ length: 15 }, (_, index) => ({
                 value: String(index + 1),
                 label: `${index + 1} fő`
             }));
             container.innerHTML = '';
             freePlannerDays.forEach(day => {
-                const recipe = getFreePlannerRecipe(day);
                 const card = document.createElement('article');
                 card.className = 'flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm';
 
@@ -1147,31 +1137,40 @@
                 settings.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3';
                 settings.append(
                     createPlannerSelect(day, 'Konyha', 'cuisine', cuisines),
-                    createPlannerSelect(day, 'Fogás', 'course', courses),
                     createPlannerSelect(day, 'Adag', 'servings', servings)
                 );
 
-                const recipeButton = document.createElement('button');
-                recipeButton.type = 'button';
-                recipeButton.dataset.plannerRecipeDay = day.id;
-                recipeButton.className = 'flex min-h-14 w-full items-center justify-between gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-3 text-left text-sm font-bold text-brand-900 hover:border-brand-400 hover:bg-brand-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500';
-                const recipeName = document.createElement('span');
-                recipeName.className = 'min-w-0 flex-1';
-                recipeName.textContent = recipe ? recipe.name : 'Recept keresése és választása';
-                const recipeIcon = document.createElement('i');
-                recipeIcon.className = `fa-solid ${recipe ? 'fa-rotate' : 'fa-magnifying-glass'} shrink-0`;
-                recipeIcon.setAttribute('aria-hidden', 'true');
-                recipeButton.append(recipeName, recipeIcon);
-                recipeButton.addEventListener('click', () => openPlannerRecipePicker(day.id, recipeButton));
+                const mealSlots = document.createElement('div');
+                mealSlots.className = 'space-y-2';
+                [
+                    { course: 'main', label: 'Főétel', optional: false },
+                    { course: 'soup', label: 'Leves', optional: true },
+                    { course: 'dessert', label: 'Desszert', optional: true }
+                ].forEach(slot => {
+                    const recipe = getFreePlannerRecipe(day, slot.course);
+                    const recipeButton = document.createElement('button');
+                    recipeButton.type = 'button';
+                    recipeButton.dataset.plannerRecipeDay = day.id;
+                    recipeButton.dataset.plannerCourse = slot.course;
+                    recipeButton.className = `flex min-h-12 w-full items-center justify-between gap-3 rounded-xl border px-3 py-2.5 text-left text-sm font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 ${slot.course === 'main' ? 'border-brand-200 bg-brand-50 text-brand-900 hover:border-brand-400 hover:bg-brand-100' : 'border-slate-200 bg-white text-slate-700 hover:border-brand-300 hover:bg-brand-50'}`;
+                    const content = document.createElement('span');
+                    content.className = 'min-w-0 flex-1';
+                    content.textContent = recipe ? `${slot.label}: ${recipe.name}` : slot.optional ? `+ ${slot.label} hozzáadása` : `${slot.label} választása`;
+                    const icon = document.createElement('i');
+                    icon.className = `fa-solid ${recipe ? 'fa-rotate' : 'fa-magnifying-glass'} shrink-0`;
+                    icon.setAttribute('aria-hidden', 'true');
+                    recipeButton.append(content, icon);
+                    recipeButton.addEventListener('click', () => openPlannerRecipePicker(day.id, slot.course, recipeButton));
+                    mealSlots.appendChild(recipeButton);
+                    if (recipe) {
+                        const details = document.createElement('p');
+                        details.className = 'px-3 text-xs text-slate-500';
+                        details.textContent = `${Math.round(recipe.baseCost * day.servings).toLocaleString('hu-HU')} Ft · ${day.servings} fő · ${recipe.time} perc`;
+                        mealSlots.appendChild(details);
+                    }
+                });
 
-                const cost = document.createElement('p');
-                cost.className = 'text-xs text-slate-500';
-                cost.dataset.freePlannerCost = day.id;
-                cost.textContent = recipe
-                    ? `${Math.round(recipe.baseCost * day.servings).toLocaleString('hu-HU')} Ft · ${day.servings} fő · ${recipe.time} perc`
-                    : 'Még nincs recept kiválasztva.';
-
-                card.append(heading, settings, recipeButton, cost);
+                card.append(heading, settings, mealSlots);
                 container.appendChild(card);
             });
             updateFreePlannerSummary();
@@ -1189,17 +1188,18 @@
             const day = freePlannerDays.find(item => item.id === activePlannerDayId);
             if (!day) return;
 
-            const results = getFreePlannerCandidates(day, document.getElementById('planner-recipe-search').value);
+            const course = activePlannerCourse;
+            const results = getFreePlannerCandidates(day, course, document.getElementById('planner-recipe-search').value);
             const resultContainer = document.getElementById('planner-recipe-results');
             const cuisineLabels = { hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
             const courseLabels = { main: 'Főétel', soup: 'Leves', dessert: 'Desszert' };
-            document.getElementById('planner-recipe-result-count').textContent = `${results.length} választható ingyenes recept`;
+            document.getElementById('planner-recipe-result-count').textContent = `${results.length} választható ingyenes ${courseLabels[course].toLowerCase()}recept`;
             resultContainer.innerHTML = '';
 
             if (!results.length) {
                 const emptyState = document.createElement('p');
                 emptyState.className = 'rounded-xl bg-slate-50 p-5 text-center text-sm text-slate-600';
-                emptyState.textContent = 'Nincs találat. Próbálj más keresőszót vagy módosítsd a nap konyháját és fogását.';
+                emptyState.textContent = 'Nincs találat. Próbálj más keresőszót, vagy módosítsd a nap konyháját.';
                 resultContainer.appendChild(emptyState);
                 return;
             }
@@ -1217,26 +1217,28 @@
                 details.textContent = `${cuisineLabels[recipe.cuisine] || 'Egyéb'} · ${courseLabels[recipe.course] || 'Fogás'} · ${recipe.time} perc · ${Math.round(recipe.baseCost * day.servings).toLocaleString('hu-HU')} Ft / ${day.servings} fő`;
                 button.append(name, details);
                 button.addEventListener('click', () => {
-                    day.recipeId = recipe.id;
+                    day.meals[course] = recipe.id;
                     closePlannerRecipePicker();
                     renderFreePlanner();
-                    setFreePlannerStatus(`${day.label}: ${recipe.name} kiválasztva.`);
+                    setFreePlannerStatus(`${day.label} ${courseLabels[course].toLowerCase()}: ${recipe.name} kiválasztva.`);
                 });
                 resultContainer.appendChild(button);
             });
         }
 
-        function openPlannerRecipePicker(dayId, returnFocus) {
+        function openPlannerRecipePicker(dayId, course, returnFocus) {
             const day = freePlannerDays.find(item => item.id === dayId);
             if (!day) return;
 
             activePlannerDayId = day.id;
+            activePlannerCourse = course;
             plannerRecipePickerReturnFocus = returnFocus;
             const cuisineLabels = { all: 'Bármilyen konyha', hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
-            const courseLabels = { all: 'bármilyen fogás', main: 'főétel', soup: 'leves', dessert: 'desszert' };
+            const courseLabels = { main: 'főétel', soup: 'leves', dessert: 'desszert' };
             document.getElementById('planner-recipe-modal-day').textContent = day.label;
+            document.getElementById('planner-recipe-modal-title').textContent = `${courseLabels[course]} választása`;
             document.getElementById('planner-recipe-modal-filters').textContent =
-                `${cuisineLabels[day.cuisine]} · ${courseLabels[day.course]} · ${day.servings} fő`;
+                `${cuisineLabels[day.cuisine]} · ${day.servings} fő`;
             document.getElementById('planner-recipe-search').value = '';
             document.getElementById('planner-recipe-modal').classList.remove('hidden');
             renderPlannerRecipePickerResults();
@@ -1248,34 +1250,34 @@
             const dayId = activePlannerDayId;
             activePlannerDayId = null;
             const currentTrigger = dayId
-                ? document.querySelector(`[data-planner-recipe-day="${dayId}"]`)
+                ? document.querySelector(`[data-planner-recipe-day="${dayId}"][data-planner-course="${activePlannerCourse}"]`)
                 : null;
             (currentTrigger || plannerRecipePickerReturnFocus)?.focus();
             plannerRecipePickerReturnFocus = null;
         }
 
         function generateFreeThreeDayMenu() {
-            const usedRecipeIds = new Set();
+            const usedRecipeIds = new Set(freePlannerDays.flatMap(day => [day.meals.soup, day.meals.dessert]).filter(Boolean));
             const daysWithoutMatches = [];
 
             freePlannerDays.forEach(day => {
-                const candidates = getFreePlannerCandidates(day);
+                const candidates = getFreePlannerCandidates(day, 'main');
                 const unusedCandidates = candidates.filter(recipe => !usedRecipeIds.has(recipe.id));
                 const pool = unusedCandidates.length ? unusedCandidates : candidates;
                 if (!pool.length) {
-                    day.recipeId = null;
+                    day.meals.main = null;
                     daysWithoutMatches.push(day.label);
                     return;
                 }
 
                 const recipe = pool[Math.floor(Math.random() * pool.length)];
-                day.recipeId = recipe.id;
+                day.meals.main = recipe.id;
                 usedRecipeIds.add(recipe.id);
             });
             renderFreePlanner();
 
             if (daysWithoutMatches.length) {
-                setFreePlannerStatus(`${daysWithoutMatches.join(', ')} napra a beállított konyhával és fogással nincs ingyenes recept. Módosítsd a nap szűrőit, majd válassz receptet.`, true);
+                setFreePlannerStatus(`${daysWithoutMatches.join(', ')} napra a beállított konyhával nincs ingyenes főétel. Módosítsd a nap konyháját, vagy válassz főételt kézzel.`, true);
                 return;
             }
 
@@ -1288,10 +1290,11 @@
         document.getElementById('clear-planner-recipe').addEventListener('click', () => {
             const day = freePlannerDays.find(item => item.id === activePlannerDayId);
             if (!day) return;
-            day.recipeId = null;
+            const course = activePlannerCourse;
+            day.meals[course] = null;
             closePlannerRecipePicker();
             renderFreePlanner();
-            setFreePlannerStatus(`${day.label} receptválasztása törölve.`);
+            setFreePlannerStatus(`${day.label} ${course === 'main' ? 'főétel' : course === 'soup' ? 'leves' : 'desszert'} választása törölve.`);
         });
         plannerRecipeModal.addEventListener('click', event => {
             if (event.target === plannerRecipeModal) closePlannerRecipePicker();

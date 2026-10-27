@@ -117,30 +117,6 @@
             <span>A tesztelés alatt nem indul előfizetés vagy visszaszámlálás, és a hozzáférés nem jár le automatikusan.</span>
         </div>
 
-        <section aria-labelledby="app-how-it-works-heading" class="rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 shadow-sm">
-            <div class="max-w-3xl mx-auto text-center mb-5">
-                <span class="text-brand-700 text-xs font-extrabold uppercase tracking-wide">Egyszerűen indulhatsz</span>
-                <h2 id="app-how-it-works-heading" class="mt-1 text-2xl font-extrabold text-slate-900">Így használd a receptkeresőt</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">1</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Állítsd be a létszámot</h3>
-                    <p class="mt-1 text-sm text-slate-600">A receptkártyák és a hozzávalók mennyisége a kiválasztott családlétszámhoz igazodik.</p>
-                </article>
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">2</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Jelöld be, mi van otthon</h3>
-                    <p class="mt-1 text-sm text-slate-600">A spájzban lévő alapanyagok alapján recepteket szűrhetsz, és a konyhát, fogást, étrendet vagy elkészítési időt is beállíthatod.</p>
-                </article>
-                <article class="rounded-2xl bg-slate-50 p-4">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">3</span>
-                    <h3 class="mt-3 font-bold text-slate-900">Jelöld a receptnél a hiányzókat</h3>
-                    <p class="mt-1 text-sm text-slate-600">Nyiss meg egy receptet. Ha egy piros hozzávaló mégis van otthon, koppints rá: zöldre vált, és nem kerül a másolt bevásárlólistába.</p>
-                </article>
-            </div>
-        </section>
-
         <!-- CONTROLS & PANTRY -->
         <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-slate-200/80 space-y-4">
             <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 border-b border-slate-100 pb-4">
@@ -220,6 +196,29 @@
             <div class="flex justify-between items-center px-1">
                 <h2 class="font-extrabold text-slate-900 text-lg">Receptek (<span id="recipe-count">0</span>)</h2>
             </div>
+            <section aria-labelledby="app-how-it-works-heading" class="rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 shadow-sm">
+                <div class="max-w-3xl mx-auto text-center mb-5">
+                    <span class="text-brand-700 text-xs font-extrabold uppercase tracking-wide">Egyszerűen indulhatsz</span>
+                    <h2 id="app-how-it-works-heading" class="mt-1 text-2xl font-extrabold text-slate-900">Így használd a receptkeresőt</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <article class="rounded-2xl bg-slate-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">1</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Állítsd be a létszámot</h3>
+                        <p class="mt-1 text-sm text-slate-600">A receptkártyák és a hozzávalók mennyisége a kiválasztott családlétszámhoz igazodik.</p>
+                    </article>
+                    <article class="rounded-2xl bg-slate-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">2</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Jelöld be, mi van otthon</h3>
+                        <p class="mt-1 text-sm text-slate-600">A spájzban lévő alapanyagok alapján recepteket szűrhetsz, és a konyhát, fogást, étrendet vagy elkészítési időt is beállíthatod.</p>
+                    </article>
+                    <article class="rounded-2xl bg-slate-50 p-4">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold text-white">3</span>
+                        <h3 class="mt-3 font-bold text-slate-900">Jelöld a receptnél a hiányzókat</h3>
+                        <p class="mt-1 text-sm text-slate-600">Nyiss meg egy receptet. Ha egy piros hozzávaló mégis van otthon, koppints rá: zöldre vált, és nem kerül a másolt bevásárlólistába.</p>
+                    </article>
+                </div>
+            </section>
             <div class="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-brand-200 bg-white p-4 shadow-sm">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
                     <i class="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
@@ -243,6 +242,7 @@
                 <div>
                     <span class="bg-brand-500/20 text-brand-400 text-xs font-bold px-3 py-1 rounded-md uppercase">Heti Menütervező Pro</span>
                     <h2 class="text-2xl font-extrabold mt-1">Heti Menünaptár</h2>
+                    <p class="mt-1 text-xs text-slate-300">A spájzban kijelölt alapanyagok szűrik a receptjavaslatokat. Naponta válassz főételt, és igény szerint levest vagy desszertet is.</p>
                 </div>
                 <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full md:w-auto">
                     <div class="bg-slate-800/90 p-3.5 rounded-2xl border border-slate-700/80 w-full sm:w-auto">
@@ -275,6 +275,31 @@
             </div>
         </div>
     </main>
+
+    <div id="app-planner-recipe-modal" role="dialog" aria-modal="true" aria-labelledby="app-planner-recipe-modal-title" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200">
+            <div class="p-5 border-b border-slate-100 flex justify-between items-start gap-4">
+                <div>
+                    <p id="app-planner-recipe-modal-day" class="text-xs font-extrabold uppercase tracking-wide text-brand-700"></p>
+                    <h2 id="app-planner-recipe-modal-title" class="mt-1 text-xl font-extrabold text-slate-900">Válassz receptet</h2>
+                    <p id="app-planner-recipe-modal-filters" class="mt-1 text-sm text-slate-600"></p>
+                </div>
+                <button id="close-app-planner-recipe-modal" type="button" aria-label="Receptválasztó bezárása" class="shrink-0 rounded-lg px-2 text-2xl font-bold text-slate-400 hover:text-slate-700">&times;</button>
+            </div>
+            <div class="p-5 border-b border-slate-100 space-y-3">
+                <label for="app-planner-recipe-search" class="sr-only">Recept keresése</label>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true"></i>
+                    <input id="app-planner-recipe-search" type="search" autocomplete="off" placeholder="Keress recept vagy alapanyag alapján..." class="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200">
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <p id="app-planner-recipe-result-count" class="text-xs font-semibold text-slate-500" aria-live="polite"></p>
+                    <button id="clear-app-planner-recipe" type="button" class="self-start rounded-lg px-3 py-2 text-xs font-bold text-rose-700 hover:bg-rose-50">Fogás törlése erről a napról</button>
+                </div>
+            </div>
+            <div id="app-planner-recipe-results" class="min-h-0 flex-1 space-y-2 overflow-y-auto p-5" aria-label="Választható receptek"></div>
+        </div>
+    </div>
 
     <footer class="border-t border-slate-200 bg-white px-4 py-6 text-sm text-slate-600">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
@@ -401,9 +426,14 @@
         let selectedIngredients = new Set();
         let recipePage = 1;
         let recipesPerPage = 12;
-        let weeklyMenu = { mon: 2, tue: 3, wed: 5, thu: 1, fri: 4, sat: 2, sun: 1 };
-        const plannerSearch = {};
-        const plannerCuisine = {};
+        const plannerDays = Object.fromEntries(daysList.map((day, index) => [day.id, {
+            cuisine: 'all',
+            servings: 4,
+            meals: { main: [1002, 1003, 1004, 2001, 3001, 4001, 2002][index], soup: null, dessert: null }
+        }]));
+        let activePlannerDayId = null;
+        let activePlannerCourse = 'main';
+        let plannerRecipePickerReturnFocus = null;
         let activeRecipeId = null;
 
         // DOM Elements
@@ -582,15 +612,15 @@
             });
         }
 
-        function getPlannerFilteredRecipes(dayId) {
-            const cuisine = plannerCuisine[dayId] || 'all';
-            const query = window.PantryPicker.normalizeSearchText(plannerSearch[dayId] || '');
+        function getPlannerFilteredRecipes(dayId, course, query = '') {
+            const day = plannerDays[dayId];
+            const normalizedQuery = window.PantryPicker.normalizeSearchText(query);
             return getFilteredRecipes(true, true).filter(r => {
-                if (r.course === 'dessert') return false;
-                if (cuisine !== 'all' && r.cuisine !== cuisine) return false;
-                return !query
-                    || window.PantryPicker.normalizeSearchText(r.name).includes(query)
-                    || r.ingredients.some(i => window.PantryPicker.normalizeSearchText(i.name).includes(query));
+                if (r.course !== course) return false;
+                if (day.cuisine !== 'all' && r.cuisine !== day.cuisine) return false;
+                return !normalizedQuery
+                    || window.PantryPicker.normalizeSearchText(r.name).includes(normalizedQuery)
+                    || r.ingredients.some(i => window.PantryPicker.normalizeSearchText(i.name).includes(normalizedQuery));
             });
         }
 
@@ -688,29 +718,6 @@
             renderRecipes();
         }
 
-        function buildPlannerRecipeOptions(dayId) {
-            const recipeId = weeklyMenu[dayId];
-            const selectedRecipe = recipes.find(r => r.id === recipeId);
-            const matches = getPlannerFilteredRecipes(dayId);
-            let options = '<option value="">-- Nincs étel --</option>';
-
-            if (selectedRecipe && !matches.some(r => r.id === selectedRecipe.id)) {
-                options += `<option value="${selectedRecipe.id}" selected>${selectedRecipe.name} · jelenlegi választás, eltér a szűrőktől</option>`;
-            }
-            matches.forEach(r => {
-                options += `<option value="${r.id}" ${recipeId === r.id ? 'selected' : ''}>${r.name}</option>`;
-            });
-            if (!matches.length && !selectedRecipe) options += '<option disabled>Nincs találat a szűrőkre</option>';
-            return options;
-        }
-
-        function updatePlannerRecipeOptions(dayId) {
-            const select = document.querySelector(`[data-day-select="${dayId}"]`);
-            if (!select) return;
-            select.innerHTML = buildPlannerRecipeOptions(dayId);
-            select.value = weeklyMenu[dayId] ? String(weeklyMenu[dayId]) : '';
-        }
-
         function renderRecipes() {
             const servings = parseInt(servingsSlider.value);
             const maxTime = parseInt(timeSlider.value);
@@ -784,73 +791,249 @@
         });
 
         function renderWeeklyPlanner() {
-            const servings = parseInt(servingsSlider.value);
             const daysGrid = document.getElementById('weekly-days-grid');
             daysGrid.innerHTML = '';
 
             let totalWeeklyCost = 0;
-            let consolidatedIngredients = {};
+            const consolidatedIngredients = {};
+            const cuisines = [
+                { value: 'all', label: 'Minden konyha' },
+                { value: 'hu', label: 'Magyar 🇭🇺' },
+                { value: 'it', label: 'Olasz 🇮🇹' },
+                { value: 'mx', label: 'Mexikói 🇲🇽' },
+                { value: 'asia', label: 'Ázsiai 🥢' }
+            ];
+            const servingOptions = Array.from({ length: 15 }, (_, index) => ({
+                value: String(index + 1),
+                label: `${index + 1} fő`
+            }));
 
             daysList.forEach(day => {
-                const recipeId = weeklyMenu[day.id];
-                const recipe = recipes.find(r => r.id === recipeId);
-
+                const settings = plannerDays[day.id];
                 let dayCost = 0;
-                if (recipe) {
-                    dayCost = Math.round(recipe.baseCost * servings);
-                    totalWeeklyCost += dayCost;
+                const dayCard = document.createElement('article');
+                dayCard.className = 'bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm flex flex-col gap-3';
 
-                    recipe.ingredients.forEach(ing => {
-                        if (ing.amount == null) return;
-                        const totalAmt = ing.amount * servings;
-                        if (!consolidatedIngredients[ing.name]) {
-                            consolidatedIngredients[ing.name] = { amount: 0, unit: ing.unit };
-                        }
-                        consolidatedIngredients[ing.name].amount += totalAmt;
-                    });
-                }
+                const header = document.createElement('div');
+                header.className = 'flex justify-between items-center gap-2';
+                const dayName = document.createElement('h3');
+                dayName.className = 'font-extrabold text-slate-900 text-sm';
+                dayName.textContent = day.label;
+                const dayCost = document.createElement('span');
+                dayCost.dataset.plannerDayCost = day.id;
+                dayCost.className = 'shrink-0 text-[10px] font-bold text-brand-700 bg-brand-50 px-2 py-1 rounded';
+                dayCost.textContent = '0 Ft';
+                header.append(dayName, dayCost);
 
-                const dayCard = document.createElement('div');
-                dayCard.className = 'bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-3';
-                
-                const selectOptions = buildPlannerRecipeOptions(day.id);
+                const dayControls = document.createElement('div');
+                dayControls.className = 'grid grid-cols-1 sm:grid-cols-2 gap-2';
+                const cuisineField = createPlannerDaySelect(day, 'cuisine', 'Konyha', cuisines);
+                const servingsField = createPlannerDaySelect(day, 'servings', 'Adag', servingOptions);
+                dayControls.append(cuisineField, servingsField);
 
-                dayCard.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-extrabold text-slate-900 text-sm">${day.label}</span>
-                            <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded">${dayCost.toLocaleString('hu-HU')} Ft</span>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_160px] gap-2 mb-2">
-                            <input type="search" data-day-search="${day.id}" aria-label="${day.label} receptkereső" placeholder="Recept keresése..." class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <select data-day-cuisine="${day.id}" aria-label="${day.label} konyhája" class="min-w-0 bg-white border border-slate-200 rounded-xl p-2 text-xs font-semibold text-slate-700">
-                                <option value="all">Minden konyha</option>
-                                <option value="hu">Magyar 🇭🇺</option>
-                                <option value="it">Olasz 🇮🇹</option>
-                                <option value="mx">Mexikói 🇲🇽</option>
-                                <option value="asia">Ázsiai 🥢</option>
-                            </select>
-                        </div>
-                        <select data-day-select="${day.id}" onchange="updateDayRecipe('${day.id}', this.value)" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            ${selectOptions}
-                        </select>
-                    </div>
-                `;
-                dayCard.querySelector(`[data-day-search="${day.id}"]`).value = plannerSearch[day.id] || '';
-                dayCard.querySelector(`[data-day-cuisine="${day.id}"]`).value = plannerCuisine[day.id] || 'all';
-                dayCard.querySelector(`[data-day-search="${day.id}"]`).addEventListener('input', event => {
-                    plannerSearch[day.id] = event.target.value;
-                    updatePlannerRecipeOptions(day.id);
+                const mealsContainer = document.createElement('div');
+                mealsContainer.className = 'space-y-2';
+                [
+                    { course: 'main', label: 'Főétel', optional: false },
+                    { course: 'soup', label: 'Leves', optional: true },
+                    { course: 'dessert', label: 'Desszert', optional: true }
+                ].forEach(slot => {
+                    const recipe = recipes.find(item => item.id === settings.meals[slot.course]);
+                    if (recipe) {
+                        dayCost.dataset.cost = String(Number(dayCost.dataset.cost || 0) + Math.round(recipe.baseCost * settings.servings));
+                        recipe.ingredients.forEach(ingredient => {
+                            if (ingredient.amount == null) return;
+                            if (!consolidatedIngredients[ingredient.name]) {
+                                consolidatedIngredients[ingredient.name] = { amount: 0, unit: ingredient.unit };
+                            }
+                            consolidatedIngredients[ingredient.name].amount += ingredient.amount * settings.servings;
+                        });
+                    }
+
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.dataset.plannerRecipeDay = day.id;
+                    button.dataset.plannerCourse = slot.course;
+                    button.className = `flex min-h-11 w-full items-center justify-between gap-2 rounded-xl border px-3 py-2 text-left text-xs font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 ${slot.course === 'main' ? 'border-brand-200 bg-brand-50 text-brand-900 hover:border-brand-400 hover:bg-brand-100' : 'border-slate-200 bg-white text-slate-700 hover:border-brand-300 hover:bg-brand-50'}`;
+                    const label = document.createElement('span');
+                    label.className = 'min-w-0 flex-1';
+                    label.textContent = recipe
+                        ? `${slot.label}: ${recipe.name}`
+                        : slot.optional ? `+ ${slot.label} hozzáadása` : `${slot.label} választása`;
+                    const icon = document.createElement('i');
+                    icon.className = `fa-solid ${recipe ? 'fa-rotate' : 'fa-magnifying-glass'} shrink-0`;
+                    icon.setAttribute('aria-hidden', 'true');
+                    button.append(label, icon);
+                    button.addEventListener('click', () => openAppPlannerRecipePicker(day.id, slot.course, button));
+                    mealsContainer.appendChild(button);
+                    if (recipe) {
+                        const details = document.createElement('p');
+                        details.className = 'px-3 text-[10px] text-slate-500';
+                        details.textContent = `${Math.round(recipe.baseCost * settings.servings).toLocaleString('hu-HU')} Ft · ${settings.servings} fő · ${recipe.time} perc`;
+                        mealsContainer.appendChild(details);
+                    }
                 });
-                dayCard.querySelector(`[data-day-cuisine="${day.id}"]`).addEventListener('change', event => {
-                    plannerCuisine[day.id] = event.target.value;
-                    updatePlannerRecipeOptions(day.id);
-                });
+                dayCost.dataset.cost = String(Number(dayCost.dataset.cost || 0));
+                dayCost.textContent = `${Number(dayCost.dataset.cost).toLocaleString('hu-HU')} Ft`;
+                totalWeeklyCost += Number(dayCost.dataset.cost);
+                dayCard.append(header, dayControls, mealsContainer);
                 daysGrid.appendChild(dayCard);
             });
 
             document.getElementById('weekly-total-cost').innerText = `${totalWeeklyCost.toLocaleString('hu-HU')} Ft`;
             renderConsolidatedShoppingList(consolidatedIngredients);
+        }
+
+        function createPlannerDaySelect(day, setting, label, options) {
+            const field = document.createElement('label');
+            field.className = 'block min-w-0 text-[10px] font-bold text-slate-500';
+            field.textContent = label;
+            const select = document.createElement('select');
+            select.dataset.plannerDaySetting = day.id;
+            select.dataset.settingName = setting;
+            select.setAttribute('aria-label', `${day.label}: ${label}`);
+            select.className = 'mt-1 w-full rounded-lg border border-slate-300 bg-white px-2 py-2 text-xs font-semibold text-slate-700 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200';
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.value = optionData.value;
+                option.textContent = optionData.label;
+                select.appendChild(option);
+            });
+            select.value = String(plannerDays[day.id][setting]);
+            select.addEventListener('change', () => {
+                const settings = plannerDays[day.id];
+                settings[setting] = setting === 'servings' ? Number(select.value) : select.value;
+                if (setting === 'cuisine' && settings.cuisine !== 'all') {
+                    ['main', 'soup', 'dessert'].forEach(course => {
+                        const recipe = recipes.find(item => item.id === settings.meals[course]);
+                        if (recipe && recipe.cuisine !== settings.cuisine) settings.meals[course] = null;
+                    });
+                }
+                renderWeeklyPlanner();
+                document.querySelector(`[data-planner-day-setting="${day.id}"][data-setting-name="${setting}"]`)?.focus();
+            });
+            field.appendChild(select);
+            return field;
+        }
+
+        function renderAppPlannerRecipePickerResults() {
+            const day = daysList.find(item => item.id === activePlannerDayId);
+            if (!day) return;
+            const results = getPlannerFilteredRecipes(
+                day.id,
+                activePlannerCourse,
+                document.getElementById('app-planner-recipe-search').value
+            );
+            const resultContainer = document.getElementById('app-planner-recipe-results');
+            const cuisineLabels = { hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
+            const courseLabels = { main: 'Főétel', soup: 'Leves', dessert: 'Desszert' };
+            document.getElementById('app-planner-recipe-result-count').textContent =
+                `${results.length} választható ${courseLabels[activePlannerCourse].toLowerCase()}recept`;
+            resultContainer.replaceChildren();
+
+            if (!results.length) {
+                const emptyState = document.createElement('p');
+                emptyState.className = 'rounded-xl bg-slate-50 p-5 text-center text-sm text-slate-600';
+                emptyState.textContent = 'Nincs találat. Próbálj más keresőszót vagy módosítsd a nap szűrőit.';
+                resultContainer.appendChild(emptyState);
+                return;
+            }
+
+            results.forEach(recipe => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'w-full rounded-xl border border-slate-200 p-3 text-left hover:border-brand-300 hover:bg-brand-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500';
+                const name = document.createElement('span');
+                name.className = 'block font-bold text-slate-900';
+                name.textContent = recipe.name;
+                const details = document.createElement('span');
+                details.className = 'mt-1 block text-xs text-slate-600';
+                const servings = plannerDays[day.id].servings;
+                details.textContent = `${cuisineLabels[recipe.cuisine] || 'Egyéb'} · ${recipe.time} perc · ${Math.round(recipe.baseCost * servings).toLocaleString('hu-HU')} Ft / ${servings} fő`;
+                button.append(name, details);
+                button.addEventListener('click', () => {
+                    plannerDays[day.id].meals[activePlannerCourse] = recipe.id;
+                    const course = activePlannerCourse;
+                    closeAppPlannerRecipePicker();
+                    renderWeeklyPlanner();
+                    setAppPlannerStatus(`${day.label} ${courseLabels[course].toLowerCase()}: ${recipe.name} kiválasztva.`);
+                });
+                resultContainer.appendChild(button);
+            });
+        }
+
+        function setAppPlannerStatus(message) {
+            const status = document.getElementById('app-planner-status');
+            if (!status) return;
+            status.textContent = message;
+            status.className = 'rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900';
+        }
+
+        function openAppPlannerRecipePicker(dayId, course, returnFocus) {
+            const day = daysList.find(item => item.id === dayId);
+            if (!day) return;
+            activePlannerDayId = dayId;
+            activePlannerCourse = course;
+            plannerRecipePickerReturnFocus = returnFocus;
+            const courseLabels = { main: 'főétel', soup: 'leves', dessert: 'desszert' };
+            const cuisineLabels = { all: 'Minden konyha', hu: 'Magyar', it: 'Olasz', mx: 'Mexikói', asia: 'Ázsiai' };
+            const settings = plannerDays[dayId];
+            document.getElementById('app-planner-recipe-modal-day').textContent = day.label;
+            document.getElementById('app-planner-recipe-modal-title').textContent = `${courseLabels[course]} választása`;
+            document.getElementById('app-planner-recipe-modal-filters').textContent =
+                `${cuisineLabels[settings.cuisine]} · ${settings.servings} fő · a spájzszűrő aktív`;
+            document.getElementById('app-planner-recipe-search').value = '';
+            document.getElementById('app-planner-recipe-modal').classList.remove('hidden');
+            renderAppPlannerRecipePickerResults();
+            document.getElementById('app-planner-recipe-search').focus();
+        }
+
+        function closeAppPlannerRecipePicker() {
+            document.getElementById('app-planner-recipe-modal').classList.add('hidden');
+            const dayId = activePlannerDayId;
+            activePlannerDayId = null;
+            const currentTrigger = dayId
+                ? document.querySelector(`[data-planner-recipe-day="${dayId}"][data-planner-course="${activePlannerCourse}"]`)
+                : null;
+            (currentTrigger || plannerRecipePickerReturnFocus)?.focus();
+            plannerRecipePickerReturnFocus = null;
+        }
+
+        function clearAppPlannerRecipe() {
+            const day = daysList.find(item => item.id === activePlannerDayId);
+            if (!day) return;
+            const course = activePlannerCourse;
+            plannerDays[day.id].meals[course] = null;
+            closeAppPlannerRecipePicker();
+            renderWeeklyPlanner();
+            setAppPlannerStatus(`${day.label} ${course === 'main' ? 'főétel' : course === 'soup' ? 'leves' : 'desszert'} választása törölve.`);
+        }
+
+        function autoGenerateWeeklyMenu() {
+            const usedRecipeIds = new Set(daysList.flatMap(day => [
+                plannerDays[day.id].meals.soup,
+                plannerDays[day.id].meals.dessert
+            ]).filter(Boolean));
+            const daysWithoutMatches = [];
+            daysList.forEach(day => {
+                const candidates = getPlannerFilteredRecipes(day.id, 'main');
+                const unusedCandidates = candidates.filter(recipe => !usedRecipeIds.has(recipe.id));
+                const pool = unusedCandidates.length ? unusedCandidates : candidates;
+                if (!pool.length) {
+                    plannerDays[day.id].meals.main = null;
+                    daysWithoutMatches.push(day.label);
+                    return;
+                }
+                const recipe = pool[Math.floor(Math.random() * pool.length)];
+                plannerDays[day.id].meals.main = recipe.id;
+                usedRecipeIds.add(recipe.id);
+            });
+            renderWeeklyPlanner();
+            if (daysWithoutMatches.length) {
+                setAppPlannerStatus(`${daysWithoutMatches.join(', ')} napra nincs a beállításoknak megfelelő főétel. Módosítsd a szűrőket vagy válassz receptet kézzel.`);
+            } else {
+                setAppPlannerStatus('Elkészült a heti főétel-javaslat. Minden naphoz külön levest és desszertet is választhatsz.');
+            }
         }
 
         function renderConsolidatedShoppingList(consolidated) {
