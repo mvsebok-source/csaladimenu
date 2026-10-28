@@ -459,6 +459,31 @@
         let ratingData = null;
         let ratingStorageError = '';
         let ratingHover = 0;
+        // A kijelentkezett oldalon beállított szűrők átvétele belépés után (6 órán belül).
+        let pendingRecipeId = null;
+        try {
+            const pendingKey = 'csaladimenu-pending-app-state-v1';
+            const pending = JSON.parse(localStorage.getItem(pendingKey) || 'null');
+            localStorage.removeItem(pendingKey);
+            if (pending && Date.now() - pending.savedAt < 6 * 60 * 60 * 1000) {
+                const setSelect = (select, value) => {
+                    if ([...select.options].some(option => option.value === value)) select.value = value;
+                };
+                if (pending.servings) servingsSlider.value = pending.servings;
+                if (pending.maxTime) timeSlider.value = pending.maxTime;
+                setSelect(cuisineSelect, pending.cuisine);
+                setSelect(courseSelect, pending.course);
+                setSelect(dietSelect, pending.diet);
+                searchInput.value = pending.search || '';
+                (pending.ingredients || []).forEach(key => selectedIngredients.add(key));
+                if ([12, 24].includes(pending.recipesPerPage)) recipesPerPage = pending.recipesPerPage;
+                if (Number.isInteger(pending.recipePage) && pending.recipePage > 0) recipePage = pending.recipePage;
+                pendingRecipeId = pending.recipeId ?? null;
+            }
+        } catch (error) {
+            console.warn('Filter state from before login could not be restored.', error);
+        }
+
         const pantryPicker = window.PantryPicker.create({
             recipes,
             selectedIngredients,
@@ -1252,6 +1277,11 @@
         // Init
         initializeRatingData();
         renderRecipes();
+        if (pendingRecipeId != null) {
+            const recipeButton = recipesGrid.querySelector(`[onclick="openRecipeModal(${pendingRecipeId})"]`);
+            if (recipeButton) recipeButton.scrollIntoView({ block: 'center' });
+            openRecipeModal(pendingRecipeId);
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>

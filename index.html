@@ -793,7 +793,30 @@
             togglePasswordVisibilityButton.innerHTML = `<i class="fa-regular ${isVisible ? 'fa-eye-slash' : 'fa-eye'}" aria-hidden="true"></i>`;
         }
 
-        function triggerPaywall(featureName, plan = null, mode = 'signup') {
+        // Belépés után az app.html innen folytatja: szűrők, oldal és a kiválasztott recept.
+        const pendingAppStateKey = 'csaladimenu-pending-app-state-v1';
+        function savePendingAppState(recipeId = null) {
+            try {
+                localStorage.setItem(pendingAppStateKey, JSON.stringify({
+                    savedAt: Date.now(),
+                    recipeId,
+                    servings: servingsSlider.value,
+                    maxTime: timeSlider.value,
+                    cuisine: cuisineSelect.value,
+                    course: courseSelect.value,
+                    diet: dietSelect.disabled ? dietBeforeDessert : dietSelect.value,
+                    search: searchInput.value,
+                    ingredients: [...selectedIngredients],
+                    recipePage,
+                    recipesPerPage
+                }));
+            } catch (error) {
+                console.warn('Filter state could not be saved before login.', error);
+            }
+        }
+
+        function triggerPaywall(featureName, plan = null, mode = 'signup', recipeId = null) {
+            savePendingAppState(recipeId);
             previousFocus = document.activeElement;
             authFeatureName = featureName || 'CsaládiMenü Pro';
             authLoginOnly = mode === 'login';
@@ -1450,7 +1473,7 @@
 
         function triggerRecipePaywall(recipeId) {
             const recipe = recipes.find(item => item.id === recipeId);
-            if (recipe) triggerPaywall(`${recipe.name} Recept`);
+            if (recipe) triggerPaywall(`${recipe.name} Recept`, null, 'signup', recipe.id);
         }
 
         const recipeDetailsModal = document.getElementById('recipe-details-modal');
