@@ -239,7 +239,7 @@
 
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-filter text-brand-600 mr-1.5"></i> Étrend:</label>
-                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400 disabled:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <option value="all">Összes étel</option>
                         <option value="meat">Húsos ételek</option>
                         <option value="veggie">Húsmentes / Vega</option>
@@ -1462,7 +1462,21 @@
         servingsSlider.oninput = renderRecipes;
         timeSlider.oninput = () => { recipePage = 1; renderRecipes(); };
         cuisineSelect.onchange = () => { recipePage = 1; renderRecipes(); };
-        courseSelect.onchange = () => { recipePage = 1; renderRecipes(); };
+
+        let dietBeforeDessert = 'all';
+        function syncDietSelectWithCourse() {
+            const lockDiet = courseSelect.value === 'dessert';
+            if (lockDiet && !dietSelect.disabled) {
+                dietBeforeDessert = dietSelect.value;
+                dietSelect.value = 'all';
+            } else if (!lockDiet && dietSelect.disabled) {
+                dietSelect.value = dietBeforeDessert;
+            }
+            dietSelect.disabled = lockDiet;
+            dietSelect.title = lockDiet ? 'Desszerteknél nem választható étrend' : '';
+        }
+        courseSelect.onchange = () => { syncDietSelectWithCourse(); recipePage = 1; renderRecipes(); };
+        syncDietSelectWithCourse();
         dietSelect.onchange = () => { recipePage = 1; renderRecipes(); };
         searchInput.oninput = () => { recipePage = 1; renderRecipes(); };
 

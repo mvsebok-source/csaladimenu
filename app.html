@@ -165,7 +165,7 @@
 
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <label class="text-xs font-bold uppercase text-slate-500 block mb-1"><i class="fa-solid fa-filter text-brand-600 mr-1.5"></i> Étrend:</label>
-                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700">
+                    <select id="diet-select" class="w-full bg-white border border-slate-200 rounded-xl p-1.5 text-xs font-bold text-slate-700 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400 disabled:opacity-70">
                         <option value="all">Összes étel</option>
                         <option value="meat">Húsos ételek</option>
                         <option value="veggie">Húsmentes / Vega</option>
@@ -475,6 +475,7 @@
             document.getElementById('view-planner').classList.toggle('hidden', tab !== 'planner');
             document.getElementById('cuisine-filter-control').classList.toggle('hidden', tab === 'planner');
             document.getElementById('course-filter-control').classList.toggle('hidden', tab === 'planner');
+            syncDietSelectWithCourse();
 
             const calcBtn = document.getElementById('tab-btn-calc');
             const planBtn = document.getElementById('tab-btn-planner');
@@ -1230,7 +1231,22 @@
         timeSlider.oninput = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
         dietSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
         cuisineSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
-        courseSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+
+        let dietBeforeDessert = 'all';
+        function syncDietSelectWithCourse() {
+            const courseControlVisible = !document.getElementById('course-filter-control').classList.contains('hidden');
+            const lockDiet = courseControlVisible && courseSelect.value === 'dessert';
+            if (lockDiet && !dietSelect.disabled) {
+                dietBeforeDessert = dietSelect.value;
+                dietSelect.value = 'all';
+            } else if (!lockDiet && dietSelect.disabled) {
+                dietSelect.value = dietBeforeDessert;
+            }
+            dietSelect.disabled = lockDiet;
+            dietSelect.title = lockDiet ? 'Desszerteknél nem választható étrend' : '';
+        }
+        courseSelect.onchange = () => { syncDietSelectWithCourse(); recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        syncDietSelectWithCourse();
         searchInput.oninput = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
 
         // Init
