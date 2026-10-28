@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>CsaládiMenü – Családi receptkereső és heti menütervező | familymenu.hu</title>
     <meta name="description" content="Keress családi recepteket, szűrj otthoni alapanyagokra, és tervezz heti menüt a familymenu.hu oldalon.">
     <meta property="og:type" content="website">
@@ -31,6 +31,7 @@
                             500: '#10b981',
                             600: '#059669',
                             700: '#047857',
+                            800: '#065f46',
                             900: '#064e3b',
                         },
                         cta: {
@@ -443,9 +444,10 @@
         </div>
     </footer>
 
-    <aside id="cookie-notice" role="region" aria-labelledby="cookie-notice-heading" class="fixed inset-x-0 bottom-0 z-40 max-h-[80vh] overflow-y-auto overscroll-contain border-t border-slate-300 bg-white/95 p-4 shadow-[0_-8px_30px_rgba(15,23,42,0.14)] backdrop-blur">
+    <aside id="cookie-notice" role="region" aria-labelledby="cookie-notice-heading" class="fixed inset-x-0 bottom-0 z-40 max-h-[80vh] max-h-[80dvh] overflow-y-auto overscroll-contain border-t border-slate-300 bg-white p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-[0_-8px_30px_rgba(15,23,42,0.14)]">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-start gap-4">
-            <div class="min-w-0 flex-1">
+            <div class="relative min-w-0 flex-1 pr-10">
+                <button id="cookie-notice-close" type="button" aria-label="Tájékoztató bezárása" class="absolute right-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
                 <h2 id="cookie-notice-heading" class="font-extrabold text-slate-900"><i class="fa-solid fa-cookie-bite mr-1.5 text-amber-600" aria-hidden="true"></i>Cookie- és böngészőtárhely-tájékoztató</h2>
                 <p class="mt-1 text-sm text-slate-600">A bejelentkezés munkamenet-kezelést, a saját értékelések megőrzése pedig böngészőtárhelyet használ. Jelenleg nem futtatunk látogatottságmérést vagy hirdetési követést.</p>
                 <details class="mt-2 text-sm text-slate-600">
@@ -453,7 +455,7 @@
                     <p class="mt-1">A bejelentkezéshez a Supabase hitelesítési szolgáltatását használjuk. A receptértékelés és a tájékoztató bezárásának jelzése a böngésződ helyi tárhelyére kerül. Ezeket az adatokat a böngésző beállításaiban törölheted. Részletek: <a class="font-semibold text-brand-700 underline" href="./aszf.html#cookie-tajekoztato">tájékoztató</a>.</p>
                 </details>
             </div>
-            <button id="cookie-notice-dismiss" type="button" class="order-first w-full shrink-0 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 sm:order-last sm:w-auto">Rendben, értem</button>
+            <button id="cookie-notice-dismiss" type="button" style="background-color:#047857;color:#fff" class="w-full shrink-0 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 sm:order-last sm:w-auto">Rendben, értem</button>
         </div>
     </aside>
     <p id="cookie-notice-error" class="fixed inset-x-4 bottom-4 z-40 mx-auto hidden max-w-xl rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm font-semibold text-amber-900 shadow-lg" role="status" aria-live="polite"></p>
@@ -605,14 +607,16 @@
             console.warn('Cookie notice dismissal could not be read from local storage.', error);
         }
 
-        cookieNoticeDismissButton.addEventListener('click', () => {
+        const dismissCookieNotice = () => {
             try {
                 localStorage.setItem(cookieNoticeStorageKey, 'true');
             } catch (error) {
                 console.error('Cookie notice dismissal could not be saved to local storage.', error);
             }
             cookieNotice.classList.add('hidden');
-        });
+        };
+        cookieNoticeDismissButton.addEventListener('click', dismissCookieNotice);
+        document.getElementById('cookie-notice-close').addEventListener('click', dismissCookieNotice);
 
         let selectedIngredients = new Set();
 
