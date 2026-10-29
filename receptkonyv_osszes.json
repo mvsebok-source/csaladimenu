@@ -10842,6 +10842,1160 @@
           "osszkoltseg_ft": 2091,
           "adagonkenti_ar_ft": 520,
           "szezon": "ősz"
+        },
+        {
+          "id": "hu-89",
+          "nev": "Marhahúsleves daragaluskával",
+          "konyha": "magyar",
+          "tipus": "leves",
+          "kategoria": "húsos",
+          "jelleg": "alap",
+          "nehezseg": "közepes",
+          "elokeszites_perc": 25,
+          "fozes_perc": 180,
+          "adag_fo": 4,
+          "leiras": "Lassan főtt, tiszta marhahúsleves sok zöldséggel és puha daragaluskával – a vasárnapi ebéd első fogása.",
+          "hozzavalok": [
+            {
+              "nev": "marha lábszár (csont nélkül)",
+              "mennyiseg": "60 dkg",
+              "arazott_mennyiseg": "600 g",
+              "egysegar": "4 790 Ft/kg",
+              "koltseg_ft": 2874,
+              "arforras_kulcs": "marha_labszar"
+            },
+            {
+              "nev": "marha levescsont",
+              "mennyiseg": "30 dkg",
+              "megjegyzes": "elhagyható, nincs beárazva (testesebb lesz tőle a leves)",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 2,5 l",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "sárgarépa",
+              "mennyiseg": "2 db",
+              "arazott_mennyiseg": "200 g",
+              "egysegar": "535 Ft/kg",
+              "koltseg_ft": 107,
+              "arforras_kulcs": "repa"
+            },
+            {
+              "nev": "petrezselyemgyökér",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "1 290 Ft/kg",
+              "koltseg_ft": 129,
+              "arforras_kulcs": "petrezselyemgyoker"
+            },
+            {
+              "nev": "zellergumó",
+              "mennyiseg": "1 kis darab",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "499 Ft/kg",
+              "koltseg_ft": 40,
+              "arforras_kulcs": "zeller"
+            },
+            {
+              "nev": "karalábé",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "1 db",
+              "egysegar": "399 Ft / 1 db",
+              "koltseg_ft": 399,
+              "arforras_kulcs": "karalabe"
+            },
+            {
+              "nev": "kelkáposzta",
+              "mennyiseg": "1/4 fej",
+              "arazott_mennyiseg": "200 g",
+              "egysegar": "599 Ft/kg",
+              "koltseg_ft": 120,
+              "arforras_kulcs": "kelkaposzta"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 kis fej",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 27,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "paradicsom",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "956 Ft/kg",
+              "koltseg_ft": 96,
+              "arforras_kulcs": "paradicsom"
+            },
+            {
+              "nev": "egész bors",
+              "mennyiseg": "8–10 szem",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "vaj (a galuskához)",
+              "mennyiseg": "4 dkg",
+              "arazott_mennyiseg": "40 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 166,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "tojás (a galuskához)",
+              "mennyiseg": "2 db",
+              "arazott_mennyiseg": "2 db",
+              "egysegar": "814 Ft / 10 db",
+              "koltseg_ft": 163,
+              "arforras_kulcs": "tojas"
+            },
+            {
+              "nev": "búzadara (a galuskához)",
+              "mennyiseg": "12 dkg",
+              "arazott_mennyiseg": "120 g",
+              "egysegar": "325 Ft/kg",
+              "koltseg_ft": 39,
+              "arforras_kulcs": "buzadara"
+            }
+          ],
+          "lepesek": [
+            "A húst egészben hagyod, és a csonttal együtt egy nagy fazékban 2,5 liter hideg vízzel felteszed. Lassan forrásig melegíted, a felgyűlő habot szűrőkanállal leszeded.",
+            "A lángot annyira veszed lejjebb, hogy a leves épp csak gyöngyözzön, a fedőt félig ráteszed, és így főzöd kb. fél órát.",
+            "Hozzáadod a megtisztított, nagyobb darabokra vágott sárgarépát, petrezselyemgyökeret, zellert és karalábét, a kelkáposztát egy darabban, a hagymát héjastul, a paradicsomot, a borsot és a sót. Lassú tűzön további 2–2,5 órát főzöd, amíg a hús puha.",
+            "Galuska: a puha vajat habosra kevered, egyenként beledolgozod a tojásokat, végül a darát és egy csipet sót. 20 percre félreteszed, hogy a dara megszívja magát.",
+            "A levest leszűröd, a húst és a zöldségeket félreteszed. A tiszta levet visszaforralod, majd a lángot lejjebb veszed.",
+            "Két vizes kávéskanállal kis galuskákat szaggatsz a gyöngyöző levesbe, ráteszed a fedőt, és 12–15 percig főzöd, amíg a galuskák megdagadnak és átfőnek.",
+            "A levest a galuskával tálalod, mellé a felszeletelt húst és a zöldségeket."
+          ],
+          "tippek": "A galuska akkor jó, ha egyet kettévágva a közepe sem nyers. A maradék levesből másnap zellerleves főzhető.",
+          "osszkoltseg_ft": 4161,
+          "adagonkenti_ar_ft": 1040,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "1. és 25.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A Javított húsleves és a Leves dara-galuskával összevonása; a mennyiségek 4 főre igazítva."
+          }
+        },
+        {
+          "id": "hu-90",
+          "nev": "Zellerleves pirított zsemlekockával",
+          "konyha": "magyar",
+          "tipus": "leves",
+          "kategoria": "húsmentes",
+          "jelleg": "alap",
+          "nehezseg": "könnyű",
+          "elokeszites_perc": 15,
+          "fozes_perc": 40,
+          "adag_fo": 4,
+          "leiras": "Egyszerű, krémes ízű zellerleves, amely maradék húslevesből a legfinomabb, de vízzel is jól sikerül.",
+          "hozzavalok": [
+            {
+              "nev": "zellergumó",
+              "mennyiseg": "1 nagy db",
+              "arazott_mennyiseg": "500 g",
+              "egysegar": "499 Ft/kg",
+              "koltseg_ft": 250,
+              "arforras_kulcs": "zeller"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 kis fej",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 27,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 26,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "finomliszt",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 7,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 1,2 l (vagy maradék húsleves)",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 1,5 tk",
+              "arazott_mennyiseg": "10 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "őrölt bors",
+              "mennyiseg": "1 csipet",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "zsemle (a pirításhoz)",
+              "mennyiseg": "2 db",
+              "arazott_mennyiseg": "2 db",
+              "egysegar": "70 Ft / 1 db",
+              "koltseg_ft": 140,
+              "arforras_kulcs": "zsemle"
+            }
+          ],
+          "lepesek": [
+            "A zellert meghámozod, és kb. 1 cm-es kockákra vágod. A hagymát finomra aprítod.",
+            "Egy lábasban az olajon üvegesre párolod a hagymát, hozzáadod a zellert, és fedő alatt, időnként megkeverve 15 percig párolod.",
+            "Megszórod a liszttel, és kevergetve még 1–2 percig pirítod.",
+            "Felöntöd 1,2 liter vízzel vagy maradék húslevessel, megsózod, megborsozod, és lassú tűzön 25–30 percig főzöd, amíg a zeller teljesen puha.",
+            "Közben a zsemlét kockákra vágod, és száraz serpenyőben vagy 180 °C-os sütőben ropogósra pirítod.",
+            "A levest forrón, a pirított zsemlekockával tálalod."
+          ],
+          "tippek": "Ha krémlevest szeretnél, botmixerrel pürésítsd, és keverj bele egy kevés tejfölt. Maradék húslevessel főzve sokkal gazdagabb az íze.",
+          "osszkoltseg_ft": 452,
+          "adagonkenti_ar_ft": 110,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "69.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv maradék húslevesből főzi; itt vízzel is működő, húsmentes változatként írtam át."
+          }
+        },
+        {
+          "id": "hu-91",
+          "nev": "Vöröshagymaleves galuskával",
+          "konyha": "magyar",
+          "tipus": "leves",
+          "kategoria": "húsmentes",
+          "jelleg": "alap",
+          "nehezseg": "könnyű",
+          "elokeszites_perc": 15,
+          "fozes_perc": 30,
+          "adag_fo": 4,
+          "leiras": "Pirított hagymás, enyhén paprikás leves apró galuskával és tejföllel – olcsó, laktató, régi magyar hétköznapi leves.",
+          "hozzavalok": [
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "3 közepes fej",
+              "arazott_mennyiseg": "300 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 100,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 26,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "finomliszt (a leveshez)",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "csemege fűszerpaprika",
+              "mennyiseg": "1 tk",
+              "arazott_mennyiseg": "5 g",
+              "egysegar": "8 840 Ft/kg",
+              "koltseg_ft": 44,
+              "arforras_kulcs": "fuszerpaprika"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 1,5 l",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2,5 tk",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 4,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "finomliszt (a galuskához)",
+              "mennyiseg": "20 dkg",
+              "arazott_mennyiseg": "200 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 46,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "tojás (a galuskához)",
+              "mennyiseg": "2 db",
+              "arazott_mennyiseg": "2 db",
+              "egysegar": "814 Ft / 10 db",
+              "koltseg_ft": 163,
+              "arforras_kulcs": "tojas"
+            },
+            {
+              "nev": "vaj (a galuskához)",
+              "mennyiseg": "1,5 dkg",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 62,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "víz (a galuskához)",
+              "mennyiseg": "kb. 0,5 dl",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "tejföl (20%)",
+              "mennyiseg": "2 dl",
+              "arazott_mennyiseg": "200 g",
+              "egysegar": "1 220 Ft/kg",
+              "koltseg_ft": 244,
+              "arforras_kulcs": "tejfol"
+            }
+          ],
+          "lepesek": [
+            "A hagymát vékony félkarikákra vágod. Egy fazékban az olajon, közepes lángon 10–12 percig aranybarnára pirítod; ha kezd sötétedni, lejjebb veszed a lángot.",
+            "Megszórod a liszttel, és kevergetve még egy percig pirítod. Lehúzod a tűzről, belekevered a fűszerpaprikát.",
+            "Felöntöd 1,5 liter vízzel, megsózod, felforralod, és 10 percig főzöd.",
+            "Galuska: az olvasztott vajat a tojásokkal és egy csipet sóval elkevered, hozzáadod a lisztet, és annyi vizet, hogy sűrű, nehezen folyó tésztát kapj. Fakanállal hólyagosra vered.",
+            "Galuskaszaggatóval vagy vizes kávéskanállal a forró levesbe szaggatod, és 3–4 percig főzöd, amíg a galuskák feljönnek.",
+            "A tejfölt pár kanál forró levessel elkevered, majd a levesbe öntöd, és még 1–2 percig melegíted, de erősen már nem forralod."
+          ],
+          "tippek": "A hagymát ne siettesd: a lassan, szépen megbarnított hagymától lesz édeskés és mély az íze.",
+          "osszkoltseg_ft": 693,
+          "adagonkenti_ar_ft": 170,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "87.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv sós vízzel és 1/4 kg liszttel készült galuskájának mai, 4 fős változata."
+          }
+        },
+        {
+          "id": "hu-92",
+          "nev": "Lencseleves",
+          "konyha": "magyar",
+          "tipus": "leves",
+          "kategoria": "húsmentes",
+          "jelleg": "alap",
+          "nehezseg": "könnyű",
+          "elokeszites_perc": 15,
+          "fozes_perc": 50,
+          "adag_fo": 4,
+          "leiras": "Sűrű, enyhén savanykás lencseleves barna rántással – laktató, olcsó, és a hagyomány szerint szerencsét hoz.",
+          "hozzavalok": [
+            {
+              "nev": "zöld lencse",
+              "mennyiseg": "25 dkg",
+              "arazott_mennyiseg": "250 g",
+              "egysegar": "738 Ft/kg",
+              "koltseg_ft": 185,
+              "arforras_kulcs": "lencse"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 közepes fej",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 33,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "sárgarépa",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "535 Ft/kg",
+              "koltseg_ft": 54,
+              "arforras_kulcs": "repa"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 26,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "finomliszt",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 7,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "fokhagyma",
+              "mennyiseg": "2 gerezd",
+              "arazott_mennyiseg": "7 g",
+              "egysegar": "1 496 Ft/kg",
+              "koltseg_ft": 10,
+              "arforras_kulcs": "fokhagyma"
+            },
+            {
+              "nev": "babérlevél",
+              "mennyiseg": "2 db",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 1,5 l",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "citrom (a levéhez)",
+              "mennyiseg": "1/2 db",
+              "arazott_mennyiseg": "50 g",
+              "egysegar": "1 300 Ft/kg",
+              "koltseg_ft": 65,
+              "arforras_kulcs": "citrom"
+            },
+            {
+              "nev": "tejföl (20%)",
+              "mennyiseg": "1 dl",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "1 220 Ft/kg",
+              "koltseg_ft": 122,
+              "arforras_kulcs": "tejfol"
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "őrölt bors",
+              "mennyiseg": "1 csipet",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            }
+          ],
+          "lepesek": [
+            "A lencsét átválogatod, és hideg vízben alaposan átmosod.",
+            "Egy fazékban 1,5 liter vízzel és a babérlevéllel felteszed főni, és lassú tűzön kb. 25 percig főzöd. Hozzáadod az apró kockára vágott sárgarépát, és további 10 percig főzöd, amíg a lencse puha, de nem esik szét.",
+            "Rántás: a hagymát nagyon finomra vágod, és az olajon üvegesre párolod. Hozzáadod a zúzott fokhagymát és a lisztet, és kevergetve 2–3 percig világosbarnára pirítod. Lehúzod a tűzről, és 2 dl hideg vízzel csomómentesre kevered.",
+            "A rántást a levesbe öntöd, és kevergetve még 10 percig főzöd.",
+            "Kifacsarod a fél citromot, és a levével kissé megsavanyítod a levest. Megsózod, megborsozod.",
+            "A tejfölt pár kanál forró levessel elkevered, a levesbe öntöd, és már csak felmelegíted. A babérlevelet kiveszed."
+          ],
+          "tippek": "Ha van időd, a lencsét áztasd be 1–2 órára, gyorsabban megfő. Citrom helyett 1–2 ek ecet is jó.",
+          "osszkoltseg_ft": 505,
+          "adagonkenti_ar_ft": 130,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "75.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv csukával és pirított zsemlével átpasszírozott levesét mai, egyszerűbb lencselevessé írtam át; a barna rántás és a savanyítás megmaradt."
+          }
+        },
+        {
+          "id": "hu-93",
+          "nev": "Csirkés rizsleves",
+          "konyha": "magyar",
+          "tipus": "leves",
+          "kategoria": "húsos",
+          "jelleg": "alap",
+          "nehezseg": "közepes",
+          "elokeszites_perc": 15,
+          "fozes_perc": 60,
+          "adag_fo": 4,
+          "leiras": "Tejszínesen lágy, tojássárgájával habart csirkeleves rizzsel – kíméletes, gyerekeknek is kedvelt fogás.",
+          "hozzavalok": [
+            {
+              "nev": "csirkecomb",
+              "mennyiseg": "60 dkg",
+              "arazott_mennyiseg": "600 g",
+              "egysegar": "1 070 Ft/kg",
+              "koltseg_ft": 642,
+              "arforras_kulcs": "csirkecomb"
+            },
+            {
+              "nev": "vaj",
+              "mennyiseg": "3 dkg",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 124,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 kis fej",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 27,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "petrezselyemzöld",
+              "mennyiseg": "1 kis csokor",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "sárgarépa",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "535 Ft/kg",
+              "koltseg_ft": 54,
+              "arforras_kulcs": "repa"
+            },
+            {
+              "nev": "petrezselyemgyökér",
+              "mennyiseg": "1 kis db",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "1 290 Ft/kg",
+              "koltseg_ft": 103,
+              "arforras_kulcs": "petrezselyemgyoker"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 1,5 l",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "rizs",
+              "mennyiseg": "14 dkg",
+              "arazott_mennyiseg": "140 g",
+              "egysegar": "676 Ft/kg",
+              "koltseg_ft": 95,
+              "arforras_kulcs": "rizs"
+            },
+            {
+              "nev": "szerecsendió",
+              "mennyiseg": "1 csipet",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "tojás (csak a sárgája)",
+              "mennyiseg": "3 db",
+              "arazott_mennyiseg": "3 db",
+              "egysegar": "814 Ft / 10 db",
+              "koltseg_ft": 244,
+              "arforras_kulcs": "tojas"
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            }
+          ],
+          "lepesek": [
+            "A csirkecombot enyhén besózod. Egy fazékban megolvasztod a vajat, és a finomra vágott hagymán a petrezselyemzöld felével együtt üvegesre párolod.",
+            "Beleteszed a csirkét, és fedő alatt, kis lángon 10 percig párolod. Közben 1–2 evőkanál vizet aláöntesz, hogy ne piruljon meg, maradjon szép világos.",
+            "Felöntöd 1,5 liter vízzel, hozzáadod a karikára vágott sárgarépát és petrezselyemgyökeret, és lassú tűzön 35–40 percig főzöd, amíg a hús puha.",
+            "A csirkét kiveszed, a bőrt és a csontot eltávolítod, a húst falatnyi darabokra tépkeded.",
+            "A rizst többször átmosod, a levesbe teszed, és 15–18 percig főzöd, amíg puha, de nem szétfőtt. Egy csipet szerecsendióval ízesíted.",
+            "A tojássárgájákat egy merőkanál langyos levessel simára kevered. A fazekat lehúzod a tűzről, és folyamatos keverés mellett beleöntöd a habarást. Visszateszed a húst, megsózod, és a maradék petrezselyemzölddel tálalod. Habarás után már ne forrald, mert a tojás kicsapódik."
+          ],
+          "tippek": "Ha másnapra is marad, a rizs megszívja magát: melegítéskor önts hozzá egy kevés vizet.",
+          "osszkoltseg_ft": 1291,
+          "adagonkenti_ar_ft": 320,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "23.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv két fiatal tyúkból és húslevesből főzi; itt csirkecombbal, vízzel és kevés zöldséggel írtam át 4 főre."
+          }
+        },
+        {
+          "id": "hu-94",
+          "nev": "Csirkepörkölt pirított tarhonyával",
+          "konyha": "magyar",
+          "tipus": "főétel",
+          "kategoria": "húsos",
+          "jelleg": "alap",
+          "nehezseg": "könnyű",
+          "elokeszites_perc": 15,
+          "fozes_perc": 55,
+          "adag_fo": 4,
+          "leiras": "Zsírjára sült, paprikás csirkepörkölt aranybarnára pirított tarhonyával – egyszerű, gyors hétköznapi ebéd.",
+          "hozzavalok": [
+            {
+              "nev": "csirkecomb",
+              "mennyiseg": "1 kg",
+              "arazott_mennyiseg": "1000 g",
+              "egysegar": "1 070 Ft/kg",
+              "koltseg_ft": 1070,
+              "arforras_kulcs": "csirkecomb"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "2 közepes fej",
+              "arazott_mennyiseg": "200 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 66,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "napraforgóolaj (a pörkölthöz)",
+              "mennyiseg": "3 ek",
+              "arazott_mennyiseg": "45 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 39,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "csemege fűszerpaprika",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "8 g",
+              "egysegar": "8 840 Ft/kg",
+              "koltseg_ft": 71,
+              "arforras_kulcs": "fuszerpaprika"
+            },
+            {
+              "nev": "paradicsom",
+              "mennyiseg": "1 db",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "956 Ft/kg",
+              "koltseg_ft": 96,
+              "arforras_kulcs": "paradicsom"
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2,5 tk",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 4,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "tarhonya",
+              "mennyiseg": "30 dkg",
+              "arazott_mennyiseg": "300 g",
+              "egysegar": "870 Ft/kg",
+              "koltseg_ft": 261,
+              "arforras_kulcs": "tarhonya"
+            },
+            {
+              "nev": "napraforgóolaj (a tarhonyához)",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 13,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 7 dl",
+              "koltseg_ft": null
+            }
+          ],
+          "lepesek": [
+            "A hagymát finomra vágod, és egy lábasban az olajon üvegesre párolod.",
+            "Lehúzod a tűzről, belekevered a fűszerpaprikát, majd hozzáadod a csirkecombokat és a sót. Jól összeforgatod.",
+            "Hozzáadod a felkockázott paradicsomot, ráteszed a fedőt, és lassú tűzön 40–45 percig párolod. Ha elfő a leve, időnként egy-egy kevés vizet aláöntesz, hogy le ne égjen.",
+            "Amikor a csirke megpuhult, leveszed a fedőt, és hagyod, hogy a szaft besűrűsödjön, a zsírjára süljön.",
+            "Tarhonya: egy lábasban az olajon kevergetve 4–5 percig aranybarnára pirítod a tarhonyát. Annyi forró vizet öntesz rá, hogy két ujjnyira ellepje, megsózod, és fedő alatt kis lángon 15–20 percig főzöd, amíg a víz elfő és a tarhonya puha.",
+            "A pörköltet a tarhonyával körítve tálalod."
+          ],
+          "tippek": "Savanyú uborka vagy cékla jól illik hozzá. Csirkecomb helyett egész, feldarabolt csirkéből is készülhet.",
+          "osszkoltseg_ft": 1620,
+          "adagonkenti_ar_ft": 410,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "333.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv 2 csirkére 3 kanál sót és 28 dkg tarhonyát ír; itt 4 főre igazítottam, a sót mai ízléshez csökkentettem."
+          }
+        },
+        {
+          "id": "hu-95",
+          "nev": "Paradicsomos csirke párolt rizzsel",
+          "konyha": "magyar",
+          "tipus": "főétel",
+          "kategoria": "húsos",
+          "jelleg": "alap",
+          "nehezseg": "könnyű",
+          "elokeszites_perc": 15,
+          "fozes_perc": 50,
+          "adag_fo": 4,
+          "leiras": "Szalonnán párolt csirke selymes, enyhén édeskés paradicsommártásban, párolt rizzsel.",
+          "hozzavalok": [
+            {
+              "nev": "csirkecomb",
+              "mennyiseg": "1 kg",
+              "arazott_mennyiseg": "1000 g",
+              "egysegar": "1 070 Ft/kg",
+              "koltseg_ft": 1070,
+              "arforras_kulcs": "csirkecomb"
+            },
+            {
+              "nev": "füstölt csemegeszalonna",
+              "mennyiseg": "8 dkg",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "3 240 Ft/kg",
+              "koltseg_ft": 259,
+              "arforras_kulcs": "szalonna"
+            },
+            {
+              "nev": "paradicsom",
+              "mennyiseg": "6 db",
+              "arazott_mennyiseg": "600 g",
+              "egysegar": "956 Ft/kg",
+              "koltseg_ft": 574,
+              "arforras_kulcs": "paradicsom"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 3 dl",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "vaj",
+              "mennyiseg": "2 dkg",
+              "arazott_mennyiseg": "20 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 83,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "finomliszt",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "kristálycukor",
+              "mennyiseg": "1 tk",
+              "arazott_mennyiseg": "5 g",
+              "egysegar": "324 Ft/kg",
+              "koltseg_ft": 2,
+              "arforras_kulcs": "cukor"
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "rizs (köretnek)",
+              "mennyiseg": "25 dkg",
+              "arazott_mennyiseg": "250 g",
+              "egysegar": "676 Ft/kg",
+              "koltseg_ft": 169,
+              "arforras_kulcs": "rizs"
+            },
+            {
+              "nev": "napraforgóolaj (a rizshez)",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 13,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 5 dl (a rizshez)",
+              "koltseg_ft": null
+            }
+          ],
+          "lepesek": [
+            "A csirkecombot megsózod. A szalonnát vékony szeletekre vágod, és egy lábas alján kevés zsírt kisütsz belőle.",
+            "Rárakod a csirkecombokat, ráteszed a fedőt, és lassú tűzön 35–40 percig párolod, közben néha egy kevés vizet aláöntesz.",
+            "Közben a paradicsomot feldarabolod, és 3 dl vízzel 10 percig főzöd. Egy kis lábasban a vajon a lisztet kevergetve világossárgára pirítod, és a paradicsomhoz kevered. Hozzáadod a cukrot és egy kevés sót, és lassú tűzön még 10 percig főzöd.",
+            "A mártást szitán áttöröd vagy botmixerrel simára pürésíted.",
+            "Amikor a csirke megpuhult, a levét a zsír leszedése után a mártáshoz öntöd, és 5 percig forralod, amíg szép piros és kissé sűrű lesz. A csirkét beleforgatod.",
+            "Rizs: az olajon 1–2 percig átforgatod a megmosott rizst, felöntöd kétszeres mennyiségű forró vízzel, megsózod, és fedő alatt, kis lángon 15–18 percig párolod.",
+            "A csirkét a mártással leöntve, párolt rizzsel tálalod."
+          ],
+          "tippek": "Télen friss paradicsom helyett 1,5 doboz darabolt paradicsomkonzerv is jó. A szalonna elhagyható, ilyenkor 1 ek olajon párold a csirkét.",
+          "osszkoltseg_ft": 2176,
+          "adagonkenti_ar_ft": 540,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "325.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv két csirkét és nyolc paradicsomot ír marhahúslével; itt 4 főre, vízzel és párolt rizs körettel írtam át."
+          }
+        },
+        {
+          "id": "hu-96",
+          "nev": "Töltött cukkini fehér mártásban",
+          "konyha": "magyar",
+          "tipus": "főétel",
+          "kategoria": "húsos",
+          "jelleg": "alap",
+          "nehezseg": "közepes",
+          "elokeszites_perc": 25,
+          "fozes_perc": 45,
+          "adag_fo": 4,
+          "leiras": "Húsos-rizses töltelékkel töltött fiatal tök (cukkini) bársonyos fehér mártásban párolva.",
+          "hozzavalok": [
+            {
+              "nev": "cukkini",
+              "mennyiseg": "4 közepes db",
+              "arazott_mennyiseg": "1000 g",
+              "egysegar": "999 Ft/kg",
+              "koltseg_ft": 999,
+              "arforras_kulcs": "cukkini"
+            },
+            {
+              "nev": "darált sertéshús",
+              "mennyiseg": "40 dkg",
+              "arazott_mennyiseg": "400 g",
+              "egysegar": "1 998 Ft/kg",
+              "koltseg_ft": 799,
+              "arforras_kulcs": "daralt"
+            },
+            {
+              "nev": "rizs",
+              "mennyiseg": "5 dkg",
+              "arazott_mennyiseg": "50 g",
+              "egysegar": "676 Ft/kg",
+              "koltseg_ft": 34,
+              "arforras_kulcs": "rizs"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 közepes fej",
+              "arazott_mennyiseg": "100 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 33,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 13,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "tojás",
+              "mennyiseg": "2 db",
+              "arazott_mennyiseg": "2 db",
+              "egysegar": "814 Ft / 10 db",
+              "koltseg_ft": 163,
+              "arforras_kulcs": "tojas"
+            },
+            {
+              "nev": "petrezselyemzöld",
+              "mennyiseg": "1 kis csokor",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "őrölt bors",
+              "mennyiseg": "1 csipet",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "vaj (a mártáshoz)",
+              "mennyiseg": "3 dkg",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 124,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "finomliszt (a mártáshoz)",
+              "mennyiseg": "3 ek",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 7,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "tej (a mártáshoz)",
+              "mennyiseg": "5 dl",
+              "arazott_mennyiseg": "500 ml",
+              "egysegar": "349 Ft/l",
+              "koltseg_ft": 175,
+              "arforras_kulcs": "tej"
+            }
+          ],
+          "lepesek": [
+            "A rizst sós vízben 8 percig főzöd, majd leszűröd és hagyod kihűlni.",
+            "A cukkinik végét levágod, hosszában félbevágod őket, és egy kanállal kikaparod a magos belsejüket, hogy csónakot kapj.",
+            "A hagymát finomra vágod, az olajon üvegesre párolod, és hagyod kihűlni.",
+            "Egy tálban összekevered a darált húst, a rizst, a hagymát, a tojásokat, az apróra vágott petrezselyemzöldet, sót és borsot. A tölteléket a cukkinikbe halmozod.",
+            "Fehér mártás: egy széles lábasban megolvasztod a vajat, hozzáadod a lisztet, és 1–2 percig kevergeted. Lassan, folyamatos keverés mellett hozzáöntöd a tejet, megsózod, és csomómentesre főzöd.",
+            "A töltött cukkiniket a mártásba fekteted, ráteszed a fedőt, és kis lángon 35–40 percig párolod, amíg a hús átfő és a cukkini megpuhul. Ha a mártás túl sűrű, egy kevés vizet adsz hozzá.",
+            "A cukkiniket a mártással leöntve tálalod."
+          ],
+          "tippek": "Főtt burgonyával vagy friss kenyérrel kerek ebéd. Sütőben is elkészítheted: letakarva 180 °C-on 40 perc.",
+          "osszkoltseg_ft": 2350,
+          "adagonkenti_ar_ft": 590,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "255.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv apró tököt párolt és darált borjú- és sertéshússal tölt; itt cukkinivel és nyers darált sertéshússal írtam át."
+          }
+        },
+        {
+          "id": "hu-97",
+          "nev": "Töltött karalábé főtt burgonyával",
+          "konyha": "magyar",
+          "tipus": "főétel",
+          "kategoria": "húsos",
+          "jelleg": "különleges",
+          "nehezseg": "közepes",
+          "elokeszites_perc": 30,
+          "fozes_perc": 45,
+          "adag_fo": 4,
+          "leiras": "Kivájt, puhára főtt karalábé pirított, petrezselymes húsos töltelékkel, vajas mártásban.",
+          "hozzavalok": [
+            {
+              "nev": "karalábé",
+              "mennyiseg": "4 nagy db",
+              "arazott_mennyiseg": "4 db",
+              "egysegar": "399 Ft / 1 db",
+              "koltseg_ft": 1596,
+              "arforras_kulcs": "karalabe"
+            },
+            {
+              "nev": "darált sertéshús",
+              "mennyiseg": "30 dkg",
+              "arazott_mennyiseg": "300 g",
+              "egysegar": "1 998 Ft/kg",
+              "koltseg_ft": 599,
+              "arforras_kulcs": "daralt"
+            },
+            {
+              "nev": "vöröshagyma",
+              "mennyiseg": "1 kis fej",
+              "arazott_mennyiseg": "80 g",
+              "egysegar": "332 Ft/kg",
+              "koltseg_ft": 27,
+              "arforras_kulcs": "hagyma"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 13,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "finomliszt (a töltelékhez)",
+              "mennyiseg": "1 ek",
+              "arazott_mennyiseg": "15 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "petrezselyemzöld",
+              "mennyiseg": "1 kis csokor",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "vaj (a mártáshoz)",
+              "mennyiseg": "4 dkg",
+              "arazott_mennyiseg": "40 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 166,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "finomliszt (a mártáshoz)",
+              "mennyiseg": "3 ek",
+              "arazott_mennyiseg": "30 g",
+              "egysegar": "232 Ft/kg",
+              "koltseg_ft": 7,
+              "arforras_kulcs": "liszt"
+            },
+            {
+              "nev": "víz",
+              "mennyiseg": "kb. 5 dl (a karalábé főzőleve)",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 2 tk",
+              "arazott_mennyiseg": "12 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 3,
+              "arforras_kulcs": "so"
+            },
+            {
+              "nev": "őrölt bors",
+              "mennyiseg": "1 csipet",
+              "megjegyzes": "elhagyható, nincs beárazva",
+              "koltseg_ft": null
+            },
+            {
+              "nev": "burgonya (köretnek)",
+              "mennyiseg": "60 dkg",
+              "arazott_mennyiseg": "600 g",
+              "egysegar": "393 Ft/kg",
+              "koltseg_ft": 236,
+              "arforras_kulcs": "burgonya"
+            }
+          ],
+          "lepesek": [
+            "A karalábékat meghámozod, és sós vízben 15 percig főzöd, hogy félpuhák legyenek. Kiveszed őket, a főzőlevet félreteszed.",
+            "Mindegyik karalábé tetejéből vékony kalapot vágsz, és egy kiskanállal kivájod a belsejét úgy, hogy kb. fél centis fal maradjon. A kivájt részt apróra vágod.",
+            "Töltelék: a finomra vágott hagymát az olajon üvegesre párolod, hozzáadod a lisztet és a petrezselyemzöld felét, és egy percig pirítod. Beleteszed a darált húst, sózod, borsozod, és kevergetve 8–10 percig sütöd, amíg morzsás lesz. Egy kevés főzőlével összeforralod, hogy szaftos, de tömör maradjon.",
+            "A karalábékat megtöltöd, és visszateszed rájuk a kalapjukat.",
+            "Mártás: egy széles lábasban a vajon a lisztet 1–2 percig kevergeted, majd felöntöd 5 dl főzőlével, beleteszed az apróra vágott karalábébelsőt, megsózod, és csomómentesre főzöd.",
+            "A töltött karalábékat a mártásba állítod, és fedő alatt, kis lángon 15–20 percig párolod, amíg teljesen megpuhulnak. Közben a burgonyát meghámozod, és sós vízben puhára főzöd.",
+            "A karalábét a mártással és a maradék petrezselyemzölddel, főtt burgonyával tálalod."
+          ],
+          "tippek": "A kivájt belső a mártásba kerül, így semmi nem megy kárba. Fiatal, zsenge karalábéval a legfinomabb.",
+          "osszkoltseg_ft": 2650,
+          "adagonkenti_ar_ft": 660,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "286.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv sült borjúhússal tölti, és rántott csirkével köríti; itt darált sertéshússal és főtt burgonyával írtam át."
+          }
+        },
+        {
+          "id": "hu-98",
+          "nev": "Rakott savanyú káposzta burgonyával és kolbásszal",
+          "konyha": "magyar",
+          "tipus": "főétel",
+          "kategoria": "húsos",
+          "jelleg": "különleges",
+          "nehezseg": "közepes",
+          "elokeszites_perc": 30,
+          "fozes_perc": 60,
+          "adag_fo": 4,
+          "leiras": "Karamellizált, aranybarnára párolt savanyú káposzta főtt burgonyával, kolbásszal és tejföllel rétegezve.",
+          "hozzavalok": [
+            {
+              "nev": "savanyú káposzta",
+              "mennyiseg": "80 dkg",
+              "arazott_mennyiseg": "800 g",
+              "egysegar": "1 879 Ft/kg",
+              "koltseg_ft": 1504,
+              "arforras_kulcs": "savanyukaposzta"
+            },
+            {
+              "nev": "napraforgóolaj",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "30 ml",
+              "egysegar": "874 Ft/l",
+              "koltseg_ft": 26,
+              "arforras_kulcs": "olaj"
+            },
+            {
+              "nev": "kristálycukor",
+              "mennyiseg": "2 ek",
+              "arazott_mennyiseg": "20 g",
+              "egysegar": "324 Ft/kg",
+              "koltseg_ft": 6,
+              "arforras_kulcs": "cukor"
+            },
+            {
+              "nev": "burgonya",
+              "mennyiseg": "80 dkg",
+              "arazott_mennyiseg": "800 g",
+              "egysegar": "393 Ft/kg",
+              "koltseg_ft": 314,
+              "arforras_kulcs": "burgonya"
+            },
+            {
+              "nev": "szárazkolbász",
+              "mennyiseg": "15 dkg",
+              "arazott_mennyiseg": "150 g",
+              "egysegar": "5 830 Ft/kg",
+              "koltseg_ft": 875,
+              "arforras_kulcs": "kolbasz"
+            },
+            {
+              "nev": "tejföl (20%)",
+              "mennyiseg": "3 dl",
+              "arazott_mennyiseg": "300 g",
+              "egysegar": "1 220 Ft/kg",
+              "koltseg_ft": 366,
+              "arforras_kulcs": "tejfol"
+            },
+            {
+              "nev": "vaj (a tál kikenéséhez)",
+              "mennyiseg": "1 dkg",
+              "arazott_mennyiseg": "10 g",
+              "egysegar": "4 140 Ft/kg",
+              "koltseg_ft": 41,
+              "arforras_kulcs": "vaj"
+            },
+            {
+              "nev": "só",
+              "mennyiseg": "kb. 1,5 tk",
+              "arazott_mennyiseg": "8 g",
+              "egysegar": "266 Ft/kg",
+              "koltseg_ft": 2,
+              "arforras_kulcs": "so"
+            }
+          ],
+          "lepesek": [
+            "A burgonyát héjában, sós vízben kb. 20 percig főzöd, amíg puha, majd meghámozod, és fél centis karikákra vágod.",
+            "A savanyú káposztát kinyomkodod; ha nagyon savanyú, előtte hideg vízben átöblíted.",
+            "Egy széles lábasban felhevíted az olajat, beleszórod a cukrot, és kevergetve világos karamellá olvasztod. Azonnal hozzáadod a káposztát, és gyakran átforgatva 20–25 percig aranybarnára párolod. Ha leragadna, egy kevés vizet adsz hozzá.",
+            "A kolbászt vékony karikákra vágod. A sütőt 180 °C-ra előmelegíted, egy közepes tűzálló tálat kivajazol.",
+            "A tál aljára káposztát teszel, rá burgonyakarikákat, megsózod, megszórod kolbásszal, és meglocsolod tejföllel. Így rétegezed tovább, a tetejére burgonya és tejföl kerüljön.",
+            "Letakarva 20 percig, majd fedő nélkül még 10 percig sütöd, amíg a teteje enyhén megpirul. Tálalás előtt 5 percig pihenteted."
+          ],
+          "tippek": "Másnap újramelegítve még finomabb. Kolbász helyett füstölt szalonna vagy főtt füstölt hús is jó bele.",
+          "osszkoltseg_ft": 3135,
+          "adagonkenti_ar_ft": 780,
+          "forras": {
+            "konyv": "St. Hilaire Jozefa – Wiesner Emil: Képes pesti szakácskönyv (Athenaeum, Budapest, 1909)",
+            "recept_szam": "294.",
+            "url": "https://mek.oszk.hu/14300/14352",
+            "licenc": "CC BY-SA (Nevezd meg! – Így add tovább!)",
+            "atiras": "A könyv burgonyás változatát írtam át: sódar helyett kolbásszal, és a fedővel párolás helyett sütőben."
+          }
         }
       ],
       "melleklet_desszertek": [

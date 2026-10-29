@@ -8637,6 +8637,815 @@ window.recipeCatalog = [
         "glutenFree": false
     },
     {
+        "id": 1115,
+        "sourceId": "hu-89",
+        "name": "Marhahúsleves daragaluskával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 205,
+        "baseCost": 1040,
+        "access": "pro",
+        "servings": 4,
+        "description": "Lassan főtt, tiszta marhahúsleves sok zöldséggel és puha daragaluskával – a vasárnapi ebéd első fogása.",
+        "ingredients": [
+            {
+                "name": "marha lábszár (csont nélkül)",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "marha levescsont",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 625,
+                "unit": "ml"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "zellergumó",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "karalábé",
+                "amount": 0.25,
+                "unit": "db"
+            },
+            {
+                "name": "kelkáposzta",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "egész bors",
+                "amount": 2.25,
+                "unit": "szem"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (a galuskához)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a galuskához)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "búzadara (a galuskához)",
+                "amount": 30,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A húst egészben hagyod, és a csonttal együtt egy nagy fazékban 2,5 liter hideg vízzel felteszed. Lassan forrásig melegíted, a felgyűlő habot szűrőkanállal leszeded.",
+            "A lángot annyira veszed lejjebb, hogy a leves épp csak gyöngyözzön, a fedőt félig ráteszed, és így főzöd kb. fél órát.",
+            "Hozzáadod a megtisztított, nagyobb darabokra vágott sárgarépát, petrezselyemgyökeret, zellert és karalábét, a kelkáposztát egy darabban, a hagymát héjastul, a paradicsomot, a borsot és a sót. Lassú tűzön további 2–2,5 órát főzöd, amíg a hús puha.",
+            "Galuska: a puha vajat habosra kevered, egyenként beledolgozod a tojásokat, végül a darát és egy csipet sót. 20 percre félreteszed, hogy a dara megszívja magát.",
+            "A levest leszűröd, a húst és a zöldségeket félreteszed. A tiszta levet visszaforralod, majd a lángot lejjebb veszed.",
+            "Két vizes kávéskanállal kis galuskákat szaggatsz a gyöngyöző levesbe, ráteszed a fedőt, és 12–15 percig főzöd, amíg a galuskák megdagadnak és átfőnek.",
+            "A levest a galuskával tálalod, mellé a felszeletelt húst és a zöldségeket."
+        ],
+        "tip": "A galuska akkor jó, ha egyet kettévágva a közepe sem nyers. A maradék levesből másnap zellerleves főzhető.",
+        "totalCost": 4161,
+        "glutenFree": false
+    },
+    {
+        "id": 1116,
+        "sourceId": "hu-90",
+        "name": "Zellerleves pirított zsemlekockával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 55,
+        "baseCost": 110,
+        "access": "pro",
+        "servings": 4,
+        "description": "Egyszerű, krémes ízű zellerleves, amely maradék húslevesből a legfinomabb, de vízzel is jól sikerül.",
+        "ingredients": [
+            {
+                "name": "zellergumó",
+                "amount": 125,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 300,
+                "unit": "ml"
+            },
+            {
+                "name": "só",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt bors",
+                "amount": 0.25,
+                "unit": "csipet"
+            },
+            {
+                "name": "zsemle (a pirításhoz)",
+                "amount": 0.5,
+                "unit": "db"
+            }
+        ],
+        "steps": [
+            "A zellert meghámozod, és kb. 1 cm-es kockákra vágod. A hagymát finomra aprítod.",
+            "Egy lábasban az olajon üvegesre párolod a hagymát, hozzáadod a zellert, és fedő alatt, időnként megkeverve 15 percig párolod.",
+            "Megszórod a liszttel, és kevergetve még 1–2 percig pirítod.",
+            "Felöntöd 1,2 liter vízzel vagy maradék húslevessel, megsózod, megborsozod, és lassú tűzön 25–30 percig főzöd, amíg a zeller teljesen puha.",
+            "Közben a zsemlét kockákra vágod, és száraz serpenyőben vagy 180 °C-os sütőben ropogósra pirítod.",
+            "A levest forrón, a pirított zsemlekockával tálalod."
+        ],
+        "tip": "Ha krémlevest szeretnél, botmixerrel pürésítsd, és keverj bele egy kevés tejfölt. Maradék húslevessel főzve sokkal gazdagabb az íze.",
+        "totalCost": 452,
+        "glutenFree": false
+    },
+    {
+        "id": 1117,
+        "sourceId": "hu-91",
+        "name": "Vöröshagymaleves galuskával",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 45,
+        "baseCost": 170,
+        "access": "pro",
+        "servings": 4,
+        "description": "Pirított hagymás, enyhén paprikás leves apró galuskával és tejföllel – olcsó, laktató, régi magyar hétköznapi leves.",
+        "ingredients": [
+            {
+                "name": "vöröshagyma",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt (a leveshez)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 375,
+                "unit": "ml"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a galuskához)",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "tojás (a galuskához)",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "vaj (a galuskához)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "víz (a galuskához)",
+                "amount": 12.5,
+                "unit": "ml"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 50,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A hagymát vékony félkarikákra vágod. Egy fazékban az olajon, közepes lángon 10–12 percig aranybarnára pirítod; ha kezd sötétedni, lejjebb veszed a lángot.",
+            "Megszórod a liszttel, és kevergetve még egy percig pirítod. Lehúzod a tűzről, belekevered a fűszerpaprikát.",
+            "Felöntöd 1,5 liter vízzel, megsózod, felforralod, és 10 percig főzöd.",
+            "Galuska: az olvasztott vajat a tojásokkal és egy csipet sóval elkevered, hozzáadod a lisztet, és annyi vizet, hogy sűrű, nehezen folyó tésztát kapj. Fakanállal hólyagosra vered.",
+            "Galuskaszaggatóval vagy vizes kávéskanállal a forró levesbe szaggatod, és 3–4 percig főzöd, amíg a galuskák feljönnek.",
+            "A tejfölt pár kanál forró levessel elkevered, majd a levesbe öntöd, és még 1–2 percig melegíted, de erősen már nem forralod."
+        ],
+        "tip": "A hagymát ne siettesd: a lassan, szépen megbarnított hagymától lesz édeskés és mély az íze.",
+        "totalCost": 693,
+        "glutenFree": false
+    },
+    {
+        "id": 1118,
+        "sourceId": "hu-92",
+        "name": "Lencseleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "veggie",
+        "time": 65,
+        "baseCost": 130,
+        "access": "pro",
+        "servings": 4,
+        "description": "Sűrű, enyhén savanykás lencseleves barna rántással – laktató, olcsó, és a hagyomány szerint szerencsét hoz.",
+        "ingredients": [
+            {
+                "name": "zöld lencse",
+                "amount": 62.5,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "fokhagyma",
+                "amount": 1.75,
+                "unit": "g"
+            },
+            {
+                "name": "babérlevél",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "víz",
+                "amount": 375,
+                "unit": "ml"
+            },
+            {
+                "name": "citrom (a levéhez)",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt bors",
+                "amount": 0.25,
+                "unit": "csipet"
+            }
+        ],
+        "steps": [
+            "A lencsét átválogatod, és hideg vízben alaposan átmosod.",
+            "Egy fazékban 1,5 liter vízzel és a babérlevéllel felteszed főni, és lassú tűzön kb. 25 percig főzöd. Hozzáadod az apró kockára vágott sárgarépát, és további 10 percig főzöd, amíg a lencse puha, de nem esik szét.",
+            "Rántás: a hagymát nagyon finomra vágod, és az olajon üvegesre párolod. Hozzáadod a zúzott fokhagymát és a lisztet, és kevergetve 2–3 percig világosbarnára pirítod. Lehúzod a tűzről, és 2 dl hideg vízzel csomómentesre kevered.",
+            "A rántást a levesbe öntöd, és kevergetve még 10 percig főzöd.",
+            "Kifacsarod a fél citromot, és a levével kissé megsavanyítod a levest. Megsózod, megborsozod.",
+            "A tejfölt pár kanál forró levessel elkevered, a levesbe öntöd, és már csak felmelegíted. A babérlevelet kiveszed."
+        ],
+        "tip": "Ha van időd, a lencsét áztasd be 1–2 órára, gyorsabban megfő. Citrom helyett 1–2 ek ecet is jó.",
+        "totalCost": 505,
+        "glutenFree": false
+    },
+    {
+        "id": 1119,
+        "sourceId": "hu-93",
+        "name": "Csirkés rizsleves",
+        "cuisine": "hu",
+        "course": "soup",
+        "type": "meat",
+        "time": 75,
+        "baseCost": 320,
+        "access": "pro",
+        "servings": 4,
+        "description": "Tejszínesen lágy, tojássárgájával habart csirkeleves rizzsel – kíméletes, gyerekeknek is kedvelt fogás.",
+        "ingredients": [
+            {
+                "name": "csirkecomb",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "vaj",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            },
+            {
+                "name": "sárgarépa",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemgyökér",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 375,
+                "unit": "ml"
+            },
+            {
+                "name": "rizs",
+                "amount": 35,
+                "unit": "g"
+            },
+            {
+                "name": "szerecsendió",
+                "amount": 0.25,
+                "unit": "csipet"
+            },
+            {
+                "name": "tojás (csak a sárgája)",
+                "amount": 0.75,
+                "unit": "db"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A csirkecombot enyhén besózod. Egy fazékban megolvasztod a vajat, és a finomra vágott hagymán a petrezselyemzöld felével együtt üvegesre párolod.",
+            "Beleteszed a csirkét, és fedő alatt, kis lángon 10 percig párolod. Közben 1–2 evőkanál vizet aláöntesz, hogy ne piruljon meg, maradjon szép világos.",
+            "Felöntöd 1,5 liter vízzel, hozzáadod a karikára vágott sárgarépát és petrezselyemgyökeret, és lassú tűzön 35–40 percig főzöd, amíg a hús puha.",
+            "A csirkét kiveszed, a bőrt és a csontot eltávolítod, a húst falatnyi darabokra tépkeded.",
+            "A rizst többször átmosod, a levesbe teszed, és 15–18 percig főzöd, amíg puha, de nem szétfőtt. Egy csipet szerecsendióval ízesíted.",
+            "A tojássárgájákat egy merőkanál langyos levessel simára kevered. A fazekat lehúzod a tűzről, és folyamatos keverés mellett beleöntöd a habarást. Visszateszed a húst, megsózod, és a maradék petrezselyemzölddel tálalod. Habarás után már ne forrald, mert a tojás kicsapódik."
+        ],
+        "tip": "Ha másnapra is marad, a rizs megszívja magát: melegítéskor önts hozzá egy kevés vizet.",
+        "totalCost": 1291,
+        "glutenFree": true
+    },
+    {
+        "id": 1120,
+        "sourceId": "hu-94",
+        "name": "Csirkepörkölt pirított tarhonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 70,
+        "baseCost": 410,
+        "access": "pro",
+        "servings": 4,
+        "description": "Zsírjára sült, paprikás csirkepörkölt aranybarnára pirított tarhonyával – egyszerű, gyors hétköznapi ebéd.",
+        "ingredients": [
+            {
+                "name": "csirkecomb",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 50,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj (a pörkölthöz)",
+                "amount": 11.25,
+                "unit": "ml"
+            },
+            {
+                "name": "csemege fűszerpaprika",
+                "amount": 2,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "tarhonya",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj (a tarhonyához)",
+                "amount": 3.75,
+                "unit": "ml"
+            },
+            {
+                "name": "víz",
+                "amount": 175,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A hagymát finomra vágod, és egy lábasban az olajon üvegesre párolod.",
+            "Lehúzod a tűzről, belekevered a fűszerpaprikát, majd hozzáadod a csirkecombokat és a sót. Jól összeforgatod.",
+            "Hozzáadod a felkockázott paradicsomot, ráteszed a fedőt, és lassú tűzön 40–45 percig párolod. Ha elfő a leve, időnként egy-egy kevés vizet aláöntesz, hogy le ne égjen.",
+            "Amikor a csirke megpuhult, leveszed a fedőt, és hagyod, hogy a szaft besűrűsödjön, a zsírjára süljön.",
+            "Tarhonya: egy lábasban az olajon kevergetve 4–5 percig aranybarnára pirítod a tarhonyát. Annyi forró vizet öntesz rá, hogy két ujjnyira ellepje, megsózod, és fedő alatt kis lángon 15–20 percig főzöd, amíg a víz elfő és a tarhonya puha.",
+            "A pörköltet a tarhonyával körítve tálalod."
+        ],
+        "tip": "Savanyú uborka vagy cékla jól illik hozzá. Csirkecomb helyett egész, feldarabolt csirkéből is készülhet.",
+        "totalCost": 1620,
+        "glutenFree": false
+    },
+    {
+        "id": 1121,
+        "sourceId": "hu-95",
+        "name": "Paradicsomos csirke párolt rizzsel",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 65,
+        "baseCost": 540,
+        "access": "pro",
+        "servings": 4,
+        "description": "Szalonnán párolt csirke selymes, enyhén édeskés paradicsommártásban, párolt rizzsel.",
+        "ingredients": [
+            {
+                "name": "csirkecomb",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "füstölt csemegeszalonna",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "paradicsom",
+                "amount": 150,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 75,
+                "unit": "ml"
+            },
+            {
+                "name": "vaj",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 1.25,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "rizs (köretnek)",
+                "amount": 62.5,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj (a rizshez)",
+                "amount": 3.75,
+                "unit": "ml"
+            },
+            {
+                "name": "víz",
+                "amount": 125,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A csirkecombot megsózod. A szalonnát vékony szeletekre vágod, és egy lábas alján kevés zsírt kisütsz belőle.",
+            "Rárakod a csirkecombokat, ráteszed a fedőt, és lassú tűzön 35–40 percig párolod, közben néha egy kevés vizet aláöntesz.",
+            "Közben a paradicsomot feldarabolod, és 3 dl vízzel 10 percig főzöd. Egy kis lábasban a vajon a lisztet kevergetve világossárgára pirítod, és a paradicsomhoz kevered. Hozzáadod a cukrot és egy kevés sót, és lassú tűzön még 10 percig főzöd.",
+            "A mártást szitán áttöröd vagy botmixerrel simára pürésíted.",
+            "Amikor a csirke megpuhult, a levét a zsír leszedése után a mártáshoz öntöd, és 5 percig forralod, amíg szép piros és kissé sűrű lesz. A csirkét beleforgatod.",
+            "Rizs: az olajon 1–2 percig átforgatod a megmosott rizst, felöntöd kétszeres mennyiségű forró vízzel, megsózod, és fedő alatt, kis lángon 15–18 percig párolod.",
+            "A csirkét a mártással leöntve, párolt rizzsel tálalod."
+        ],
+        "tip": "Télen friss paradicsom helyett 1,5 doboz darabolt paradicsomkonzerv is jó. A szalonna elhagyható, ilyenkor 1 ek olajon párold a csirkét.",
+        "totalCost": 2176,
+        "glutenFree": false
+    },
+    {
+        "id": 1122,
+        "sourceId": "hu-96",
+        "name": "Töltött cukkini fehér mártásban",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 70,
+        "baseCost": 590,
+        "access": "pro",
+        "servings": 4,
+        "description": "Húsos-rizses töltelékkel töltött fiatal tök (cukkini) bársonyos fehér mártásban párolva.",
+        "ingredients": [
+            {
+                "name": "cukkini",
+                "amount": 250,
+                "unit": "g"
+            },
+            {
+                "name": "darált sertéshús",
+                "amount": 100,
+                "unit": "g"
+            },
+            {
+                "name": "rizs",
+                "amount": 12.5,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 25,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 3.75,
+                "unit": "ml"
+            },
+            {
+                "name": "tojás",
+                "amount": 0.5,
+                "unit": "db"
+            },
+            {
+                "name": "petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt bors",
+                "amount": 0.25,
+                "unit": "csipet"
+            },
+            {
+                "name": "vaj (a mártáshoz)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a mártáshoz)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "tej (a mártáshoz)",
+                "amount": 125,
+                "unit": "ml"
+            }
+        ],
+        "steps": [
+            "A rizst sós vízben 8 percig főzöd, majd leszűröd és hagyod kihűlni.",
+            "A cukkinik végét levágod, hosszában félbevágod őket, és egy kanállal kikaparod a magos belsejüket, hogy csónakot kapj.",
+            "A hagymát finomra vágod, az olajon üvegesre párolod, és hagyod kihűlni.",
+            "Egy tálban összekevered a darált húst, a rizst, a hagymát, a tojásokat, az apróra vágott petrezselyemzöldet, sót és borsot. A tölteléket a cukkinikbe halmozod.",
+            "Fehér mártás: egy széles lábasban megolvasztod a vajat, hozzáadod a lisztet, és 1–2 percig kevergeted. Lassan, folyamatos keverés mellett hozzáöntöd a tejet, megsózod, és csomómentesre főzöd.",
+            "A töltött cukkiniket a mártásba fekteted, ráteszed a fedőt, és kis lángon 35–40 percig párolod, amíg a hús átfő és a cukkini megpuhul. Ha a mártás túl sűrű, egy kevés vizet adsz hozzá.",
+            "A cukkiniket a mártással leöntve tálalod."
+        ],
+        "tip": "Főtt burgonyával vagy friss kenyérrel kerek ebéd. Sütőben is elkészítheted: letakarva 180 °C-on 40 perc.",
+        "totalCost": 2350,
+        "glutenFree": false
+    },
+    {
+        "id": 1123,
+        "sourceId": "hu-97",
+        "name": "Töltött karalábé főtt burgonyával",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 75,
+        "baseCost": 660,
+        "access": "pro",
+        "servings": 4,
+        "description": "Kivájt, puhára főtt karalábé pirított, petrezselymes húsos töltelékkel, vajas mártásban.",
+        "ingredients": [
+            {
+                "name": "karalábé",
+                "amount": 1,
+                "unit": "db"
+            },
+            {
+                "name": "darált sertéshús",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "vöröshagyma",
+                "amount": 20,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 3.75,
+                "unit": "ml"
+            },
+            {
+                "name": "finomliszt (a töltelékhez)",
+                "amount": 3.75,
+                "unit": "g"
+            },
+            {
+                "name": "petrezselyemzöld",
+                "amount": 0.25,
+                "unit": "kis csokor"
+            },
+            {
+                "name": "vaj (a mártáshoz)",
+                "amount": 10,
+                "unit": "g"
+            },
+            {
+                "name": "finomliszt (a mártáshoz)",
+                "amount": 7.5,
+                "unit": "g"
+            },
+            {
+                "name": "víz",
+                "amount": 125,
+                "unit": "ml"
+            },
+            {
+                "name": "só",
+                "amount": 3,
+                "unit": "g"
+            },
+            {
+                "name": "őrölt bors",
+                "amount": 0.25,
+                "unit": "csipet"
+            },
+            {
+                "name": "burgonya (köretnek)",
+                "amount": 150,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A karalábékat meghámozod, és sós vízben 15 percig főzöd, hogy félpuhák legyenek. Kiveszed őket, a főzőlevet félreteszed.",
+            "Mindegyik karalábé tetejéből vékony kalapot vágsz, és egy kiskanállal kivájod a belsejét úgy, hogy kb. fél centis fal maradjon. A kivájt részt apróra vágod.",
+            "Töltelék: a finomra vágott hagymát az olajon üvegesre párolod, hozzáadod a lisztet és a petrezselyemzöld felét, és egy percig pirítod. Beleteszed a darált húst, sózod, borsozod, és kevergetve 8–10 percig sütöd, amíg morzsás lesz. Egy kevés főzőlével összeforralod, hogy szaftos, de tömör maradjon.",
+            "A karalábékat megtöltöd, és visszateszed rájuk a kalapjukat.",
+            "Mártás: egy széles lábasban a vajon a lisztet 1–2 percig kevergeted, majd felöntöd 5 dl főzőlével, beleteszed az apróra vágott karalábébelsőt, megsózod, és csomómentesre főzöd.",
+            "A töltött karalábékat a mártásba állítod, és fedő alatt, kis lángon 15–20 percig párolod, amíg teljesen megpuhulnak. Közben a burgonyát meghámozod, és sós vízben puhára főzöd.",
+            "A karalábét a mártással és a maradék petrezselyemzölddel, főtt burgonyával tálalod."
+        ],
+        "tip": "A kivájt belső a mártásba kerül, így semmi nem megy kárba. Fiatal, zsenge karalábéval a legfinomabb.",
+        "totalCost": 2650,
+        "glutenFree": false
+    },
+    {
+        "id": 1124,
+        "sourceId": "hu-98",
+        "name": "Rakott savanyú káposzta burgonyával és kolbásszal",
+        "cuisine": "hu",
+        "course": "main",
+        "type": "meat",
+        "time": 90,
+        "baseCost": 780,
+        "access": "pro",
+        "servings": 4,
+        "description": "Karamellizált, aranybarnára párolt savanyú káposzta főtt burgonyával, kolbásszal és tejföllel rétegezve.",
+        "ingredients": [
+            {
+                "name": "savanyú káposzta",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "napraforgóolaj",
+                "amount": 7.5,
+                "unit": "ml"
+            },
+            {
+                "name": "kristálycukor",
+                "amount": 5,
+                "unit": "g"
+            },
+            {
+                "name": "burgonya",
+                "amount": 200,
+                "unit": "g"
+            },
+            {
+                "name": "szárazkolbász",
+                "amount": 37.5,
+                "unit": "g"
+            },
+            {
+                "name": "tejföl (20%)",
+                "amount": 75,
+                "unit": "g"
+            },
+            {
+                "name": "vaj (a tál kikenéséhez)",
+                "amount": 2.5,
+                "unit": "g"
+            },
+            {
+                "name": "só",
+                "amount": 2,
+                "unit": "g"
+            }
+        ],
+        "steps": [
+            "A burgonyát héjában, sós vízben kb. 20 percig főzöd, amíg puha, majd meghámozod, és fél centis karikákra vágod.",
+            "A savanyú káposztát kinyomkodod; ha nagyon savanyú, előtte hideg vízben átöblíted.",
+            "Egy széles lábasban felhevíted az olajat, beleszórod a cukrot, és kevergetve világos karamellá olvasztod. Azonnal hozzáadod a káposztát, és gyakran átforgatva 20–25 percig aranybarnára párolod. Ha leragadna, egy kevés vizet adsz hozzá.",
+            "A kolbászt vékony karikákra vágod. A sütőt 180 °C-ra előmelegíted, egy közepes tűzálló tálat kivajazol.",
+            "A tál aljára káposztát teszel, rá burgonyakarikákat, megsózod, megszórod kolbásszal, és meglocsolod tejföllel. Így rétegezed tovább, a tetejére burgonya és tejföl kerüljön.",
+            "Letakarva 20 percig, majd fedő nélkül még 10 percig sütöd, amíg a teteje enyhén megpirul. Tálalás előtt 5 percig pihenteted."
+        ],
+        "tip": "Másnap újramelegítve még finomabb. Kolbász helyett füstölt szalonna vagy főtt füstölt hús is jó bele.",
+        "totalCost": 3135,
+        "glutenFree": true
+    },
+    {
         "id": 1109,
         "sourceId": "hu-d21",
         "name": "Gundel palacsinta",
