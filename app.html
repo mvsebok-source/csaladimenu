@@ -172,6 +172,11 @@
                     </select>
                 </div>
 
+                <label for="gluten-free-toggle" class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60 flex items-center justify-between gap-3 cursor-pointer">
+                    <span class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-wheat-awn text-brand-600 mr-1.5" aria-hidden="true"></i> Csak gluténmentes</span>
+                    <input type="checkbox" id="gluten-free-toggle" class="h-5 w-5 shrink-0 accent-brand-600 cursor-pointer">
+                </label>
+
                 <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/60">
                     <div class="flex justify-between items-center mb-1">
                         <label class="text-xs font-bold uppercase text-slate-500"><i class="fa-solid fa-clock text-brand-600 mr-1.5"></i> Max. idő:</label>
@@ -339,6 +344,7 @@
                             <span id="modal-course-badge" class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded-md">
                                 Recept típusa
                             </span>
+                            <span id="modal-gluten-badge" class="hidden text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md"><i class="fa-solid fa-wheat-awn mr-1" aria-hidden="true"></i>Gluténmentes</span>
                         </div>
                         <h3 id="modal-title" class="text-2xl font-extrabold text-slate-900 mt-1"></h3>
                         <div id="modal-meta" class="text-xs text-slate-500 mt-1 flex gap-4 font-semibold"></div>
@@ -448,6 +454,7 @@
         const cuisineSelect = document.getElementById('cuisine-select');
         const courseSelect = document.getElementById('course-select');
         const dietSelect = document.getElementById('diet-select');
+        const glutenFreeToggle = document.getElementById('gluten-free-toggle');
         const searchInput = document.getElementById('search-input');
         const recipeCount = document.getElementById('recipe-count');
         const modal = document.getElementById('recipe-modal');
@@ -474,6 +481,7 @@
                 setSelect(cuisineSelect, pending.cuisine);
                 setSelect(courseSelect, pending.course);
                 setSelect(dietSelect, pending.diet);
+                glutenFreeToggle.checked = pending.glutenFree === true;
                 searchInput.value = pending.search || '';
                 (pending.ingredients || []).forEach(key => selectedIngredients.add(key));
                 if ([12, 24].includes(pending.recipesPerPage)) recipesPerPage = pending.recipesPerPage;
@@ -526,6 +534,7 @@
                 if (r.time > maxTime) return false;
                 if (r.course !== 'dessert' && diet === 'meat' && r.type !== 'meat') return false;
                 if (r.course !== 'dessert' && diet === 'veggie' && r.type !== 'veggie') return false;
+                if (glutenFreeToggle.checked && !r.glutenFree) return false;
                 if (!ignoreGlobalCuisine && cuisine !== 'all' && r.cuisine !== cuisine) return false;
                 if (!ignoreGlobalCourse && course !== 'all' && r.course !== course) return false;
                 if (selectedIngredients.size > 0 && !r.ingredients.some(ingredientMatchesSelection)) return false;
@@ -791,6 +800,7 @@
                             <span><i class="fa-solid fa-earth-americas text-slate-400 mr-1"></i> ${cuisineLabels[r.cuisine]}</span>
                             <span class="text-brand-700 font-bold ml-auto">${courseLabels[r.course]}</span>
                         </div>
+                        ${r.glutenFree ? `<span class="inline-flex items-center text-[11px] px-2.5 py-1 rounded-full font-bold bg-amber-50 text-amber-800 border border-amber-200" title="Nem tartalmaz glutént tartalmazó hozzávalót"><i class="fa-solid fa-wheat-awn mr-1" aria-hidden="true"></i>Gluténmentes</span>` : ''}
                     </div>
                     <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
                         <div>
@@ -897,7 +907,7 @@
                     if (recipe) {
                         const details = document.createElement('p');
                         details.className = 'px-3 text-[10px] text-slate-500';
-                        details.textContent = `${Math.round(recipe.baseCost * settings.servings).toLocaleString('hu-HU')} Ft · ${settings.servings} fő · ${recipe.time} perc`;
+                        details.textContent = `${Math.round(recipe.baseCost * settings.servings).toLocaleString('hu-HU')} Ft · ${settings.servings} fő · ${recipe.time} perc${recipe.glutenFree ? " · gluténmentes" : ""}`;
                         mealsContainer.appendChild(details);
                     }
                 });
@@ -1149,6 +1159,7 @@
             document.getElementById('modal-title').innerText = recipe.name;
             document.getElementById('modal-cuisine').innerText = cuisineLabels[recipe.cuisine];
             document.getElementById('modal-course-badge').innerText = courseLabels[recipe.course];
+            document.getElementById('modal-gluten-badge').classList.toggle('hidden', !recipe.glutenFree);
             document.getElementById('modal-servings').innerText = `${servings} fő`;
             document.getElementById('modal-cost').innerText = `${Math.round(recipe.baseCost * servings).toLocaleString('hu-HU')} Ft`;
             renderRecipeModalIngredients(recipe);
@@ -1164,6 +1175,12 @@
                 const tip = document.createElement('li');
                 tip.innerHTML = `<strong>Tipp:</strong> ${recipe.tip}`;
                 stepsList.appendChild(tip);
+            }
+            if (recipe.glutenFree) {
+                const glutenNote = document.createElement('li');
+                glutenNote.className = 'list-none mt-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900';
+                glutenNote.innerHTML = '<strong><i class="fa-solid fa-wheat-awn mr-1" aria-hidden="true"></i>Gluténmentes recept.</strong> Csomagolt alapanyagoknál (pl. sütőpor, mustár, fűszerkeverék, currypaszta, kukoricatortilla) ellenőrizd a „gluténmentes” jelölést, mert nyomokban tartalmazhatnak glutént.';
+                stepsList.appendChild(glutenNote);
             }
 
             const ratingInfo = getRatingInfo(recipe.id);
@@ -1255,6 +1272,7 @@
         servingsSlider.oninput = () => { renderRecipes(); renderWeeklyPlanner(); };
         timeSlider.oninput = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
         dietSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
+        glutenFreeToggle.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
         cuisineSelect.onchange = () => { recipePage = 1; renderRecipes(); renderWeeklyPlanner(); };
 
         let dietBeforeDessert = 'all';

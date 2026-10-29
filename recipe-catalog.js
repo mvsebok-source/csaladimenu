@@ -104,7 +104,8 @@ window.recipeCatalog = [
             "A csipetkét a forrásban lévő levesbe szórod, 5–6 percig főzöd, majd ízlés szerint utánasózod."
         ],
         "tip": "Másnapra az ízek összeérnek, még finomabb. Friss kenyérrel és erős paprikával tálald.",
-        "totalCost": 4624
+        "totalCost": 4624,
+        "glutenFree": false
     },
     {
         "id": 1002,
@@ -195,7 +196,8 @@ window.recipeCatalog = [
             "A nokedlit tányérra szeded, mellé teszed a combokat, és bőven meglocsolod szafttal."
         ],
         "tip": "Uborkasalátával tálald. Ha csirkemellből készíted, a párolási időt 15–20 percre csökkentsd, különben kiszárad.",
-        "totalCost": 2216
+        "totalCost": 2216,
+        "glutenFree": false
     },
     {
         "id": 1003,
@@ -265,7 +267,8 @@ window.recipeCatalog = [
             "A kész húst papírtörlőre szeded, hogy a felesleges olaj lecsöpögjön, majd a burgonyával tálalod."
         ],
         "tip": "Citromgerezddel és csemegeuborkával tálald. A panír akkor tapad jól, ha a hús felülete száraz, ezért sütés előtt papírtörlővel itasd le.",
-        "totalCost": 2101
+        "totalCost": 2101,
+        "glutenFree": false
     },
     {
         "id": 1004,
@@ -330,7 +333,8 @@ window.recipeCatalog = [
             "A burgonyát a húshoz forgatod a maradék fokhagymával együtt, 1 percig együtt pirítod, és azonnal tálalod."
         ],
         "tip": "Csemegeuborka vagy vegyes savanyúság illik hozzá. A fokhagyma egy részét a végén add hozzá, így megmarad a friss, csípős aromája.",
-        "totalCost": 1760
+        "totalCost": 1760,
+        "glutenFree": true
     },
     {
         "id": 1005,
@@ -410,7 +414,8 @@ window.recipeCatalog = [
             "Ha a szaft túl híg, néhány burgonyakockát a fakanállal a lábas falához nyomva szétnyomkodsz; ettől szépen besűrűsödik."
         ],
         "tip": "Csemegeuborkával vagy savanyú káposztával tálald. Húsmentes változat: hagyd el a kolbászt, és adj hozzá 1 kávéskanál füstölt paprikát.",
-        "totalCost": 2387
+        "totalCost": 2387,
+        "glutenFree": true
     },
     {
         "id": 1006,
@@ -470,7 +475,8 @@ window.recipeCatalog = [
             "Előmelegített sütőben 30–35 percig sütöd, amíg a teteje aranybarna lesz. Tálalás előtt 5 percig pihenteted, így szebben szeletelhető."
         ],
         "tip": "Savanyúsággal tálald. A kolbász zsírja ízesíti a burgonyát, ezért a középső rétegbe mindenképp tegyél belőle.",
-        "totalCost": 2753
+        "totalCost": 2753,
+        "glutenFree": true
     },
     {
         "id": 1007,
@@ -535,7 +541,8 @@ window.recipeCatalog = [
             "A csirke akkor kész, ha a bőre ropogós, és a legvastagabb részénél megszúrva a kifolyó lé tiszta (maghőmérséklet legalább 75 °C)."
         ],
         "tip": "Tejfölös-fokhagymás mártogatóst adhatsz mellé (2 dl tejföl, 1 zúzott gerezd fokhagyma, csipet só).",
-        "totalCost": 1891
+        "totalCost": 1891,
+        "glutenFree": true
     },
     {
         "id": 1008,
@@ -620,7 +627,8 @@ window.recipeCatalog = [
             "A rizst tányérra szeded, mellé kanalazod a tokányt."
         ],
         "tip": "Az uborkát csak a végén add hozzá, így ropogós marad. A csemegeuborka lével (1–2 ek) savanyíthatod is a szaftot.",
-        "totalCost": 2207
+        "totalCost": 2207,
+        "glutenFree": true
     },
     {
         "id": 1009,
@@ -697,10 +705,11 @@ window.recipeCatalog = [
             "A maradék olajon a hagymát üvegesre párolod, hozzáadod a gombát, és addig pirítod, amíg a kiengedett leve elfő (kb. 8 perc). A végén hozzáadod a zúzott fokhagymát.",
             "Visszateszed a húst, aláöntesz 1,5 dl vizet, és fedő alatt 8–10 percig párolod.",
             "A tejfölt elkevered a liszttel, kevés forró szafttal temperálod, majd hozzáöntöd. 2–3 percig forralod, amíg a mártás krémesre sűrűsödik. Ízlés szerint utánasózod, borsozod.",
-            "A rizst a hu-08 receptnél leírt módon párolod (átmosás, olajon pirítás, kétszeres vízzel 18 perc), és a mártásos hússal tálalod."
+            "A rizst a „Hentestokány rizzsel” receptnél leírt módon párolod (átmosás, olajon pirítás, kétszeres vízzel 18 perc), és a mártásos hússal tálalod."
         ],
         "tip": "A pulykamell gyorsan kiszárad, ezért ne párold tovább a megadott időnél.",
-        "totalCost": 3281
+        "totalCost": 3281,
+        "glutenFree": false
     },
     {
         "id": 1010,
@@ -781,11 +790,12 @@ window.recipeCatalog = [
             "Öntet: a citrom felének levét összekevered 1,5 dl langyos vízzel, a cukorral, 1 teáskanál sóval, a borssal és az olajjal. A még langyos burgonyára öntöd a hagymával együtt, óvatosan összeforgatod, és legalább 30 percig állni hagyod, hogy magába szívja.",
             "Hal: ha a pontyszeleten van bőr, a húsát a bőréig 3–4 milliméterenként bevagdosod (ez a pontyban lévő apró villás szálkákat elvágja, sütés után nem lesznek érezhetők).",
             "A szeleteket megsózod, meglocsolod a maradék citrom levével, és 15 percig pihenteted.",
-            "Papírtörlővel szárazra törlöd, majd lisztbe, felvert sós tojásba és zsemlemorzsába forgatod (a morzsa készítését lásd a hu-03 receptnél).",
+            "Papírtörlővel szárazra törlöd, majd lisztbe, felvert sós tojásba és zsemlemorzsába forgatod (a morzsa készítését lásd a „Rántott sertésszelet vajas burgonyával” receptnél).",
             "Serpenyőben kb. 1,5 cm magas, 170 °C-os olajban oldalanként 4–5 percig aranybarnára sütöd. Papírtörlőre szeded, és a salátával tálalod."
         ],
         "tip": "A bevagdosás a legfontosabb lépés, ettől lesz élvezhető a ponty. Filé esetén is érdemes.",
-        "totalCost": 4953
+        "totalCost": 4953,
+        "glutenFree": false
     },
     {
         "id": 1011,
@@ -855,7 +865,8 @@ window.recipeCatalog = [
             "Azonnal tálalod friss kenyérrel."
         ],
         "tip": "Lefagyasztva télire is eltehető (tojás nélkül). Rizzsel is laktató főétel.",
-        "totalCost": 2232
+        "totalCost": 2232,
+        "glutenFree": false
     },
     {
         "id": 1012,
@@ -915,7 +926,8 @@ window.recipeCatalog = [
             "A tésztát a káposztához forgatod, bőven megborsozod, és tálalod."
         ],
         "tip": "Sokan porcukorral meghintve, édesen eszik. Sietve 400 g kész kockatésztával is elkészíthető.",
-        "totalCost": 768
+        "totalCost": 768,
+        "glutenFree": false
     },
     {
         "id": 1013,
@@ -990,7 +1002,8 @@ window.recipeCatalog = [
             "A főzeléket mély tányérba szeded, és mindegyik tetejére egy tükörtojást csúsztatsz."
         ],
         "tip": "Néhány burgonyakockát a főzés végén nyomj szét, ettől krémesebb lesz. Fasírt vagy virsli is illik hozzá.",
-        "totalCost": 1085
+        "totalCost": 1085,
+        "glutenFree": false
     },
     {
         "id": 1014,
@@ -1070,12 +1083,13 @@ window.recipeCatalog = [
             "A gombát megtisztítod (nem áztatod, csak nedves papírral letörlöd), és vastagabb szeletekre vagy negyedekre vágod. A hagymát finomra aprítod.",
             "Az olajon a hagymát üvegesre párolod, majd a tűzről lehúzva elkevered benne a fűszerpaprikát.",
             "Visszateszed a tűzre, hozzáadod a gombát, a felkockázott paradicsomot és paprikát, sózod, borsozod. Fedő nélkül, közepes lángon 15 percig párolod; a gomba először levet ereszt, ez részben elfő.",
-            "Ha túl sűrű, 1 dl vizet adsz hozzá. Közben a hu-02 receptnél leírt módon elkészíted a nokedlit.",
+            "Ha túl sűrű, 1 dl vizet adsz hozzá. Közben a „Csirkepaprikás nokedlivel” receptnél leírt módon elkészíted a nokedlit.",
             "A tejfölt csomómentesen elkevered a liszttel, kevés forró szafttal temperálod, majd a gombához öntöd, és 2–3 percig forralod, amíg besűrűsödik.",
             "A nokedlire szeded a gombapaprikást."
         ],
         "tip": "Vegyes gombából (csiperke + laska) még gazdagabb ízű.",
-        "totalCost": 2425
+        "totalCost": 2425,
+        "glutenFree": false
     },
     {
         "id": 1015,
@@ -1133,14 +1147,15 @@ window.recipeCatalog = [
         ],
         "steps": [
             "A sajtot 1 cm vastag szeletekre vágod (a vékonyabb szelet könnyebben kifolyik).",
-            "Elkészíted a zsemlemorzsát (lásd a hu-03 receptnél), a tojásokat egy csipet sóval felvered.",
+            "Elkészíted a zsemlemorzsát (lásd a „Rántott sertésszelet vajas burgonyával” receptnél), a tojásokat egy csipet sóval felvered.",
             "Dupla panír: a szeleteket lisztbe, tojásba, morzsába forgatod, majd még egyszer tojásba és morzsába. Ez a dupla réteg akadályozza meg, hogy a sajt kifolyjon. Sütésig 15 percre hűtőbe teszed.",
-            "Közben a rizst a hu-08 receptnél leírt módon megpárolod.",
+            "Közben a rizst a „Hentestokány rizzsel” receptnél leírt módon megpárolod.",
             "Serpenyőben kb. 1,5 cm magasan olajat hevítesz 175–180 °C-ra. A sajtokat oldalanként 1–1,5 percig, gyorsan aranybarnára sütöd. Ha túl sokáig sütöd, a sajt kifolyik.",
             "Papírtörlőre szeded, és azonnal tálalod a rizzsel."
         ],
         "tip": "Hagyományosan tartármártással eszik. A kész sajtot rögtön tálald, mert hűlve megkeményedik.",
-        "totalCost": 2571
+        "totalCost": 2571,
+        "glutenFree": false
     },
     {
         "id": 1016,
@@ -1209,13 +1224,14 @@ window.recipeCatalog = [
         "steps": [
             "Saláta: az uborkát meghámozod, és vékony karikákra gyalulod. Megsózod (1 tk), összeforgatod, és 15 percig állni hagyod, majd a levét kinyomkodod.",
             "Salátalé: 2,5 dl hideg vízben elkevered a citrom levét, a cukrot és egy csipet sót; kóstolva édes-savanykásra állítod be. Hozzáadod a zúzott fokhagymát, ráöntöd az uborkára, és tálalásig hűtőbe teszed.",
-            "A nokedlit a hu-02 receptnél leírt módon elkészíted, leszűröd.",
+            "A nokedlit a „Csirkepaprikás nokedlivel” receptnél leírt módon elkészíted, leszűröd.",
             "Egy nagy serpenyőben felhevíted az olajat, beleteszed a nokedlit, és 2–3 percig pirítod.",
             "A 6 tojást 1/2 teáskanál sóval felvered, a nokedlire öntöd, és folyamatosan forgatva 2–3 percig sütöd, amíg a tojás megköt.",
             "Tálaláskor az uborkasalátát meghinted egy csipet fűszerpaprikával, és a forró nokedli mellé adod."
         ],
         "tip": "A citromlé helyett a hagyományos változat 2–3 ek ecetet használ.",
-        "totalCost": 1748
+        "totalCost": 1748,
+        "glutenFree": false
     },
     {
         "id": 1017,
@@ -1295,7 +1311,8 @@ window.recipeCatalog = [
             "Sóval, borssal és cukorral édes-savanykásra ízesíted (a paradicsom savasságától függően több vagy kevesebb cukor kell). A tésztát külön, sós vízben kifőzöd, és tálaláskor a tányérba szeded."
         ],
         "tip": "Ha a paradicsom nem elég érett, 1 ek sűrített paradicsom mélyebb ízt ad.",
-        "totalCost": 1670
+        "totalCost": 1670,
+        "glutenFree": false
     },
     {
         "id": 1018,
@@ -1396,11 +1413,12 @@ window.recipeCatalog = [
             "Egy másik lábasban az olajon a finomra vágott hagymát üvegesre párolod, a tűzről lehúzva elkevered benne a fűszerpaprikát, majd hozzáadod a zúzott fokhagymát, a felkockázott paradicsomot és paprikát.",
             "Hozzáadod a karikázott répát, petrezselyemgyökeret, a kockázott zellert és burgonyát, valamint a babot a főzőlevével együtt. Annyi vizet adsz hozzá, hogy kb. 2 liter legyen.",
             "Sózod, borsozod, és 25–30 percig főzöd, amíg minden zöldség és a bab is teljesen puha.",
-            "Közben a gulyásleves (hu-01) receptje szerint elkészíted a csipetkét, és a levesbe szórva 5–6 percig főzöd.",
+            "Közben a „Gulyásleves csipetkével” receptje szerint elkészíted a csipetkét, és a levesbe szórva 5–6 percig főzöd.",
             "Tálalás előtt a babérlevelet kiveszed, és ízlés szerint utánasózod."
         ],
         "tip": "Egy kanál tejföllel és erős paprikával tálald. Füstölt paprikával a kolbászos íz is megidézhető.",
-        "totalCost": 1400
+        "totalCost": 1400,
+        "glutenFree": false
     },
     {
         "id": 1019,
@@ -1466,11 +1484,12 @@ window.recipeCatalog = [
             "Közben egy kis lábasban a vajat felolvasztod, hozzáadod a lisztet, és kevergetve 1 percig, színe ne változzon, pirítod (fehér rántás).",
             "A rántást lehúzod a tűzről, és a hideg tejjel habverővel csomómentesre kevered.",
             "A tejes rántást a borsóhoz öntöd, és állandó kevergetés mellett 4–5 percig főzöd, amíg krémesre sűrűsödik. Ízlés szerint utánasózod, és belekevered az apróra vágott petrezselyemzöldet.",
-            "A tükörtojásokat a hu-13 receptnél leírt módon megsütöd.",
+            "A tükörtojásokat a „Krumplifőzelék tükörtojással” receptnél leírt módon megsütöd.",
             "A főzeléket tányérba szeded, és a tetejére teszed a tojást."
         ],
         "tip": "A cukor hangsúlyozza a borsó természetes édességét; ne hagyd el.",
-        "totalCost": 1530
+        "totalCost": 1530,
+        "glutenFree": false
     },
     {
         "id": 1020,
@@ -1550,7 +1569,8 @@ window.recipeCatalog = [
             "A diót száraz serpenyőben, kevergetve 3–4 perc alatt illatosra pirítod, majd durvára vágod. Tálaláskor a leves tetejére egy kanál tejfölt teszel, és megszórod a dióval."
         ],
         "tip": "Hidegen, nyáron is kiváló. A tejföl helyett kecskesajttal is különleges.",
-        "totalCost": 1008
+        "totalCost": 1008,
+        "glutenFree": true
     },
     {
         "id": 1021,
@@ -1650,8 +1670,9 @@ window.recipeCatalog = [
             "Fedő alatt, kis lángon 1,5–2 órát főzöd. Ne kevergesd, inkább a lábast rázogatod.",
             "A tejföl felét a liszttel és a maradék fűszerpaprikával csomómentesre kevered, kevés forró lével temperálod, majd óvatosan a káposzta levéhez öntöd, és 5 percig forralod. Tálaláskor a maradék tejfölt a tetejére kanalazod."
         ],
-        "tip": "Másnap, újramelegítve a legfinomabb. A bolti savanyú káposzta helyett ha kapsz, használj hordós káposztát és savanyított káposztalevelet.",
-        "totalCost": 3601
+        "tip": "Másnap, újramelegítve a legfinomabb. Ha kapsz, a bolti savanyú káposzta helyett használj hordós káposztát és savanyított káposztaleveleket.",
+        "totalCost": 3601,
+        "glutenFree": false
     },
     {
         "id": 1022,
@@ -1740,13 +1761,14 @@ window.recipeCatalog = [
         "steps": [
             "A zsemlét 1 dl tejben 10 percig áztatod, majd alaposan kinyomkodod. A hagymát nagyon finomra vágod (vagy lereszeled), a fokhagymát összezúzod.",
             "A darált húst összegyúrod a kinyomott zsemlével, a tojással, a hagymával, a fokhagymával, a fűszerpaprikával, 2 teáskanál sóval és a borssal. Legalább 10 percig gyúrd, így lesz a fasírt összeálló és szaftos. 15 percre hűtőbe teszed.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
             "Vizes kézzel 12 egyforma, lapított golyót formázol, és zsemlemorzsába forgatod.",
             "Püré: a burgonyát meghámozod, felkockázod, sós vízben 18–20 perc alatt puhára főzöd, leszűröd, és krumplinyomón áttöröd. A felforralt tejjel és a vajjal habosra kevered, sóval ízesíted.",
             "Serpenyőben kb. 1 cm magasan olajat hevítesz (170 °C), és a fasírtokat közepes lángon oldalanként 4–5 percig sütöd, amíg kívül aranybarna, belül átsült (a közepe ne legyen rózsaszín). Papírtörlőre szeded."
         ],
         "tip": "Savanyúsággal vagy főzelékkel (pl. krumpli- vagy borsófőzelék) is tálalható. Hidegen is finom.",
-        "totalCost": 2399
+        "totalCost": 2399,
+        "glutenFree": false
     },
     {
         "id": 1023,
@@ -1821,7 +1843,8 @@ window.recipeCatalog = [
             "A főzeléket tányérba szeded, a babérlevelet kiveszed, és a virslit a tetejére teszed."
         ],
         "tip": "Tükörtojással vagy sült kolbásszal is klasszikus.",
-        "totalCost": 1821
+        "totalCost": 1821,
+        "glutenFree": false
     },
     {
         "id": 1024,
@@ -1920,8 +1943,9 @@ window.recipeCatalog = [
             "A tejfölt a liszttel csomómentesre kevered, kevés forró lével temperálod, majd a leveshez öntöd, és 5 percig forralod.",
             "Néhány csepp citromlével vagy ecettel enyhén savanykásra ízesíted, kiveszed a babérlevelet."
         ],
-        "tip": "Csipetkét (hu-01) is főzhetsz bele. Füstölt csülökkel készítve lesz belőle Jókai bableves.",
-        "totalCost": 2252
+        "tip": "Csipetkét (a „Gulyásleves csipetkével” receptje szerint) is főzhetsz bele. Füstölt csülökkel készítve lesz belőle Jókai bableves.",
+        "totalCost": 2252,
+        "glutenFree": false
     },
     {
         "id": 1025,
@@ -2003,10 +2027,11 @@ window.recipeCatalog = [
             "Hozzáadod a húst, visszateszed a tűzre, és nagy lángon kevergetve 5 percig pirítod, amíg kifehéredik. Sózod, borsozod, hozzáadod a köményt, a zúzott fokhagymát, a felkockázott paradicsomot és paprikát.",
             "Fedő alatt, kis lángon párolod. Az elején csak 1 dl vizet adsz hozzá; a hús levet ereszt. Ezután mindig csak annyi vizet pótolsz, hogy éppen ne kapjon le. 60–80 perc alatt a hús puha lesz.",
             "A végén fedő nélkül még 10 percig főzöd, hogy a szaft besűrűsödjön és a zsír a tetején piros színnel kiváljon (ez a „zsírjára sütés”).",
-            "A nokedlit a hu-02 receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva)."
+            "A nokedlit a „Csirkepaprikás nokedlivel” receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva)."
         ],
         "tip": "Csemegeuborkával vagy kovászos uborkával tálald. Tejföllel már paprikás lenne, nem pörkölt.",
-        "totalCost": 2468
+        "totalCost": 2468,
+        "glutenFree": false
     },
     {
         "id": 1026,
@@ -2074,14 +2099,15 @@ window.recipeCatalog = [
         ],
         "steps": [
             "A csirkemellet vízszintesen kettévágod, így 1–1,5 cm vastag szeleteket kapsz; folpack alatt egyenletes vastagságúra veregeted. Sózod, borsozod.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
             "A szeleteket lisztbe, felvert sós tojásba, végül zsemlemorzsába forgatod.",
             "Rizibizi: a rizst átmosod, az olajon üvegesre pirítod, hozzáadod a fagyasztott borsót, felöntöd 6 dl forró sós vízzel, és fedő alatt, kis lángon 18 percig főzöd, majd 5 percig pihenteted.",
             "Serpenyőben kb. 1,5 cm magasan 170 °C-ra hevíted az olajat, és a húst oldalanként 3–4 percig sütöd, amíg aranybarna és átsült.",
             "Papírtörlőre szeded, és a rizibizivel tálalod."
         ],
         "tip": "Citromkarikával és vegyes salátával tálald.",
-        "totalCost": 2441
+        "totalCost": 2441,
+        "glutenFree": false
     },
     {
         "id": 1027,
@@ -2166,7 +2192,8 @@ window.recipeCatalog = [
             "A cérnametéltet külön, sós vízben 3–4 perc alatt kifőzöd. A levest leszűröd, a húst lefejted a csontról, a zöldségeket felkarikázod, és a tésztával együtt tányérba szeded, rá merőd a forró levet."
         ],
         "tip": "A főtt hús és zöldség másnap salátának vagy rakottasnak is felhasználható.",
-        "totalCost": 3181
+        "totalCost": 3181,
+        "glutenFree": false
     },
     {
         "id": 1028,
@@ -2236,7 +2263,8 @@ window.recipeCatalog = [
             "A húst a hasábburgonyával tálalod, a tetejére teszed a szalonnát."
         ],
         "tip": "Mustárral és csemegeuborkával tálald.",
-        "totalCost": 2301
+        "totalCost": 2301,
+        "glutenFree": true
     },
     {
         "id": 1029,
@@ -2308,10 +2336,11 @@ window.recipeCatalog = [
             "A maradék olajon a hagymát üvegesre párolod, hozzáadod a paprikát, és 8 percig párolod, amíg összeesik.",
             "A tűzről levéve elkevered benne a fűszerpaprikát, hozzáadod a paradicsomot, sózod, és 10 percig főzöd.",
             "Visszateszed a húst, és fedő alatt még 8–10 percig együtt párolod.",
-            "A rizst a hu-08 receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés)."
+            "A rizst a „Hentestokány rizzsel” receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés)."
         ],
         "tip": "Csípősebben egy hegyes erős paprikával.",
-        "totalCost": 3060
+        "totalCost": 3060,
+        "glutenFree": true
     },
     {
         "id": 1030,
@@ -2368,7 +2397,7 @@ window.recipeCatalog = [
             }
         ],
         "steps": [
-            "A kockatésztát a hu-12 receptnél leírt módon elkészíted (liszt, 3 tojás, csipet só; 1–2 mm vastagra nyújtva, 2×2 cm-es kockákra vágva), és sós vízben 3–4 perc alatt kifőzöd, majd leszűröd.",
+            "A kockatésztát a „Káposztás tészta gyúrt kockatésztával” receptnél leírt módon elkészíted (liszt, 3 tojás, csipet só; 1–2 mm vastagra nyújtva, 2×2 cm-es kockákra vágva), és sós vízben 3–4 perc alatt kifőzöd, majd leszűröd.",
             "A sütőt 180 °C-ra előmelegíted, egy kb. 20×30 cm-es tálat kivajazol.",
             "A sonkát apró kockákra vágod.",
             "A 3 tojás sárgáját a tejföllel, sóval és borssal elkevered. A fehérjéket kemény habbá vered, és óvatosan beleforgatod.",
@@ -2376,7 +2405,8 @@ window.recipeCatalog = [
             "Előmelegített sütőben 25–30 percig sütöd, amíg a teteje aranybarna és megszilárdul."
         ],
         "tip": "Uborkasalátával tálald. Sietve 400 g bolti kockatésztával is készülhet.",
-        "totalCost": 2272
+        "totalCost": 2272,
+        "glutenFree": false
     },
     {
         "id": 1031,
@@ -2433,7 +2463,7 @@ window.recipeCatalog = [
             }
         ],
         "steps": [
-            "A halat 4–5 cm-es darabokra vágod, ha bőrös, a pontyról szóló hu-10 receptnél leírt módon bevagdosod, megsózod, és hűtőben pihenteted.",
+            "A halat 4–5 cm-es darabokra vágod, ha bőrös, a „Rántott ponty hagymás burgonyasalátával” receptnél leírt módon bevagdosod, megsózod, és hűtőben pihenteted.",
             "A hagymát durvára vágod, egy lábasban 1,5 liter vízzel, a paradicsommal és a zöldpaprikával 20 percig főzöd, amíg teljesen puha.",
             "Botmixerrel simára turmixolod, majd szűrőn átpasszírozod; ez lesz a halászlé sűrű alapja.",
             "Visszaöntöd a lábasba, felforralod, belekevered a fűszerpaprikát, és sózod.",
@@ -2441,7 +2471,8 @@ window.recipeCatalog = [
             "A tésztát külön, sós vízben kifőzöd, és a tányérokba szeded. A halászlét rámered, mindenki ízlése szerint vághat bele erős paprikát."
         ],
         "tip": "A valódi bajai halászléhez a halfejekből és -farokból külön alaplé is készül; ez a filés változat gyorsabb és szálkamentes.",
-        "totalCost": 5727
+        "totalCost": 5727,
+        "glutenFree": false
     },
     {
         "id": 1032,
@@ -2506,7 +2537,8 @@ window.recipeCatalog = [
             "A húst a szaftjával tányérra teszed, a tetejére halmozod a ropogós hagymát, mellé a burgonyát."
         ],
         "tip": "A hagymát közvetlenül tálalás előtt süsd, mert állás közben megpuhul.",
-        "totalCost": 4868
+        "totalCost": 4868,
+        "glutenFree": false
     },
     {
         "id": 1033,
@@ -2581,7 +2613,8 @@ window.recipeCatalog = [
             "Lefedve 30 percig, majd fedő nélkül további 20 percig sütöd, amíg a teteje pirosas lesz."
         ],
         "tip": "Pihentetés után szebben szeletelhető, és újramelegítve még finomabb.",
-        "totalCost": 3092
+        "totalCost": 3092,
+        "glutenFree": true
     },
     {
         "id": 1034,
@@ -2656,7 +2689,8 @@ window.recipeCatalog = [
             "4–5 percig sütöd, amíg a sajt megolvad, és azonnal tálalod."
         ],
         "tip": "Hagyományosan párolt lilakáposztával vagy friss salátával kínálják.",
-        "totalCost": 2204
+        "totalCost": 2204,
+        "glutenFree": false
     },
     {
         "id": 1035,
@@ -2746,7 +2780,8 @@ window.recipeCatalog = [
             "A palacsintákat egy kikent tűzálló tálba fekteted, leöntöd a mártással, és 180 °C-os sütőben 12–15 percig sütöd."
         ],
         "tip": "Az eredeti hortobágyi borjúpörköltből készül; csirkemellel könnyebb és olcsóbb.",
-        "totalCost": 2301
+        "totalCost": 2301,
+        "glutenFree": false
     },
     {
         "id": 1036,
@@ -2816,7 +2851,8 @@ window.recipeCatalog = [
             "A citrom levével, sóval és borssal ízesíted."
         ],
         "tip": "Tejföllel vagy egy kanál pirított hagymával tálald; kenyérkockát is pirhatsz mellé.",
-        "totalCost": 519
+        "totalCost": 519,
+        "glutenFree": true
     },
     {
         "id": 1037,
@@ -2871,7 +2907,8 @@ window.recipeCatalog = [
             "Ha melegen szereted, a túróval és tejföllel megszórt tálat 180 °C-os sütőben 5 percig átmelegíted."
         ],
         "tip": "Hagyományosan pirított szalonnakockákkal és a kisült zsírral készül; húsmentesen pirított hagymát is szórhatsz rá.",
-        "totalCost": 1685
+        "totalCost": 1685,
+        "glutenFree": false
     },
     {
         "id": 1038,
@@ -2946,7 +2983,8 @@ window.recipeCatalog = [
             "30–35 percig sütöd, amíg a teteje aranybarna."
         ],
         "tip": "Húsos változatban egy réteg paprikás darált hús is kerül bele.",
-        "totalCost": 2440
+        "totalCost": 2440,
+        "glutenFree": false
     },
     {
         "id": 1039,
@@ -3026,7 +3064,8 @@ window.recipeCatalog = [
             "Friss kenyérrel tálalod."
         ],
         "tip": "Fasírttal vagy tükörtojással laktatóbb.",
-        "totalCost": 1642
+        "totalCost": 1642,
+        "glutenFree": false
     },
     {
         "id": 1040,
@@ -3086,7 +3125,8 @@ window.recipeCatalog = [
             "A tésztát a burgonyához forgatod, 2 percig együtt pirítod, és ízlés szerint megborsozod."
         ],
         "tip": "Csemegeuborkával tálald. Húsos változatban kolbászt is pirítanak a hagymához.",
-        "totalCost": 1072
+        "totalCost": 1072,
+        "glutenFree": false
     },
     {
         "id": 1041,
@@ -3140,7 +3180,8 @@ window.recipeCatalog = [
             "Azonnal tálalod, ízlés szerint további porcukorral."
         ],
         "tip": "Egy kanál baracklekvárral vagy forró vaníliasodóval különleges.",
-        "totalCost": 1207
+        "totalCost": 1207,
+        "glutenFree": false
     },
     {
         "id": 1042,
@@ -3225,7 +3266,8 @@ window.recipeCatalog = [
             "Citromlével enyhén savanykásra ízesíted, és apróra vágott petrezselyemzölddel tálalod."
         ],
         "tip": "Galuskával (a nokedli tésztájából kiskanállal szaggatva) laktató egytál.",
-        "totalCost": 1583
+        "totalCost": 1583,
+        "glutenFree": false
     },
     {
         "id": 1043,
@@ -3291,11 +3333,12 @@ window.recipeCatalog = [
             "Lábasban 4 dl sós, cukros vízzel feltéve 12–15 percig főzöd, amíg puha.",
             "Fehér rántás: a vajon a lisztet 1 percig pirítod (színe ne változzon), lehúzod a tűzről, és a hideg tejjel csomómentesre kevered.",
             "A rántást a karalábéhoz öntöd, a levelekkel együtt kevergetve 5 percig főzöd, amíg krémes. Sóval, cukorral és petrezselyemmel ízesíted.",
-            "A tükörtojásokat a hu-13 receptnél leírt módon megsütöd.",
+            "A tükörtojásokat a „Krumplifőzelék tükörtojással” receptnél leírt módon megsütöd.",
             "A főzeléket tányérba szeded, a tetejére teszed a tojást."
         ],
         "tip": "Fasírttal vagy rántott hússal is klasszikus párosítás.",
-        "totalCost": 2181
+        "totalCost": 2181,
+        "glutenFree": false
     },
     {
         "id": 1044,
@@ -3353,14 +3396,15 @@ window.recipeCatalog = [
         ],
         "steps": [
             "A gombákat nedves papírral letörlöd, a szárukat tövig levágod (a nagyobbakat félbevághatod). Enyhén megsózod.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
             "A gombafejeket lisztbe, felvert sós tojásba, majd zsemlemorzsába forgatod.",
-            "A rizst a hu-08 receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés).",
+            "A rizst a „Hentestokány rizzsel” receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés).",
             "Bő, 170 °C-os olajban a gombákat 4–5 perc alatt, többször átforgatva aranybarnára sütöd. Ennyi idő alatt a gomba belül is átpuhul.",
             "Papírtörlőre szeded, és a rizzsel tálalod."
         ],
         "tip": "Tartármártással vagy fokhagymás tejföllel tálald.",
-        "totalCost": 2115
+        "totalCost": 2115,
+        "glutenFree": false
     },
     {
         "id": 1045,
@@ -3430,7 +3474,8 @@ window.recipeCatalog = [
             "Fokhagymás tejföllel és uborkasalátával tálalod."
         ],
         "tip": "Édesen is finom: só nélkül, porcukorral és fahéjjal megszórva.",
-        "totalCost": 1929
+        "totalCost": 1929,
+        "glutenFree": false
     },
     {
         "id": 1046,
@@ -3490,7 +3535,8 @@ window.recipeCatalog = [
             "Melegen vagy hűtőben lehűtve tálalod."
         ],
         "tip": "Egy szegfűszeggel főzve még illatosabb.",
-        "totalCost": 700
+        "totalCost": 700,
+        "glutenFree": false
     },
     {
         "id": 1047,
@@ -3570,7 +3616,8 @@ window.recipeCatalog = [
             "Ízlés szerint utánasózod, és forrón tálalod."
         ],
         "tip": "Hagyományosan szalonnazsíron pirítják a tésztát; húsmentesen az olaj is tökéletes.",
-        "totalCost": 671
+        "totalCost": 671,
+        "glutenFree": false
     },
     {
         "id": 1048,
@@ -3646,7 +3693,8 @@ window.recipeCatalog = [
             "A forró lángost megkened fokhagymás vízzel, majd tejföllel, és megszórod sajttal."
         ],
         "tip": "Sima, krumpli nélküli tésztából is készülhet; a krumplitól lesz puhább és tovább friss.",
-        "totalCost": 1497
+        "totalCost": 1497,
+        "glutenFree": false
     },
     {
         "id": 1049,
@@ -3731,7 +3779,8 @@ window.recipeCatalog = [
             "Fedő alatt, kis lángon 35–40 percig főzöd, amíg a paprika puha és a rizs is megfő."
         ],
         "tip": "Főtt burgonyával vagy friss kenyérrel tálald. Húsos változatban a gomba helyett darált sertés kerül bele.",
-        "totalCost": 2765
+        "totalCost": 2765,
+        "glutenFree": false
     },
     {
         "id": 1050,
@@ -3806,7 +3855,8 @@ window.recipeCatalog = [
             "Forrón tálalod friss kenyérrel."
         ],
         "tip": "Néhány szem főtt tojással vagy virslikarikákkal tartalmasabb.",
-        "totalCost": 667
+        "totalCost": 667,
+        "glutenFree": false
     },
     {
         "id": 1051,
@@ -3865,13 +3915,14 @@ window.recipeCatalog = [
         "steps": [
             "A túrót villával összetöröd (ha nagyon rögös, szitán áttöröd), majd elkevered a tojásokkal, a búzadarával és a sóval.",
             "Letakarva legalább 30 percre hűtőbe teszed; ezalatt a dara megszívja magát, és a massza formázhatóvá válik.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon elkészíted, és egy serpenyőben a vajon kevergetve aranybarnára pirítod.",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon elkészíted, és egy serpenyőben a vajon kevergetve aranybarnára pirítod.",
             "Vizes kézzel 12 diónyi gombócot formázol.",
             "Bő, enyhén sós, forrásban lévő vízbe teszed őket, és amikor feljönnek a víz tetejére, még 8–10 percig gyöngyözve főzöd.",
             "Szűrőkanállal kiszeded, a pirított morzsába forgatod, és tejföllel, porcukorral tálalod."
         ],
         "tip": "Ha a gombóc főzés közben szétesne, a masszába még 1–2 evőkanál dara kell. A közepébe egy szem meggyet vagy szilvát is rejthetsz.",
-        "totalCost": 1781
+        "totalCost": 1781,
+        "glutenFree": false
     },
     {
         "id": 1052,
@@ -3928,10 +3979,11 @@ window.recipeCatalog = [
             "A mákot összekevered a porcukorral.",
             "A zsemlekockákat egyenletesen meglocsolod a meleg tejjel, és a mákos cukor kétharmadával összeforgatod.",
             "A tetejét megszórod a maradék mákos cukorral és vajdarabkákkal, és 180 °C-os sütőben 15–20 percig sütöd, amíg a teteje kissé ropogós.",
-            "Melegen tálalod, ha szereted, vaníliasodóval (lásd hu-d09) leöntve."
+            "Melegen tálalod, ha szereted, vaníliasodóval (lásd az „Aranygaluska vaníliasodóval” receptet) leöntve."
         ],
         "tip": "Ha nincs sütő: a tejes zsemlét egyszerűen összeforgatod a mákkal, és így tálalod – ez a hagyományos, sütés nélküli változat.",
-        "totalCost": 1018
+        "totalCost": 1018,
+        "glutenFree": false
     },
     {
         "id": 1053,
@@ -4006,7 +4058,8 @@ window.recipeCatalog = [
             "Langyosan tálalod, porcukorral meghintve."
         ],
         "tip": "A szódavíztől lesz a tészta igazán vékony és csipkés.",
-        "totalCost": 1380
+        "totalCost": 1380,
+        "glutenFree": false
     },
     {
         "id": 1054,
@@ -4106,7 +4159,8 @@ window.recipeCatalog = [
             "180 °C-os sütőben 20 percig sütöd, amíg a túró megköt és a teteje kissé megpirul. Porcukorral meghintve tálalod."
         ],
         "tip": "A tejfölös öntetbe egy tojást is keverhetsz, így szilárdabb lesz.",
-        "totalCost": 2043
+        "totalCost": 2043,
+        "glutenFree": false
     },
     {
         "id": 1055,
@@ -4191,7 +4245,8 @@ window.recipeCatalog = [
             "40 percig sütöd, amíg a teteje aranybarna. Kihűtve porcukorral meghinted, és kockákra vágod."
         ],
         "tip": "Langyosan, vaníliafagylalttal is remek. A tészta a hűtőben 2 napig eltartható.",
-        "totalCost": 2626
+        "totalCost": 2626,
+        "glutenFree": false
     },
     {
         "id": 1056,
@@ -4241,7 +4296,8 @@ window.recipeCatalog = [
             "Tálakba szeded, a tetejére teszed a habgaluskákat, és hűtőben legalább 2 órát hűtöd."
         ],
         "tip": "A tetejére karamellt csorgathatsz: 5 dkg cukrot száraz serpenyőben barnára olvasztasz.",
-        "totalCost": 969
+        "totalCost": 969,
+        "glutenFree": false
     },
     {
         "id": 1057,
@@ -4311,7 +4367,8 @@ window.recipeCatalog = [
             "Melegen, lekvárral tálalod."
         ],
         "tip": "A masszába 5 dkg mazsolát is keverhetsz.",
-        "totalCost": 1468
+        "totalCost": 1468,
+        "glutenFree": true
     },
     {
         "id": 1058,
@@ -4376,7 +4433,8 @@ window.recipeCatalog = [
             "A grízt tányérokba szeded, és bőven megszórod kakaós cukorral."
         ],
         "tip": "Fahéjas cukorral, lekvárral vagy friss gyümölccsel is finom.",
-        "totalCost": 699
+        "totalCost": 699,
+        "glutenFree": false
     },
     {
         "id": 1059,
@@ -4476,7 +4534,8 @@ window.recipeCatalog = [
             "Vaníliasodó: a sárgákat a cukorral, a vaníliás cukorral és a liszttel habosra kevered, a forró tejjel temperálod, majd kis lángon, folyamatosan kevergetve, forralás nélkül sűrűre főzöd. A melegen tálalt galuskára vagy mellé öntöd."
         ],
         "tip": "A galuskák közé mazsolát vagy egy-egy kanál baracklekvárt is tehetsz.",
-        "totalCost": 2630
+        "totalCost": 2630,
+        "glutenFree": false
     },
     {
         "id": 1060,
@@ -4546,7 +4605,8 @@ window.recipeCatalog = [
             "Melegen, lekvárral tálalod."
         ],
         "tip": "Liszttel is készülhet (osztrák Kaiserschmarrn), a darás változat a hagyományos magyar.",
-        "totalCost": 1118
+        "totalCost": 1118,
+        "glutenFree": false
     },
     {
         "id": 1061,
@@ -4641,7 +4701,8 @@ window.recipeCatalog = [
             "15–20 percig sütöd, amíg a hab kissé megszárad és halvány drappra színeződik. Teljesen kihűtve, nedves késsel vágod szeletekre."
         ],
         "tip": "Melegen a hab összeesik; legalább 2 órát hűtsd szeletelés előtt.",
-        "totalCost": 2699
+        "totalCost": 2699,
+        "glutenFree": false
     },
     {
         "id": 1062,
@@ -4706,7 +4767,8 @@ window.recipeCatalog = [
             "A tetejüket porcukorral meghinted. Légmentes dobozban 1–2 hétig eláll, és egyre puhább lesz."
         ],
         "tip": "A maradék tésztát újragyúrás előtt mindig hűtsd vissza.",
-        "totalCost": 1715
+        "totalCost": 1715,
+        "glutenFree": false
     },
     {
         "id": 1063,
@@ -4801,7 +4863,8 @@ window.recipeCatalog = [
             "Máz: a vajat kis lángon felolvasztod, belekevered a kakaót, a porcukrot és a tejet, és sima, fényes mázzá kevered. A sütemény tetejére öntöd, elsimítod, és dermedés után kockákra vágod."
         ],
         "tip": "Egy nap pihentetés után a lapok átnedvesednek, és a zserbó sokkal finomabb.",
-        "totalCost": 4640
+        "totalCost": 4640,
+        "glutenFree": false
     },
     {
         "id": 1064,
@@ -4881,7 +4944,8 @@ window.recipeCatalog = [
             "A tetejüket felvert tojással megkened, és 20–25 percig aranybarnára sütöd."
         ],
         "tip": "Fahéjas cukorral fahéjas csiga, mákkal mákos csiga lesz belőle.",
-        "totalCost": 1337
+        "totalCost": 1337,
+        "glutenFree": false
     },
     {
         "id": 1065,
@@ -4951,7 +5015,8 @@ window.recipeCatalog = [
             "Kihűtve porcukorral meghinted, és kockákra vágod."
         ],
         "tip": "A tetejére sütés előtt szórhatsz meggyet vagy felszeletelt almát.",
-        "totalCost": 838
+        "totalCost": 838,
+        "glutenFree": false
     },
     {
         "id": 1066,
@@ -5051,7 +5116,8 @@ window.recipeCatalog = [
             "180 °C-os előmelegített sütőben 30–35 percig sütöd, amíg mélyen aranybarna. Csak teljesen kihűlve szeleteled."
         ],
         "tip": "Fóliába csomagolva 1–2 hétig eláll, a töltelék közben összeérik.",
-        "totalCost": 3846
+        "totalCost": 3846,
+        "glutenFree": false
     },
     {
         "id": 1067,
@@ -5166,7 +5232,8 @@ window.recipeCatalog = [
             "Tálaláskor evőkanállal galuskákat szaggatsz tányérokra, leöntöd csokoládéöntettel, és a felvert habtejszínnel díszíted."
         ],
         "tip": "Egy nap érlelés után a legfinomabb; a piskóta ekkorra teljesen átitatódik.",
-        "totalCost": 2971
+        "totalCost": 2971,
+        "glutenFree": false
     },
     {
         "id": 1068,
@@ -5238,10 +5305,11 @@ window.recipeCatalog = [
             "Minden négyzet közepére egy púpozott teáskanál lekvárt teszel, a négy sarkát középen összefogod, és a széleket jól összenyomkodod, hogy a lekvár ne folyjon ki.",
             "A buktákat illesztéssel lefelé egy kivajazott tepsibe sorakoztatod szorosan egymás mellé, és mindegyiket megkened olvasztott vajjal (így válnak el sütés után szépen).",
             "Letakarva 20 percig keleszted, közben a sütőt 180 °C-ra előmelegíted. A tetejüket újra megkened vajjal, és 25–30 percig aranybarnára sütöd.",
-            "Langyosan, porcukorral meghintve tálalod; vaníliasodóval (hu-d09) is klasszikus."
+            "Langyosan, porcukorral meghintve tálalod; vaníliasodóval (lásd az „Aranygaluska vaníliasodóval” receptet) is klasszikus."
         ],
         "tip": "Túróval, mákkal vagy dióval is tölthető.",
-        "totalCost": 1602
+        "totalCost": 1602,
+        "glutenFree": false
     },
     {
         "id": 1069,
@@ -5321,7 +5389,8 @@ window.recipeCatalog = [
             "Papírtörlőre szeded, porcukorral meghinted, és lekvárral tálalod."
         ],
         "tip": "Az első fánkkal próbáld ki a hőfokot: ha túl gyorsan barnul, vedd lejjebb a lángot.",
-        "totalCost": 1477
+        "totalCost": 1477,
+        "glutenFree": false
     },
     {
         "id": 1070,
@@ -5376,7 +5445,8 @@ window.recipeCatalog = [
             "A maradék mézzel meglocsolva, melegen tálalod."
         ],
         "tip": "Vaníliasodóval vagy egy kanál tejföllel is nagyon finom.",
-        "totalCost": 1369
+        "totalCost": 1369,
+        "glutenFree": true
     },
     {
         "id": 1071,
@@ -5456,7 +5526,8 @@ window.recipeCatalog = [
             "A kenyeret kis kockákra vágod, és a maradék olajon serpenyőben aranybarnára pirítod. Tálaláskor a leves tetejére szórod."
         ],
         "tip": "A sütés a titok: főzve a tök vizes és fakóbb ízű marad. Egy csepp tökmagolaj vagy pirított tökmag a tetején igazi stájer-magyar csavar.",
-        "totalCost": 1121
+        "totalCost": 1121,
+        "glutenFree": false
     },
     {
         "id": 1072,
@@ -5526,7 +5597,8 @@ window.recipeCatalog = [
             "Kihűtöd, majd legalább 3 órára hűtőbe teszed. Jéghidegen tálalod."
         ],
         "tip": "Friss meggyből a legfinomabb (június–július); a magokat meggymagozóval vedd ki. Vegyes gyümölcslevesnek fél adag meggy mellé almát, körtét és szilvát is főzhetsz.",
-        "totalCost": 3054
+        "totalCost": 3054,
+        "glutenFree": false
     },
     {
         "id": 1073,
@@ -5626,7 +5698,8 @@ window.recipeCatalog = [
             "Belekevered a kaprot, néhány csepp citromlével enyhén savanykásra ízesíted, kiveszed a babérlevelet, és forrón tálalod."
         ],
         "tip": "Friss kaporral és nyári zöldbabbal a legjobb. Az eredeti ürühússal készül; bárányhússal is kiváló.",
-        "totalCost": 1940
+        "totalCost": 1940,
+        "glutenFree": false
     },
     {
         "id": 1074,
@@ -5735,8 +5808,9 @@ window.recipeCatalog = [
             "Habarás: a tejfölt csomómentesre kevered a liszttel, hozzáadsz 3–4 evőkanál forró levet (így nem csapódik ki), majd visszaöntöd a lábasba, és kevergetve 3–4 percig forralod.",
             "Néhány csepp citromlével vagy ecettel enyhén savanykásra ízesíted, kóstolod a sót (a füstölt hús sós), és forrón tálalod."
         ],
-        "tip": "Az igazi Jókai bableves füstölt csülökkel készül; a leveskocka-ízű pótlás helyett inkább a csülök főzőlevét használd fel.",
-        "totalCost": 2853
+        "tip": "Az igazi Jókai bableves füstölt csülökkel készül; a csülök főzőleve adja a leves alapját, ezért leveskockára nincs szükség.",
+        "totalCost": 2853,
+        "glutenFree": false
     },
     {
         "id": 1075,
@@ -5821,7 +5895,8 @@ window.recipeCatalog = [
             "Citromlével enyhén savanykásra ízesíted, kóstolod a sót, és tálalod. A tárkony íze állás közben erősödik."
         ],
         "tip": "Galuskával (a nokedli tésztájából kiskanállal szaggatva) még laktatóbb.",
-        "totalCost": 1889
+        "totalCost": 1889,
+        "glutenFree": false
     },
     {
         "id": 1076,
@@ -5901,7 +5976,8 @@ window.recipeCatalog = [
             "A zsemlét felkockázod, az olajon ropogósra pirítod, és tálaláskor a levesre szórod."
         ],
         "tip": "Ha krémlevesnek szereted, a felét turmixold bele, a többit hagyd darabosan.",
-        "totalCost": 1638
+        "totalCost": 1638,
+        "glutenFree": false
     },
     {
         "id": 1077,
@@ -5976,7 +6052,8 @@ window.recipeCatalog = [
             "A levest tányérba szeded, és a sajtos kockákat a tetejére halmozod."
         ],
         "tip": "Bögrébe töltve, egy kevés pirított hagymával is látványos.",
-        "totalCost": 1428
+        "totalCost": 1428,
+        "glutenFree": false
     },
     {
         "id": 1078,
@@ -6051,7 +6128,8 @@ window.recipeCatalog = [
             "A maradék vajat és az apróra vágott petrezselyemzöldet belekevered, és tálalod."
         ],
         "tip": "Májusban, friss zöldborsóval a legfinomabb; a hüvelyeket is kifőzheted alaplének.",
-        "totalCost": 953
+        "totalCost": 953,
+        "glutenFree": false
     },
     {
         "id": 1079,
@@ -6126,7 +6204,8 @@ window.recipeCatalog = [
             "Tálaláskor mindegyik tányérba egy kanál tejföl kerül."
         ],
         "tip": "Sokan egy kevés főtt füstölt hússal vagy virslikarikákkal teszik még laktatóbbá.",
-        "totalCost": 2847
+        "totalCost": 2847,
+        "glutenFree": false
     },
     {
         "id": 1080,
@@ -6210,8 +6289,9 @@ window.recipeCatalog = [
             "Kaporral, citromlével és cukorral édes-savanykásra ízesíted, kóstolod a sót.",
             "Tükörtojás: serpenyőben 1 evőkanál olajat közepes lángon felhevítesz, a tojásokat egyenként beleütöd, megsózod, és 3–4 percig sütöd, amíg a fehérje megköt, a sárgája folyós marad. A főzeléket mély tányérba szeded, a tetejére teszed a tojást."
         ],
-        "tip": "Hagyományos feltét a fasírt (hu-22) vagy a sült virsli.",
-        "totalCost": 1781
+        "tip": "Hagyományos feltét a fasírt (lásd a „Fasírozott burgonyapürével” receptet) vagy a sült virsli.",
+        "totalCost": 1781,
+        "glutenFree": false
     },
     {
         "id": 1081,
@@ -6291,7 +6371,8 @@ window.recipeCatalog = [
             "A főzeléket a főtt burgonyával és a tükörtojással tálalod."
         ],
         "tip": "Friss spenótból (1,2 kg) is készülhet: forrásban lévő vízben 1 percig blansírozod, majd apróra vágod.",
-        "totalCost": 1722
+        "totalCost": 1722,
+        "glutenFree": false
     },
     {
         "id": 1082,
@@ -6371,7 +6452,8 @@ window.recipeCatalog = [
             "A főzeléket tányérba szeded, a tetejére halmozod a pirított hagymát, és kenyérrel tálalod."
         ],
         "tip": "Hagyományosan sült kolbásszal vagy füstölt hússal eszik; állás közben erősen besűrűsödik.",
-        "totalCost": 602
+        "totalCost": 602,
+        "glutenFree": false
     },
     {
         "id": 1083,
@@ -6451,7 +6533,8 @@ window.recipeCatalog = [
             "Kenyérrel tálalod; hagyományos feltét a sült kolbász, a fasírt vagy a tükörtojás."
         ],
         "tip": "A kelkáposzta a fagyok után a legédesebb – ezért igazi őszi-téli étel.",
-        "totalCost": 1270
+        "totalCost": 1270,
+        "glutenFree": false
     },
     {
         "id": 1084,
@@ -6521,7 +6604,8 @@ window.recipeCatalog = [
             "Tükörtojás: serpenyőben 1 evőkanál olajat közepes lángon felhevítesz, a tojásokat egyenként beleütöd, megsózod, és 3–4 percig sütöd, amíg a fehérje megköt, a sárgája folyós marad. A főzeléket a tükörtojással tálalod."
         ],
         "tip": "Egy marék zöldborsó vagy egy kevés kapor változatossá teszi.",
-        "totalCost": 1121
+        "totalCost": 1121,
+        "glutenFree": false
     },
     {
         "id": 1085,
@@ -6590,8 +6674,9 @@ window.recipeCatalog = [
             "Felöntöd a paradicsompürével, csomómentesre kevered, majd a káposztához öntöd. 10 percig főzöd, amíg sűrű.",
             "Cukorral és sóval édes-savanykásra ízesíted, és a főtt burgonyával tálalod."
         ],
-        "tip": "Klasszikus párja a fasírt (hu-22) vagy a sült kolbász. Nyár végén friss, érett paradicsomból a legfinomabb.",
-        "totalCost": 1281
+        "tip": "Klasszikus párja a fasírt (lásd a „Fasírozott burgonyapürével” receptet) vagy a sült kolbász. Nyár végén friss, érett paradicsomból a legfinomabb.",
+        "totalCost": 1281,
+        "glutenFree": false
     },
     {
         "id": 1086,
@@ -6671,7 +6756,8 @@ window.recipeCatalog = [
             "Kenyérrel, fasírttal vagy tükörtojással tálalod."
         ],
         "tip": "A friss kapor a lényeg; szárított kaporral is jó, de kevésbé illatos.",
-        "totalCost": 1449
+        "totalCost": 1449,
+        "glutenFree": false
     },
     {
         "id": 1087,
@@ -6751,7 +6837,8 @@ window.recipeCatalog = [
             "A főzeléket a pirított hagymával és kenyérrel tálalod."
         ],
         "tip": "Sült kolbásszal vagy füstölt hússal húsos változat is készülhet.",
-        "totalCost": 1206
+        "totalCost": 1206,
+        "glutenFree": false
     },
     {
         "id": 1088,
@@ -6831,7 +6918,8 @@ window.recipeCatalog = [
             "A tésztát a szósszal összeforgatod, és bőven reszelt sajttal tálalod."
         ],
         "tip": "Sütőben is befejezheted: tűzálló tálban, sajttal megszórva 200 °C-on 10 percig.",
-        "totalCost": 2454
+        "totalCost": 2454,
+        "glutenFree": false
     },
     {
         "id": 1089,
@@ -6923,10 +7011,11 @@ window.recipeCatalog = [
             "A visszamaradt zsiradékon a finomra vágott hagymát üvegesre párolod, a tűzről levéve elkevered benne a fűszerpaprikát, majd hozzáadod a felkockázott zöldpaprikát, paradicsomot és a felszeletelt gombát.",
             "Visszateszed a húst, aláöntesz 2 dl vizet, és fedő alatt, kis lángon 30–35 percig párolod, amíg a hús puha.",
             "A tejfölt a liszttel csomómentesre kevered, kevés forró szafttal temperálod, és a mártáshoz öntöd; 2–3 percig forralod.",
-            "A nokedlit a hu-02 receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva). A húst a nokedlivel és a gombás mártással tálalod."
+            "A nokedlit a „Csirkepaprikás nokedlivel” receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva). A húst a nokedlivel és a gombás mártással tálalod."
         ],
         "tip": "Erdei gombával (vargánya, rókagomba) az igazi bakonyi.",
-        "totalCost": 2433
+        "totalCost": 2433,
+        "glutenFree": false
     },
     {
         "id": 1090,
@@ -7011,7 +7100,8 @@ window.recipeCatalog = [
             "Tálaláskor mindegyik tányérra még egy kanál tejfölt teszel, és friss kenyérrel kínálod."
         ],
         "tip": "Másnap, újramelegítve még ízesebb – mint minden káposztás étel.",
-        "totalCost": 3316
+        "totalCost": 3316,
+        "glutenFree": false
     },
     {
         "id": 1091,
@@ -7093,10 +7183,11 @@ window.recipeCatalog = [
             "Hozzáadod a húst, visszateszed a tűzre, és nagy lángon kevergetve 5–6 percig pirítod, amíg minden oldala kifehéredik.",
             "Sózod, borsozod, hozzáadod a köményt, a zúzott fokhagymát, a felkockázott paradicsomot és paprikát, aláöntesz 1,5 dl vizet, és fedő alatt, a leggyengébb lángon 2–2,5 órát párolod. Mindig csak annyi vizet pótolsz, hogy ne kapjon le.",
             "Amikor a hús omlós, fedő nélkül 10 percig zsírjára sütöd, hogy a szaft sűrű és fényes legyen.",
-            "A nokedlit a hu-02 receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva)."
+            "A nokedlit a „Csirkepaprikás nokedlivel” receptnél leírt módon készíted el (liszt, tojás, só, kb. 2 dl víz; sós, lobogó vízbe szaggatva)."
         ],
         "tip": "A lábszár inas, kollagénben gazdag része adja a pörkölt selymes szaftját – ne cseréld sovány húsra.",
-        "totalCost": 5588
+        "totalCost": 5588,
+        "glutenFree": false
     },
     {
         "id": 1092,
@@ -7221,7 +7312,8 @@ window.recipeCatalog = [
             "A húst szeletekre vágod, és a mártással, zsemlegombóccal tálalod. Hagyományosan egy kanál vörösáfonya-lekvár is kerül mellé."
         ],
         "tip": "Az ízek másnapra összeérnek; a vadas előző nap elkészítve még jobb.",
-        "totalCost": 6472
+        "totalCost": 6472,
+        "glutenFree": false
     },
     {
         "id": 1093,
@@ -7301,7 +7393,8 @@ window.recipeCatalog = [
             "Villával óvatosan átforgatod, és csemegeuborkával tálalod."
         ],
         "tip": "Ne kevergesd a rizst főzés közben, különben ragacsos lesz.",
-        "totalCost": 2252
+        "totalCost": 2252,
+        "glutenFree": true
     },
     {
         "id": 1094,
@@ -7396,7 +7489,8 @@ window.recipeCatalog = [
             "Püré: a burgonyát felkockázva sós vízben puhára főzöd, áttöröd, és a forró tejjel és a vajjal habosra kevered. A vagdaltat a pürével és a tepsi szaftjával tálalod."
         ],
         "tip": "Hidegen, vékonyra szeletelve szendvicsbe is kiváló. Savanyúsággal tálald.",
-        "totalCost": 3130
+        "totalCost": 3130,
+        "glutenFree": false
     },
     {
         "id": 1095,
@@ -7491,7 +7585,8 @@ window.recipeCatalog = [
             "Kaporral ízesíted, és mély tányérban, szaftosan tálalod."
         ],
         "tip": "Ha a káposzta túl sok levet szív fel, egy kevés vízzel hígítsd: a lucskos legyen szaftos.",
-        "totalCost": 2033
+        "totalCost": 2033,
+        "glutenFree": false
     },
     {
         "id": 1096,
@@ -7576,7 +7671,8 @@ window.recipeCatalog = [
             "Fóliával letakarva 30 percig, majd fólia nélkül 15 percig sütöd, amíg a teteje aranyszínű. 10 percig pihenteted, és szeletelve tálalod."
         ],
         "tip": "Húsmentesen gombás-rizses töltelékkel is elkészítheted.",
-        "totalCost": 2333
+        "totalCost": 2333,
+        "glutenFree": true
     },
     {
         "id": 1097,
@@ -7656,7 +7752,8 @@ window.recipeCatalog = [
             "Csemegeuborkával tálalod."
         ],
         "tip": "A tarhonyát mindig pirítsd meg főzés előtt; így nem ragad össze.",
-        "totalCost": 1979
+        "totalCost": 1979,
+        "glutenFree": false
     },
     {
         "id": 1098,
@@ -7731,7 +7828,8 @@ window.recipeCatalog = [
             "Forrón, citromgerezddel, friss kenyérrel és a hideg uborkasalátával tálalod."
         ],
         "tip": "A strandokon egész, kibelezett hekket sütnek; filével szálkamentes és gyerekbarát.",
-        "totalCost": 4529
+        "totalCost": 4529,
+        "glutenFree": false
     },
     {
         "id": 1099,
@@ -7826,7 +7924,8 @@ window.recipeCatalog = [
             "Kóstolod a mártást: legyen édes-savanykás. A paprikát a mártással és a főtt burgonyával tálalod."
         ],
         "tip": "Augusztus–szeptemberben, friss paradicsommal és vékony falú TV-paprikával a legjobb.",
-        "totalCost": 3053
+        "totalCost": 3053,
+        "glutenFree": false
     },
     {
         "id": 1100,
@@ -7906,7 +8005,8 @@ window.recipeCatalog = [
             "3 percig pihenteted, majd a burgonyával és a káposztasalátával tálalod."
         ],
         "tip": "A tarja zsírosabb, mint a karaj, ezért grillen szaftos marad.",
-        "totalCost": 2253
+        "totalCost": 2253,
+        "glutenFree": true
     },
     {
         "id": 1101,
@@ -7991,7 +8091,8 @@ window.recipeCatalog = [
             "A kacsacombot a párolt káposztával és a hagymás tört burgonyával tálalod."
         ],
         "tip": "A megmaradt kacsazsír üvegben hetekig eláll – zsíros kenyérre vagy krumplisütéshez kiváló.",
-        "totalCost": 5771
+        "totalCost": 5771,
+        "glutenFree": true
     },
     {
         "id": 1102,
@@ -8086,7 +8187,8 @@ window.recipeCatalog = [
             "Cukorral édes-savanykásra ízesíted a mártást, és a gombócokat a burgonyával tálalod."
         ],
         "tip": "Rizzsel vagy nokedlivel is tálalható; a gombócok fagyasztva is elállnak.",
-        "totalCost": 2184
+        "totalCost": 2184,
+        "glutenFree": false
     },
     {
         "id": 1103,
@@ -8154,14 +8256,15 @@ window.recipeCatalog = [
         ],
         "steps": [
             "A karfiolt nagyobb rózsáira szeded, és bő, sós, forrásban lévő vízben 5–6 percig roppanósra előfőzöd. Leszűröd, és papírtörlőn hagyod teljesen kihűlni és megszáradni.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva).",
             "A rózsákat lisztbe, felvert sós tojásba, majd zsemlemorzsába forgatod.",
-            "A rizst a hu-08 receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés).",
+            "A rizst a „Hentestokány rizzsel” receptnél leírt módon párolod (átmosás, olajon üvegesre pirítás, kétszeres mennyiségű sós vízzel fedő alatt 18 perc, majd 5 perc pihentetés).",
             "Egy serpenyőben 1,5 cm magasan olajat hevítesz 170 °C-ra, és a karfiolt adagonként, forgatva 4–5 perc alatt aranybarnára sütöd. Papírtörlőre szeded.",
             "A tejfölt elkevered a zúzott fokhagymával és egy csipet sóval, és a karfiolt a rizzsel és a fokhagymás tejföllel tálalod."
         ],
         "tip": "A karfiol legyen teljesen száraz, különben a panír leválik. Tartármártással is klasszikus.",
-        "totalCost": 2184
+        "totalCost": 2184,
+        "glutenFree": false
     },
     {
         "id": 1104,
@@ -8236,7 +8339,8 @@ window.recipeCatalog = [
             "A tejfölt elkevered a maradék zúzott fokhagymával és egy csipet sóval, és a forró tócsnival tálalod."
         ],
         "tip": "Reszelt sajttal megszórva vagy savanyú káposztával is népszerű.",
-        "totalCost": 1009
+        "totalCost": 1009,
+        "glutenFree": false
     },
     {
         "id": 1105,
@@ -8311,12 +8415,13 @@ window.recipeCatalog = [
             "A burgonyát héjában puhára főzöd, még melegen meghámozod és áttöröd. Hagyod teljesen kihűlni.",
             "A kihűlt burgonyát a tojással, a puha vajjal, egy csipet sóval és annyi liszttel gyúrod össze, hogy rugalmas, nem ragadó tésztát kapj.",
             "A szilvákat oldalt bevágod, kiveszed a magjukat, és a helyükre egy csipet fahéjas cukrot teszel.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon kevergetve aranybarnára pirítod, és elkevered egy kevés fahéjjal.",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon kevergetve aranybarnára pirítod, és elkevered egy kevés fahéjjal.",
             "A tésztát lisztezett deszkán 0,5 cm vastagra nyújtod, 7×7 cm-es négyzetekre vágod, mindegyik közepére egy szilvát teszel, és a tésztát köré zárva sima gombóccá formázod.",
             "Bő, enyhén sós, forrásban lévő vízben adagonként főzöd; amikor feljönnek, még 8–10 percig gyöngyözve főzöd. Szűrőkanállal kiszeded, a pirított morzsába forgatod, és porcukorral meghintve tálalod."
         ],
         "tip": "Fagyasztott, felezett szilvával télen is elkészíthető; a nyers gombócok tálcán lefagyaszthatók.",
-        "totalCost": 1548
+        "totalCost": 1548,
+        "glutenFree": false
     },
     {
         "id": 1106,
@@ -8369,14 +8474,15 @@ window.recipeCatalog = [
         ],
         "steps": [
             "A lisztet 2 tojással, egy csipet sóval és kb. 1 dl langyos vízzel sima, rugalmas tésztává gyúrod, és 20 percig letakarva pihenteted.",
-            "A zsemlemorzsát a hu-03 receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon aranybarnára pirítod.",
+            "A zsemlemorzsát a „Rántott sertésszelet vajas burgonyával” receptnél leírt módon készíted (kockázott zsemle 100 °C-on kiszárítva, majd ledarálva). A morzsát a vajon aranybarnára pirítod.",
             "A tésztát lisztezett deszkán 2 mm vékonyra nyújtod. A felére 5 cm-enként egy-egy kávéskanál lekvárt teszel, a lekvárcsomók közötti részt felvert tojással megkened.",
             "Ráhajtod a tészta másik felét, ujjal a lekvár körül lenyomkodod, majd derelyevágóval vagy késsel négyzetekre vágod. A széleket villával összenyomod, hogy főzés közben ne nyíljanak szét.",
             "Bő, enyhén sós, forrásban lévő vízben 4–5 percig főzöd, amíg feljönnek.",
             "Leszűröd, a pirított morzsába forgatod, és porcukorral meghintve tálalod."
         ],
         "tip": "Túróval vagy diós töltelékkel is készülhet.",
-        "totalCost": 1699
+        "totalCost": 1699,
+        "glutenFree": false
     },
     {
         "id": 1107,
@@ -8441,7 +8547,8 @@ window.recipeCatalog = [
             "A forró galuskát a juhtúrós krémmel összeforgatod, tányérra szeded, a tetejére a maradék tejfölt és a pirított hagymát teszed."
         ],
         "tip": "A hagyományos változatban pirított szalonnakockák és a kisült zsír kerül rá.",
-        "totalCost": 2994
+        "totalCost": 2994,
+        "glutenFree": false
     },
     {
         "id": 1108,
@@ -8526,7 +8633,8 @@ window.recipeCatalog = [
             "Csemegeuborkával tálalod."
         ],
         "tip": "Vegyes erdei gombával még ízletesebb.",
-        "totalCost": 2091
+        "totalCost": 2091,
+        "glutenFree": false
     },
     {
         "id": 1109,
@@ -8636,7 +8744,8 @@ window.recipeCatalog = [
             "Tányéronként 2–3 palacsintát teszel, és bőven meglocsolod a forró csokoládémártással."
         ],
         "tip": "A legenda szerint a receptet Gundel Károly vendéglőjében tették híressé; a mártás legyen forró, a palacsinta meleg.",
-        "totalCost": 2579
+        "totalCost": 2579,
+        "glutenFree": false
     },
     {
         "id": 1110,
@@ -8681,7 +8790,8 @@ window.recipeCatalog = [
             "Melegen vagy langyosan, ízlés szerint mézzel meglocsolva tálalod."
         ],
         "tip": "A Nagydobosi sütőtök a legédesebb; október–novemberben, néhány hét érlelés után a legjobb.",
-        "totalCost": 1200
+        "totalCost": 1200,
+        "glutenFree": true
     },
     {
         "id": 1111,
@@ -8736,7 +8846,8 @@ window.recipeCatalog = [
             "Tálalás előtt reszelt étcsokoládéval vagy egy szem koktélcseresznyével díszíted, és hidegen kínálod."
         ],
         "tip": "Ha cukrozatlan gesztenyepürét kapsz, 25 dkg-hoz kb. 5–6 dkg porcukrot keverj.",
-        "totalCost": 3237
+        "totalCost": 3237,
+        "glutenFree": true
     },
     {
         "id": 1112,
@@ -8811,7 +8922,8 @@ window.recipeCatalog = [
             "Langyosra hűtöd, ferdén felszeleteled, és bőven porcukorral meghinted."
         ],
         "tip": "Az alma levét mindig nyomd ki, különben a rétes alja elázik. Túrós vagy mákos töltelékkel is ugyanígy készül.",
-        "totalCost": 2932
+        "totalCost": 2932,
+        "glutenFree": false
     },
     {
         "id": 1113,
@@ -8871,7 +8983,8 @@ window.recipeCatalog = [
             "A kihűlt tekercset óvatosan kitekered, megkened a lekvárral, újra feltekered, porcukorral meghinted, és ferdén szeleteled."
         ],
         "tip": "A melegen való feltekerés a titka: így nem reped meg a tekercs.",
-        "totalCost": 1244
+        "totalCost": 1244,
+        "glutenFree": false
     },
     {
         "id": 1114,
@@ -8951,7 +9064,8 @@ window.recipeCatalog = [
             "40–45 percig sütöd, amíg a tészta aranybarna és a közepébe szúrt tűpróba száraz. Langyosra hűtve kockákra vágod."
         ],
         "tip": "A fahéjas cukorba egy kevés darált diót is keverhetsz. Fagyasztott szilvával télen is elkészíthető.",
-        "totalCost": 1727
+        "totalCost": 1727,
+        "glutenFree": false
     },
     {
         "id": 2001,
@@ -9037,7 +9151,8 @@ window.recipeCatalog = [
             "A maradék olajon az erős paprikát 30 másodpercig, majd a fokhagymát, a gyömbért és az újhagyma fehér részét 30 másodpercig pirítod.",
             "Visszateszed a csirkét, ráöntöd a mártást, és 1 percig forgatod, amíg fényes és sűrű lesz. Belekevered a földimogyorót és az újhagyma zöldjét, és rizzsel tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2002,
@@ -9132,7 +9247,8 @@ window.recipeCatalog = [
             "Az olaj nagy részét leöntöd, 1 evőkanálnyit hagysz. Ezen a nagy kockákra vágott paprikákat és hagymát 2–3 percig, roppanósra pirítod.",
             "Ráöntöd a mártást, és kevergetve 1–2 percig főzöd, amíg sűrű és fényes. Belekevered a húst, és azonnal tálalod a rizzsel, amíg a bunda ropogós."
         ],
-        "tip": "A mártást kóstold: legyen egyszerre édes és savanykás; cukorral vagy citrommal igazíthatsz."
+        "tip": "A mártást kóstold: legyen egyszerre édes és savanykás; cukorral vagy citrommal igazíthatsz.",
+        "glutenFree": false
     },
     {
         "id": 2003,
@@ -9212,7 +9328,8 @@ window.recipeCatalog = [
             "A kisült zsír nagy részét papírtörlővel felitatod, majd ráöntöd a mártást, és 3–4 percig forralod, közben a húst többször megforgatod, amíg a mártás sűrű, fényes mázzá válik.",
             "A húst csíkokra vágod, a rizsre teszed, meglocsolod a mázzal, és szezámmaggal, újhagymával megszórva tálalod."
         ],
-        "tip": "Csirkemellből is készülhet, de a comb szaftosabb marad."
+        "tip": "Csirkemellből is készülhet, de a comb szaftosabb marad.",
+        "glutenFree": false
     },
     {
         "id": 2004,
@@ -9292,7 +9409,8 @@ window.recipeCatalog = [
             "Ráöntöd a maradék kókusztejet, hozzáadod a cukrot és a szójaszószt, felforralod, majd beleteszed a zöldségeket, és 6–8 percig gyöngyözve főzöd, amíg a csirke átfő és a zöldségek roppanósra puhulnak.",
             "A tűzről levéve belekevered a lime levét és egy marék bazsalikomlevelet. Ízlés szerint sóval, cukorral vagy több lime-mal igazítasz, és rizzsel tálalod."
         ],
-        "tip": "A currypaszták csípőssége márkánként eltér; kezdd kevesebbel, és kóstolva adj hozzá."
+        "tip": "A currypaszták csípőssége márkánként eltér; kezdd kevesebbel, és kóstolva adj hozzá.",
+        "glutenFree": false
     },
     {
         "id": 2005,
@@ -9392,7 +9510,8 @@ window.recipeCatalog = [
             "Belekevered a tejszínt, a cukrot és a csirkét, és fedő alatt 10–12 percig főzöd. A végén belekevered a maradék vajat, és utánasózod.",
             "Rizs: a rizst szitában hideg vízzel addig mosod, amíg a víz tiszta lesz. Egy lábasban 1,5-szeres mennyiségű vízzel (300 g rizshez 4,5 dl) és egy csipet sóval felforralod, majd fedő alatt, a leggyengébb lángon 12 percig főzöd. A tűzről levéve 10 percig fedő alatt pihenteted, végül villával fellazítod. A curryt a rizzsel tálalod."
         ],
-        "tip": "Naan kenyér helyett pirított tortilla vagy lepény is jó mellé."
+        "tip": "Naan kenyér helyett pirított tortilla vagy lepény is jó mellé.",
+        "glutenFree": true
     },
     {
         "id": 2006,
@@ -9477,7 +9596,8 @@ window.recipeCatalog = [
             "Hozzáadod a maradék olajat, a zúzott fokhagymát és a tésztát, ráöntöd a mártást, és 2–3 percig forgatod, amíg a tészta puha és bevonja a mártás. Ha kell, 2–3 evőkanál vizet adsz hozzá.",
             "Belekevered az újhagymát és a mogyoró felét, és a maradék mogyoróval, lime-gerezdekkel tálalod."
         ],
-        "tip": "Ne áztasd túl a tésztát, mert a wokban szétesik. Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Ne áztasd túl a tésztát, mert a wokban szétesik. Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2007,
@@ -9552,7 +9672,8 @@ window.recipeCatalog = [
             "Hozzáadod a maradék olajat és a rizst, kézzel szétmorzsolva, és nagy lángon 3–4 percig pirítod, hogy a szemek különváljanak és enyhén megpiruljanak.",
             "Ráöntöd a szójaszószt és a szezámolajat, visszateszed a tojást, és az újhagyma zöldjével összeforgatva tálalod."
         ],
-        "tip": "Frissen főtt rizsből ragacsos lesz; ha nincs időd, terítsd szét a friss rizst tálcán, és hűtsd 30 percig."
+        "tip": "Frissen főtt rizsből ragacsos lesz; ha nincs időd, terítsd szét a friss rizst tálcán, és hűtsd 30 percig.",
+        "glutenFree": false
     },
     {
         "id": 2008,
@@ -9637,7 +9758,8 @@ window.recipeCatalog = [
             "Az utolsó adaghoz hozzáadod a felkarikázott újhagymát.",
             "Szezámmaggal megszórva, rizzsel és vékonyra szeletelt uborkával tálalod. Koreai módon salátalevélbe tekerve is ehető."
         ],
-        "tip": "A körte enzimjei puhítják a húst – ne hagyd el."
+        "tip": "A körte enzimjei puhítják a húst – ne hagyd el.",
+        "glutenFree": false
     },
     {
         "id": 2009,
@@ -9727,7 +9849,8 @@ window.recipeCatalog = [
             "A roux-t egy merőkanálnyi főzőlével csomómentesre kevered, majd a lábasba öntöd. Hozzáadod a szójaszószt, a mézet és a reszelt almát, és kevergetve 8–10 percig főzöd, amíg sűrű, fényes lesz. Sóval ízesíted.",
             "Rizs: a rizst szitában hideg vízzel addig mosod, amíg a víz tiszta lesz. Egy lábasban 1,5-szeres mennyiségű vízzel (300 g rizshez 4,5 dl) és egy csipet sóval felforralod, majd fedő alatt, a leggyengébb lángon 12 percig főzöd. A tűzről levéve 10 percig fedő alatt pihenteted, végül villával fellazítod. A tányér egyik felére rizst, a másikra curryt szedsz."
         ],
-        "tip": "Panírozott sertésszelettel (tonkatsu, as-16) tálalva lesz belőle katsu curry."
+        "tip": "Panírozott sertésszelettel (lásd a „Tonkatsu – japán rántott sertés káposztasalátával” receptet) tálalva lesz belőle katsu curry.",
+        "glutenFree": false
     },
     {
         "id": 2010,
@@ -9817,7 +9940,8 @@ window.recipeCatalog = [
             "Felöntöd 2,5 dl vízzel, hozzáadod a szójaszószt és a cukrot, belecsúsztatod a tofut, és 5 percig gyöngyözve főzöd, a serpenyőt rázogatva (kanállal ne kevergesd, mert a tofu összetörik).",
             "A keményítőt 3 evőkanál hideg vízzel elkevered, és két részletben a mártáshoz öntöd, amíg fényes, sűrű lesz. Borssal és újhagymával megszórva, rizzsel tálalod."
         ],
-        "tip": "Az eredeti recepthez szecsuáni bors és fermentált chilis babpaszta (doubanjiang) kell; ázsiai boltban kapható."
+        "tip": "Az eredeti recepthez szecsuáni bors és fermentált chilis babpaszta (doubanjiang) kell; ázsiai boltban kapható.",
+        "glutenFree": false
     },
     {
         "id": 2011,
@@ -9912,7 +10036,8 @@ window.recipeCatalog = [
             "A rizstésztát a csomagolás szerint beáztatod vagy kifőzöd, leszűröd, és mély tálakba osztod.",
             "A tésztára halmozod a csirkehúst és a felkarikázott újhagymát, ráöntöd a forró levest. Mellé lime-gerezdeket, felkarikázott erős paprikát és friss zöldfűszereket adsz, amit mindenki ízlése szerint tép bele."
         ],
-        "tip": "A leves lefagyasztható; a tésztát mindig frissen készítsd hozzá."
+        "tip": "A leves lefagyasztható; a tésztát mindig frissen készítsd hozzá.",
+        "glutenFree": false
     },
     {
         "id": 2012,
@@ -9997,7 +10122,8 @@ window.recipeCatalog = [
             "A tésztát külön, a csomagoláson jelzett ideig kifőzöd, leszűröd, és mély tálakba osztod.",
             "Ráöntöd a forró alaplét a gombával, rárakod a felszeletelt húst, a félbevágott tojásokat, a lecsöpögtetett kukoricát és az újhagyma felkarikázott zöldjét."
         ],
-        "tip": "A tojás sárgája legyen folyós, krémes – ez a ramen ékköve."
+        "tip": "A tojás sárgája legyen folyós, krémes – ez a ramen ékköve.",
+        "glutenFree": false
     },
     {
         "id": 2013,
@@ -10082,7 +10208,8 @@ window.recipeCatalog = [
             "A maradék olajon a fokhagymát és a gyömbért 30 másodpercig, majd a répát és a káposztát 2–3 percig pirítod, hogy roppanós maradjon.",
             "Hozzáadod a tésztát, a csirkét, a maradék szójaszószt, a cukrot és a szezámolajat, és nagy lángon 2 percig forgatod. Az újhagymával összeforgatva tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2014,
@@ -10172,7 +10299,8 @@ window.recipeCatalog = [
             "Forró grillserpenyőben, grillen vagy sütő grillfunkciója alatt oldalanként 3–4 percig sütöd, amíg átsül és a széle megpirul.",
             "A nyársakat a mogyorószósszal, rizzsel, felszeletelt uborkával és lime-gerezdekkel tálalod."
         ],
-        "tip": "Sertéscombból vagy pulykamellből is készülhet."
+        "tip": "Sertéscombból vagy pulykamellből is készülhet.",
+        "glutenFree": false
     },
     {
         "id": 2015,
@@ -10257,7 +10385,8 @@ window.recipeCatalog = [
             "A szezámmagot száraz serpenyőben illatosra pirítod.",
             "Egy tiszta serpenyőben a mártást felforralod, és 1–2 percig főzöd, amíg sűrű, fényes. Beleforgatod a csirkét, megszórod szezámmaggal és újhagymával, és azonnal tálalod a rizzsel."
         ],
-        "tip": "A ropogósság érdekében közvetlenül tálalás előtt forgasd a csirkét a mázba."
+        "tip": "A ropogósság érdekében közvetlenül tálalás előtt forgasd a csirkét a mázba.",
+        "glutenFree": false
     },
     {
         "id": 2016,
@@ -10352,7 +10481,8 @@ window.recipeCatalog = [
             "Rizs: a rizst szitában hideg vízzel addig mosod, amíg a víz tiszta lesz. Egy lábasban 1,5-szeres mennyiségű vízzel (300 g rizshez 4,5 dl) és egy csipet sóval felforralod, majd fedő alatt, a leggyengébb lángon 12 percig főzöd. A tűzről levéve 10 percig fedő alatt pihenteted, végül villával fellazítod. A káposztát nagyon vékonyra gyalulod, és jeges vízbe teszed 10 percre, hogy ropogós legyen, majd lecsöpögteted.",
             "Egy mély serpenyőben 2–3 cm magasan olajat hevítesz 170 °C-ra, és a húst oldalanként 3–4 percig aranybarnára sütöd. 3 percig rácson pihenteted, majd 2 cm-es csíkokra vágod. Káposztával, rizzsel, citromgerezddel és a szósszal tálalod."
         ],
-        "tip": "A pihentetés közben a hús belseje tovább sül, de a bunda ropogós marad."
+        "tip": "A pihentetés közben a hús belseje tovább sül, de a bunda ropogós marad.",
+        "glutenFree": false
     },
     {
         "id": 2017,
@@ -10437,7 +10567,8 @@ window.recipeCatalog = [
             "Hozzáadod a garnélát (előfőzött koktélráknál csak 1 percig melegíted), majd a tésztát és a mártást.",
             "Nagy lángon 2 percig forgatod, amíg a tészta átmelegszik és bevonja a mártás. Az újhagymával összeforgatva tálalod."
         ],
-        "tip": "Nyers garnélát 2–3 percig süss, amíg rózsaszínű lesz. Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Nyers garnélát 2–3 percig süss, amíg rózsaszínű lesz. Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2018,
@@ -10532,7 +10663,8 @@ window.recipeCatalog = [
             "Belecsúsztatod a halat és a paradicsomot, és fedő alatt, kis lángon 6–8 percig főzöd, amíg a hal fehér és lapjaira válik. Ne kevergesd, csak rázogasd.",
             "Lime levével ízesíted, és rizzsel, korianderrel tálalod."
         ],
-        "tip": "Bármilyen tömör fehér húsú hal (tőkehal, pangasius, alaszkai tőkehal) megfelel."
+        "tip": "Bármilyen tömör fehér húsú hal (tőkehal, pangasius, alaszkai tőkehal) megfelel.",
+        "glutenFree": false
     },
     {
         "id": 2019,
@@ -10622,7 +10754,8 @@ window.recipeCatalog = [
             "Máz: egy nagy serpenyőben a mézet, a szójaszószt, a chilit, a fűszerpaprikát, a zúzott fokhagymát és a szezámolajat felforralod, és 2–3 percig főzöd, amíg sűrű, ragacsos lesz.",
             "A forró szárnyakat beleforgatod a mázba, megszórod szezámmaggal és újhagymával, és rizzsel tálalod."
         ],
-        "tip": "Sütőpor helyett bármilyen keményítő is működik, de ropogósabb vele."
+        "tip": "A sütőpor teszi a bőrt igazán ropogóssá; nélküle, csak keményítővel is jó, de kevésbé ropogós.",
+        "glutenFree": false
     },
     {
         "id": 2020,
@@ -10712,7 +10845,8 @@ window.recipeCatalog = [
             "Az alsó részét ráhajtod a töltelékre, behajtod az oldalait, és szorosan feltekered, mint egy burritót.",
             "A kész tekercseket nedves ruha alatt tárolod, és a mogyorós mártással azonnal tálalod."
         ],
-        "tip": "Fejenként 4 tekercs egy könnyű főétel."
+        "tip": "Fejenként 4 tekercs egy könnyű főétel.",
+        "glutenFree": false
     },
     {
         "id": 2021,
@@ -10802,7 +10936,8 @@ window.recipeCatalog = [
             "Egy fedővel zárható serpenyőben 1 evőkanál olajat hevítesz, és a gombócokat lapos aljukra ültetve 2 percig aranybarnára sütöd. Ráöntesz 1 dl vizet, azonnal lefeded, és 5–6 percig gőzölöd, amíg a víz elfő. Fedő nélkül még 1 percig sütöd, hogy az alja újra ropogós legyen.",
             "Mártogató: 2 evőkanál szójaszószt elkeversz a citromlével és a chilivel. A gyozát ropogós aljával felfelé tálalod a mártással."
         ],
-        "tip": "A formázott, nyers gyoza tálcán lefagyasztható, és fagyasztva is süthető (1–2 perccel hosszabban gőzöld)."
+        "tip": "A formázott, nyers gyoza tálcán lefagyasztható, és fagyasztva is süthető (1–2 perccel hosszabban gőzöld).",
+        "glutenFree": false
     },
     {
         "id": 2022,
@@ -10892,7 +11027,8 @@ window.recipeCatalog = [
             "Amikor langyosra hűlt, hozzáadod a vékonyra szeletelt lilahagymát, a felkarikázott újhagymát, a tépett bazsalikomot és a rizspor nagy részét.",
             "Káposztalevelekben, uborkával és rizzsel tálalod, a tetejére a maradék rizsport szórod."
         ],
-        "tip": "Langyosan vagy szobahőmérsékleten a legfinomabb."
+        "tip": "Langyosan vagy szobahőmérsékleten a legfinomabb.",
+        "glutenFree": false
     },
     {
         "id": 2023,
@@ -10972,7 +11108,8 @@ window.recipeCatalog = [
             "A wokban 1 evőkanál olajon a csirkét 3–4 percig pirítod, amíg átsül, kiszeded. A maradék olajon a reszelt gyömbért és a zúzott fokhagymát 30 másodpercig pirítod.",
             "Hozzáadod a brokkolit és a csirkét, ráöntöd a mártást, és 1–2 percig forgatod, amíg sűrű és fényes. Rizzsel tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2024,
@@ -11072,7 +11209,8 @@ window.recipeCatalog = [
             "A rizst a csirkére rétegezed, megszórod a mazsolával, az olvasztott vajjal meglocsolod, és a tetejére 3 evőkanál vizet öntesz. A lábast alufóliával, majd a fedővel szorosan lezárod, és a leggyengébb lángon 20 percig gőzölöd.",
             "A mandulát száraz serpenyőben megpirítod. Tálaláskor a biryanit óvatosan, rétegenként szeded ki, és a pirított hagymával, mandulával szórod meg."
         ],
-        "tip": "Tálald egy kis uborkás tejföllel (raita) mellé."
+        "tip": "Tálald egy kis uborkás tejföllel (raita) mellé.",
+        "glutenFree": true
     },
     {
         "id": 2025,
@@ -11147,7 +11285,8 @@ window.recipeCatalog = [
             "Ráöntöd a szójaszószt, a cukrot és 2 evőkanál vizet, 1 percig forgatod, majd a tűzről levéve belekevered a bazsalikomleveleket.",
             "Tükörtojás: egy serpenyőben 3 evőkanál olajat nagyon forróra hevítesz, és a tojásokat egyenként beleütve, a forró olajjal locsolgatva 1–2 percig sütöd, amíg a széle csipkésen ropogós, a sárgája folyós. A hússal és rizzsel tálalod."
         ],
-        "tip": "A thai szent bazsalikom (kra pao) borsosabb, de az olasz bazsalikom is finom vele."
+        "tip": "A thai szent bazsalikom (kra pao) borsosabb, de az olasz bazsalikom is finom vele.",
+        "glutenFree": false
     },
     {
         "id": 2026,
@@ -11227,7 +11366,8 @@ window.recipeCatalog = [
             "Hozzáadod a rizst, szétmorzsolod, és nagy lángon 3–4 percig pirítod.",
             "Ráöntöd a szójaszószt és a szezámolajat, visszateszed a tojást, és az újhagyma zöldjével összeforgatva tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2027,
@@ -11317,7 +11457,8 @@ window.recipeCatalog = [
             "Hozzáadod a tésztát és a mártást, 2–3 percig forgatod, amíg a tészta megpuhul (ha kell, 2–3 ek vizet adsz hozzá).",
             "Belekevered a tofut, az újhagymát, a maradék szójaszószt és a mogyoró felét; a maradék mogyoróval és lime-gerezdekkel tálalod."
         ],
-        "tip": "A tofu kinyomkodása után sokkal ropogósabbra sül."
+        "tip": "A tofu kinyomkodása után sokkal ropogósabbra sül.",
+        "glutenFree": false
     },
     {
         "id": 2028,
@@ -11407,7 +11548,8 @@ window.recipeCatalog = [
             "Ráöntöd a kókusztejet, hozzáadod a szójaszószt és a cukrot, felforralod, majd beleteszed a répát; 3 perc múlva a többi zöldséget, és 6–7 percig gyöngyözve főzöd.",
             "Belekevered a tofut, a lime levét és a bazsalikomot, és rizzsel tálalod."
         ],
-        "tip": "Bármilyen szezonális zöldség mehet bele: zöldbab, padlizsán, édesburgonya."
+        "tip": "Bármilyen szezonális zöldség mehet bele: zöldbab, padlizsán, édesburgonya.",
+        "glutenFree": false
     },
     {
         "id": 2029,
@@ -11502,7 +11644,8 @@ window.recipeCatalog = [
             "Hozzáadod a paradicsomot, és 8–10 percig főzöd, amíg az olaj kiválik a széleken. Belekevered a csicseriborsót és 3 dl vizet, sózod, és 10 percig főzöd. Néhány szem borsót kanállal szétnyomsz, hogy sűrűbb legyen.",
             "Citromlével ízesíted, és rizzsel (vagy lepénnyel) tálalod."
         ],
-        "tip": "Egy kanál tejföl vagy joghurt a tetején kellemesen tompítja a csípősséget."
+        "tip": "Egy kanál tejföl vagy joghurt a tetején kellemesen tompítja a csípősséget.",
+        "glutenFree": true
     },
     {
         "id": 2030,
@@ -11587,7 +11730,8 @@ window.recipeCatalog = [
             "A tadkát a lencsébe öntöd (sistereg), összekevered, és 2 percig együtt főzöd.",
             "Citromlével ízesíted, és a rizzsel tálalod."
         ],
-        "tip": "Hígabbra főzve leves, sűrűbben főzelék – mindkét formában eszik Indiában."
+        "tip": "Hígabbra főzve leves, sűrűbben főzelék – mindkét formában eszik Indiában.",
+        "glutenFree": true
     },
     {
         "id": 2031,
@@ -11682,7 +11826,8 @@ window.recipeCatalog = [
             "Hozzáadod a felkockázott paradicsomot, sózod, 3 percig főzöd, majd visszateszed a zöldségeket, aláöntesz 1 dl vizet, és fedő alatt, kis lángon 10–12 percig párolod, amíg puhák.",
             "Fedő nélkül még 2–3 percig pirítod, hogy a zöldségek „szárazak” legyenek, citromlével ízesíted, és rizzsel tálalod."
         ],
-        "tip": "Nem főzelék, hanem száraz curry: a zöldségeket csak a fűszerek vonják be."
+        "tip": "Nem főzelék, hanem száraz curry: a zöldségeket csak a fűszerek vonják be.",
+        "glutenFree": true
     },
     {
         "id": 2032,
@@ -11772,7 +11917,8 @@ window.recipeCatalog = [
             "Beleteszed a fagyasztott spenótot, és 10 percig főzöd, amíg felolvad és a mártás besűrűsödik.",
             "Sóval és citromlével ízesíted, és rizzsel tálalod."
         ],
-        "tip": "A spenót egy részét turmixold bele, így zöldebb és krémesebb lesz."
+        "tip": "A spenót egy részét turmixold bele, így zöldebb és krémesebb lesz.",
+        "glutenFree": true
     },
     {
         "id": 2033,
@@ -11862,7 +12008,8 @@ window.recipeCatalog = [
             "Felöntöd 2,5 dl vízzel, hozzáadod a szójaszószt és a cukrot, belecsúsztatod a tofut, és 5 percig gyöngyözve főzöd, a serpenyőt rázogatva.",
             "A keményítőt 3 evőkanál vízzel elkevered, és a mártáshoz öntöd, amíg fényes, sűrű lesz. Borssal, újhagymával és rizzsel tálalod."
         ],
-        "tip": "A gomba pirítása a lényeg: minél barnább, annál húsosabb az íze."
+        "tip": "A gomba pirítása a lényeg: minél barnább, annál húsosabb az íze.",
+        "glutenFree": false
     },
     {
         "id": 2034,
@@ -11947,7 +12094,8 @@ window.recipeCatalog = [
             "Hozzáadod a tésztát, a gombát, a szójaszószt, a cukrot és a maradék szezámolajat, és 2 percig forgatod.",
             "Az újhagymával összeforgatva tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2035,
@@ -12042,7 +12190,8 @@ window.recipeCatalog = [
             "A szezámmagot száraz serpenyőben megpirítod.",
             "A tésztát összeforgatod a mártással, tálakba szeded, a tetejére halmozod a zöldségeket, a tojást, és megszórod szezámmaggal, újhagymával."
         ],
-        "tip": "Előre is elkészíthető; tálalás előtt egy kevés vízzel lazítsd a mártást."
+        "tip": "Előre is elkészíthető; tálalás előtt egy kevés vízzel lazítsd a mártást.",
+        "glutenFree": false
     },
     {
         "id": 2036,
@@ -12142,7 +12291,8 @@ window.recipeCatalog = [
             "Hozzáadod a borsót, a szójaszószt, a mézet és a reszelt almát, és kevergetve 8 percig főzöd, amíg sűrű, fényes. Sóval ízesíted.",
             "Rizs: a rizst szitában hideg vízzel addig mosod, amíg a víz tiszta lesz. Egy lábasban 1,5-szeres mennyiségű vízzel (300 g rizshez 4,5 dl) és egy csipet sóval felforralod, majd fedő alatt, a leggyengébb lángon 12 percig főzöd. A tűzről levéve 10 percig fedő alatt pihenteted, végül villával fellazítod."
         ],
-        "tip": "Egy darab étcsokoládé vagy egy kanál ketchup a mártásban japán háziasszony-trükk."
+        "tip": "Egy darab étcsokoládé vagy egy kanál ketchup a mártásban japán háziasszony-trükk.",
+        "glutenFree": false
     },
     {
         "id": 2037,
@@ -12212,7 +12362,8 @@ window.recipeCatalog = [
             "A maradék olajon a paradicsomot 3–4 percig nagy lángon főzöd, amíg kiengedi a levét és kissé szétesik. Hozzáadod a cukrot, a szójaszószt, a sót és a 3 evőkanál vízzel elkevert keményítőt.",
             "Visszateszed a tojást, 30 másodpercig összeforgatod, megszórod újhagymával, és rizzsel tálalod."
         ],
-        "tip": "A tojást ne süsd túl, hiszen a paradicsomban tovább fő."
+        "tip": "A tojást ne süsd túl, hiszen a paradicsomban tovább fő.",
+        "glutenFree": false
     },
     {
         "id": 2038,
@@ -12312,7 +12463,8 @@ window.recipeCatalog = [
             "A tojásokat egy kevés olajon tükörtojásnak sütöd, folyós sárgával.",
             "A rizst tálakba szeded, a tetejére körben, egymás mellé rendezed a zöldségeket, középre a tojást, és szezámmaggal, szezámolajjal, egy kanál mártással tálalod. Evés előtt mindenki összekeveri az egészet."
         ],
-        "tip": "Forró, olajjal kikent kőedényben (dolsot) a rizs alja ropogósra sül."
+        "tip": "Forró, olajjal kikent kőedényben (dolsot) a rizs alja ropogósra sül.",
+        "glutenFree": false
     },
     {
         "id": 2039,
@@ -12392,7 +12544,8 @@ window.recipeCatalog = [
             "A padlizsánokat megfordítod, a vágott felüket vastagon megkened a mázzal, és a sütő grillfunkciója alatt 3–5 percig sütöd, amíg a máz bugyog és karamellizálódik.",
             "Szezámmaggal és újhagymával megszórva, rizzsel és párolt brokkolival tálalod."
         ],
-        "tip": "Ha kapsz miso pasztát, 2 ek-t használj a szójaszósz és a mogyoróvaj helyett."
+        "tip": "Ha kapsz miso pasztát, 2 ek-t használj a szójaszósz és a mogyoróvaj helyett.",
+        "glutenFree": false
     },
     {
         "id": 2040,
@@ -12497,7 +12650,8 @@ window.recipeCatalog = [
             "A rizst a zöldségekre rétegezed, megszórod a mazsolával, meglocsolod az olvasztott vajjal és 3 evőkanál vízzel. A lábast fóliával és fedővel szorosan lezárod, és a leggyengébb lángon 20 percig gőzölöd.",
             "A mandulát megpirítod. Tálaláskor a biryanit a pirított hagymával és mandulával szórod meg."
         ],
-        "tip": "Uborkás tejföllel (raita) tálald."
+        "tip": "Uborkás tejföllel (raita) tálald.",
+        "glutenFree": true
     },
     {
         "id": 2041,
@@ -12577,7 +12731,8 @@ window.recipeCatalog = [
             "Mártás: a szójaszószt összekevered a mézzel, a szezámolajjal, 1 evőkanál keményítővel és 1 dl vízzel. A maradék olajon a gyömbért és a fokhagymát 30 másodpercig pirítod, hozzáadod a brokkolit, majd a mártást, és 1 percig forgatod, amíg sűrű.",
             "Beleforgatod a tofut, szezámmaggal megszórod, és rizzsel tálalod."
         ],
-        "tip": "A tofut csak az utolsó pillanatban forgasd a mártásba, így ropogós marad."
+        "tip": "A tofut csak az utolsó pillanatban forgasd a mártásba, így ropogós marad.",
+        "glutenFree": false
     },
     {
         "id": 2042,
@@ -12672,7 +12827,8 @@ window.recipeCatalog = [
             "Belekevered a csicseriborsót és a spenótot, és további 5 percig főzöd.",
             "Lime levével ízesíted, és rizzsel tálalod."
         ],
-        "tip": "Néhány édesburgonya-kockát nyomj szét a mártásban, így krémesebb lesz."
+        "tip": "Néhány édesburgonya-kockát nyomj szét a mártásban, így krémesebb lesz.",
+        "glutenFree": true
     },
     {
         "id": 2043,
@@ -12762,7 +12918,8 @@ window.recipeCatalog = [
             "A tojásokat felvered, és vékony sugárban, villán keresztül csorgatva, lassan körkörösen kevergetve a forró levesbe öntöd – finom tojásfátyol lesz belőle.",
             "Lehúzod a tűzről, belekevered a citromlevet és a szezámolajat, és újhagymával megszórva tálalod."
         ],
-        "tip": "A savanyúságot és a borsosságot kóstolva igazítsd: legyen markáns mindkettő."
+        "tip": "A savanyúságot és a borsosságot kóstolva igazítsd: legyen markáns mindkettő.",
+        "glutenFree": false
     },
     {
         "id": 2044,
@@ -12857,7 +13014,8 @@ window.recipeCatalog = [
             "A mogyorót durvára vágod.",
             "Tálakba szeded a tésztát, mellé halmozod a zöldségeket, a tofut és a tépett fűszereket, megszórod mogyoróval, és az öntetet külön adod, hogy mindenki ráöntse és összekeverje."
         ],
-        "tip": "Nyáron tökéletes ebéd; minden előre elkészíthető."
+        "tip": "Nyáron tökéletes ebéd; minden előre elkészíthető.",
+        "glutenFree": false
     },
     {
         "id": 2045,
@@ -12947,7 +13105,8 @@ window.recipeCatalog = [
             "Belekevered a burgonyát, felöntöd 4 dl vízzel, sózod, és fedő alatt 15 percig főzöd, amíg a burgonya majdnem puha.",
             "Hozzáadod a borsót, és további 5 percig főzöd. Rizzsel tálalod."
         ],
-        "tip": "Ha szereted, a végén egy kanál vajat keverj bele."
+        "tip": "Ha szereted, a végén egy kanál vajat keverj bele.",
+        "glutenFree": true
     },
     {
         "id": 2046,
@@ -13037,7 +13196,8 @@ window.recipeCatalog = [
             "Megfordítod, a széle mellé még egy kevés olajat csorgatsz, és a másik oldalát is 3 percig sütöd. Így készíted el mind a négyet.",
             "Mártogató: a szójaszószt elkevered a citromlével, 1 evőkanál vízzel és a szezámmaggal. A palacsintákat cikkekre vágva, a mártással tálalod."
         ],
-        "tip": "A hideg víz és a rizsliszt teszi ropogóssá; ne keverd túl a tésztát."
+        "tip": "A hideg víz és a rizsliszt teszi ropogóssá; ne keverd túl a tésztát.",
+        "glutenFree": false
     },
     {
         "id": 2047,
@@ -13122,7 +13282,8 @@ window.recipeCatalog = [
             "Hozzáadod a tésztát és a mártást, és 2 percig forgatod, amíg a mártás besűrűsödik és bevonja a tésztát.",
             "Visszateszed a tojást, és az újhagymával összeforgatva tálalod."
         ],
-        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz."
+        "tip": "Wok helyett egy nagy, vastag aljú serpenyő is megfelel; a lényeg, hogy nagyon forró legyen, és kis adagokban dolgozz.",
+        "glutenFree": false
     },
     {
         "id": 2048,
@@ -13136,7 +13297,7 @@ window.recipeCatalog = [
         "totalCost": 1707,
         "access": "pro",
         "servings": 4,
-        "description": "Oszakai „ahogy szereted” palacsinta: sok káposztával, tojással, mézes-szójás mázzal és majonézzel csíkozva.",
+        "description": "Oszakai „ahogy szereted” palacsinta: sok káposztával, tojással, mézes-szójás mázzal és tejföllel csíkozva.",
         "ingredients": [
             {
                 "name": "fejes káposzta",
@@ -13212,7 +13373,8 @@ window.recipeCatalog = [
             "Egy tányér segítségével megfordítod, és fedő nélkül további 5–6 percig sütöd, amíg a közepe is átsül. A második adagot ugyanígy.",
             "A tetejét megkened a szósszal, csíkokban rácsorgatod a tejfölt, és szezámmaggal, újhagymával megszórva tálalod."
         ],
-        "tip": "Hagyományosan pirított disznóhús-szeletek is kerülnek rá; ez a húsmentes változat."
+        "tip": "Hagyományosan pirított disznóhús-szeletek is kerülnek rá; ez a húsmentes változat.",
+        "glutenFree": false
     },
     {
         "id": 2049,
@@ -13282,7 +13444,8 @@ window.recipeCatalog = [
             "A tojásokat felvered, és vékony sugárban, lassan kevergetve a levesbe csorgatod, hogy finom fátylakat alkosson.",
             "Szezámolajjal meglocsolva, újhagymával megszórva tálalod."
         ],
-        "tip": "Egy csésze tofukocka vagy zöldborsó laktatóbbá teszi."
+        "tip": "Egy csésze tofukocka vagy zöldborsó laktatóbbá teszi.",
+        "glutenFree": false
     },
     {
         "id": 2050,
@@ -13377,7 +13540,8 @@ window.recipeCatalog = [
             "Az alsó harmadára tésztát, zöldségeket, tofut és fűszerleveleket halmozol, ráhajtod az alját, behajtod az oldalait, és szorosan feltekered.",
             "A tekercseket nedves ruha alatt tárolod, és a mogyorós mártással tálalod."
         ],
-        "tip": "A rizspapírt ne áztasd túl, mert szakad; a pulton magától tovább puhul."
+        "tip": "A rizspapírt ne áztasd túl, mert szakad; a pulton magától tovább puhul.",
+        "glutenFree": false
     },
     {
         "id": 2051,
@@ -13437,7 +13601,8 @@ window.recipeCatalog = [
             "A mangót meghámozod, és a magja mentén levágott húsát szeletekre vágod.",
             "A rizst tányérra szeded, mellé teszed a mangót, meglocsolod a kókuszkrémmel, és pirított szezámmaggal szórod meg."
         ],
-        "tip": "A mangó legyen nagyon érett és illatos; a fagyasztott mangó kiolvasztva is jó."
+        "tip": "A mangó legyen nagyon érett és illatos; a fagyasztott mangó kiolvasztva is jó.",
+        "glutenFree": true
     },
     {
         "id": 2052,
@@ -13497,7 +13662,8 @@ window.recipeCatalog = [
             "A pudingot tálkákba szeded; langyosan vagy hűtve is tálalhatod.",
             "A tetejét pirított kókusszal és a maradék lime-héjjal szórod meg."
         ],
-        "tip": "Mangó- vagy banánszeletekkel még trópusibb."
+        "tip": "Mangó- vagy banánszeletekkel még trópusibb.",
+        "glutenFree": true
     },
     {
         "id": 2053,
@@ -13552,7 +13718,8 @@ window.recipeCatalog = [
             "A kókusztejet 2 dl vízzel, a cukorral, a vaníliás cukorral és a sóval felmelegíted (ne forrald erősen).",
             "Beleteszed a gombócokat, 1 percig melegíted, és tálkákba merve melegen tálalod."
         ],
-        "tip": "Az eredetihez ragacsos rizsliszt kell; sima rizsliszttel kissé kevésbé rágós."
+        "tip": "Az eredetihez ragacsos rizsliszt kell; sima rizsliszttel kissé kevésbé rágós.",
+        "glutenFree": true
     },
     {
         "id": 2054,
@@ -13622,7 +13789,8 @@ window.recipeCatalog = [
             "Papírtörlőre szeded, hogy lecsöpögjön.",
             "Melegen, mézzel meglocsolva tálalod."
         ],
-        "tip": "Vaníliafagylalttal is remek."
+        "tip": "Vaníliafagylalttal is remek.",
+        "glutenFree": false
     },
     {
         "id": 2055,
@@ -13677,7 +13845,8 @@ window.recipeCatalog = [
             "Legalább 3 órára hűtőbe teszed, amíg megdermed.",
             "Tálaláskor a maradék kókusztejet ráöntöd, és a másik mangó kockáival díszíted."
         ],
-        "tip": "Fagyasztott mangóból egész évben elkészíthető."
+        "tip": "Fagyasztott mangóból egész évben elkészíthető.",
+        "glutenFree": true
     },
     {
         "id": 2056,
@@ -13747,7 +13916,8 @@ window.recipeCatalog = [
             "Az alját ráhajtod, behajtod az oldalait, és szorosan feltekered, mint egy tavaszi tekercset.",
             "Félbevágva, szobahőmérsékleten tálalod."
         ],
-        "tip": "A zöld szín hagyományosan pandanlevéltől van; spenóttal ízmentesen is színezhetsz."
+        "tip": "A zöld szín hagyományosan pandanlevéltől van; spenóttal ízmentesen is színezhetsz.",
+        "glutenFree": false
     },
     {
         "id": 2057,
@@ -13802,7 +13972,8 @@ window.recipeCatalog = [
             "A körtéket tálkákba állítod, és leöntöd a gyömbéres sziruppal.",
             "Pirított dióval megszórva melegen tálalod."
         ],
-        "tip": "Egy darab fahéjrúd vagy csillagánizs is mehet a sziruphoz."
+        "tip": "Egy darab fahéjrúd vagy csillagánizs is mehet a sziruphoz.",
+        "glutenFree": true
     },
     {
         "id": 2058,
@@ -13862,7 +14033,8 @@ window.recipeCatalog = [
             "A mandulát felszeleteled és száraz serpenyőben megpirítod.",
             "Melegen, mandulával megszórva tálalod."
         ],
-        "tip": "Hidegen is finom, de hagyományosan melegen eszik."
+        "tip": "Hidegen is finom, de hagyományosan melegen eszik.",
+        "glutenFree": true
     },
     {
         "id": 2059,
@@ -13922,7 +14094,8 @@ window.recipeCatalog = [
             "A kheert tálkákba szeded; kihűlve tovább sűrűsödik.",
             "Langyosan vagy hűtve, mandulával megszórva tálalod."
         ],
-        "tip": "Egy csipet sáfrány aranyszínt és különleges illatot ad."
+        "tip": "Egy csipet sáfrány aranyszínt és különleges illatot ad.",
+        "glutenFree": true
     },
     {
         "id": 2060,
@@ -13987,7 +14160,8 @@ window.recipeCatalog = [
             "Letakarva kihűtöd őket, hogy puhák maradjanak.",
             "Egy palacsintát megkensz bőven lekvárral, ráteszel egy másikat, és a széleket enyhén összenyomod."
         ],
-        "tip": "Ha kapsz édes vörösbabkrémet (anko), azzal az igazi."
+        "tip": "Ha kapsz édes vörösbabkrémet (anko), azzal az igazi.",
+        "glutenFree": false
     },
     {
         "id": 2061,
@@ -14047,7 +14221,8 @@ window.recipeCatalog = [
             "10 percig 200 °C-on, majd 180 °C-on további 12–15 percig sütöd, amíg a krém épp megköt (enyhén remeg). Ha puffadni kezd, kicsit nyisd ki a sütő ajtaját.",
             "Langyosan a legfinomabbak."
         ],
-        "tip": "A túlsütött krém felhólyagosodik; a tökéletes tetején tükörsima, fényes."
+        "tip": "A túlsütött krém felhólyagosodik; a jól sikerült krém teteje tükörsima és fényes.",
+        "glutenFree": false
     },
     {
         "id": 2062,
@@ -14097,7 +14272,8 @@ window.recipeCatalog = [
             "Azonnal a sütőpapírra öntöd, és a kiolajozott nyújtófával 3–4 mm vastagra nyújtod.",
             "Amíg még langyos és hajlítható, éles késsel rombuszokra vágod. Kihűlve ropogós lesz; légmentesen tárolod."
         ],
-        "tip": "Vigyázz, a forró karamell súlyos égési sérülést okozhat; gyerekek ne dolgozzanak vele."
+        "tip": "Vigyázz, a forró karamell súlyos égési sérülést okozhat; gyerekek ne dolgozzanak vele.",
+        "glutenFree": true
     },
     {
         "id": 2063,
@@ -14152,7 +14328,8 @@ window.recipeCatalog = [
             "A tetejét pirított kókusszal és mogyoróval szórod meg.",
             "Azonnal tálalod."
         ],
-        "tip": "Egy csipet chilipor az öntetben izgalmas thai csavar."
+        "tip": "Egy csipet chilipor az öntetben izgalmas thai csavar.",
+        "glutenFree": true
     },
     {
         "id": 2064,
@@ -14217,7 +14394,8 @@ window.recipeCatalog = [
             "Mindegyik közepébe egy szem mandulát nyomsz, és a tetejüket megkened felvert tojással.",
             "12–15 percig sütöd, amíg aranyszínűek. A tepsin hűtöd ki, mert melegen törékenyek."
         ],
-        "tip": "Légmentes dobozban 2 hétig eláll."
+        "tip": "Légmentes dobozban 2 hétig eláll.",
+        "glutenFree": false
     },
     {
         "id": 2065,
@@ -14287,7 +14465,8 @@ window.recipeCatalog = [
             "Egy olajozott spatulával vagy pohár aljával 1 cm vastag lepénnyé nyomod, és 1,5–2 percig sütöd, majd megfordítod, és a másik oldalát is aranybarnára sütöd, közben a cukor belül megolvad.",
             "Melegen tálalod – vigyázz, a töltelék forró!"
         ],
-        "tip": "A tészta nagyon ragacsos, olajos kézzel könnyű vele dolgozni."
+        "tip": "A tészta nagyon ragacsos, olajos kézzel könnyű vele dolgozni.",
+        "glutenFree": false
     },
     {
         "id": 2066,
@@ -14342,7 +14521,8 @@ window.recipeCatalog = [
             "Ráöntöd a felső réteget, és további 8–10 percig gőzölöd, amíg az is megszilárdul.",
             "Kissé hűlni hagyod, és langyosan vagy szobahőmérsékleten tálalod."
         ],
-        "tip": "A fedőt konyharuhába csomagold, hogy a gőz ne csöpögjön a pudingra."
+        "tip": "A fedőt konyharuhába csomagold, hogy a gőz ne csöpögjön a pudingra.",
+        "glutenFree": true
     },
     {
         "id": 2067,
@@ -14392,7 +14572,8 @@ window.recipeCatalog = [
             "Vajas kézzel 24 kis golyót formázol.",
             "A félretett kókuszreszelékbe forgatod őket, és hűtőben tárolod."
         ],
-        "tip": "Egy hétig eláll hűtőben, légmentes dobozban."
+        "tip": "Egy hétig eláll hűtőben, légmentes dobozban.",
+        "glutenFree": true
     },
     {
         "id": 2068,
@@ -14447,7 +14628,8 @@ window.recipeCatalog = [
             "Alufóliával letakarva 35–40 percig sütöd, amíg a krém megköt, de a közepe még enyhén remeg.",
             "Kihűtöd, majd legalább 4 órára hűtőbe teszed. Tálaláskor késsel körbevágod, tányérra borítod, és ízlés szerint egy kevés erős kávét csorgatsz rá."
         ],
-        "tip": "Ha a krém lyukacsos, túl magas volt a hőfok – sütés közben se forrjon a vízfürdő."
+        "tip": "Ha a krém lyukacsos, túl magas volt a hőfok – sütés közben se forrjon a vízfürdő.",
+        "glutenFree": true
     },
     {
         "id": 2069,
@@ -14492,7 +14674,8 @@ window.recipeCatalog = [
             "Ha nem dermed meg, a tej túl hideg vagy túl forró volt, vagy a gyömbér nem elég friss.",
             "Melegen, egy csepp mézzel tálalod."
         ],
-        "tip": "A szárazabb, öreg gyömbérben kevesebb az enzim; a zsenge, lédús gyömbér működik a legjobban."
+        "tip": "A szárazabb, öreg gyömbérben kevesebb az enzim; a zsenge, lédús gyömbér működik a legjobban.",
+        "glutenFree": true
     },
     {
         "id": 2070,
@@ -14537,7 +14720,8 @@ window.recipeCatalog = [
             "A tűzről levéve belekevered a mézet.",
             "Melegen, tálkákba merve tálalod."
         ],
-        "tip": "Télen melegítő, nyáron hűtve is kínálják."
+        "tip": "Télen melegítő, nyáron hűtve is kínálják.",
+        "glutenFree": true
     },
     {
         "id": 3001,
@@ -14637,7 +14821,8 @@ window.recipeCatalog = [
             "Hozzáadod a paradicsomot és 2 dl vizet, sózod, és fedő alatt, kis lángon 40 percig főzöd. Az utolsó 15 percben belekevered a lecsöpögtetett babot.",
             "Közben a rizst átmosod, és kétszeres mennyiségű sós vízben fedő alatt 18 percig főzöd. A chilit rizzsel, egy kanál tejföllel tálalod."
         ],
-        "tip": "Másnap még ízesebb. Reszelt cheddarral és tortilla chipsszel is kínálható."
+        "tip": "Másnap még ízesebb. Reszelt cheddarral és tortilla chipsszel is kínálható.",
+        "glutenFree": true
     },
     {
         "id": 3002,
@@ -14737,7 +14922,8 @@ window.recipeCatalog = [
             "A maradék olajon a paprikát és a hagymát nagy lángon 5–6 percig pirítod, amíg a szélük megpirul, de még roppanósak. Visszateszed a csirkét, és meglocsolod a második lime levével.",
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. A fajitast a serpenyőben, sercegve tálalod; mindenki maga tölti a tortillát hússal, salsával és tejföllel."
         ],
-        "tip": "A serpenyő legyen nagyon forró: a fajitas lényege a pirult, füstös íz."
+        "tip": "A serpenyő legyen nagyon forró: a fajitas lényege a pirult, füstös íz.",
+        "glutenFree": false
     },
     {
         "id": 3003,
@@ -14827,7 +15013,8 @@ window.recipeCatalog = [
             "Az utolsó adag után a narancskockákat 1 percig a serpenyőben karamellizálod.",
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. Minden tortillára hús, narancskocka, lilahagyma és koriander kerül, mellé lime-gerezd."
         ],
-        "tip": "A mexikói taquerókban két tortillát tesznek egymásra, hogy ne szakadjon."
+        "tip": "A mexikói taquerókban két tortillát tesznek egymásra, hogy ne szakadjon.",
+        "glutenFree": true
     },
     {
         "id": 3004,
@@ -14917,7 +15104,8 @@ window.recipeCatalog = [
             "A tortillákat megmelegíted, mindegyikre egy csík tölteléket teszel, feltekered, és illesztéssel lefelé a tálba sorakoztatod. Leöntöd a maradék szósszal, és megszórod a maradék sajttal.",
             "20 percig sütöd, amíg a sajt megolvad és bugyog. Tejföllel tálalod."
         ],
-        "tip": "Zöld szósszal (salsa verde) enchiladas verdes lesz belőle."
+        "tip": "Zöld szósszal (salsa verde) enchiladas verdes lesz belőle.",
+        "glutenFree": false
     },
     {
         "id": 3005,
@@ -15007,7 +15195,8 @@ window.recipeCatalog = [
             "Egy tortilla felére sajtot, csirkét, majd megint sajtot szórsz, és ráhajtod a másik felét.",
             "Egy száraz vagy nagyon kevés olajjal kikent serpenyőben közepes lángon oldalanként 2–3 percig sütöd, amíg aranybarna és a sajt megolvad. Cikkekre vágva, guacamoléval és salsával tálalod."
         ],
-        "tip": "Közepes lángon süsd, hogy a sajt megolvadjon, mielőtt a tortilla megég."
+        "tip": "Közepes lángon süsd, hogy a sajt megolvadjon, mielőtt a tortilla megég.",
+        "glutenFree": false
     },
     {
         "id": 3006,
@@ -15102,7 +15291,8 @@ window.recipeCatalog = [
             "Minden tortilla közepére egy csík rizst, babot, húst, sajtot és tejfölt teszel. Az alsó részét ráhajtod, behajtod a két oldalát, majd szorosan feltekered.",
             "Egy száraz serpenyőben illesztéssel lefelé 1–2 percig pirítod, hogy lezáródjon, majd megfordítva a másik oldalát is. Félbevágva tálalod."
         ],
-        "tip": "Alufóliába csomagolva útravalónak is kiváló."
+        "tip": "Alufóliába csomagolva útravalónak is kiváló.",
+        "glutenFree": false
     },
     {
         "id": 3007,
@@ -15207,7 +15397,8 @@ window.recipeCatalog = [
             "Visszateszed a csirkét, és fedő alatt, kis lángon 35–40 percig főzöd, amíg a hús puha. Közben kifőzöd a rizst (átmosva, kétszeres sós vízben, fedő alatt 18 perc).",
             "A szezámmagot száraz serpenyőben megpirítod. A csirkét a mole-lal, rizzsel tálalod, a tetejére szezámmagot szórsz."
         ],
-        "tip": "Az eredeti mole többféle szárított chiliből és több mint húsz hozzávalóból készül; ez egy egyszerű, de karakteres változat."
+        "tip": "Az eredeti mole többféle szárított chiliből és több mint húsz hozzávalóból készül; ez egy egyszerű, de karakteres változat.",
+        "glutenFree": false
     },
     {
         "id": 3008,
@@ -15297,7 +15488,8 @@ window.recipeCatalog = [
             "A húst két villával nagyobb darabokra tépkeded, és a zsírban, ritkán forgatva addig sütöd, amíg helyenként barna és ropogós.",
             "Pico de gallo (friss salsa): a paradicsomot apró kockákra, a lilahagymát és az erős paprikát (magok nélkül, ha kevésbé csípősen szereted) nagyon apróra vágod, összekevered a lime levével és egy csipet sóval, és 10 percig állni hagyod. A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. A carnitast tortillán, salsával és apróra vágott lilahagymával tálalod."
         ],
-        "tip": "A carnitas lefagyasztható; újramelegítéskor serpenyőben süsd ropogósra."
+        "tip": "A carnitas lefagyasztható; újramelegítéskor serpenyőben süsd ropogósra.",
+        "glutenFree": true
     },
     {
         "id": 3009,
@@ -15387,7 +15579,8 @@ window.recipeCatalog = [
             "A babot egy kevés vízzel átmelegíted, és villával krémesre töröd, sózod.",
             "Minden tostadára babkrém, tinga, egy kanál tejföl és avokádószeletek kerülnek."
         ],
-        "tip": "Ha kapsz chipotle chilit adobo szószban, 1–2 db-bal ez az igazi füstös íz."
+        "tip": "Ha kapsz chipotle chilit adobo szószban, 1–2 db-bal ez az igazi füstös íz.",
+        "glutenFree": true
     },
     {
         "id": 3010,
@@ -15482,7 +15675,8 @@ window.recipeCatalog = [
             "A tortillákat vékony csíkokra vágod, és a maradék olajon ropogósra sütöd, papírtörlőre szeded, megsózod.",
             "Tálakba szeded a levest, és mindenki a tetejére tesz tortillacsíkot, avokádókockát, reszelt sajtot, tejfölt és lime-ot."
         ],
-        "tip": "A tortillacsíkokat csak tálaláskor tedd a levesbe, hogy ropogósak maradjanak."
+        "tip": "A tortillacsíkokat csak tálaláskor tedd a levesbe, hogy ropogósak maradjanak.",
+        "glutenFree": true
     },
     {
         "id": 3011,
@@ -15582,7 +15776,8 @@ window.recipeCatalog = [
             "Hozzáadod a felkockázott répát, burgonyát és cukkinit, és további 15 percig főzöd, amíg a zöldségek és a gombócokban lévő rizs is megpuhulnak.",
             "Lime-gerezdekkel tálalod."
         ],
-        "tip": "A nyers rizs a gombócban fő meg, és lazává teszi."
+        "tip": "A nyers rizs a gombócban fő meg, és lazává teszi.",
+        "glutenFree": true
     },
     {
         "id": 3012,
@@ -15672,7 +15867,8 @@ window.recipeCatalog = [
             "Rászórod a borsót, visszateszed a fedőt, és még 5 percig párolod, majd 10 percig a tűzről levéve pihenteted.",
             "Lime-gerezdekkel tálalod."
         ],
-        "tip": "Ne kevergesd főzés közben, különben ragacsos lesz a rizs."
+        "tip": "Ne kevergesd főzés közben, különben ragacsos lesz a rizs.",
+        "glutenFree": true
     },
     {
         "id": 3013,
@@ -15762,7 +15958,8 @@ window.recipeCatalog = [
             "Közben kifőzöd a rizst (átmosva, kétszeres sós vízben, fedő alatt 18 perc).",
             "A picadillót rizzsel tálalod; tortillába vagy tacóba töltve is finom."
         ],
-        "tip": "Néhány olajbogyó vagy mazsola hozzáadásával a kubai és spanyol változatokat idézi."
+        "tip": "Néhány olajbogyó vagy mazsola hozzáadásával a kubai és spanyol változatokat idézi.",
+        "glutenFree": true
     },
     {
         "id": 3014,
@@ -15776,7 +15973,7 @@ window.recipeCatalog = [
         "totalCost": 4445,
         "access": "pro",
         "servings": 4,
-        "description": "Baja California partjainak kedvence: sörtésztában sült ropogós halfilé kukoricatortillán, ropogós káposztával és lime-os tejfölös szósszal.",
+        "description": "Baja California partjainak kedvence: ropogós bundában sült halfilé kukoricatortillán, ropogós káposztával és lime-os tejfölös szósszal.",
         "ingredients": [
             {
                 "name": "hekkfilé (kiolvasztva)",
@@ -15857,7 +16054,8 @@ window.recipeCatalog = [
             "Egy serpenyőben 2 cm magasan olajat hevítesz 180 °C-ra. A halcsíkokat a bundába mártod, és adagonként 3–4 perc alatt aranybarnára sütöd. Papírtörlőre szeded.",
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. Minden tortillára káposztasaláta, hal és egy kanál szósz kerül; lime-gerezddel tálalod."
         ],
-        "tip": "A jéghideg víz (vagy sör) teszi a bundát könnyűvé és ropogóssá."
+        "tip": "A jéghideg víz (vagy sör) teszi a bundát könnyűvé és ropogóssá.",
+        "glutenFree": false
     },
     {
         "id": 3015,
@@ -15947,7 +16145,8 @@ window.recipeCatalog = [
             "Visszateszed a garnélát, 1 percig összeforgatod, és lime levével ízesíted.",
             "Rizzsel és avokádószeletekkel tálalod."
         ],
-        "tip": "A csípősséget a chili mennyiségével szabályozd; az eredeti valóban „ördögi”."
+        "tip": "A csípősséget a chili mennyiségével szabályozd; az eredeti valóban „ördögi”.",
+        "glutenFree": true
     },
     {
         "id": 3016,
@@ -16052,7 +16251,8 @@ window.recipeCatalog = [
             "Egy serpenyőben 1,5 cm magasan olajat hevítesz 175 °C-ra, és a chimichangákat illesztéssel lefelé kezdve, körbeforgatva 3–4 perc alatt aranybarnára sütöd. Papírtörlőre szeded.",
             "Tejföllel és salsával tálalod."
         ],
-        "tip": "Sütőben is készülhet: olajjal megkenve 220 °C-on 15 perc alatt ropogós."
+        "tip": "Sütőben is készülhet: olajjal megkenve 220 °C-on 15 perc alatt ropogós.",
+        "glutenFree": false
     },
     {
         "id": 3017,
@@ -16152,7 +16352,8 @@ window.recipeCatalog = [
             "Egy nagy tálba vagy tányérokra rétegezed a káposztát, a paradicsomot, a babot, a kukoricát és a hagymát, a tetejére a meleg húst és a sajtot.",
             "Az öntettel meglocsolod, és durván összetört tortilla chipsszel megszórva azonnal tálalod."
         ],
-        "tip": "A chipset csak tálaláskor szórd rá, hogy ropogós maradjon."
+        "tip": "A chipset csak tálaláskor szórd rá, hogy ropogós maradjon.",
+        "glutenFree": true
     },
     {
         "id": 3018,
@@ -16257,7 +16458,8 @@ window.recipeCatalog = [
             "8–10 percig sütöd, amíg a sajt megolvad és bugyog.",
             "Azonnal tálalod, a tetejére guacamole, salsa és tejföl kerül."
         ],
-        "tip": "Csoportos falatozásra vagy meccsnézéshez ideális."
+        "tip": "Csoportos falatozásra vagy meccsnézéshez ideális.",
+        "glutenFree": true
     },
     {
         "id": 3019,
@@ -16342,7 +16544,8 @@ window.recipeCatalog = [
             "Ugyanott a maradék olajon a tojásokat tükörtojásnak sütöd.",
             "Tányéronként 2 tortilla, mindegyikre babkrém, tükörtojás, bőven szósz, sajt és avokádószeletek kerülnek."
         ],
-        "tip": "Mexikóban reggeli, de tartalmas vacsorának is kiváló."
+        "tip": "Mexikóban reggeli, de tartalmas vacsorának is kiváló.",
+        "glutenFree": true
     },
     {
         "id": 3020,
@@ -16432,7 +16635,8 @@ window.recipeCatalog = [
             "A hagymát kiveszed, a levest ízlés szerint utánasózod.",
             "Mély tányérokba szeded, és lime-gerezdekkel, felkarikázott erős paprikával és avokádóval tálalod."
         ],
-        "tip": "Mexikóban betegeknek és fáradtaknak főzik – igazi lélekmelegítő."
+        "tip": "Mexikóban betegeknek és fáradtaknak főzik – igazi lélekmelegítő.",
+        "glutenFree": true
     },
     {
         "id": 3021,
@@ -16532,7 +16736,8 @@ window.recipeCatalog = [
             "A sütőt 190 °C-ra előmelegíted. A maradék paradicsomot egy tűzálló tál aljára öntöd, belefekteted a paprikafeleket, megtöltöd őket, és alufóliával letakarva 25 percig sütöd.",
             "A fóliát leveszed, megszórod sajttal, és további 10–12 percig sütöd, amíg a sajt aranyszínű. Tejföllel tálalod."
         ],
-        "tip": "Húsmentesen a hús helyett dupla bab és gomba is mehet bele."
+        "tip": "Húsmentesen a hús helyett dupla bab és gomba is mehet bele.",
+        "glutenFree": true
     },
     {
         "id": 3022,
@@ -16627,7 +16832,8 @@ window.recipeCatalog = [
             "Salsa: a paradicsomot apró kockákra, a lilahagymát nagyon apróra vágod, összekevered a lime levével és sóval. A káposztát nagyon vékonyra vágod.",
             "A flautasokat káposztaágyon, tejföllel, salsával és reszelt sajttal tálalod."
         ],
-        "tip": "A fogpiszkálókat tálalás előtt húzd ki."
+        "tip": "A fogpiszkálókat tálalás előtt húzd ki.",
+        "glutenFree": true
     },
     {
         "id": 3023,
@@ -16727,7 +16933,8 @@ window.recipeCatalog = [
             "Egy grillserpenyőt vagy öntöttvas serpenyőt a maradék olajjal füstölésig hevítesz, és a húst oldalanként 3–4 percig sütöd (közepesen átsütve). 5 percig pihenteted, majd a rostokra merőlegesen vékony csíkokra vágod.",
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. A húst guacamoléval, salsával és lime-gerezdekkel tálalod."
         ],
-        "tip": "A rostokra merőleges szeletelés teszi a húst porhanyóssá."
+        "tip": "A rostokra merőleges szeletelés teszi a húst porhanyóssá.",
+        "glutenFree": false
     },
     {
         "id": 3024,
@@ -16817,7 +17024,8 @@ window.recipeCatalog = [
             "A 4 zsemlét félbevágod, és a vágott felüket száraz serpenyőben megpirítod.",
             "Az alsó felére babkrémet, a felsőre tejfölt kensz, közé kerül a rántott hús, a sajt, avokádó-, paradicsom- és lilahagymaszeletek, valamint erős paprika."
         ],
-        "tip": "Mexikóban telera vagy bolillo zsemlét használnak; a nagyobb, puhább zsemle a legjobb."
+        "tip": "Mexikóban telera vagy bolillo zsemlét használnak; a nagyobb, puhább zsemle a legjobb.",
+        "glutenFree": false
     },
     {
         "id": 3025,
@@ -16907,7 +17115,8 @@ window.recipeCatalog = [
             "Közben kifőzöd a rizst (átmosva, kétszeres sós vízben, fedő alatt 18 perc), a babot átmelegíted.",
             "A ragut rizzsel és babbal, vagy tortillába töltve tálalod."
         ],
-        "tip": "A magyar pörkölt távoli rokona, de a kömény és az oregánó egészen más karaktert ad."
+        "tip": "A magyar pörkölt távoli rokona, de a kömény és az oregánó egészen más karaktert ad.",
+        "glutenFree": false
     },
     {
         "id": 3026,
@@ -17002,7 +17211,8 @@ window.recipeCatalog = [
             "Így készíted el mind a nyolcat, a kész quesadillákat alacsony hőfokú sütőben melegen tartod.",
             "Cikkekre vágva, salsával és tejföllel tálalod."
         ],
-        "tip": "Egy marék friss spenót is mehet a sajt közé."
+        "tip": "Egy marék friss spenót is mehet a sajt közé.",
+        "glutenFree": false
     },
     {
         "id": 3027,
@@ -17107,7 +17317,8 @@ window.recipeCatalog = [
             "Közben kifőzöd a rizst (átmosva, kétszeres sós vízben, fedő alatt 18 perc).",
             "Rizzsel, egy kanál tejföllel tálalod."
         ],
-        "tip": "Néhány kocka étcsokoládé a végén mélyíti az ízt."
+        "tip": "Néhány kocka étcsokoládé a végén mélyíti az ízt.",
+        "glutenFree": true
     },
     {
         "id": 3028,
@@ -17212,7 +17423,8 @@ window.recipeCatalog = [
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod.",
             "Minden tortillára rizs, bab, paprika, sajt, guacamole és tejföl kerül; a két oldalát behajtod, és szorosan feltekered. Száraz serpenyőben az illesztésénél lezárod, és félbevágva tálalod."
         ],
-        "tip": "Egy kevés sült kukorica vagy édesburgonya is illik bele."
+        "tip": "Egy kevés sült kukorica vagy édesburgonya is illik bele.",
+        "glutenFree": false
     },
     {
         "id": 3029,
@@ -17302,7 +17514,8 @@ window.recipeCatalog = [
             "A káposztát nagyon vékonyra vágod, egy kevés lime-lével és sóval összekevered.",
             "Minden tostadára vékony réteg babkrém, guacamole, káposzta, salsa, egy kanál tejföl és reszelt sajt kerül. Azonnal tálalod."
         ],
-        "tip": "Kézből eszik, mint egy nyitott szendvicset – szórva, ropogva."
+        "tip": "Kézből eszik, mint egy nyitott szendvicset – szórva, ropogva.",
+        "glutenFree": true
     },
     {
         "id": 3030,
@@ -17382,7 +17595,8 @@ window.recipeCatalog = [
             "Tányéronként 2 tortillára babkrém, tükörtojás és bőven szósz kerül.",
             "Reszelt sajttal és avokádószeletekkel tálalod."
         ],
-        "tip": "Félig zöld, félig vörös szósszal „huevos divorciados” (elvált tojás) a neve."
+        "tip": "Félig zöld, félig vörös szósszal „huevos divorciados” (elvált tojás) a neve.",
+        "glutenFree": true
     },
     {
         "id": 3031,
@@ -17472,7 +17686,8 @@ window.recipeCatalog = [
             "Azonnal tányérra szeded, és mindegyikre tükörtojás kerül.",
             "Tejföllel, reszelt sajttal, vékonyra szeletelt lilahagymával és avokádóval tálalod."
         ],
-        "tip": "Gyorsan tálald, mert a chips a szószban hamar megpuhul."
+        "tip": "Gyorsan tálald, mert a chips a szószban hamar megpuhul.",
+        "glutenFree": true
     },
     {
         "id": 3032,
@@ -17557,7 +17772,8 @@ window.recipeCatalog = [
             "Tányéronként 3 enfrijoladát leöntesz a maradék szósszal.",
             "Tejföllel, vékonyra szeletelt lilahagymával, avokádóval és a maradék sajttal tálalod."
         ],
-        "tip": "Tükörtojással tartalmas vacsora."
+        "tip": "Tükörtojással tartalmas vacsora.",
+        "glutenFree": true
     },
     {
         "id": 3033,
@@ -17647,7 +17863,8 @@ window.recipeCatalog = [
             "Leöntöd a szósszal, megszórod a maradék sajttal, és 18–20 percig sütöd, amíg bugyog.",
             "A maradék lilahagymával és tejföllel tálalod."
         ],
-        "tip": "Kukoricatortillával autentikusabb; melegítsd meg őket, hogy ne törjenek."
+        "tip": "Kukoricatortillával autentikusabb; melegítsd meg őket, hogy ne törjenek.",
+        "glutenFree": false
     },
     {
         "id": 3034,
@@ -17737,7 +17954,8 @@ window.recipeCatalog = [
             "A maradék olajon tükörtojásokat sütsz.",
             "Tányéronként rizs, bab, tükörtojás és avokádószeletek, lime-gerezddel."
         ],
-        "tip": "A rizs pirítása adja a jellegzetes diós ízt; ne hagyd ki."
+        "tip": "A rizs pirítása adja a jellegzetes diós ízt; ne hagyd ki.",
+        "glutenFree": true
     },
     {
         "id": 3035,
@@ -17837,7 +18055,8 @@ window.recipeCatalog = [
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod.",
             "A zöldségeket sercegve tálalod a tortillával, guacamoléval és tejföllel."
         ],
-        "tip": "Egy marék fekete bab vagy pirított tofu laktatóbbá teszi."
+        "tip": "Egy marék fekete bab vagy pirított tofu laktatóbbá teszi.",
+        "glutenFree": false
     },
     {
         "id": 3036,
@@ -17932,7 +18151,8 @@ window.recipeCatalog = [
             "Óvatosan beleforgatod az avokádót, hogy ne törjön össze.",
             "Reszelt sajttal megszórva, tortilla chipsszel tálalod."
         ],
-        "tip": "Előre elkészíthető; az avokádót csak tálaláskor add hozzá."
+        "tip": "Előre elkészíthető; az avokádót csak tálaláskor add hozzá.",
+        "glutenFree": true
     },
     {
         "id": 3037,
@@ -18027,7 +18247,8 @@ window.recipeCatalog = [
             "Lime levével ízesíted a levest.",
             "Tálakba szeded, és tejföllel, tortillacsíkokkal, avokádóval és reszelt sajttal tálalod."
         ],
-        "tip": "Száraz babból főzve még mélyebb ízű (300 g bab beáztatva, 1,5 óra főzés)."
+        "tip": "Száraz babból főzve még mélyebb ízű (300 g bab beáztatva, 1,5 óra főzés).",
+        "glutenFree": true
     },
     {
         "id": 3038,
@@ -18117,7 +18338,8 @@ window.recipeCatalog = [
             "A tetejére szórod a sajtot, lefeded, és 2 percig hagyod, hogy megolvadjon.",
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod. A calabacitast tortillával és tejföllel tálalod."
         ],
-        "tip": "Rizzsel vagy tacóba töltve is kiváló."
+        "tip": "Rizzsel vagy tacóba töltve is kiváló.",
+        "glutenFree": false
     },
     {
         "id": 3039,
@@ -18207,7 +18429,8 @@ window.recipeCatalog = [
             "Mindegyikre vastagon babkrémet kensz, megszórod a sajtokkal, és további 5–6 percig sütöd, amíg a sajt bugyog.",
             "A tetejükre pico de gallót és avokádószeleteket teszel, és azonnal tálalod."
         ],
-        "tip": "Fejenként 3 zsemlefél egy könnyű vacsora."
+        "tip": "Fejenként 3 zsemlefél egy könnyű vacsora.",
+        "glutenFree": false
     },
     {
         "id": 3040,
@@ -18297,7 +18520,8 @@ window.recipeCatalog = [
             "Egy serpenyőben 2 cm magasan olajat hevítesz 175 °C-ra. A paprikákat lisztbe forgatod, majd a tojáshabba mártod, és oldalanként 2–3 percig aranybarnára sütöd. Papírtörlőre szeded.",
             "A paprikákat a szósszal leöntve, rizzsel tálalod."
         ],
-        "tip": "A liszt segít, hogy a tojáshab rátapadjon a paprikára."
+        "tip": "A liszt segít, hogy a tojáshab rátapadjon a paprikára.",
+        "glutenFree": false
     },
     {
         "id": 3041,
@@ -18397,7 +18621,8 @@ window.recipeCatalog = [
             "Egy serpenyőben 1 cm magasan olajat hevítesz, és a tacókat oldalanként 2 percig ropogósra sütöd. Papírtörlőre szeded.",
             "Káposztával, salsával és tejföllel tálalod: a tacót kissé szétnyitod, és beleteszed a feltéteket."
         ],
-        "tip": "Sütés helyett 220 °C-os sütőben, olajjal megkenve 12–15 perc alatt is ropogós lesz."
+        "tip": "Sütés helyett 220 °C-os sütőben, olajjal megkenve 12–15 perc alatt is ropogós lesz.",
+        "glutenFree": true
     },
     {
         "id": 3042,
@@ -18492,7 +18717,8 @@ window.recipeCatalog = [
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod.",
             "Minden tortillára édesburgonya, bab, káposzta és egy kanál avokádós krém kerül."
         ],
-        "tip": "Pirított tökmag vagy feta jellegű sajt is illik rá."
+        "tip": "Pirított tökmag vagy feta jellegű sajt is illik rá.",
+        "glutenFree": true
     },
     {
         "id": 3043,
@@ -18597,7 +18823,8 @@ window.recipeCatalog = [
             "A tortillákat vékony csíkokra vágod, és a maradék olajon ropogósra sütöd, sózod.",
             "Tálakba szeded, és tortillacsíkokkal, avokádóval, sajttal, tejföllel és lime-mal tálalod."
         ],
-        "tip": "Zöldségalaplével még ízesebb."
+        "tip": "Zöldségalaplével még ízesebb.",
+        "glutenFree": true
     },
     {
         "id": 3044,
@@ -18687,7 +18914,8 @@ window.recipeCatalog = [
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod.",
             "Minden tortillára krumpli, rántotta, bab, sajt, salsa és tejföl kerül; behajtod az oldalait, feltekered, és száraz serpenyőben az illesztésénél lezárod."
         ],
-        "tip": "Fóliába csomagolva lefagyasztható, és mikróban vagy sütőben felmelegíthető."
+        "tip": "Fóliába csomagolva lefagyasztható, és mikróban vagy sütőben felmelegíthető.",
+        "glutenFree": false
     },
     {
         "id": 3045,
@@ -18782,7 +19010,8 @@ window.recipeCatalog = [
             "Egy száraz serpenyőben oldalanként 2–3 percig sütöd, amíg aranybarna és a sajt megolvad.",
             "Cikkekre vágva, salsával és tejföllel tálalod."
         ],
-        "tip": "Egy kevés spenót vagy kukorica is mehet a gombához."
+        "tip": "Egy kevés spenót vagy kukorica is mehet a gombához.",
+        "glutenFree": false
     },
     {
         "id": 3046,
@@ -18887,7 +19116,8 @@ window.recipeCatalog = [
             "8–10 percig sütöd, amíg a sajt megolvad és bugyog.",
             "Azonnal tálalod guacamoléval, salsával és tejföllel."
         ],
-        "tip": "Egy kevés pirított gomba is jól illik rá."
+        "tip": "Egy kevés pirított gomba is jól illik rá.",
+        "glutenFree": true
     },
     {
         "id": 3047,
@@ -18982,7 +19212,8 @@ window.recipeCatalog = [
             "Lime levével ízesíted.",
             "Avokádókockákkal és összetört tortilla chipsszel tálalod."
         ],
-        "tip": "Másnap még sűrűbb és ízesebb; hígítsd egy kevés vízzel."
+        "tip": "Másnap még sűrűbb és ízesebb; hígítsd egy kevés vízzel.",
+        "glutenFree": true
     },
     {
         "id": 3048,
@@ -19072,7 +19303,8 @@ window.recipeCatalog = [
             "Alufóliával letakarva 20 percig, majd fólia nélkül 15 percig sütöd, amíg a sajt aranyszínű.",
             "10 percig pihenteted, majd tortaként szeletelve tálalod."
         ],
-        "tip": "A mexikói lasagnénak is nevezik; tépett csirkével húsos változatban is készül."
+        "tip": "A mexikói lasagnénak is nevezik; tépett csirkével húsos változatban is készül.",
+        "glutenFree": true
     },
     {
         "id": 3049,
@@ -19177,7 +19409,8 @@ window.recipeCatalog = [
             "Pico de gallo (friss salsa): a paradicsomot apró kockákra, a lilahagymát és az erős paprikát (magok nélkül, ha kevésbé csípősen szereted) nagyon apróra vágod, összekevered a lime levével és egy csipet sóval, és 10 percig állni hagyod.",
             "Tálakba szeded a rizst, és szekciókban mellé rendezed a babot, a kukoricás paprikát, a guacamolét és a salsát; a tetejére sajtot és tejfölt teszel."
         ],
-        "tip": "Előre elkészítve, dobozokban remek munkahelyi ebéd."
+        "tip": "Előre elkészítve, dobozokban remek munkahelyi ebéd.",
+        "glutenFree": true
     },
     {
         "id": 3050,
@@ -19252,7 +19485,8 @@ window.recipeCatalog = [
             "A tortillákat egy száraz, forró serpenyőben oldalanként 20–30 másodpercig melegíted, amíg hajlékonyak és enyhén foltosak lesznek, majd konyharuhába csavarva melegen tartod.",
             "A rántottát babbal, avokádószeletekkel és tortillával tálalod."
         ],
-        "tip": "Ne süsd túl a tojást – Mexikóban krémes, lágy rántottát szeretnek."
+        "tip": "Ne süsd túl a tojást – Mexikóban krémes, lágy rántottát szeretnek.",
+        "glutenFree": true
     },
     {
         "id": 3051,
@@ -19332,7 +19566,8 @@ window.recipeCatalog = [
             "Még melegen a fahéjas cukorba forgatod.",
             "Csokoládészósz: a tejet felforralod, belekevered a 1 ek vízzel elkevert keményítőt, majd a tűzről levéve a darabolt csokoládét, és simára kevered. Melegen, mártogatóként adod a churros mellé."
         ],
-        "tip": "A csillagcső fontos: a bordák miatt sül át egyenletesen, és nem reped szét."
+        "tip": "A csillagcső fontos: a bordák miatt sül át egyenletesen, és nem reped szét.",
+        "glutenFree": false
     },
     {
         "id": 3052,
@@ -19397,7 +19632,8 @@ window.recipeCatalog = [
             "Langyosan vagy hűtve tálalod – hűlés közben tovább sűrűsödik.",
             "Tálaláskor őrölt fahéjjal megszórod."
         ],
-        "tip": "Ha túl sűrű lett, egy kevés tejjel lazíthatod."
+        "tip": "Ha túl sűrű lett, egy kevés tejjel lazíthatod.",
+        "glutenFree": true
     },
     {
         "id": 3053,
@@ -19472,7 +19708,8 @@ window.recipeCatalog = [
             "Itatás: a sűrített tejet összekevered 3 dl tejjel és 2,5 dl tejszínnel, és lassan, több részletben a még langyos tortára öntöd, hagyva, hogy magába szívja. Legalább 4 órára (legjobb egy éjszakára) hűtőbe teszed.",
             "A maradék tejszínt a porcukorral kemény habbá vered, a tortára kened, és fahéjjal meghintve, kockákra vágva tálalod."
         ],
-        "tip": "A torta alján maradó tejes lé a lényeg – ne ijedj meg tőle."
+        "tip": "A torta alján maradó tejes lé a lényeg – ne ijedj meg tőle.",
+        "glutenFree": false
     },
     {
         "id": 3054,
@@ -19527,7 +19764,8 @@ window.recipeCatalog = [
             "55–65 percig sütöd, amíg a széle megköt, a közepe pedig enyhén remeg.",
             "Kihűtöd, legalább 6 órára hűtőbe teszed, majd késsel körbevágva tányérra borítod; a karamell szószként folyik rá."
         ],
-        "tip": "A vízfürdő ne forrjon; a túl magas hő lyukacsossá teszi a flant."
+        "tip": "A vízfürdő ne forrjon; a túl magas hő lyukacsossá teszi a flant.",
+        "glutenFree": true
     },
     {
         "id": 3055,
@@ -19602,7 +19840,8 @@ window.recipeCatalog = [
             "A formába simítod, és 22–25 percig sütöd. A közepe legyen még kissé nedves (a tűpróbánál nedves morzsák tapadnak rá).",
             "A formában teljesen kihűtöd, majd kockákra vágod."
         ],
-        "tip": "A chili csak melegséget adjon, ne csípjen – kezdd kevesebbel."
+        "tip": "A chili csak melegséget adjon, ne csípjen – kezdd kevesebbel.",
+        "glutenFree": false
     },
     {
         "id": 3056,
@@ -19677,7 +19916,8 @@ window.recipeCatalog = [
             "Szirup: a mézet 2 evőkanál vízzel felmelegíted.",
             "Tálaláskor a sziruppal meglocsolod."
         ],
-        "tip": "Légmentes dobozban néhány napig ropogós marad."
+        "tip": "Légmentes dobozban néhány napig ropogós marad.",
+        "glutenFree": false
     },
     {
         "id": 3057,
@@ -19732,7 +19972,8 @@ window.recipeCatalog = [
             "A tejfölt elkevered a sűrített tejjel.",
             "A meleg banánt a serpenyő karamelljével leöntve, az édes tejföllel tálalod."
         ],
-        "tip": "Vaníliafagylalttal is remek."
+        "tip": "Vaníliafagylalttal is remek.",
+        "glutenFree": true
     },
     {
         "id": 3058,
@@ -19807,7 +20048,8 @@ window.recipeCatalog = [
             "A tetejére a maradék vajat teszed darabokban, letakarod alufóliával, és 180 °C-on 20 percig, majd fólia nélkül 10 percig sütöd.",
             "Langyosan tálalod."
         ],
-        "tip": "A sós-édes sajtos ízkontraszt a lényeg; ne hagyd ki a sajtot."
+        "tip": "A sós-édes sajtos ízkontraszt a lényeg; ne hagyd ki a sajtot.",
+        "glutenFree": false
     },
     {
         "id": 3059,
@@ -19877,7 +20119,8 @@ window.recipeCatalog = [
             "A formába öntöd, megszórod egy csipet fahéjjal, és 40–45 percig sütöd, amíg aranybarna és a közepe épp megszilárdul.",
             "Kihűtve szeleteled; hűtőből hidegen is nagyon finom."
         ],
-        "tip": "Egy kanál tejföllel vagy cajetával (karamellel) kínáld."
+        "tip": "Egy kanál tejföllel vagy cajetával (karamellel) kínáld.",
+        "glutenFree": false
     },
     {
         "id": 3060,
@@ -19937,7 +20180,8 @@ window.recipeCatalog = [
             "12–15 percig sütöd, amíg az aljuk halványan aranyszínű (a tetejük világos marad).",
             "Kissé hűlni hagyod, majd még langyosan porcukorba forgatod; teljesen kihűlve még egyszer."
         ],
-        "tip": "Légmentes dobozban két hétig eláll."
+        "tip": "Légmentes dobozban két hétig eláll.",
+        "glutenFree": false
     },
     {
         "id": 3061,
@@ -19987,7 +20231,8 @@ window.recipeCatalog = [
             "1 óra fagyasztás után beleszúrod a pálcikákat, majd legalább 5 órára a mélyhűtőbe teszed.",
             "Kivétel előtt a formát néhány másodpercre langyos vízbe mártod."
         ],
-        "tip": "Mexikóban chilis-lime-os sóba (tajín) mártva is eszik."
+        "tip": "Mexikóban chilis-lime-os sóba (tajín) mártva is eszik.",
+        "glutenFree": true
     },
     {
         "id": 3062,
@@ -20057,7 +20302,8 @@ window.recipeCatalog = [
             "Legalább 2 órára hűtőbe teszed.",
             "A tejszínt felvered, a pudingra kanalazod, és egy csipet fahéjjal díszíted."
         ],
-        "tip": "Melegen, hígabbra főzve champurrado-szerű forró ital."
+        "tip": "Melegen, hígabbra főzve champurrado-szerű forró ital.",
+        "glutenFree": true
     },
     {
         "id": 3063,
@@ -20122,7 +20368,8 @@ window.recipeCatalog = [
             "Minden palacsintát vékonyan megkensz a langyos karamellel, és negyedbe hajtod.",
             "Tálaláskor egy kevés karamellt egy kanál vízzel lazítasz, rácsorgatod, és pirított dióval szórod meg."
         ],
-        "tip": "A karamell hűtőben egy hétig eláll; sok más desszerthez is használható."
+        "tip": "A karamell hűtőben egy hétig eláll; sok más desszerthez is használható.",
+        "glutenFree": false
     },
     {
         "id": 3064,
@@ -20192,7 +20439,8 @@ window.recipeCatalog = [
             "Papírtörlőre szeded, és a fahéjjal elkevert cukorral megszórod.",
             "Melegen, mézzel meglocsolva tálalod; egy sarkukat letörve mézet is csorgathatsz beléjük."
         ],
-        "tip": "Az olaj legyen elég forró, különben a tészta nem fúvódik fel."
+        "tip": "Az olaj legyen elég forró, különben a tészta nem fúvódik fel.",
+        "glutenFree": false
     },
     {
         "id": 3065,
@@ -20267,7 +20515,8 @@ window.recipeCatalog = [
             "Sütőpapíros tepsire teszed, megkened felvert tojással, és megszórod a maradék fahéjjal elkevert cukorral.",
             "20–25 percig aranybarnára sütöd."
         ],
-        "tip": "Ananászos vagy sütőtökös töltelékkel is hagyományos."
+        "tip": "Ananászos vagy sütőtökös töltelékkel is hagyományos.",
+        "glutenFree": false
     },
     {
         "id": 3066,
@@ -20352,7 +20601,8 @@ window.recipeCatalog = [
             "Letakarva még 45–60 percig keleszted, közben a sütőt 180 °C-ra előmelegíted.",
             "18–20 percig sütöd, amíg az alja aranyszínű (a teteje világos marad)."
         ],
-        "tip": "Forró csokoládéba mártogatva eszik reggelire."
+        "tip": "Forró csokoládéba mártogatva eszik reggelire.",
+        "glutenFree": false
     },
     {
         "id": 3067,
@@ -20422,7 +20672,8 @@ window.recipeCatalog = [
             "Bőven meglocsolod lime levével.",
             "Megszórod a chilis sóval, és azonnal tálalod."
         ],
-        "tip": "Görögdinnye, jicama vagy ananász is hagyományos ebben a keverékben."
+        "tip": "Görögdinnye, jicama vagy ananász is hagyományos ebben a keverékben.",
+        "glutenFree": true
     },
     {
         "id": 3068,
@@ -20477,7 +20728,8 @@ window.recipeCatalog = [
             "Legalább 6 órára (vagy egy éjszakára) hűtőbe teszed, amíg teljesen megdermed.",
             "A forma alját 10 másodpercre meleg vízbe mártod, tányérra borítod, és lekvárral tálalod."
         ],
-        "tip": "Színes gyümölcszselé-kockákkal keverve „gelatina de mosaico” lesz belőle."
+        "tip": "Színes gyümölcszselé-kockákkal keverve „gelatina de mosaico” lesz belőle.",
+        "glutenFree": true
     },
     {
         "id": 3069,
@@ -20527,7 +20779,8 @@ window.recipeCatalog = [
             "A tepsin hagyod kihűlni, mert melegen puhák és törékenyek.",
             "Légmentes dobozban tárolod."
         ],
-        "tip": "Egy kevés lime-héj frissességet ad."
+        "tip": "Egy kevés lime-héj frissességet ad.",
+        "glutenFree": true
     },
     {
         "id": 3070,
@@ -20597,7 +20850,8 @@ window.recipeCatalog = [
             "180 °C-os előmelegített sütőben 30–35 percig sütöd, amíg mélyen aranybarna (ha túl gyorsan sötétedik, fóliával letakarod).",
             "Még melegen megkened olvasztott vajjal, és bőven megszórod kristálycukorral."
         ],
-        "tip": "Hagyományosan narancsvirágvízzel illatosítják; néhány csepp is elég."
+        "tip": "Hagyományosan narancsvirágvízzel illatosítják; néhány csepp is elég.",
+        "glutenFree": false
     },
     {
         "id": 4001,
@@ -20659,7 +20913,7 @@ window.recipeCatalog = [
                 "unit": "ml"
             },
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -20688,7 +20942,8 @@ window.recipeCatalog = [
             "A tésztát bő, jól megsózott (literenként kb. 10 g só) lobogó vízben a csomagoláson jelzett ideig, al dente (harapásra éppen puha) állapotúra főzöd. Leszűrés előtt 1 bögre főzővizet félreteszel.",
             "A tésztát a szósz egy részével összeforgatod, tányérra szeded, a tetejére még szószt kanalazol, és reszelt sajttal tálalod."
         ],
-        "tip": "Bolognában széles tésztával (tagliatelle) eszik. A ragu lefagyasztva 3 hónapig eláll."
+        "tip": "Bolognában széles tésztával (tagliatelle) eszik. A ragu lefagyasztva 3 hónapig eláll.",
+        "glutenFree": false
     },
     {
         "id": 4002,
@@ -20705,7 +20960,7 @@ window.recipeCatalog = [
         "description": "Római klasszikus tejszín nélkül: tojássárgás-sajtos krém, ropogós szalonna és sok frissen őrölt bors.",
         "ingredients": [
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -20743,7 +20998,8 @@ window.recipeCatalog = [
             "Várj 30 másodpercet, hogy a serpenyő kicsit hűljön, majd ráöntöd a tojásos krémet, és 2–3 evőkanál főzővízzel folyamatosan forgatva krémes szósszá kevered. Ha túl forró a serpenyő, a tojás rántottává csomósodik; ha túl hideg, híg marad.",
             "Azonnal tányérra szeded, és a maradék sajttal, borssal megszórva tálalod."
         ],
-        "tip": "Az igazi carbonarában nincs tejszín és fokhagyma; a krémességet a tojás és a főzővíz adja."
+        "tip": "Az igazi carbonarában nincs tejszín és fokhagyma; a krémességet a tojás és a főzővíz adja.",
+        "glutenFree": false
     },
     {
         "id": 4003,
@@ -20843,7 +21099,8 @@ window.recipeCatalog = [
             "Alufóliával letakarva 25 percig, majd fólia nélkül további 20 percig sütöd, amíg a teteje aranybarna és buborékos.",
             "Szeletelés előtt legalább 15 percig pihenteted, így a rétegek nem csúsznak szét."
         ],
-        "tip": "Ha a lapokat szárazon használod, a szószok legyenek kicsit hígabbak, mert a tészta sütés közben magába szívja a nedvességet."
+        "tip": "Ha a lapokat szárazon használod, a szószok legyenek kicsit hígabbak, mert a tészta sütés közben magába szívja a nedvességet.",
+        "glutenFree": false
     },
     {
         "id": 4004,
@@ -20860,7 +21117,7 @@ window.recipeCatalog = [
         "description": "Amatrice városkájának tésztája: füstölt szalonna, paradicsom, egy kevés chili és sok reszelt sajt.",
         "ingredients": [
             {
-                "name": "bucatini vagy spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "bucatini vagy spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -20908,7 +21165,8 @@ window.recipeCatalog = [
             "A tésztát bő, jól megsózott (literenként kb. 10 g só) lobogó vízben a csomagoláson jelzett ideig, al dente (harapásra éppen puha) állapotúra főzöd. Leszűrés előtt 1 bögre főzővizet félreteszel.",
             "A tésztát a szószba forgatod egy kevés főzővízzel, és bőven reszelt sajttal tálalod."
         ],
-        "tip": "Hagyma nem kerül bele – ezt az amatricei recept szigorúan előírja."
+        "tip": "Hagyma nem kerül bele – ezt az amatricei recept szigorúan előírja.",
+        "glutenFree": false
     },
     {
         "id": 4005,
@@ -20998,7 +21256,8 @@ window.recipeCatalog = [
             "Hozzáadod a paradicsomot, az oregánót és az olajbogyót, visszateszed a csirkét, és fedő alatt, kis lángon 35–40 percig párolod, amíg a hús könnyen elválik a csonttól.",
             "Friss kenyérrel tálalod, hogy a szaftot is ki lehessen tunkolni."
         ],
-        "tip": "Polentával (lásd it-22) is hagyományos párosítás."
+        "tip": "Polentával (lásd a „Polenta fűszeres sertésraguval” receptet) is hagyományos párosítás.",
+        "glutenFree": false
     },
     {
         "id": 4006,
@@ -21078,7 +21337,8 @@ window.recipeCatalog = [
             "Serpenyőben a vaj felét és az olajat felhevíted, és a szeleteket először a sonkás oldalukon 1–2 percig, majd a másikon 2 percig sütöd. Kiszeded, melegen tartod.",
             "A serpenyőbe öntöd a bort, felkaparod a pörzsanyagot, 2 percig forralod, majd a tűzről levéve belekevered a maradék hideg vajat, amíg fényes mártás lesz. A húsra öntöd, és a burgonyával tálalod."
         ],
-        "tip": "A fogpiszkálókat tálalás előtt húzd ki."
+        "tip": "A fogpiszkálókat tálalás előtt húzd ki.",
+        "glutenFree": false
     },
     {
         "id": 4007,
@@ -21158,7 +21418,8 @@ window.recipeCatalog = [
             "1–2 percig forralod, majd a tűzről levéve belekevered a maradék vajat. A maradék fél citromot vékonyan felkarikázod, és a mártásba teszed.",
             "Visszateszed a húst, átforgatod a mártásban, és a burgonyával tálalod."
         ],
-        "tip": "A liszt sűríti a mártást, ezért ne rázd le teljesen a húsról."
+        "tip": "A liszt sűríti a mártást, ezért ne rázd le teljesen a húsról.",
+        "glutenFree": false
     },
     {
         "id": 4008,
@@ -21230,7 +21491,7 @@ window.recipeCatalog = [
                 "unit": "g"
             },
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -21253,7 +21514,8 @@ window.recipeCatalog = [
             "A tésztát bő, jól megsózott (literenként kb. 10 g só) lobogó vízben a csomagoláson jelzett ideig, al dente (harapásra éppen puha) állapotúra főzöd. Leszűrés előtt 1 bögre főzővizet félreteszel.",
             "A spagettire szeded a gombócokat és a szószt, és a maradék sajttal tálalod."
         ],
-        "tip": "Olaszországban a polpette gyakran külön fogásként, kenyérrel kerül az asztalra."
+        "tip": "Olaszországban a polpette gyakran külön fogásként, kenyérrel kerül az asztalra.",
+        "glutenFree": false
     },
     {
         "id": 4009,
@@ -21333,7 +21595,8 @@ window.recipeCatalog = [
             "Ezután egy merőkanálnyi forró vizet öntesz rá, és kevergetve főzöd, amíg a rizs felszívja; csak ekkor jön a következő merőkanál. Így folytatod 17–18 percig, amíg a rizs krémes, de a közepe még harapható.",
             "Belekevered a csirkét és a gombát, majd a tűzről levéve a vajat és a parmezánt (olaszul: mantecatura). Fedő alatt 2 percig pihenteted, borsozod, és azonnal tálalod."
         ],
-        "tip": "A jó rizottó tányérra szedve lassan „hullámzik”, nem áll meg csomóban."
+        "tip": "A jó rizottó tányérra szedve lassan „hullámzik”, nem áll meg csomóban.",
+        "glutenFree": true
     },
     {
         "id": 4010,
@@ -21418,7 +21681,8 @@ window.recipeCatalog = [
             "Sütőpapírra teszed, vékonyan megkened szósszal, megszórod mozzarellával, rárakod a sonkát és a vékonyra szeletelt gombát, és meglocsolod egy kevés olívaolajjal.",
             "Egyenként 8–10 percig sütöd, amíg a széle felhólyagosodik és megbarnul, a sajt pedig bugyog."
         ],
-        "tip": "A tészta előző este is elkészíthető: hűtőben lassan kelve még ízletesebb."
+        "tip": "A tészta előző este is elkészíthető: hűtőben lassan kelve még ízletesebb.",
+        "glutenFree": false
     },
     {
         "id": 4011,
@@ -21508,7 +21772,8 @@ window.recipeCatalog = [
             "Sütőpapíros tepsin 15–18 percig sütöd, amíg aranybarna.",
             "Közben a paradicsomot az oregánóval és egy csipet sóval 10 percig főzöd, és mártogatósként adod a calzone mellé."
         ],
-        "tip": "Sütés előtt kend meg a tetejét olívaolajjal, így fényes lesz."
+        "tip": "Sütés előtt kend meg a tetejét olívaolajjal, így fényes lesz.",
+        "glutenFree": false
     },
     {
         "id": 4012,
@@ -21525,7 +21790,7 @@ window.recipeCatalog = [
         "description": "Gyors, kamrából főzhető dél-olasz tészta: tonhal, paradicsom, olajbogyó és fokhagyma.",
         "ingredients": [
             {
-                "name": "penne (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "penne (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -21573,7 +21838,8 @@ window.recipeCatalog = [
             "A tésztát bő, jól megsózott (literenként kb. 10 g só) lobogó vízben a csomagoláson jelzett ideig, al dente (harapásra éppen puha) állapotúra főzöd. Leszűrés előtt 1 bögre főzővizet félreteszel.",
             "A tésztát a szószba forgatod egy kevés főzővízzel, és azonnal tálalod."
         ],
-        "tip": "Olaszországban halas tésztára nem szórnak sajtot; helyette pirított zsemlemorzsát."
+        "tip": "Olaszországban halas tésztára nem szórnak sajtot; helyette pirított zsemlemorzsát.",
+        "glutenFree": false
     },
     {
         "id": 4013,
@@ -21648,7 +21914,8 @@ window.recipeCatalog = [
             "Visszateszed a sütőbe 12–15 percre, amíg a hal húsa fehér és villával könnyen lapokra válik.",
             "A maradék citromot gerezdekre vágva melléteszed, és azonnal tálalod."
         ],
-        "tip": "Fagyasztott filét hűtőben, egy éjszakán át olvassz ki, és sütés előtt alaposan szárítsd meg."
+        "tip": "Fagyasztott filét hűtőben, egy éjszakán át olvassz ki, és sütés előtt alaposan szárítsd meg.",
+        "glutenFree": true
     },
     {
         "id": 4014,
@@ -21665,7 +21932,7 @@ window.recipeCatalog = [
         "description": "Tengerparti olasz tészta: olívaolajban pirított fokhagyma, chili és garnélarák, citrommal és fehérborral.",
         "ingredients": [
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -21718,7 +21985,8 @@ window.recipeCatalog = [
             "Felöntöd a borral, 1 percig forralod, majd hozzáadod a citrom reszelt héját és levét.",
             "A tésztát a serpenyőbe forgatod fél bögre főzővízzel, amíg az olaj és a víz selymes mártássá áll össze. Petrezselyemmel megszórva tálalod."
         ],
-        "tip": "Nyers garnéla esetén a sütési idő 3–4 perc, amíg rózsaszínűre színeződik."
+        "tip": "Nyers garnéla esetén a sütési idő 3–4 perc, amíg rózsaszínűre színeződik.",
+        "glutenFree": false
     },
     {
         "id": 4015,
@@ -21788,7 +22056,8 @@ window.recipeCatalog = [
             "60–75 percig sütöd, amíg a hús maghőmérséklete eléri a 68–70 °C-ot (a közepébe szúrt késnél a kifolyó lé tiszta). Félidőben a burgonyát átforgatod.",
             "A húst 10 percig fólia alatt pihenteted, majd a zsineget eltávolítva vastag szeletekre vágod, és a burgonyával, a tepsi szaftjával tálalod."
         ],
-        "tip": "Hidegen, vékonyra szeletelve szendvicsbe is kiváló."
+        "tip": "Hidegen, vékonyra szeletelve szendvicsbe is kiváló.",
+        "glutenFree": true
     },
     {
         "id": 4016,
@@ -21845,7 +22114,7 @@ window.recipeCatalog = [
                 "unit": "g"
             },
             {
-                "name": "apró tészta, pl. ditalini (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "apró tészta, pl. ditalini (durumtészta)",
                 "amount": 37.5,
                 "unit": "g"
             },
@@ -21873,7 +22142,8 @@ window.recipeCatalog = [
             "Beleszórod a tésztát, és a csomagoláson jelzett ideig benne főzöd, gyakran kevergetve (a tészta keményítője tovább sűríti).",
             "Reszelt sajttal és egy csorgatás olívaolajjal tálalod."
         ],
-        "tip": "Állás közben sűrűsödik; újramelegítéskor hígítsd egy kevés vízzel."
+        "tip": "Állás közben sűrűsödik; újramelegítéskor hígítsd egy kevés vízzel.",
+        "glutenFree": false
     },
     {
         "id": 4017,
@@ -21940,7 +22210,7 @@ window.recipeCatalog = [
                 "unit": "g"
             },
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 75.0,
                 "unit": "g"
             },
@@ -21963,7 +22233,8 @@ window.recipeCatalog = [
             "A sütőt 200 °C-ra előmelegíted. A szeleteket tepsibe teszed, mindegyikre szószt kanalazol, rá mozzarellaszeleteket és a maradék parmezánt, és 10 percig sütöd, amíg a sajt megolvad. Közben kifőzöd a spagettit.",
             "A spagettit a maradék szósszal összeforgatod, és a csirkével tálalod."
         ],
-        "tip": "Olaszországban ez inkább padlizsánnal (it-38) készül; a csirkés változat az olasz–amerikai konyhából ered."
+        "tip": "Olaszországban ez inkább padlizsánnal (lásd a „Melanzane alla parmigiana” receptet) készül; a csirkés változat az olasz–amerikai konyhából ered.",
+        "glutenFree": false
     },
     {
         "id": 4018,
@@ -22043,7 +22314,8 @@ window.recipeCatalog = [
             "Fedő alatt, kis lángon 15–18 percig párolod, amíg a hús átsül (maghőmérséklet 75 °C).",
             "A fogpiszkálókat kihúzod, és a tekercseket a szósszal, friss kenyérrel tálalod."
         ],
-        "tip": "A mozzarella helyett trappista is megfelel, de a mozzarella krémesebb."
+        "tip": "A mozzarella helyett trappista is megfelel, de a mozzarella krémesebb.",
+        "glutenFree": false
     },
     {
         "id": 4019,
@@ -22123,7 +22395,8 @@ window.recipeCatalog = [
             "Hozzáadod a borsót és a sonkát, és további 5–6 percig folytatod a folyadék adagolását, amíg a rizs krémes és al dente.",
             "A tűzről levéve belekevered a vajat és a parmezánt, 2 percig fedő alatt pihenteted, borsozod, és tálalod."
         ],
-        "tip": "A rizst ne mosd meg: a felületén lévő keményítő adja a krémességet."
+        "tip": "A rizst ne mosd meg: a felületén lévő keményítő adja a krémességet.",
+        "glutenFree": true
     },
     {
         "id": 4020,
@@ -22188,7 +22461,8 @@ window.recipeCatalog = [
             "A gnocchikat bő, sós, forrásban lévő vízben adagonként főzöd; amikor feljönnek a víz tetejére (2–3 perc), szűrőkanállal kiszeded.",
             "A gnocchit a szószba forgatod, belekevered a parmezánt, és azonnal tálalod."
         ],
-        "tip": "A kész, főzés előtti gnocchi lisztezett tálcán lefagyasztható."
+        "tip": "A kész, főzés előtti gnocchi lisztezett tálcán lefagyasztható.",
+        "glutenFree": false
     },
     {
         "id": 4021,
@@ -22205,7 +22479,7 @@ window.recipeCatalog = [
         "description": "Gyerekek és felnőttek kedvence 15 perc alatt: masnitészta krémes, sonkás-borsós szószban.",
         "ingredients": [
             {
-                "name": "farfalle (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "farfalle (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -22253,7 +22527,8 @@ window.recipeCatalog = [
             "A tésztát a szószba forgatod a parmezán felével és egy kevés főzővízzel.",
             "A maradék sajttal megszórva tálalod."
         ],
-        "tip": "Egy marék friss spenót is belekeverhető a végén."
+        "tip": "Egy marék friss spenót is belekeverhető a végén.",
+        "glutenFree": false
     },
     {
         "id": 4022,
@@ -22338,7 +22613,8 @@ window.recipeCatalog = [
             "A tűzről levéve belekevered a vajat és a parmezánt.",
             "A polentát mély tányérba szeded, a közepébe mélyedést nyomsz, és belekanalazod a ragut."
         ],
-        "tip": "A maradék polenta kihűlve szeletelhető, és másnap serpenyőben ropogósra süthető."
+        "tip": "A maradék polenta kihűlve szeletelhető, és másnap serpenyőben ropogósra süthető.",
+        "glutenFree": true
     },
     {
         "id": 4023,
@@ -22413,7 +22689,8 @@ window.recipeCatalog = [
             "75–80 percig sütöd, amíg a bőr aranybarna, és a comb legvastagabb részét megszúrva a lé tiszta (maghőmérséklet 75 °C). Félidőben a zöldségeket átforgatod.",
             "A csirkét 10 percig pihenteted, majd feldarabolod, és a zöldségekkel, a tepsi szaftjával tálalod."
         ],
-        "tip": "A kisült citrom levét facsard a húsra tálaláskor."
+        "tip": "A kisült citrom levét facsard a húsra tálaláskor.",
+        "glutenFree": true
     },
     {
         "id": 4024,
@@ -22493,7 +22770,8 @@ window.recipeCatalog = [
             "Visszateszed a kolbászt, 5 percig együtt főzöd, ízlés szerint sózod, borsozod.",
             "Olívaolajjal meglocsolva, pirított kenyérrel tálalod."
         ],
-        "tip": "Ha a lencse túl sok folyadékot szív fel, adj hozzá egy kevés forró vizet."
+        "tip": "Ha a lencse túl sok folyadékot szív fel, adj hozzá egy kevés forró vizet.",
+        "glutenFree": false
     },
     {
         "id": 4025,
@@ -22568,7 +22846,8 @@ window.recipeCatalog = [
             "A serpenyőt a sütőbe teszed 8–10 percre, amíg a teteje is megszilárdul és enyhén aranyszínű.",
             "Kicsit hűlni hagyod, tálra csúsztatod, cikkekre vágod, és felszeletelt, sózott, olívaolajos paradicsomsalátával tálalod."
         ],
-        "tip": "Ha nincs sütőbe tehető serpenyő, a frittatát egy tányér segítségével megfordíthatod, és a másik oldalát is megsütheted."
+        "tip": "Ha nincs sütőbe tehető serpenyő, a frittatát egy tányér segítségével megfordíthatod, és a másik oldalát is megsütheted.",
+        "glutenFree": true
     },
     {
         "id": 4026,
@@ -22643,7 +22922,8 @@ window.recipeCatalog = [
             "Sütőpapírra teszed, vékonyan megkened a szósszal, rárakod a mozzarellát, és meglocsolod olívaolajjal.",
             "Egyenként 8–10 percig sütöd. Kivétel után friss bazsalikomleveleket szórsz a tetejére."
         ],
-        "tip": "A bazsalikom sütés után kerüljön rá, különben megfeketedik."
+        "tip": "A bazsalikom sütés után kerüljön rá, különben megfeketedik.",
+        "glutenFree": false
     },
     {
         "id": 4027,
@@ -22660,7 +22940,7 @@ window.recipeCatalog = [
         "description": "Az éjféli spagetti: fokhagyma, olívaolaj és chili – három hozzávaló, tíz perc, tökéletes egyensúly.",
         "ingredients": [
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -22702,7 +22982,8 @@ window.recipeCatalog = [
             "A leszűrt tésztát a serpenyőbe teszed fél bögre főzővízzel, és erőteljesen forgatod, amíg az olaj és a víz selymes, a tésztát bevonó mártássá áll össze.",
             "Petrezselyemmel, ízlés szerint egy kevés reszelt sajttal tálalod."
         ],
-        "tip": "A főzővíz keményítője köti meg az olajat – ne hagyd ki."
+        "tip": "A főzővíz keményítője köti meg az olajat – ne hagyd ki.",
+        "glutenFree": false
     },
     {
         "id": 4028,
@@ -22719,7 +23000,7 @@ window.recipeCatalog = [
         "description": "„Dühös” római tészta: csípős, fokhagymás paradicsomszósz, egyszerű és tüzes.",
         "ingredients": [
             {
-                "name": "penne (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "penne (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -22767,7 +23048,8 @@ window.recipeCatalog = [
             "A tésztát a szószba forgatod egy kevés főzővízzel.",
             "Reszelt sajttal tálalod."
         ],
-        "tip": "A csípősséget a chili mennyiségével szabályozhatod."
+        "tip": "A csípősséget a chili mennyiségével szabályozhatod.",
+        "glutenFree": false
     },
     {
         "id": 4029,
@@ -22784,7 +23066,7 @@ window.recipeCatalog = [
         "description": "Szicíliai tészta Bellini Norma című operájáról elnevezve: sült padlizsán, paradicsomszósz, bazsalikom és reszelt sajt.",
         "ingredients": [
             {
-                "name": "rigatoni vagy penne (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "rigatoni vagy penne (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -22837,7 +23119,8 @@ window.recipeCatalog = [
             "A tésztát bő, jól megsózott (literenként kb. 10 g só) lobogó vízben a csomagoláson jelzett ideig, al dente (harapásra éppen puha) állapotúra főzöd. Leszűrés előtt 1 bögre főzővizet félreteszel.",
             "A tésztát a szószba forgatod, tányérra szeded, a tetejére teszed a maradék padlizsánt, morzsolt ricottát, reszelt sajtot és bazsalikomot."
         ],
-        "tip": "A padlizsán sok olajat szív fel; ha egyszerre túl sokat teszel a serpenyőbe, párolódik és megszívja magát."
+        "tip": "A padlizsán sok olajat szív fel; ha egyszerre túl sokat teszel a serpenyőbe, párolódik és megszívja magát.",
+        "glutenFree": false
     },
     {
         "id": 4030,
@@ -22854,7 +23137,7 @@ window.recipeCatalog = [
         "description": "Az olasz konyha alapja: lassan főtt, édes paradicsomszósz vajjal, friss bazsalikommal és parmezánnal.",
         "ingredients": [
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -22902,7 +23185,8 @@ window.recipeCatalog = [
             "A tésztát a szószba forgatod, beletépsz egy marék bazsalikomot.",
             "Reszelt sajttal tálalod."
         ],
-        "tip": "Ez a Marcella Hazan nevéhez kötött módszer: a vaj selymessé, a hagyma édessé teszi a szószt."
+        "tip": "Ez a Marcella Hazan nevéhez kötött módszer: a vaj selymessé, a hagyma édessé teszi a szószt.",
+        "glutenFree": false
     },
     {
         "id": 4031,
@@ -22919,7 +23203,7 @@ window.recipeCatalog = [
         "description": "Friss bazsalikompesztó a drága fenyőmag helyett dióval – zöldbabbal és burgonyával, ahogy Liguriában eszik.",
         "ingredients": [
             {
-                "name": "penne vagy trofie (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "penne vagy trofie (durumtészta)",
                 "amount": 87.5,
                 "unit": "g"
             },
@@ -22967,7 +23251,8 @@ window.recipeCatalog = [
             "Leszűrés előtt fél bögre főzővizet félreteszel. A pesztót egy nagy tálban 3–4 evőkanál főzővízzel hígítod.",
             "A tésztát és a burgonyát a pesztóval összeforgatod (nem melegíted tovább), és azonnal tálalod."
         ],
-        "tip": "A pesztó légmentesen, olajréteggel lefedve 3 napig eltartható a hűtőben."
+        "tip": "A pesztó légmentesen, olajréteggel lefedve 3 napig eltartható a hűtőben.",
+        "glutenFree": false
     },
     {
         "id": 4032,
@@ -23047,7 +23332,8 @@ window.recipeCatalog = [
             "A tűzről levéve belekevered a vajat és a parmezánt, borsozod, és 2 percig fedő alatt pihenteted.",
             "Tányérra szeded, és a tetejére teszed a félretett pirított gombát."
         ],
-        "tip": "Egy marék szárított vargánya beáztatva (és a beáztatólé) erdei ízt ad."
+        "tip": "Egy marék szárított vargánya beáztatva (és a beáztatólé) erdei ízt ad.",
+        "glutenFree": true
     },
     {
         "id": 4033,
@@ -23127,7 +23413,8 @@ window.recipeCatalog = [
             "Amikor a rizs al dente (összesen kb. 18 perc), a tűzről levéve belekevered a vajat, a parmezánt, a citrom reszelt héját és 2 evőkanál levét.",
             "Tálaláskor a tetejére szórod a pirított cukkinikockákat, és borsozod."
         ],
-        "tip": "A citromot csak a végén add hozzá, hogy friss maradjon az aromája."
+        "tip": "A citromot csak a végén add hozzá, hogy friss maradjon az aromája.",
+        "glutenFree": true
     },
     {
         "id": 4034,
@@ -23217,7 +23504,8 @@ window.recipeCatalog = [
             "A legfelső lapot besamellel kened, és megszórod a mozzarellával és a maradék parmezánnal.",
             "Fóliával letakarva 25 percig, majd fólia nélkül 20 percig sütöd. Szeletelés előtt 15 percig pihenteted."
         ],
-        "tip": "Friss spenóttal is készülhet: 1 kg nyers levélből lesz ugyanennyi."
+        "tip": "Friss spenóttal is készülhet: 1 kg nyers levélből lesz ugyanennyi.",
+        "glutenFree": false
     },
     {
         "id": 4035,
@@ -23274,7 +23562,7 @@ window.recipeCatalog = [
                 "unit": "g"
             },
             {
-                "name": "apró tészta (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "apró tészta (durumtészta)",
                 "amount": 25.0,
                 "unit": "g"
             },
@@ -23312,7 +23600,8 @@ window.recipeCatalog = [
             "Ízlés szerint utánasózod.",
             "Tálaláskor minden tányérba egy kevés olívaolajat csorgatsz, és reszelt sajttal megszórod."
         ],
-        "tip": "Egy darab parmezánhéj a főzés során mélyebb ízt ad – tálalás előtt vedd ki."
+        "tip": "Egy darab parmezánhéj a főzés során mélyebb ízt ad – tálalás előtt vedd ki.",
+        "glutenFree": false
     },
     {
         "id": 4036,
@@ -23397,7 +23686,8 @@ window.recipeCatalog = [
             "Ízlés szerint utánasózod.",
             "Bőven meglocsolod olívaolajjal, megszórod sajttal és borssal, úgy tálalod."
         ],
-        "tip": "Másnap, újramelegítve („ribollita” = újrafőzött) a legfinomabb."
+        "tip": "Másnap, újramelegítve („ribollita” = újrafőzött) a legfinomabb.",
+        "glutenFree": false
     },
     {
         "id": 4037,
@@ -23472,7 +23762,8 @@ window.recipeCatalog = [
             "A gnocchit a szósszal egy tűzálló tálba öntöd, a tetejére felkockázott mozzarellát és parmezánt szórsz.",
             "10–12 percig sütöd, amíg a sajt megolvad és bugyog. Friss bazsalikommal tálalod."
         ],
-        "tip": "Sietve bolti gnocchival is elkészíthető."
+        "tip": "Sietve bolti gnocchival is elkészíthető.",
+        "glutenFree": false
     },
     {
         "id": 4038,
@@ -23542,7 +23833,8 @@ window.recipeCatalog = [
             "30–35 percig sütöd, amíg a teteje aranybarna és bugyog.",
             "Legalább 15 percig pihenteted, majd kenyérrel tálalod. Langyosan a legfinomabb."
         ],
-        "tip": "Másnap, szobahőmérsékleten még ízesebb."
+        "tip": "Másnap, szobahőmérsékleten még ízesebb.",
+        "glutenFree": false
     },
     {
         "id": 4039,
@@ -23622,7 +23914,8 @@ window.recipeCatalog = [
             "A kenyeret összeforgatod a paradicsommal, a zöldségekkel, az öntettel és a tépett bazsalikommal, és 15 percig állni hagyod, hogy a kenyér magába szívja a leveket.",
             "Tálaláskor rátépkeded a mozzarellát."
         ],
-        "tip": "A kenyér legyen kissé puha, de ne ázzon szét: 15–20 perc állás az ideális."
+        "tip": "A kenyér legyen kissé puha, de ne ázzon szét: 15–20 perc állás az ideális.",
+        "glutenFree": false
     },
     {
         "id": 4040,
@@ -23702,7 +23995,8 @@ window.recipeCatalog = [
             "A sütőben 8–10 perc alatt a tetejét is megszilárdítod.",
             "Cikkekre vágva, olívaolajos, sózott paradicsomsalátával és kenyérrel tálalod."
         ],
-        "tip": "Hidegen szendvicsbe vagy uzsonnára is kiváló."
+        "tip": "Hidegen szendvicsbe vagy uzsonnára is kiváló.",
+        "glutenFree": false
     },
     {
         "id": 4041,
@@ -23724,7 +24018,7 @@ window.recipeCatalog = [
                 "unit": "g"
             },
             {
-                "name": "apró tészta, pl. ditalini (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "apró tészta, pl. ditalini (durumtészta)",
                 "amount": 62.5,
                 "unit": "g"
             },
@@ -23777,7 +24071,8 @@ window.recipeCatalog = [
             "Beleszórod a tésztát, és benne főzöd a csomagoláson jelzett ideig, gyakran kevergetve; ha túl sűrű, forró vizet adsz hozzá. A végére sűrű, krémes legyen.",
             "A maradék olívaolajjal, borssal és parmezánnal tálalod."
         ],
-        "tip": "Csípős változat: egy kevés chilit is párolj a hagymával."
+        "tip": "Csípős változat: egy kevés chilit is párolj a hagymával.",
+        "glutenFree": false
     },
     {
         "id": 4042,
@@ -23794,7 +24089,7 @@ window.recipeCatalog = [
         "description": "A római trattoriák minimalista remeke: tészta, sajt és bors – a főzővíz teszi krémes szósszá.",
         "ingredients": [
             {
-                "name": "spagetti vagy tonnarelli (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti vagy tonnarelli (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -23827,7 +24122,8 @@ window.recipeCatalog = [
             "Lehúzod a tűzről, 30 másodpercig hűlni hagyod, majd hozzáadod a sajtpasztát és a vajat, és erőteljesen forgatod, amíg krémes, fényes mártás lesz. Ha túl sűrű, még egy kevés főzővíz.",
             "Azonnal tálalod, extra borssal."
         ],
-        "tip": "A titok a hőmérséklet: túl forró serpenyőben a sajt csomós gumivá olvad."
+        "tip": "A titok a hőmérséklet: túl forró serpenyőben a sajt csomós gumivá olvad.",
+        "glutenFree": false
     },
     {
         "id": 4043,
@@ -23844,7 +24140,7 @@ window.recipeCatalog = [
         "description": "Tavaszi zöldséges tészta: roppanósra pirított cukkini, paprika, borsó és brokkoli, könnyű vajas-sajtos szószban.",
         "ingredients": [
             {
-                "name": "penne vagy farfalle (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "penne vagy farfalle (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -23912,7 +24208,8 @@ window.recipeCatalog = [
             "Hozzáadod a citrom reszelt héját és levét, a parmezán felét, és összeforgatod, amíg krémes lesz.",
             "Sóval, borssal ízesíted, és a maradék sajttal tálalod."
         ],
-        "tip": "Bármilyen idénynek megfelelő zöldség mehet bele: spárga, zöldbab, újhagyma."
+        "tip": "Bármilyen idénynek megfelelő zöldség mehet bele: spárga, zöldbab, újhagyma.",
+        "glutenFree": false
     },
     {
         "id": 4044,
@@ -23992,7 +24289,8 @@ window.recipeCatalog = [
             "A tűzről levéve belekevered a vajat és a parmezán felét.",
             "Mély tányérba szeded, a közepére kanalazod a gombaragut, és a maradék sajttal megszórod."
         ],
-        "tip": "A maradék polentát hűtve szeletelheted és grillezheted."
+        "tip": "A maradék polentát hűtve szeletelheted és grillezheted.",
+        "glutenFree": true
     },
     {
         "id": 4045,
@@ -24082,7 +24380,8 @@ window.recipeCatalog = [
             "Sütőpapíros tepsin 15–18 percig sütöd, amíg aranybarna.",
             "A paradicsomot az oregánóval és egy csipet sóval 10 percig főzöd, és mártogatósként adod mellé."
         ],
-        "tip": "A spenót legyen nagyon száraz, különben a calzone alja átázik."
+        "tip": "A spenót legyen nagyon száraz, különben a calzone alja átázik.",
+        "glutenFree": false
     },
     {
         "id": 4046,
@@ -24152,7 +24451,8 @@ window.recipeCatalog = [
             "20–25 percig sütöd, amíg a teteje aranybarna és az alja ropogós.",
             "Közben a paradicsomot és a mozzarellát felszeleteled, sózod, olívaolajjal és bazsalikommal ízesíted. A langyos focacciát a salátával tálalod."
         ],
-        "tip": "Hűtőben egy éjszakán át kelesztve még levegősebb lesz."
+        "tip": "Hűtőben egy éjszakán át kelesztve még levegősebb lesz.",
+        "glutenFree": false
     },
     {
         "id": 4047,
@@ -24232,7 +24532,8 @@ window.recipeCatalog = [
             "Egy mély lábasban 4–5 cm magasan olajat hevítesz 175 °C-ra, és a golyókat adagonként 4–5 percig aranybarnára sütöd. Papírtörlőre szeded.",
             "Szósz: a zúzott fokhagymát egy kevés olajon megpirítod, hozzáadod a paradicsomot, sózod, és 10 percig főzöd. Az arancinit melegen, a szósszal tálalod."
         ],
-        "tip": "A kihűlt rizs jobban formázható; meleg rizsből a golyók szétesnek."
+        "tip": "A kihűlt rizs jobban formázható; meleg rizsből a golyók szétesnek.",
+        "glutenFree": false
     },
     {
         "id": 4048,
@@ -24249,7 +24550,7 @@ window.recipeCatalog = [
         "description": "Vasárnapi rakott tészta paradicsomszósszal, olvadó mozzarellával és ropogós parmezános tetővel.",
         "ingredients": [
             {
-                "name": "penne vagy rigatoni (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "penne vagy rigatoni (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -24307,7 +24608,8 @@ window.recipeCatalog = [
             "20–25 percig sütöd, amíg a teteje aranybarna és ropogós.",
             "5 percig pihenteted, majd tálalod."
         ],
-        "tip": "A széleken megpirult, ropogós tészta a legfinomabb rész."
+        "tip": "A széleken megpirult, ropogós tészta a legfinomabb rész.",
+        "glutenFree": false
     },
     {
         "id": 4049,
@@ -24382,7 +24684,8 @@ window.recipeCatalog = [
             "Lehúzod a tűzről, beletépsz egy marék bazsalikomot, és 10 percig pihenteted.",
             "Langyosan, bőven meglocsolva olívaolajjal tálalod."
         ],
-        "tip": "Nyáron szobahőmérsékleten is fogyasztják."
+        "tip": "Nyáron szobahőmérsékleten is fogyasztják.",
+        "glutenFree": false
     },
     {
         "id": 4050,
@@ -24399,7 +24702,7 @@ window.recipeCatalog = [
         "description": "Amalfi-parti egyszerűség: citromhéjas-citromleves, vajas-sajtos krémes spagetti.",
         "ingredients": [
             {
-                "name": "spagetti (durumtészta (a fajtától függetlenül ugyanazzal a bolti egységárral számolva))",
+                "name": "spagetti (durumtészta)",
                 "amount": 100.0,
                 "unit": "g"
             },
@@ -24442,7 +24745,8 @@ window.recipeCatalog = [
             "Lehúzod a tűzről, belekevered a parmezánt, és erőteljesen forgatod, amíg krémes. Ízlés szerint még citromlevet adsz hozzá.",
             "A maradék citromhéjjal és borssal tálalod."
         ],
-        "tip": "Kezeletlen héjú citromot használj, és mosd meg alaposan."
+        "tip": "Kezeletlen héjú citromot használj, és mosd meg alaposan.",
+        "glutenFree": false
     },
     {
         "id": 4051,
@@ -24502,7 +24806,8 @@ window.recipeCatalog = [
             "A babapiskótákat egyenként 1–2 másodpercre a kávéba mártod (ne ázzanak szét), és egy kb. 20×25 cm-es tál aljára sorakoztatod. Rákened a krém felét, majd jön még egy réteg mártott piskóta és a maradék krém.",
             "Lefedve legalább 6 órára (legjobb egy éjszakára) hűtőbe teszed. Tálalás előtt sűrű szitán át kakaóval megszórod."
         ],
-        "tip": "A nyers tojás miatt nagyon friss, ellenőrzött tojást használj, és a kész desszertet 2 napon belül fogyaszd el."
+        "tip": "A nyers tojás miatt nagyon friss, ellenőrzött tojást használj, és a kész desszertet 2 napon belül fogyaszd el.",
+        "glutenFree": false
     },
     {
         "id": 4052,
@@ -24562,7 +24867,8 @@ window.recipeCatalog = [
             "Legalább 4 órára hűtőbe teszed, amíg megdermed.",
             "Öntet: a lekvárt 2–3 evőkanál vízzel és néhány csepp citromlével kis lángon folyóssá melegíted, kihűtöd, és tálaláskor a panna cottára kanalazod."
         ],
-        "tip": "Ha formából borítod ki, mártsd a forma alját 5 másodpercre forró vízbe."
+        "tip": "Ha formából borítod ki, mártsd a forma alját 5 másodpercre forró vízbe.",
+        "glutenFree": true
     },
     {
         "id": 4053,
@@ -24607,7 +24913,8 @@ window.recipeCatalog = [
             "Közvetlenül tálalás előtt a forró kávét a fagylaltra öntöd.",
             "Megszórod pirított mandulával és reszelt csokoládéval, és azonnal tálalod."
         ],
-        "tip": "Felnőtteknek egy evőkanál amaretto vagy kávélikőr is mehet bele."
+        "tip": "Felnőtteknek egy evőkanál amaretto vagy kávélikőr is mehet bele.",
+        "glutenFree": true
     },
     {
         "id": 4054,
@@ -24672,7 +24979,8 @@ window.recipeCatalog = [
             "10 percig hűlni hagyod, majd éles, fogazott késsel ferdén 1 cm vastag szeletekre vágod.",
             "A szeleteket vágott felükkel a tepsire fekteted, és 150 °C-on további 12–15 percig szárítod, félidőben megfordítva. Teljesen kihűtve ropogós lesz."
         ],
-        "tip": "Fémdobozban hetekig eláll."
+        "tip": "Fémdobozban hetekig eláll.",
+        "glutenFree": false
     },
     {
         "id": 4055,
@@ -24732,7 +25040,8 @@ window.recipeCatalog = [
             "A formába simítod, és 35–40 percig sütöd. A közepe maradjon enyhén nedves (a tűpróbánál néhány morzsa tapad rá).",
             "A formában kihűtöd, majd porcukorral meghintve tálalod."
         ],
-        "tip": "Tejszínhabbal vagy vaníliafagylalttal tálald."
+        "tip": "Tejszínhabbal vagy vaníliafagylalttal tálald.",
+        "glutenFree": true
     },
     {
         "id": 4056,
@@ -24797,7 +25106,8 @@ window.recipeCatalog = [
             "Szirup: a másik citrom levét 6 dkg porcukorral elkevered. A még meleg tortát hústűvel sűrűn megszurkálod, és meglocsolod a sziruppal.",
             "Kihűtve a maradék porcukorral meghinted."
         ],
-        "tip": "Egy nap után még nedvesebb és illatosabb."
+        "tip": "Egy nap után még nedvesebb és illatosabb.",
+        "glutenFree": false
     },
     {
         "id": 4057,
@@ -24842,7 +25152,8 @@ window.recipeCatalog = [
             "A kekszet durvára morzsolod, és poharak aljára szórod.",
             "A langyos zabaionét rákanalazod, és azonnal tálalod."
         ],
-        "tip": "Hidegen is tálalható: kihűtve 2 dl felvert tejszínhabbal lazítsd."
+        "tip": "Hidegen is tálalható: kihűtve 2 dl felvert tejszínhabbal lazítsd.",
+        "glutenFree": false
     },
     {
         "id": 4058,
@@ -24902,7 +25213,8 @@ window.recipeCatalog = [
             "35 percig sütöd, amíg a tészta aranyszínű.",
             "A formában kihűtöd, mert melegen a lekvár még folyós."
         ],
-        "tip": "Nagyon híg lekvárt 1 ek búzadarával sűríts."
+        "tip": "Nagyon híg lekvárt 1 ek búzadarával sűríts.",
+        "glutenFree": false
     },
     {
         "id": 4059,
@@ -24952,7 +25264,8 @@ window.recipeCatalog = [
             "A sárgás krémbe óvatosan beleforgatod a tejszínhabot, majd a tojáshabot és a karamellizált mandula kétharmadát.",
             "Fóliával bélelt őzgerinc- vagy kenyérformába simítod, és legalább 6 órára mélyhűtőbe teszed. Tálalás előtt 10 perccel kiveszed, szeletelve, a maradék mandulával tálalod."
         ],
-        "tip": "Nagyon friss tojást használj, a sárgákat a gőz fölött kissé át is hevíted."
+        "tip": "Nagyon friss tojást használj, a sárgákat a gőz fölött kissé át is hevíted.",
+        "glutenFree": true
     },
     {
         "id": 4060,
@@ -25027,7 +25340,8 @@ window.recipeCatalog = [
             "50–55 percig sütöd, amíg a közepe épp megszilárdul (enyhén remeg).",
             "A sütőben, résnyire nyitott ajtónál hűtöd ki (így nem reped meg), majd porcukorral meghintve tálalod."
         ],
-        "tip": "Hűtőben pihentetve, másnap a legfinomabb."
+        "tip": "Hűtőben pihentetve, másnap a legfinomabb.",
+        "glutenFree": false
     },
     {
         "id": 4061,
@@ -25097,7 +25411,8 @@ window.recipeCatalog = [
             "A maradék almaszeleteket legyezőszerűen a tetejére rendezed.",
             "40–45 percig sütöd, amíg tűpróbánál száraz. Kihűtve porcukorral meghinted."
         ],
-        "tip": "Egy csipet fahéj is kerülhet a tésztába, bár ez inkább az északi változat."
+        "tip": "Egy csipet fahéj is kerülhet a tésztába, bár ez inkább az északi változat.",
+        "glutenFree": false
     },
     {
         "id": 4062,
@@ -25197,7 +25512,8 @@ window.recipeCatalog = [
             "Még melegen kristálycukorba forgatod.",
             "A krémet habzsákba töltöd, a fánkok oldalán egy kis lyukat szúrsz, és mindegyiket bőven megtöltöd krémmel."
         ],
-        "tip": "A krém helyett lekvárral vagy kakaós krémmel is tölthető."
+        "tip": "A krém helyett lekvárral vagy kakaós krémmel is tölthető.",
+        "glutenFree": false
     },
     {
         "id": 4063,
@@ -25211,7 +25527,7 @@ window.recipeCatalog = [
         "totalCost": 1777,
         "access": "pro",
         "servings": 12,
-        "description": "Három hozzávalós, kívül repedezett, belül puha, gluténmentes mandulás aprósütemény Szardíniából.",
+        "description": "Néhány hozzávalós, kívül repedezett, belül puha, gluténmentes mandulás aprósütemény Szardíniából.",
         "ingredients": [
             {
                 "name": "darált mandula",
@@ -25247,7 +25563,8 @@ window.recipeCatalog = [
             "Vizes kézzel diónyi golyókat formázol, porcukorba forgatod, és sütőpapíros tepsire teszed őket. Kissé ellapítod.",
             "18–20 percig sütöd, amíg a felszínük megrepedezik, és alul halványan aranyszínű. A tepsin hűtöd ki."
         ],
-        "tip": "Néhány csepp keserűmandula-aroma az eredeti ízt adja."
+        "tip": "Néhány csepp keserűmandula-aroma az eredeti ízt adja.",
+        "glutenFree": true
     },
     {
         "id": 4064,
@@ -25312,7 +25629,8 @@ window.recipeCatalog = [
             "Legalább 4 órára hűtőbe teszed, amíg teljesen megszilárdul.",
             "A papírból kicsomagolva porcukorba forgatod, és 1 cm-es szeletekre vágod."
         ],
-        "tip": "Nyers tojás helyett 3 ek tejjel biztonságosabb, főleg gyerekeknek."
+        "tip": "A nyers tojás 3 ek tejjel helyettesíthető – így biztonságosabb, főleg gyerekeknek.",
+        "glutenFree": false
     },
     {
         "id": 4065,
@@ -25367,7 +25685,8 @@ window.recipeCatalog = [
             "A körtéket a sziruppal leöntöd, és melegen vagy hidegen tálalod.",
             "Félig felvert tejszínnel kínálod."
         ],
-        "tip": "Egy éjszakán át a szirupban állva még mélyebb ízű és színű lesz."
+        "tip": "Egy éjszakán át a szirupban állva még mélyebb ízű és színű lesz.",
+        "glutenFree": true
     },
     {
         "id": 4066,
@@ -25427,7 +25746,8 @@ window.recipeCatalog = [
             "A felületét fóliával lefeded (így nem bőrösödik), és legalább 2 órára hűtőbe teszed.",
             "A tejszínt felvered, és a puding tetejére kanalazod."
         ],
-        "tip": "Egy csipet só és egy kevés kávé kiemeli a csokoládé ízét."
+        "tip": "Egy csipet só és egy kevés kávé kiemeli a csokoládé ízét.",
+        "glutenFree": true
     },
     {
         "id": 4067,
@@ -25507,7 +25827,8 @@ window.recipeCatalog = [
             "A kisebb tésztát korongra nyújtod, a krémre fekteted, a széleket összenyomkodod. A tetejét megkened egy kevés vízzel, és megszórod mandulával.",
             "40–45 percig sütöd, amíg aranyszínű. Teljesen kihűtve porcukorral meghinted."
         ],
-        "tip": "Egy éjszakára hűtőbe téve a krém megszilárdul, és szépen szeletelhető lesz."
+        "tip": "Egy éjszakára hűtőbe téve a krém megszilárdul, és szépen szeletelhető lesz.",
+        "glutenFree": false
     },
     {
         "id": 4068,
@@ -25572,7 +25893,8 @@ window.recipeCatalog = [
             "30–35 percig sütöd, amíg aranybarna.",
             "Kihűtve kézzel nagyobb darabokra töröd, és édes borral vagy kávéval kínálod."
         ],
-        "tip": "Légmentes dobozban egy hétig ropogós marad."
+        "tip": "Légmentes dobozban egy hétig ropogós marad.",
+        "glutenFree": false
     },
     {
         "id": 4069,
@@ -25657,7 +25979,8 @@ window.recipeCatalog = [
             "A zsemléket ferdén bevágod (nem teljesen át), szétnyitod, és bőven megtöltöd tejszínhabbal; a hab tetejét késsel simára húzod.",
             "Porcukorral meghintve, frissen tálalod."
         ],
-        "tip": "A zsemlék előző nap is megsüthetők; a habot mindig tálalás előtt töltsd bele."
+        "tip": "A zsemlék előző nap is megsüthetők; a habot mindig tálalás előtt töltsd bele.",
+        "glutenFree": false
     },
     {
         "id": 4070,
@@ -25697,6 +26020,7 @@ window.recipeCatalog = [
             "Tálalás előtt még egyszer villával fellazítod.",
             "Hideg poharakba szeded, és azonnal tálalod."
         ],
-        "tip": "Kávéból is készül: 6 dl erős, cukrozott kávéval, tejszínhabbal tálalva."
+        "tip": "Kávéból is készül: 6 dl erős, cukrozott kávéval, tejszínhabbal tálalva.",
+        "glutenFree": true
     }
 ];
